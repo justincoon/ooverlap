@@ -26,7 +26,7 @@ Aside from Computer Science, Mariem has taken a variety of engineering and mathe
 
 **Kiernan Drohan:** From Westborough/Northborough, Mass. Homegrown programmer of 2 generations, dreams in binary and got his foot in the door at a major corporation, EMC. Familiar with C, Java, PHP and some dinosaur languages, consistently plays videogames and looks for different ways to optimize and secure data, cryptography and security coding nerd and built my first computer at 8 years old, i never looked back. My newest interest in a language is SAP due to its very integrative and innovative architecture. My 2 favorite courses in comp sci before are 187 and 220 due to its actual practical applications. My 2 favorite non Comp Sci courses are GeoScience and English.
 
-**Justin Coon:** From Longmeadow, Mass but currently living in Frisco, Texas. Very solid understanding of Java including experience in Android development. Proficient in C/C++ and LaTeX. Interested in security and databases.
+**Justin Coon:** A self-taught programmer and juggler from Longmeadow, Mass who has since moved to Frisco, Texas. I started teaching myself programming  with a scripting language called LSL, then moved onto C++, C, and then Java and Android development. One of my favorite things to do is to learn new things, and I can't wait to jump into learning Javascript and Node!
 
 **Thai Nguyen:** An Asian geek who sleeps with Java every night but falls in love with Python instead, who desires to solve challenging back-end problems but also fascinated in creating fabulous UI design. 
 

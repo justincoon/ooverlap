@@ -30,4 +30,21 @@ Aside from Computer Science, Mariem has taken a variety of engineering and mathe
 
 **Thai Nguyen:** An Asian geek who sleeps with Java every night but falls in love with Python instead, who desires to solve challenging back-end problems but also fascinated in creating fabulous UI design. 
 
-**Santiago De La Torre:** I’m coming all the way from Barcelona, Spain and I am a huge soccer fan. I am expecting Lionel Messi to destroy Real Madrid this season, but in the meantime I am a Computer Science major in my senior year. I am really looking forward to graduate this coming May and maybe work in Yelp with my friend, afterwards. I am more of a back-end type of person and I really like DataBases, JavaScript, and looking forward to learn some WebGL. I have always liked the “behind the scenes” of everything. My technical skills include; Database(MySQL, PostgreSQL, Oracle), Java, Visual Basic, C++/CLI, C++, C, and learning Swift(on my own). My doctor thinks I am a healthy person, but I am allergic to Windows “Operating System.”
+**Santiago De La Torre:** I’m coming all the way from Barcelona, Spain and I am a huge soccer fan. I am expecting Lionel Messi to destroy Real Madrid this season, but in the meantime I am a Computer Science major in my senior year. I am really looking forward to graduate this coming May and maybe work in Yelp with my friend, afterwards. I am more of a back-end type of person and I really like DataBases, JavaScript, and looking forward to learn some WebGL. I have always liked the “behind the scenes” of everything. My technical skills include; Database(MySQL, PostgreSQL, Oracle), Java, Visual Basic, C++/CLI, C++, C, and learning Swift(on my own). My doctor thinks I am a healthy person, but I am allergic to Windows “Operating System.” 
+In BHCC I took:
+
+- Datastructures
+- Intro to Obeject Oriented Programming
+- C++
+- Java
+
+In Umass I have taken:
+
+- Compsci 250 - Introduction to Computation
+- Compsci 220 - Programming Methodology
+- Compsci 230 - Computer Systems Principles
+- Compsci 240 - Reasoning Under Uncertainty 
+- Compsci 390 - Database Systems Management
+- Compsci 403 - Robotics
+- Compsci 320 - Software Engineering
+- Compsci 326 - Web Programming

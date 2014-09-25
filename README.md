@@ -26,8 +26,26 @@ Aside from Computer Science, Mariem has taken a variety of engineering and mathe
 
 **Kiernan Drohan:** From Westborough/Northborough, Mass. Homegrown programmer of 2 generations, dreams in binary and got his foot in the door at a major corporation, EMC. Familiar with C, Java, PHP and some dinosaur languages, consistently plays videogames and looks for different ways to optimize and secure data, cryptography and security coding nerd and built my first computer at 8 years old, i never looked back. My newest interest in a language is SAP due to its very integrative and innovative architecture. My 2 favorite courses in comp sci before are 187 and 220 due to its actual practical applications. My 2 favorite non Comp Sci courses are GeoScience and English.
 
-**Justin Coon:** A self-taught programmer and juggler from Longmeadow, Mass who has since moved to Frisco, Texas. I started teaching myself programming when I was just eleven years old with a scripting language called LSL, then moved onto C++, C, and then Java and Android development. One of my favorite things to do is to learn new things, and I can't wait to jump into learning Javascript and Node!
+**Justin Coon:** A self-taught programmer and juggler from Longmeadow, Mass who has since moved to Frisco, Texas. I started teaching myself programming when I was just eleven years old with a scripting language called LSL, then moved onto C++, C, and then Java and Android development. In high school I was a teaching assistant in my school's C++ and Java courses. I also wrote a program for the school library which is still in use today that allowed them to scan student ID's to take attendance for study halls. My interests mainly involve databases, security, and game development. Here at UMass I've taken CS187, CS197C, CS220, CS250 and am currently taking CS230, CS240 and CS326. One of my favorite things to do is to learn new languages and tools, so I can't wait to jump into Javascript and Node!
 
 **Thai Nguyen:** An Asian geek who sleeps with Java every night but falls in love with Python instead, who desires to solve challenging back-end problems but also fascinated in creating fabulous UI design. 
 
-**Santiago De La Torre:** I’m coming all the way from Barcelona, Spain and I am a huge soccer fan. I am expecting Lionel Messi to destroy Real Madrid this season, but in the meantime I am a Computer Science major in my senior year. I am really looking forward to graduate this coming May and maybe work in Yelp with my friend, afterwards. I am more of a back-end type of person and I really like DataBases, JavaScript, and looking forward to learn some WebGL. I have always liked the “behind the scenes” of everything. My technical skills include; Database(MySQL, PostgreSQL, Oracle), Java, Visual Basic, C++/CLI, C++, C, and learning Swift(on my own). My doctor thinks I am a healthy person, but I am allergic to Windows “Operating System.”
+**Santiago De La Torre:** I’m coming all the way from Barcelona, Spain and I am a huge soccer fan. I am expecting Lionel Messi to destroy Real Madrid this season, but in the meantime I am a Computer Science major in my senior year. I am really looking forward to graduate this coming May and maybe work in Yelp with my friend, afterwards. I am more of a back-end type of person and I really like DataBases, JavaScript, and looking forward to learn some WebGL. I have always liked the “behind the scenes” of everything. My technical skills include; Database(MySQL, PostgreSQL, Oracle), Java, Visual Basic, C++/CLI, C++, C, and learning Swift(on my own). My doctor thinks I am a healthy person, but I am allergic to Windows “Operating System.” 
+
+In BHCC I took:
+
+- Datastructures
+- Intro to Obeject Oriented Programming
+- C++
+- Java
+
+In Umass I have taken:
+
+- Compsci 250 - Introduction to Computation
+- Compsci 220 - Programming Methodology
+- Compsci 230 - Computer Systems Principles
+- Compsci 240 - Reasoning Under Uncertainty 
+- Compsci 390 - Database Systems Management
+- Compsci 403 - Robotics
+- Compsci 320 - Software Engineering
+- Compsci 326 - Web Programming

@@ -7,5 +7,3 @@ Referring to your Trello board, which is fantastic, I love that your team is tak
 I think it's early to give y'all suggestions on implementing some of your ideas, though I think you should take a look at the Socket.io (http://socket.io) library if you decide to implement chat functionality. It has sample code of how to build a basic chat app (I believe in 6 lines of code?) which you may find useful!
 
 All in all, awesome job! I look forward to seeing how your project evolves!
-
-P.S. You should rename your Project 1 file as "profile.md"!

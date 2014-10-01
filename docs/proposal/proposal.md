@@ -11,7 +11,7 @@ Meet the Team:
 --------------
 
 Thai Nguyen
-* UI/UX Designer, Software Engineer *
+__UI/UX Designer, Software Engineer__
 
 >An Asian geek who sleeps with Java every night but falls in love with Python instead, who desires to solve challenging back-end problems but also fascinated in creating fabulous UI design.
 

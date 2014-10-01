@@ -10,6 +10,12 @@ Team: Undefined
 Meet the Team:
 --------------
 
+Thai Nguyen
+* UI/UX Designer, Software Engineer *
+
+>An Asian geek who sleeps with Java every night but falls in love with Python instead, who desires to solve challenging back-end problems but also fascinated in creating fabulous UI design.
+
+
 Problem Statement:
 ------------------
 
@@ -44,5 +50,3 @@ Providing open-source and free product, we consider ourselves as “unpaid inter
 Last but not least, Domain and Hosting is gonna takes us around 30$ per month and Office supplies (notes, paper, print …) is also around 50$ per month. We also need to have a monthly budget of 100$/month to spend for any other miscellaneous things.
 
 Totally, in order to run efficiently in the first 3 months, our start-up needs around $4000.
-
-

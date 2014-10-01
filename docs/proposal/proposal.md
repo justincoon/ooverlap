@@ -24,6 +24,11 @@ Project Manager, Graphic Designer
 
 >A Dallas, Texas native, Giovanna Diaz is a junior at Smith College double majoring in Computer Science and Mathematics. She also has a great interest in design and will jump at any chance she gets to use the Adobe Creative Suite!
 
+**Colin McGinnis**
+UI Designer, Software Engineer
+
+>Grew up in the South Shore of Massachusetts, in Hingham, MA specifically. He's a junior at the University of Massachusetts Amherst, studying Computer Science. He has an interest in design, which he hopes to explore in working with User Interfaces, and has an interest in working in both front end and back end development as well. 
+
 Problem Statement:
 ------------------
 

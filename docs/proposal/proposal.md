@@ -10,10 +10,10 @@ Team: Undefined
 Meet the Team:
 --------------
 
-Thai Nguyen
-__UI/UX Designer, Software Engineer__
+__Thai Nguyen__ 
+UI/UX Designer, Software Engineer
 
->An Asian geek who sleeps with Java every night but falls in love with Python instead, who desires to solve challenging back-end problems but also fascinated in creating fabulous UI design.
+>An Asian geek who sleeps with Java every night but falls in love with Python instead, who desires to solve challenging back-end problems but also fascinated in creating fabulous UI design. Being a person who favors "high entropy" (in other words: "utmost laziness"), he loves utilizing his computer to save his time and work, that's why he is now craving to learn about Machine Learning and Information Retrieval.
 
 
 Problem Statement:

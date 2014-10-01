@@ -32,7 +32,7 @@ UI Designer, Software Engineer
 **Justin Coon**
 Software Engineer, Technology Integration Specialist
 
->A sophomore at University of Massachusetts, Amherst majoring in Computer Science. Interested primarily in back end development with node and will be working towards integration with Google Calendar and Facebook.
+>A sophomore at University of Massachusetts, Amherst majoring in Computer Science. Originally from Longmeadow, MA he now lives in Dallas, TX but missed the snow too much. Interested primarily in back end development with node and will be working towards integration with Google Calendar and Facebook.
 
 Problem Statement:
 ------------------

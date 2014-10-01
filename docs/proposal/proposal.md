@@ -33,5 +33,5 @@ Budget:
 | Food + Drink     | 100$/week            | 1200$           |
 | Office supplies  | 50$/month            | 150$            |
 | Miscellaneous    | 100$/month           | 300$            |
-| Total                                   | ~4000$          |
+| Total            |                      | ~4000$          |
 

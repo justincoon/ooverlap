@@ -80,3 +80,5 @@ Because we are providing an open-source and free product, we consider ourselves 
 Last but not least, Domain and Hosting is gonna takes us around 30$ per month and Office supplies (notes, paper, print …) is also around 50$ per month. We also need to have a monthly budget of 100$/month to spend on any other miscellaneous things.
 
 In total, to run efficiently in the first 3 months, our start-up needs around $4000.
+
+Thai Nguyen [Sept 30 2014]

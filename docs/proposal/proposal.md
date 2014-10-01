@@ -9,6 +9,9 @@ Team: Undefined
 
 Meet the Team:
 --------------
+Santiago De La Torre
+Database Analist
+>Software engineer brought from the darkest side of Europe looking forward to start writing malicious code. In the meantime, he loves desining databases and fairy-rail queries to store and retrieve data in a minimal time possible. Systems programming is his passion and C isn't only his favourite "vitamin."
 
 __Thai Nguyen__ 
 UI/UX Designer, Software Engineer

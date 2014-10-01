@@ -46,16 +46,15 @@ Competition:
 Timeline:
 ---------
 
-| Date   | Objective                                                                             |
-|--------|---------------------------------------------------------------------------------------|
-| Oct 03 | Finish preliminary design of overall website structure.                               |
-| Oct 17 | Research: Google Calendar API                                                         |
-| Oct 31 | Implement Google Calendar integration with OAuth.                                     |
-| Nov 06 | Add user account and chat capabilities.                                               |
-| Nov 13 | Implement calendar difference algorithm.                                              |
-| Nov 20 | Implement priorities for events.                                                      |
-| Nov 22 |                                                                                       |
-| Nov 25 | Finish project. Wrap up all loose ends and confirm overall cohesiveness of the site.  |
+| Date   | Objective                                                                                              |
+|--------|--------------------------------------------------------------------------------------------------------|
+| Oct 03 | Research: Google Calendar and Facebook APIs, databases, competitors.                                   |
+| Oct 17 | Organize and decide on flow of website, split features between members and get coding.                 |
+| Nov 06 | Have a working user interface.                                                                         |
+| Nov 13 | Alpha version of the site should be up, get consumer feedback.                                         |
+| Nov 20 | Implement user feedback and anything else we have yet to finish.                                       |
+| Nov 22 | Debugging, patching, begin working on presentation.                                                    |
+| Nov 28 | Finish project and presentation. Wrap up all loose ends and confirm overall cohesiveness of the site.  |
 Justin Coon [Sept 28 2014]
 
 

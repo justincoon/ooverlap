@@ -9,12 +9,12 @@ Team: Undefined
 
 Meet the Team:
 --------------
-Santiago De La Torre
+**Santiago De La Torre**
 Database Analist
 
 >Software engineer brought from the darkest side of Europe looking forward to start writing malicious code. In the meantime, he loves desining databases and fairy-rail queries to store and retrieve data in a minimal time possible. Systems programming is his passion and C isn't only his favourite "vitamin."
 
-__Thai Nguyen__ 
+**Thai Nguyen**
 UI/UX Designer, Software Engineer
 
 >An Asian geek who sleeps with Java every night but falls in love with Python instead, who desires to solve challenging back-end problems but also fascinated in creating fabulous UI design. Being a person who favors "high entropy" (in other words: "utmost laziness"), he loves utilizing his computer to save his time and work, that's why he is now craving to learn about Machine Learning and Information Retrieval.

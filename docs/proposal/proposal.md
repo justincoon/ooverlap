@@ -46,6 +46,19 @@ Competition:
 Timeline:
 ---------
 
+| Date   | Objective                                                                             |
+|--------|---------------------------------------------------------------------------------------|
+| Oct 03 | Finish preliminary design of overall website structure.                               |
+| Oct 17 | Research: Google Calendar API                                                         |
+| Oct 31 | Implement Google Calendar integration with OAuth.                                     |
+| Nov 06 | Add user account and chat capabilities.                                               |
+| Nov 13 | Implement calendar difference algorithm.                                              |
+| Nov 20 | Implement priorities for events.                                                      |
+| Nov 22 |                                                                                       |
+| Nov 25 | Finish project. Wrap up all loose ends and confirm overall cohesiveness of the site.  |
+Justin Coon [Sept 28 2014]
+
+
 Budget:
 -------
 | Asset            | Rate                 | Cost (3 months) |

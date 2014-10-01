@@ -29,6 +29,11 @@ UI Designer, Software Engineer
 
 >Grew up in the South Shore of Massachusetts, in Hingham, MA specifically. He's a junior at the University of Massachusetts Amherst, studying Computer Science. He has an interest in design, which he hopes to explore in working with User Interfaces, and has an interest in working in both front end and back end development as well. 
 
+**Justin Coon**
+Software Engineer, Technology Integration Specialist
+
+>A sophomore at University of Massachusetts, Amherst majoring in Computer Science. Interested primarily in back end development with node and will be working towards integration with Google Calendar and Facebook.
+
 Problem Statement:
 ------------------
 

@@ -39,6 +39,8 @@ Problem Statement:
 
 Product Description:
 --------------------
+Nowadays, there are several multi-platform applications that allow you to keep a record of your schedule. When two or more individuals want to meet for any purpose, they have to check their own schedule and present their free time to the people the want to meet with. Other applications, allow you to share your calendar, making other people go over your schedule to figure out when they can meet with you. Going over your schedule or someone else’s every time you want to meet with someone, makes this whole experience completely annoying and inefficient.  
+Overlap is multi-platform application that allows users to detect overlaps between their schedule and their friends’ schedule. In that way, individuals can find the perfect time in their schedule to meet for any given purpose. Our complex algorithm and priority sets allow our users to schedule a meeting in a fast and efficient fashion. Being able to connect Overlap with other products allows you to transfer your schedules from other applications, in that way, you do not have to make your schedule from scratch.
 
 Competition:
 ------------

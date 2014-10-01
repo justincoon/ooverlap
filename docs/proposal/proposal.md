@@ -15,7 +15,7 @@ UI/UX Designer, Software Engineer
 
 >An Asian geek who sleeps with Java every night but falls in love with Python instead, who desires to solve challenging back-end problems but also fascinated in creating fabulous UI design. Being a person who favors "high entropy" (in other words: "utmost laziness"), he loves utilizing his computer to save his time and work, that's why he is now craving to learn about Machine Learning and Information Retrieval.
 
-_Giovanna Diaz_
+**Giovanna Diaz**
 Project Manager, Graphic Designer
 
 >A Dallas, Texas native, Giovanna Diaz is a junior at Smith College double majoring in Computer Science and Mathematics. She also has a great interest in design and will jump at any chance she gets to use the Adobe Creative Suite!

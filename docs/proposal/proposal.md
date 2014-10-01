@@ -9,3 +9,22 @@ Team: Undefined
 
 App Name:
 ---------
+
+Meet the Team:
+--------------
+
+Problem Statement:
+------------------
+
+Product Description:
+--------------------
+
+Competition:
+------------
+
+Timeline:
+---------
+
+Budget:
+-------
+

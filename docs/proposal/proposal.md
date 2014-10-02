@@ -50,7 +50,7 @@ Software Engineer, Technology Integration Specialist
 
 Problem Statement:
 ------------------
-**[Authored by Colin McGinnis, Kiernan Drohan on October 1, 2014]**
+**[Authored by Colin McGinnis, Kiernan Drohan, and Justin Coon on October 1, 2014]**
 
 From the arcane 'paper and pencil' method, to Google Calendar and beyond, the sheer number of scheduling applications that exist is daunting. With so many available platforms to choose from, it feels as though everybody uses something different. One person might even have different schedules spread out over different platforms. Trying to organize your life with multiple apps seems redundent - you shoud only need one! In addition, picking out free times from your schedule to meet with groups, hang out with friends, or go to a concert can be a hassle. (Believe us, we know from experience. Finding times for our group to meet was very confusing and troublesome at first!)
 
@@ -58,7 +58,7 @@ Undefined hopes to change that with Overlap, a web application designed to make 
 
 _Ideas that Change the World_ also served as a point of inspriation for the team. One idea promoted in the course was the ability to take pre-existing ideas and improve upon them. We have implemented this idea by elevating your boring, old, Google Calendar to an entirely new level of connectivity with your peers. To this extent we will not only improve upon what exists, but we will also make a product more tailored to a designated audience of peers. The possibility of expansion to an even greater audience will beomce more real as we learn more about the user's needs through the scope of our integrative experiences.
 
-A class that inspired us inside the major was Computer Science 240: Reasoning About Uncertainty. One of the features that we plan to add to our web app is going to be priorities. Basically, you are given your calendar's complement and then you can choose which times work best for you. Then when you match your calendar with someone else's, we will use the statistical methods from 240 to decide which times are likely to be 'best' for the both of you.
+A class that inspired us inside the major was Computer Science 240: Reasoning About Uncertainty. One of the features that we plan to add to our web app is going to be priorities. Basically, you are given your calendar's complement and then you can choose which times work best for you. Then when you match your calendar with someone else's, we will be able to decide which times are most likely to be 'best' for the both of you. We can do this by using the statistical methods we have learned in CS240. This pivotal feature was inspired by the material covered in this course.
 
 
 Product Description:

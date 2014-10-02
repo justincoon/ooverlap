@@ -36,6 +36,11 @@ Software Engineer, Technology Integration Specialist
 
 Problem Statement:
 ------------------
+People from all backgrounds use many different apps or tools to schedule their lives. But there is so much variation on what tools are used, that sometimes it is easy to get lost in all the schedules that you have floating around. This can make it hard to find the free time that you and one or more people share, so that you can make plans to do something. Believe us, we know from experience. Finding times for our group to meet was very confusing and troublesome at first.
+
+But we hope to change all that and make it easier for people to figure out when their free time overlaps with someone else’s! Through the courses our group has taken outside of the major, such as Introduction to Sociology and Honors 291A: Ideas that Change the World, we have been inspired to find a solution to this scheduling problem. Through Introduction to Sociology, we have learned social interactions play a big role in our lives. They are responsible for so many things, such as cultural growth, the creation of new and innovative ideas that change the world, and just simply making friends. With our new app we want ideas and friendships to have a chance to grow and mature into something greater than they could be individually.
+
+Ideas that Change the World also gave us inspiration to take on this task. First off, as I said earlier, social interactions facilitate ideas that change the world, so that right there is partly inspired by this class as well. However, there were other things we gleaned from that class as well. One idea promoted in Honors291A is being able to take ideas that already exist and improve them. We have been looking to implement this idea by utilizing Google Calendar, but taking it to an entirely new level of connection with your peers. To this extent we will not only improve upon, we will also make a product more tailored to a designated audience of peers with the possibility of expansion to a greater audience as we are able to understand their needs through the scope of our integrative experiences.
 
 Product Description:
 --------------------

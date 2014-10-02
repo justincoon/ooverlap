@@ -9,6 +9,9 @@ Team: Undefined
 
 Meet the Team:
 --------------
+**[Authored by Undefined on October 2, 2014]**
+
+
 **Santiago De La Torre**
 Database Analyst
 
@@ -49,6 +52,7 @@ Problem Statement:
 ------------------
 **[Authored by Colin McGinnis and Kiernan Drohan on October 1, 2014]**
 
+
 People from all backgrounds use many different apps or tools to schedule their lives. But there is so much variation on what tools are used, that sometimes it is easy to get lost in all the schedules that you have floating around. This can make it hard to find the free time that you and one or more people share, so that you can make plans to do something. Believe us, we know from experience. Finding times for our group to meet was very confusing and troublesome at first.
 
 But we hope to change all that and make it easier for people to figure out when their free time overlaps with someone else’s! Through the courses our group has taken outside of the major, such as Introduction to Sociology and Honors 291A: Ideas that Change the World, we have been inspired to find a solution to this scheduling problem. Through Introduction to Sociology, we have learned social interactions play a big role in our lives. They are responsible for so many things, such as cultural growth, the creation of new and innovative ideas that change the world, and just simply making friends. With our new app we want ideas and friendships to have a chance to grow and mature into something greater than they could be individually.
@@ -59,6 +63,8 @@ Ideas that Change the World also gave us inspiration to take on this task. First
 Product Description:
 --------------------
 **[Authored by Santiago De La Torre and Giovanna Diaz on Oct 2, 2014]**
+
+
 Nowadays, there are several multi-platform applications that allow you to keep a record of your schedule. When two or more individuals want to meet for any purpose, they have to check their own schedule and present their free time to the people the want to meet with. Other applications, allow you to share your calendar, making other people go over your schedule to figure out when they can meet with you. Going over your schedule or someone else’s every time you want to meet with someone, makes this whole experience completely annoying and inefficient.  
 Overlap is multi-platform application that allows users to detect overlaps between their schedule and their friends’ schedule. In that way, individuals can find the perfect time in their schedule to meet for any given purpose. Our complex algorithm and priority sets allow our users to schedule a meeting in a fast and efficient fashion. Being able to connect Overlap with other products allows you to transfer your schedules from other applications, in that way, you do not have to make your schedule from scratch.
 
@@ -66,6 +72,8 @@ Overlap is multi-platform application that allows users to detect overlaps betwe
 Competition:
 ------------
 **[Authored by Mariem Ayadi on Oct 2, 2014]**
+
+
 Many of us may have heard the expression “There is an App of that!”.
 This is idea holds true for web applications, just as it does for mobile apps. At Overlap, we believe that it is important to be aware of our competitors because it helps develop a unique product that offers many additional features that might be missing in different products.
 Below, we explain how Overlap differentiates itself from other competitors.
@@ -94,6 +102,7 @@ Timeline:
 ---------
 **[Authored by Justin Coon on September 28, 2014]**
 
+
 | Date   | Objective                                                                                              |
 |--------|--------------------------------------------------------------------------------------------------------|
 | Oct 03 | Research: Google Calendar and Facebook APIs, databases, competitors.                                   |
@@ -108,6 +117,7 @@ Timeline:
 Budget:
 -------
 **[Authored by Thai Nguyen on September 30, 2014]**
+
 
 | Asset            | Rate                 | Cost (3 months) |
 |------------------|----------------------|-----------------|

@@ -63,6 +63,7 @@ Product Description:
 --------------------
 **[Authored by Santiago De La Torre and Giovanna Diaz on Oct 2, 2014]**
 
+![Overlap Logo] (https://github.com/umass-cs-326/team-undefined/blob/master/docs/proposal/Overlap.jpg)
 
 Nowadays, there are several multi-platform applications that allow you to keep a record of your schedule. When two or more individuals want to meet for any purpose, they have to check their own schedule and present their free time to the people the want to meet with. Other applications allow you to share your calendar, making other people go over your schedule to figure out when they can meet with you. Going over your schedule or someone else’s every time you want to meet with someone, makes this whole experience completely annoying and inefficient.  
 

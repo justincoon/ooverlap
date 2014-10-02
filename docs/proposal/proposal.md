@@ -57,6 +57,34 @@ Overlap is multi-platform application that allows users to detect overlaps betwe
 Competition:
 ------------
 
+Many of us may have heard the expression “There is an App of that!”.
+This is idea holds true for web applications, just as it does for mobile apps. At Overlap, we believe that it is important to be aware of our competitors because it helps develop a unique product that offers many additional features that might be missing in different products.
+Below, we explain how Overlap differentiates itself from other competitors.
+
+**Schedule Share**
+>scheduleshare.net
+
+ScheduleShare only offers the possibility to use their product Google Calender. At Overlap, even though our product is centered around the usage of gmail and thus Google Calender, we will provide guidelines and alternative ways to log in for non-google account users.
+Even more importantly, ScheduleShare is not a free web application; it requires subscription. Overlap will be entirely free for the user.
+
+**Google Calender**
+
+As previously mentioned above, Overlap will also offer non-google account users to log in and use our web application. Google calendar can be used in its plain form, however this implies that the user would have to create multiple calendars: one for private meetings and potentially another one for public events. Overlap will resolve that issue by allowing the user to specify what type of event they would like input: private or public. 
+Example:
+Meeting @ 2pm - Public? Private?
+Class @ 4:14 - Public? Private?
+Accept | Skip
+
+**Kalendi**
+>www.kalendi.com
+
+Kalendi does not seem to have an extensive number of users. Its UI display seems slightly outdated and the subscription fee is relatively high. Overlap will considerably improve those aspects while also being a free service.
+
+Mariem Ayadi [Oct 2nd 2014]
+
+
+
+
 Timeline:
 ---------
 

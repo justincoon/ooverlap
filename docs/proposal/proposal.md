@@ -50,7 +50,7 @@ Software Engineer, Technology Integration Specialist
 
 Problem Statement:
 ------------------
-**[Authored by Colin McGinnis and Kiernan Drohan on October 1, 2014]**
+**[Authored by Colin McGinnis, Kiernan Drohan on October 1, 2014]**
 
 From the arcane 'paper and pencil' method, to Google Calendar and beyond, the sheer number of scheduling applications that exist is daunting. With so many available platforms to choose from, it feels as though everybody uses something different. One person might even have different schedules spread out over different platforms. Trying to organize your life with multiple apps seems redundent - you shoud only need one! In addition, picking out free times from your schedule to meet with groups, hang out with friends, or go to a concert can be a hassle. (Believe us, we know from experience. Finding times for our group to meet was very confusing and troublesome at first!)
 
@@ -58,16 +58,20 @@ Undefined hopes to change that with Overlap, a web application designed to make 
 
 _Ideas that Change the World_ also served as a point of inspriation for the team. One idea promoted in the course was the ability to take pre-existing ideas and improve upon them. We have implemented this idea by elevating your boring, old, Google Calendar to an entirely new level of connectivity with your peers. To this extent we will not only improve upon what exists, but we will also make a product more tailored to a designated audience of peers. The possibility of expansion to an even greater audience will beomce more real as we learn more about the user's needs through the scope of our integrative experiences.
 
+<Still needed: One class within the major! />
+
 
 Product Description:
 --------------------
-**[Authored by Santiago De La Torre and Giovanna Diaz on Oct 2, 2014]**
+**[Authored by Santiago De La Torre, Giovanna Diaz on Oct 2, 2014]**
 
 ![Overlap Logo] (https://github.com/umass-cs-326/team-undefined/blob/master/docs/proposal/Overlap.jpg)
 
 Nowadays, there are several multi-platform applications that allow you to keep a record of your schedule. When two or more individuals want to meet for any purpose, they have to check their own schedule and present their free time to the people the want to meet with. Other applications allow you to share your calendar, making other people go over your schedule to figure out when they can meet with you. Going over your schedule or someone else’s every time you want to meet with someone, makes this whole experience completely annoying and inefficient.  
 
-Overlap is multi-platform application that allows users to detect overlaps between their schedule and their friends’ schedule. In that way, individuals can find the perfect time in their schedule to meet for any given purpose. Our complex algorithm and priority sets allow our users to schedule a meeting in a fast and efficient fashion. Being able to connect Overlap with other products allows you to transfer your schedules from other applications, in that way, you do not have to make your schedule from scratch.
+Overlap is multi-platform application that allows users to detect overlaps between their schedule and their friends’ schedule. In that way, individuals can find the perfect time to meet for any given purpose. With the "Priority" feature, a our user can set which free times they want to priortize first and Overlap will do the rest.
+
+Overlap solves your scheduling problems. If you need to meet a friend, simply have Overlap compare your schedules. There is no back and forth emails, or accidentally forgetting a commitment. This will not only enhance your social interactions, cutting out the frustration of scheduling, but will also increase your number of social interactions.
 
 
 Competition:

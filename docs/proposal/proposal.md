@@ -58,7 +58,7 @@ Undefined hopes to change that with Overlap, a web application designed to make 
 
 _Ideas that Change the World_ also served as a point of inspriation for the team. One idea promoted in the course was the ability to take pre-existing ideas and improve upon them. We have implemented this idea by elevating your boring, old, Google Calendar to an entirely new level of connectivity with your peers. To this extent we will not only improve upon what exists, but we will also make a product more tailored to a designated audience of peers. The possibility of expansion to an even greater audience will beomce more real as we learn more about the user's needs through the scope of our integrative experiences.
 
-<Still needed: One class within the major! />
+One of the classes that inspired us inside the major was Computer Science 240: Reasoning About Uncertainty. One of the features that we plan to add to our web app is going to be priorities. Basically, you are given your calendar's complement and then you can choose which times work best for you. Then when you match your calendar with someone else's, we will use the statistical methods from 240 to decide which times are likely to be 'best' for the both of you.
 
 
 Product Description:

@@ -44,6 +44,7 @@ Software Engineer, Technology Integration Specialist
 
 >A sophomore at University of Massachusetts, Amherst majoring in Computer Science. Originally from Longmeadow, MA he now lives in Dallas, TX for summers but comes back for the cold UMass winters. Primarily going to be doing back end development with node and will be working towards integration with Google Calendar and Facebook.
 
+
 Problem Statement:
 ------------------
 **[Authored by Colin McGinnis and Kiernan Drohan on October 1, 2014]**
@@ -54,14 +55,17 @@ But we hope to change all that and make it easier for people to figure out when 
 
 Ideas that Change the World also gave us inspiration to take on this task. First off, as I said earlier, social interactions facilitate ideas that change the world, so that right there is partly inspired by this class as well. However, there were other things we gleaned from that class as well. One idea promoted in Honors291A is being able to take ideas that already exist and improve them. We have been looking to implement this idea by utilizing Google Calendar, but taking it to an entirely new level of connection with your peers. To this extent we will not only improve upon, we will also make a product more tailored to a designated audience of peers with the possibility of expansion to a greater audience as we are able to understand their needs through the scope of our integrative experiences.
 
+
 Product Description:
 --------------------
+**[Authored by Santiago De La Torre and Giovanna Diaz on Oct 2, 2014]**
 Nowadays, there are several multi-platform applications that allow you to keep a record of your schedule. When two or more individuals want to meet for any purpose, they have to check their own schedule and present their free time to the people the want to meet with. Other applications, allow you to share your calendar, making other people go over your schedule to figure out when they can meet with you. Going over your schedule or someone else’s every time you want to meet with someone, makes this whole experience completely annoying and inefficient.  
 Overlap is multi-platform application that allows users to detect overlaps between their schedule and their friends’ schedule. In that way, individuals can find the perfect time in their schedule to meet for any given purpose. Our complex algorithm and priority sets allow our users to schedule a meeting in a fast and efficient fashion. Being able to connect Overlap with other products allows you to transfer your schedules from other applications, in that way, you do not have to make your schedule from scratch.
 
+
 Competition:
 ------------
-
+**[Authored by Mariem Ayadi on Oct 2, 2014]**
 Many of us may have heard the expression “There is an App of that!”.
 This is idea holds true for web applications, just as it does for mobile apps. At Overlap, we believe that it is important to be aware of our competitors because it helps develop a unique product that offers many additional features that might be missing in different products.
 Below, we explain how Overlap differentiates itself from other competitors.
@@ -85,13 +89,10 @@ Accept | Skip
 
 Kalendi does not seem to have an extensive number of users. Its UI display seems slightly outdated and the subscription fee is relatively high. Overlap will considerably improve those aspects while also being a free service.
 
-Mariem Ayadi [Oct 2nd 2014]
-
-
-
 
 Timeline:
 ---------
+**[Authored by Justin Coon on September 28, 2014]**
 
 | Date   | Objective                                                                                              |
 |--------|--------------------------------------------------------------------------------------------------------|
@@ -102,11 +103,12 @@ Timeline:
 | Nov 20 | Implement user feedback and anything else we have yet to finish.                                       |
 | Nov 22 | Debugging, patching, begin working on presentation.                                                    |
 | Nov 28 | Finish project and presentation. Wrap up all loose ends and confirm overall cohesiveness of the site.  |
-Justin Coon [Sept 28 2014]
 
 
 Budget:
 -------
+**[Authored by Thai Nguyen on September 30, 2014]**
+
 | Asset            | Rate                 | Cost (3 months) |
 |------------------|----------------------|-----------------|
 | Domain + Hosting | 30$/month            | 90$             |
@@ -127,5 +129,3 @@ Because we are providing an open-source and free product, we consider ourselves 
 Last but not least, Domain and Hosting is gonna takes us around 30$ per month and Office supplies (notes, paper, print …) is also around 50$ per month. We also need to have a monthly budget of 100$/month to spend on any other miscellaneous things.
 
 In total, to run efficiently in the first 3 months, our start-up needs around $4000.
-
-Thai Nguyen [Sept 30 2014]

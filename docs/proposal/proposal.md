@@ -67,7 +67,7 @@ This is idea holds true for web applications, just as it does for mobile apps. A
 Below, we explain how Overlap differentiates itself from other competitors.
 
 **Schedule Share**
->scheduleshare.net
+>www.scheduleshare.net
 
 ScheduleShare only offers the possibility to use their product Google Calender. At Overlap, even though our product is centered around the usage of gmail and thus Google Calender, we will provide guidelines and alternative ways to log in for non-google account users.
 Even more importantly, ScheduleShare is not a free web application; it requires subscription. Overlap will be entirely free for the user.

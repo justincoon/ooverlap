@@ -29,6 +29,11 @@ UI Designer, Software Engineer
 
 >Grew up in the South Shore of Massachusetts, in Hingham, MA specifically. He's a junior at the University of Massachusetts Amherst, studying Computer Science. He has an interest in design, which he hopes to explore in working with User Interfaces, and has an interest in working in both front end and back end development as well. 
 
+**Mariem Ayadi**
+Software Engineer and Marketing Leader
+
+>Junior at Smith College, majoring in Computer Science with a minor in Engineering. She is Tunisian/Moroccan nternational student who enjoys learning languages. Interested in back-end development with a focus on databases. Mariem will be responsible for marketing the product in order to increase user interest.
+
 **Kiernan Drohan**
 Business Integration and User Access Specialist
 

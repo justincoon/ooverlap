@@ -29,6 +29,11 @@ UI Designer, Software Engineer
 
 >Grew up in the South Shore of Massachusetts, in Hingham, MA specifically. He's a junior at the University of Massachusetts Amherst, studying Computer Science. He has an interest in design, which he hopes to explore in working with User Interfaces, and has an interest in working in both front end and back end development as well. 
 
+**Kiernan Drohan**
+Business Integration and User Access Specialist
+
+>A Massachusetts native with roots set in the boroughs. Originally a Westborough native but now dwelling in Northborough Massacusetts. With a foot already in the door on the business side of things he seeks to further his knowledge in every direction. Junior at University of Massachusetts Amherst, majoring in Computer Science with a focus in security. Interested in back end security and transfer intricacies.
+
 **Justin Coon**
 Software Engineer, Technology Integration Specialist
 

@@ -71,6 +71,8 @@ Nowadays, there are several multi-platform applications that allow you to keep a
 
 Overlap is multi-platform application that allows users to detect overlaps between their schedule and their friends’ schedule. In that way, individuals can find the perfect time to meet for any given purpose. With the "Priority" feature, a our user can set which free times they want to priortize first and Overlap will do the rest.
 
+Overlap allows the user
+
 Overlap solves your scheduling problems. If you need to meet a friend, simply have Overlap compare your schedules. There is no back and forth emails, or accidentally forgetting a commitment. This will not only enhance your social interactions, cutting out the frustration of scheduling, but will also increase your number of social interactions.
 
 

@@ -9,7 +9,7 @@ Team: Undefined
 
 Meet the Team:
 --------------
-**[Authored by Undefined on October 2, 2014]**
+[Authored by Undefined on October 2, 2014]
 
 
 **Santiago De La Torre**
@@ -50,20 +50,20 @@ Software Engineer, Technology Integration Specialist
 
 Problem Statement:
 ------------------
-**[Authored by Colin McGinnis, Kiernan Drohan, and Justin Coon on October 1, 2014]**
+[Authored by Colin McGinnis, Kiernan Drohan, Justin Coon, & Giovanna Diaz on October 1, 2014]
 
 From the arcane 'paper and pencil' method, to Google Calendar and beyond, the sheer number of scheduling applications that exist is daunting. With so many available platforms to choose from, it feels as though everybody uses something different. One person might even have different schedules spread out over different platforms. Trying to organize your life with multiple apps seems redundent - you shoud only need one! In addition, picking out free times from your schedule to meet with groups, hang out with friends, or go to a concert can be a hassle. (Believe us, we know from experience. Finding times for our group to meet was very confusing and troublesome at first!)
 
 Undefined hopes to change that with Overlap, a web application designed to make it easier for people to share their free time right when they need to! Through courses team members have taken outside of the major, such as _Introduction to Sociology_ and Honors 291A: _Ideas that Change the World_, we have been inspired to find a solution to this scheduling problem. _Introduction to Sociology_ taught us that social interactions play a big role in our lives. They are responsible for things such as cultural growth, the creation of new and innovative ideas that change the world, and just simply making friends. Overlap facilitates social interaction. It simplifies the scheduling process to just a question of 'Where' rather than 'When'. With our new app we want ideas and friendships to have a chance to grow and mature into something greater than they could be individually.
 
-_Ideas that Change the World_ also served as a point of inspriation for the team. One idea promoted in the course was the ability to take pre-existing ideas and improve upon them. We have implemented this idea by elevating your boring, old, Google Calendar to an entirely new level of connectivity with your peers. To this extent we will not only improve upon what exists, but we will also make a product more tailored to a designated audience of peers. The possibility of expansion to an even greater audience will beomce more real as we learn more about the user's needs through the scope of our integrative experiences.
+_Ideas that Change the World_ also served as a point of inspriation for the team. One idea promoted in the course was the ability to take pre-existing ideas and improve upon them. We have implemented this idea by elevating your boring, old, Google Calendar to an entirely new level of connectivity with your peers. To this extent we will not only improve upon what exists, but we will also make a product more tailored to a designated audience of peers. The possibility of expansion to an even greater audience will become more real as we learn more about the user's needs through the scope of our integrative experiences.
 
-A class that inspired us inside the major was Computer Science 240: _Reasoning About Uncertainty_. One of the features that we plan to add to our web app is going to be priorities. Basically, you are given your calendar's complement and then you can choose which times work best for you. When you match your calendar with someone else's, we will be able to decide which times are most likely to be 'best' for the both of you. We can do this by using the statistical methods we have learned in CS240. This pivotal feature was inspired by the material covered in this course.
+A class that inspired us inside the major was Computer Science 240: _Reasoning About Uncertainty_. One of the features that we plan to add to our web app is going to be priorities. Basically, when you are shown your free time, you can choose which times work best for you. Not only that, but you can also set which free times you prefer. (eg. You are free Monday and Tuesday, but you prefer the Monday time slot.) When we match your calendar with someone else's, we will be able to decide which times are most likely to be the 'best' for both of you. We can do this by using the statistical methods we have learned in CS240.
 
 
 Product Description:
 --------------------
-**[Authored by Santiago De La Torre, Giovanna Diaz on Oct 2, 2014]**
+[Authored by Santiago De La Torre, Giovanna Diaz on Oct 2, 2014]
 
 ![Overlap Logo] (https://github.com/umass-cs-326/team-undefined/blob/master/docs/proposal/Overlap.jpg)
 
@@ -78,7 +78,7 @@ Overlap solves your scheduling problems. If you need to meet a friend, simply ha
 
 Competition:
 ------------
-**[Authored by Mariem Ayadi on Oct 2, 2014]**
+[Authored by Mariem Ayadi on Oct 2, 2014]
 
 
 Many of us may have heard the expression “There is an App of that!”.
@@ -94,10 +94,10 @@ Even more importantly, ScheduleShare is not a free web application; it requires 
 **Google Calender**
 
 As previously mentioned above, Overlap will also offer non-google account users to log in and use our web application. Google calendar can be used in its plain form, however this implies that the user would have to create multiple calendars: one for private meetings and potentially another one for public events. Overlap will resolve that issue by allowing the user to specify what type of event they would like input: private or public. 
-Example:
-Meeting @ 2pm - Public? Private?
-Class @ 4:14 - Public? Private?
-Accept | Skip
+Example:  
+Meeting @ 2pm - Public? Private?  
+Class @ 4:14 - Public? Private?  
+Accept | Skip  
 
 **Kalendi**
 >www.kalendi.com
@@ -107,7 +107,7 @@ Kalendi does not seem to have an extensive number of users. Its UI display seems
 
 Timeline:
 ---------
-**[Authored by Justin Coon on September 28, 2014]**
+[Authored by Justin Coon on September 28, 2014]
 
 
 | Date   | Objective                                                                                              |
@@ -123,7 +123,7 @@ Timeline:
 
 Budget:
 -------
-**[Authored by Thai Nguyen on September 30, 2014]**
+[Authored by Thai Nguyen on September 30, 2014]
 
 
 | Asset            | Rate                 | Cost (3 months) |
@@ -137,12 +137,12 @@ Budget:
 | Miscellaneous    | 100$/month           | 300$            |
 | Total            |                      | ~4000$          |
 
-Since we intend to provide our application for free and with open source code, we try to minimize the expense as much as we can. 
+Since we intend to provide our application for free and with open source code, we have tried to minimize the expense as much as we can. 
 
-The most expensive cost will be spent on Advertising. Since we’re a new start-up, we need to promote our products so people have a chance to try it out and provide us useful feedback. We’re gonna have 20$ daily budget for both Google Ads and Facebook Ads, which totals 140$/week. Another way to promote our product is to design our own Swag like T-shirts, stickers, etc with our logo and brand. It does not only boost our company spirit but also raise others’ curiosity about our product. Projected cost of ordering the t-shirts/stickers is around 400$.
+The most expensive cost will be spent on Advertising. Since we’re a new start-up, we need to promote our products so people have a chance to try it out and provide us with useful feedback. We’re gonna have 20$ daily budget for both Google Ads and Facebook Ads, which totals 140$/week. Another way to promote our product is to design our own Swag like T-shirts, stickers, etc with our logo and brand. It does not only boost our company spirit but will also raise others’ curiosity about our product. Projected cost of ordering the t-shirts/stickers is around 400$.
 
 Because we are providing an open-source and free product, we consider ourselves “unpaid interns” who want to develop the application to help others rather than gaining economical benefits. However, as a group of enthusiastic and dynamic young people, we need a lot of food and drink to produce high quality code. That’s why we’re gonna spend around 100$/week for “energy supplies”.
 
-Last but not least, Domain and Hosting is gonna takes us around 30$ per month and Office supplies (notes, paper, print …) is also around 50$ per month. We also need to have a monthly budget of 100$/month to spend on any other miscellaneous things.
+Last but not least, Domain and Hosting is going to take us around 30$ per month and Office supplies (notes, paper, print …) is also around 50$ per month. Additionally, We need to have a monthly budget of 100$/month to spend on any other miscellaneous things.
 
 In total, to run efficiently in the first 3 months, our start-up needs around $4000.

@@ -69,7 +69,7 @@ Product Description:
 
 Nowadays, there are many multi-platform applications that allow you to keep a record of your schedule. When two or more individuals want to meet for any purpose, they have to check their own schedule and present their free time to the people the want to meet with. Other applications simply allow you to share your calendar, thus forcing other people go over your schedule to figure out a meeting time. Going over a schedule every time you want to meet with someone makes the whole experience of meeting completely annoying and inefficient.  
 
-Overlap is multi-platform application that allows users to detect overlaps between their schedule and their friends’ schedule. In that way, individuals can find the perfect time to meet for any given purpose. With the "Priority" feature, a  user can prioritize their free time. Overlap will then take their priorities in to consideration when comparing the schedules.
+Overlap is a multi-platform application that allows users to detect overlaps between their schedule and their friend's schedule. In that way, individuals can find the perfect time to meet for any given purpose. With the "Priority" feature, a  user can prioritize their free time. Overlap will then take their priorities in to consideration when comparing the schedules.
 
 Overlap is great for college students and professionals alike. It will include connections with Facebook and LinkedIn allowing the users to find their friends with ease. Overlap solves your scheduling problems. If you need to meet a friend, simply have Overlap compare your schedules. There is no back and forth emails, or accidentally forgetting a commitment. This will not only enhance your social interactions, cutting out the frustration of scheduling, but will also increase your number of social interactions.
 
@@ -79,7 +79,7 @@ Competition:
 [Authored by Mariem Ayadi on Oct 2, 2014]
 
 
-Many of us may have heard the expression “There is an App of that!”.
+Many of us may have heard the expression “There is an App for that!”.
 This is idea holds true for web applications, just as it does for mobile apps. With Overlap, we believe that it is important to be aware of our competitors because it helps develop a unique product that offers many additional features that might be missing in different products.
 Below, we explain how Overlap differentiates itself from other competitors.
 

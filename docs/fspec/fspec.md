@@ -8,3 +8,29 @@ General Information:
 
 Team Organization: 
 ------------------
+**Giovanna Diaz:** Project Manager, Graphic Designer  
+*Responsibilities:*  
+- _something here_
+
+**Santiago De La Torre:** Database Analyst  
+*Responsibilities:*  
+- _something here_
+
+**Justin Coon:** Software Engineer, Technology Integration Specialist  
+*Responsibilities:*  
+- _something here_
+
+**Thai Nguyen:** UI/UX Designer, Software Engineer  
+*Responsibilities:*  
+- _something here_
+
+**Colin McGinnis:** UI/UX Designer, Software Engineer  
+*Responsibilities:*  
+- _something here_
+
+**Kiernan Drohan:** Software Engineer, Technology Integration Specialist  
+*Responsibilities:*  
+- _something here_
+
+
+

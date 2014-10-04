@@ -39,28 +39,28 @@ Overview:
 ---------
   
   
-<p align = "right"></em>>[Written by  - ??/??/2014]</em></p>
+<p align = "right"><em>[Written by  - ??/??/2014]</em></p>
 
 Scenarios:
 ----------
   
 
-<p align = "right"></em>>[Written by  - ??/??/2014]</em></p>  
+<p align = "right"><em>[Written by  - ??/??/2014]</em></p>  
 
 Non-Goals:
 ----------
   
 
-<p align = "right"></em>>[Written by  - ??/??/2014]</em></p>
+<p align = "right"><em>[Written by  - ??/??/2014]</em></p>
 
 Flowchart:
 ----------
   
 
-<p align = "right"></em>>[Written by  - ??/??/2014]</em></p>
+<p align = "right"><em>[Written by  - ??/??/2014]</em></p>
 
 Screen-by-Screen:
 -----------------
   
 
-<p align = "right"></em>>[Written by  - ??/??/2014]</em></p>
+<p align = "right"><em>[Written by  - ??/??/2014]</em></p>

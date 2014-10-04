@@ -4,14 +4,14 @@ General Information:
 --------------------
 
 **Name of System:** Overlap  
-**Authors:** Giovanna Diaz, Santiago De La Torre, Justin Coon, Thai Nguyen, Colin McGinnis, and Kiernan Drokahn (Team Undefined)  
+**Authors:** Giovanna Diaz, Santiago De La Torre, Justin Coon, Thai Nguyen, Colin McGinnis, and Kiernan Drohan (Team Undefined)  
   
-<p align="center"><em>This file was Last Revised on: October 4, 2014</em></p>
+<p align="center"><em>This file was last revised on: October 4, 2014</em></p>
 
 Revision History:
 ----------------- 
-| Date | Name | Revision |
-|------|------|----------|
+| Date     | Name | Revision |
+|----------|------|----------|
 | 10-04-14 | Giovanna Diaz | Created and Uploaded File |
 
 

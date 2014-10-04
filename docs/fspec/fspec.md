@@ -6,9 +6,18 @@ General Information:
 **Name of System:** Overlap  
 **Authors:** Giovanna Diaz, Santiago De La Torre, Justin Coon, Thai Nguyen, Colin McGinnis, and Kiernan Drokahn (Team Undefined)  
 **Revision History:** October 4, 2014  
-| Date      | Name     | Revision               |
-|-----------|----------|------------------------|
-| 10-4-2014 | Giovanna | Created File           |
+<table>
+	<tr>
+		<td> Date </td>
+		<td> Name </td>
+		<td> Revision </td>
+	</tr>
+	<tr>
+		<td> 10-04-14 </td>
+		<td> Giovanna Diaz </td>
+		<td> Created the File </td>
+	</tr>
+</table>
 
 Team Organization: 
 ------------------

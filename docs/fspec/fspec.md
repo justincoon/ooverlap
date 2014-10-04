@@ -5,7 +5,12 @@ General Information:
 
 **Name of System:** Overlap  
 **Authors:** Giovanna Diaz, Santiago De La Torre, Justin Coon, Thai Nguyen, Colin McGinnis, and Kiernan Drokahn (Team Undefined)  
-**Revision History:** <table>
+  
+<p align="center">*This File was Last Revised on: October 4, 2014*</p>
+
+Revision History:
+----------------- 
+<table>
 	<tr>
 		<td> Date </td>
 		<td> Name </td>
@@ -14,7 +19,7 @@ General Information:
 	<tr>
 		<td> 10-04-14 </td>
 		<td> Giovanna Diaz </td>
-		<td> Created the File </td>
+		<td> Created and uploaded File </td>
 	</tr>
 </table>
 

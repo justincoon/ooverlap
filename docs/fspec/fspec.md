@@ -1,9 +1,11 @@
+![Undefined Logo] (https://github.com/umass-cs-326/team-undefined/blob/master/docs/UndefinedLogo.jpg)
+
 General Information:
 --------------------
 
 **Name of System:** Overlap  
 **Authors:** Giovanna Diaz, Santiago De La Torre, Justin Coon, Thai Nguyen, Colin McGinnis, and Kiernan Drokahn (Team Undefined)  
-**Last Updated:** October 3, 2014  
+**Revision History:** October 3, 2014  
 
 
 Team Organization: 

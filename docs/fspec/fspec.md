@@ -33,10 +33,6 @@ Team Organization:
 *Responsibilities:*  
 - _something here_
 
-**Colin McGinnis:** UI/UX Designer, Software Engineer  
-*Responsibilities:*  
-- _something here_
-
 **Kiernan Drohan:** Software Engineer, Technology Integration Specialist  
 *Responsibilities:*  
 - _something here_

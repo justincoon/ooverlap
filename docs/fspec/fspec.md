@@ -48,7 +48,9 @@ Disclaimer:
 -----------
 The functional specification of our web application is very straight forward. We load the user’s schedule and we compare them to other user’s schedule to see when they overlap and return the times when two or more schedules don’t overlap so events can be scheduled. Our web application is subject for extension and modification.
   
-<p align = "right"><em>[Written by  - ??/??/2014]</em></p>
+<p align = "right"><em>[Written by Santiago - 15/10/2014]</em></p>
+
+
 
 Scenarios:
 ----------
@@ -76,6 +78,18 @@ Flowchart:
 
 Screen-by-Screen:
 -----------------
-  
+ 
+|Privacy & Security.                                                          | 
+|Schedules being stored in the user’s database.								|
+|Time limit when users can meet.										 |
+|Integrating other scheduling system in ours.								|
+|Refreshing other scheduling systems when they have changes.					|
+|If you send out multiple requests at one time, we need to update the other requests with the newly used time when a request is completed.|
 
-<p align = "right"><em>[Written by  - ??/??/2014]</em></p>
+
+
+
+
+
+ -------------------------------
+<p align = "right"><em>[Written by  Santiago - 15/10/2014]</em></p>

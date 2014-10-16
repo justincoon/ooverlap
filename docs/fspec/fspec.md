@@ -106,10 +106,9 @@ Wireframe Images:
 
 
 
-| 1 |
-| 2 |
-|---|
-
-
+|          |
+|----------|
+| santiago |
+| thai     |
  -------------------------------
 <p align = "right"><em>[Written by  Santiago - 15/10/2014]</em></p>

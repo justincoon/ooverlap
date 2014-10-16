@@ -107,18 +107,41 @@ Although represented as one page, this page will really be one long page that yo
 
 ###Profile: Personal View  
 ![Personal Profile] (https://github.com/umass-cs-326/team-undefined/blob/master/docs/fspec/images/PersonalProfile.png)  
+The user’s profile view meets their needs in the following ways:
+- Easy viewing of friends and groups
+- Quick view of their calendar to see any upcoming events
+- Easy access to settings (gear - currently circle right next to their profile picture)
+- Easy access to scheduling an event: 2 ways: clicking on a friend’s profile picture or clicking the “Schedule Event” button on their profile  
+
+Simple, giving just the right amount of information!
 
 ###Profile: Personal View - Settings Page  
 ![Personal Profile:Settings] (https://github.com/umass-cs-326/team-undefined/blob/master/docs/fspec/images/user_settings.png)  
+All the settings the user could ever want - right there at a click of the mouse!
 
 ###Profile: External View  
 ![Personal Profile:External View] (https://github.com/umass-cs-326/team-undefined/blob/master/docs/fspec/images/public_Profile.png)  
+As mentioned in our non-goals, we are not trying to create a social networking site. This means, when you look at another user’s profile, there really isn’t much that you need to see besides their:
+- Profile Picture
+- General Information
+- Friendship status (with you)
+
+Where privacy is concerned, a user can eliminate their place of business, and their contact email from their public profile. When you click on another user’s profile picture, this information will pop up. This is also how your profile will be displayed to other users.
 
 ###Group: Moderator View  
 ![Group Profile:Mod View] (https://github.com/umass-cs-326/team-undefined/blob/master/docs/fspec/images/group_ModView.png)  
+Groups are for things such as a clubs, project teams, etc., where you will have recurring events. This is the moderator view. Moderators either were either the creator of the group / invited to become a moderator by a creator. This meets the moderator’s needs in the following ways:
+- Moderators can accept / decline people to the group (by clicking on the request - triggering a pop up window to confirm or reject)
+- Moderators have easy access to all of their members / other moderators
+- Quick access for scheduling an event
+- Quick view of their group calendar
 
 ###Group: Member View  
-![Group Profile:Member View] (https://github.com/umass-cs-326/team-undefined/blob/master/docs/fspec/images/group_UserView.png)
+![Group Profile:Member View] (https://github.com/umass-cs-326/team-undefined/blob/master/docs/fspec/images/group_UserView.png)  
+As a participant, the group is much more stripped down. The user can quickly see…
+- Moderators and other members of the group (they are in the same position as on the profile page for consistency across the site).
+- Upcoming events: Quick View - If you are doing a quick glance of the page, the upcoming events are posted right at the top so that users don’t have to search through the calendar
+- Full Calendar: Useful if the Members wants to see upcoming events in more detail / when past events were held
 
 <p align = "right"><em>[Written by Giovanna Diaz - 10/15/2014]</em></p>
 

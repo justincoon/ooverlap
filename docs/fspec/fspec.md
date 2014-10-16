@@ -95,20 +95,15 @@ Wireframe Images:
 ![Group Profile:Member View] (https://github.com/umass-cs-326/team-undefined/blob/master/docs/fspec/images/group_UserView.png)
 
 =======
-|---------------------------------------------------------------------------------------------------------------------|
-|Privacy & Security.                                                                                                  | 
-|Schedules being stored in the user’s database.								                                          |
-|Time limit when users can meet.										                                              |
-|Integrating other scheduling system in ours.								                                          |
-|Refreshing other scheduling systems when they have changes.					                                      |
-|If you send out multiple requests at one time, we need to update the other requests with the newly used time when a request is completed.                                                                                                 |
->>>>>>> 3b3f88b61af9968c42687632a95a2b222a8f17ff
-
 
 
 |          |
 |----------|
-| santiago |
-| thai     |
+| Privacy & Security.  |
+| Schedules being stored in the user’s database.     |
+|Time limit when users can meet.|
+|Integrating other scheduling system in ours.|
+|Refreshing other scheduling systems when they have changes.|
+|If you send out multiple requests at one time, we need to update the other requests with the newly used time when a request is completed.   |
  -------------------------------
 <p align = "right"><em>[Written by  Santiago - 15/10/2014]</em></p>

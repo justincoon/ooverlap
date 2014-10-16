@@ -89,7 +89,7 @@ Non-Goals:
 - We are not supporting multiple calendars per person (eg. work calendar / play calendar). It is assumed that everybody has one calendar for everything.
 
 
-<p align = "right"><em>[Written by Giovanna Diaz, Justin Coon - 10/?15/2014]</em></p>
+<p align = "right"><em>[Written by Giovanna Diaz, Justin Coon - 10/15/2014]</em></p>
 
 Flowchart:
 ----------

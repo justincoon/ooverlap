@@ -146,12 +146,10 @@ As a participant, the group is much more stripped down. The user can quickly see
 
 List of Open Issues:
 --------------------
-|Open Issues |
-|-----------------------------------------------------------------------------------------------------------------------------------------------|
-|Privacy & Security. 																|
-|Schedules being stored in the user’s database.  		         									|
-|Time limit when users can meet.														|
-|Integrating other scheduling system in ours.													|
-|Refreshing other scheduling systems when they have changes.											|
-|If you send out multiple requests at one time, we need to update the other requests with the newly used time when a request is completed.      |
+- Privacy & Security.
+- Schedules being stored in the user’s database.
+- Time limit when users can meet.
+- Integrating other scheduling system in ours.
+- Refreshing other scheduling systems when they have changes.
+- If you send out multiple requests at one time, we need to update the other requests with the newly used time when a request is completed.
 <p align = "right"><em>[Written by Santiago De La Torre Pinzon and Justin Coon - 10/15/2014]</em></p>

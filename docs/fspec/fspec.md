@@ -147,6 +147,7 @@ As a participant, the group is much more stripped down. The user can quickly see
 <p align = "right"><em>[Written by Giovanna Diaz - 10/15/2014]</em></p>
 
 
+
 List of Open Issues:
 --------------------
 - Privacy & Security.

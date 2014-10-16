@@ -4,7 +4,7 @@ General Information:
 --------------------
 
 **Name of System:** Overlap  
-**Authors:** Giovanna Diaz, Santiago De La Torre, Justin Coon, Thai Nguyen, Colin McGinnis, and Kiernan Drohan (Team Undefined)  
+**Authors:** Giovanna Diaz, Santiago De La Torre, Justin Coon, Thai Nguyen, and Kiernan Drohan (Team Undefined)  
   
 <p align="center"><em>This file was last revised on: October 4, 2014</em></p>
 

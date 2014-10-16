@@ -78,7 +78,7 @@ Flowchart:
 
 Wireframe Images:
 -----------------
-<<<<<<< HEAD
+
 ###Profile: Personal View  
 ![Personal Profile] (https://github.com/umass-cs-326/team-undefined/blob/master/docs/fspec/images/PersonalProfile.png)  
 

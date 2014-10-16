@@ -53,7 +53,7 @@ The local high school’s chess club is having problems with consistent attendan
 Scenario 7: <Justin>
 UMass Professor Tim Richards decides that the students in his classes have had it too easy but doesn’t want to have to change the courses material too much. He looks online and stumbles upon OOverlap. He has all his students upload their calendars to find the most convenient times to have assignments due, and then deliberately chooses any other time.  
 
-<p align = "right"><em>[Written by  - ??/??/2014]</em></p>  
+<p align = "right"><em>[Written by Justin Coon, Thai Nguyen, Kiernan Drohan - 10/15/2014]</em></p>  
 
 Non-Goals:
 ----------

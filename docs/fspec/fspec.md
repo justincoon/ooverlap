@@ -45,7 +45,7 @@ Users can connect their social media accounts (Google, Facebook) with their sche
 In case the user does not have a social media account, he or she can open an OOverlap account with a regular email address. In that way, companies can schedule professional meetings and events in a more serious manner. 
 
 
-<p align = "right"><em>[Written by Santiago De La Torre Pinzon - 10/16/2014]</em></p>
+<p align = "right"><em>[Written by Santiago De La Torre Pinzon - 10/15/2014]</em></p>
 
 Disclaimer:
 -----------

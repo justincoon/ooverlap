@@ -85,4 +85,4 @@ Open Issues:
 
 - If you send out multiple requests at one time, we need to update the other requests with the newly used time when a request is completed.
 
-<p align = "right"><em>[Written by  - ??/??/2014]</em></p>
+<p align = "right"><em>[Written by Justin Coon and Santiago De La Torre Pinzon - 10/15/2014]</em></p>

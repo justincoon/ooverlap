@@ -6,7 +6,7 @@ General Information:
 **Name of System:** Overlap  
 **Authors:** Giovanna Diaz, Santiago De La Torre, Justin Coon, Thai Nguyen, and Kiernan Drohan (Team Undefined)  
   
-<p align="center"><em>This file was last revised on: October 4, 2014</em></p>
+<p align="center"><em>This file was last revised on: October 16, 2014</em></p>
 
 Revision History:
 ----------------- 
@@ -98,12 +98,13 @@ Wireframe Images:
 
 List of Open Issues:
 --------------------
-|																												     |
-|--------------------------------------------------------------------------------------------------------------------|
-|Privacy & Security.  			     																			 |Schedules being stored in the user’s database.     																 |
-|Time limit when users can meet.																					 |
-|Integrating other scheduling system in ours.																		 |
-|Refreshing other scheduling systems when they have changes.														 |
-|If you send out multiple requests at one time, we need to update the other requests with the newly used time when a request is completed.   |
+|																		|
+|-----------------------------------------------------------------------------------------------------------------------------------------------|
+|Privacy & Security. 																|
+|Schedules being stored in the user’s database.  		         									|
+|Time limit when users can meet.														|
+|Integrating other scheduling system in ours.													|
+|Refreshing other scheduling systems when they have changes.											|
+|If you send out multiple requests at one time, we need to update the other requests with the newly used time when a request is completed.      |
  -------------------------------
 <p align = "right"><em>[Written by  Santiago - 15/10/2014]</em></p>

@@ -74,8 +74,22 @@ Flowchart:
 
 <p align = "right"><em>[Written by  - ??/??/2014]</em></p>
 
-Screen-by-Screen:
+Wireframe Images:
 -----------------
-  
+###Profile: Personal View  
+![Personal Profile] (https://github.com/umass-cs-326/team-undefined/blob/master/docs/fspec/images/PersonalProfile.png)  
+
+###Profile: Personal View - Settings Page  
+![Personal Profile:Settings] (https://github.com/umass-cs-326/team-undefined/blob/master/docs/fspec/images/user_settings.png)  
+
+###Profile: External View  
+![Personal Profile:External View] (https://github.com/umass-cs-326/team-undefined/blob/master/docs/fspec/images/public_Profile.png)  
+
+###Group: Moderator View  
+![Group Profile:Mod View] (https://github.com/umass-cs-326/team-undefined/blob/master/docs/fspec/images/group_ModView.png)  
+
+###Group: Member View  
+![Group Profile:Member View] (https://github.com/umass-cs-326/team-undefined/blob/master/docs/fspec/images/group_UserView.png)
+
 
 <p align = "right"><em>[Written by  - ??/??/2014]</em></p>

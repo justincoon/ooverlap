@@ -3,7 +3,7 @@
 General Information:
 --------------------
 
-**Name of System:** Overlap  
+**Name of System:** OOverlap  
 **Authors:** Giovanna Diaz, Santiago De La Torre, Justin Coon, Thai Nguyen, and Kiernan Drohan (Team Undefined)  
   
 <p align="center"><em>This file was last revised on: October 15, 2014</em></p>

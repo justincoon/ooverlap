@@ -117,7 +117,6 @@ Wireframe Images:
 
 List of Open Issues:
 --------------------
-|																		|
 |-----------------------------------------------------------------------------------------------------------------------------------------------|
 |Privacy & Security. 																|
 |Schedules being stored in the user’s database.  		         									|
@@ -125,5 +124,5 @@ List of Open Issues:
 |Integrating other scheduling system in ours.													|
 |Refreshing other scheduling systems when they have changes.											|
 |If you send out multiple requests at one time, we need to update the other requests with the newly used time when a request is completed.      |
- -------------------------------
+|-----------------------------------------------------------------------------------------------------------------------------------------------|
 <p align = "right"><em>[Written by  Santiago - 10/15/2014]</em></p>

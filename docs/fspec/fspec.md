@@ -55,11 +55,30 @@ The functional specification of our web application is very straight forward. We
 Scenarios:
 ----------
 
-- Scenario 6: <Justin>
+Scenario 1: <Thai>
+Cardie and Duncan from UMass and Nala from Smith College want to meet up to do assignment for CmpSci 250. They cannot figure out when to meet up because everyone has their own schedule to follow. They go to OOverlap and import their schedule from Spire and Google Calendar and OOverlap tells them a perfect time to meet up in Wednesday afternoon.
+
+Scenario 2: <Thai>
+OOverlap wants to do phone interview with 4 different intern candidates from UMass. They use their own system to overlap engineer’s schedule and interviewee’s schedule by asking them to provide at least 5 possible time slots. Just after a few clicks, they are matched perfectly with the other and stay happily ever after.
+
+Scenario 3: <Kiernan>
+Setting up a party and knowing when everyones available/if theyre close enough to come/
+
+Scenario 4: <Kiernan>
+A select team in a business needs to have a team meeting to discuss how to move forward, this shows who’s available when and a descriptive meeting outline placed by the planner.
+
+Scenario 5: <Kiernan>
+Setting up date night
+
+Scenario 6: <Justin>
 The local high school’s chess club is having problems with consistent attendance, all the members have very complicated schedules and they can’t seem to find the right time to hold their weekly meetings. They all upload their schedules to OOverlap, find the perfect time to meet, and attendance skyrockets. They go on to win the world series of chess. 
 
-- Scenario 7: <Justin>
-UMass Professor Tim Richards decides that the students in his classes have had it too easy but doesn’t want to have to change the courses material too much. He looks online and stumbles upon OOverlap. He has all his students upload their calendars to find the most convenient times to have assignments due, and then deliberately chooses any other time.  
+Scenario 7: <Justin>
+UMass Professor Tim Richards decides that the students in his classes have had it too easy but doesn’t want to have to change the courses material too much. He looks online and stumbles upon OOverlap. He has all his students upload their calendars to find the most convenient times to have assignments due, and then deliberately chooses any other time.
+
+Scenario 8: <Kiernan>
+A group of friends wants to know when they finally have a day off to go to a concert at a local area, some don't have cars so they can plan with others who are showing up and live closer.
+
 
 <p align = "right"><em>[Written by Justin Coon, Thai Nguyen, Kiernan Drohan - 10/15/2014]</em></p>  
 

@@ -101,6 +101,8 @@ Flowchart:
 
 Wireframe Images:
 -----------------
+###Profile: Homepage  
+![Homepage] (https://github.com/umass-cs-326/team-undefined/blob/master/docs/fspec/images/home.png)  
 
 ###Profile: Personal View  
 ![Personal Profile] (https://github.com/umass-cs-326/team-undefined/blob/master/docs/fspec/images/PersonalProfile.png)  

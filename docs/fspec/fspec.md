@@ -146,7 +146,7 @@ As a participant, the group is much more stripped down. The user can quickly see
 
 List of Open Issues:
 --------------------
-||
+|Open Issues |
 |-----------------------------------------------------------------------------------------------------------------------------------------------|
 |Privacy & Security. 																|
 |Schedules being stored in the user’s database.  		         									|

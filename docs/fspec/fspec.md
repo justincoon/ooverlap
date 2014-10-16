@@ -59,7 +59,7 @@ Scenario 1: <Thai>
 Cardie and Duncan from UMass and Nala from Smith College want to meet up to do assignment for CmpSci 250. They cannot figure out when to meet up because everyone has their own schedule to follow. They go to OOverlap and import their schedule from Spire and Google Calendar and OOverlap tells them a perfect time to meet up in Wednesday afternoon.
 
 Scenario 2: <Thai>
-OOverlap wants to do phone interview with 4 different intern candidates from UMass. They use their own system to overlap engineer’s schedule and interviewee’s schedule by asking them to provide at least 5 possible time slots. Just after a few clicks, they are matched perfectly with the other and stay happily ever after.
+OOverlap wants to set up phone interviews with 4 different intern candidates from UMass. They use our system to overlap the engineer’s schedule and the interviewees' schedules by asking them to provide at least 5 possible time slots. After just a few clicks, they are matched up perfectly and live happily ever after.
 
 Scenario 3: <Kiernan>
 Setting up a party and knowing when everyones available/if theyre close enough to come/

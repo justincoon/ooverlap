@@ -44,6 +44,9 @@ OOverlap is a multiplatform application that allows users to see when their sche
 Users can connect their social media accounts (Google, Facebook) with their scheduling information and OOverlap will add their schedule automatically. In addition,  when social media accounts are linked to OOverlap, your friends are going to be easy to find. In that way, it will be easier to see when the users’ schedule overlap with their friends, so they can spend time together by creating social events or professional meetings.
 In case the user does not have a social media account, he or she can open an OOverlap account with a regular email address. In that way, companies can schedule professional meetings and events in a more serious manner. 
 
+
+<p align = "right"><em>[Written by Santiago De La Torre Pinzon - 10/16/2014]</em></p>
+
 Disclaimer:
 -----------
 The functional specification of our web application is very straight forward. We load the user’s schedule and we compare them to other user’s schedule to see when they overlap and return the times when two or more schedules don’t overlap so events can be scheduled. Our web application is subject for extension and modification.

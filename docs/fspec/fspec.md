@@ -76,8 +76,25 @@ Flowchart:
 
 <p align = "right"><em>[Written by  - ??/??/2014]</em></p>
 
-Screen-by-Screen:
+Wireframe Images:
 -----------------
+<<<<<<< HEAD
+###Profile: Personal View  
+![Personal Profile] (https://github.com/umass-cs-326/team-undefined/blob/master/docs/fspec/images/PersonalProfile.png)  
+
+###Profile: Personal View - Settings Page  
+![Personal Profile:Settings] (https://github.com/umass-cs-326/team-undefined/blob/master/docs/fspec/images/user_settings.png)  
+
+###Profile: External View  
+![Personal Profile:External View] (https://github.com/umass-cs-326/team-undefined/blob/master/docs/fspec/images/public_Profile.png)  
+
+###Group: Moderator View  
+![Group Profile:Mod View] (https://github.com/umass-cs-326/team-undefined/blob/master/docs/fspec/images/group_ModView.png)  
+
+###Group: Member View  
+![Group Profile:Member View] (https://github.com/umass-cs-326/team-undefined/blob/master/docs/fspec/images/group_UserView.png)
+
+=======
 |---------------------------------------------------------------------------------------------------------------------|
 |Privacy & Security.                                                                                                  | 
 |Schedules being stored in the user’s database.								                                          |
@@ -85,6 +102,7 @@ Screen-by-Screen:
 |Integrating other scheduling system in ours.								                                          |
 |Refreshing other scheduling systems when they have changes.					                                      |
 |If you send out multiple requests at one time, we need to update the other requests with the newly used time when a request is completed.                                                                                                 |
+>>>>>>> 3b3f88b61af9968c42687632a95a2b222a8f17ff
 
 
 

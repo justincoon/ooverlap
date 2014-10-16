@@ -26,7 +26,7 @@ Team Organization:
 - _something here_
 
 **Justin Coon:** Software Engineer, Technology Integration Specialist  
-*Responsibilities:*  
+*Responsibilities:*  Assisting in creation of design documents and researching the Google and Facebook APIs
 - _something here_
 
 **Thai Nguyen:** UI/UX Designer, Software Engineer  
@@ -48,7 +48,7 @@ Disclaimer:
 -----------
 The functional specification of our web application is very straight forward. We load the user’s schedule and we compare them to other user’s schedule to see when they overlap and return the times when two or more schedules don’t overlap so events can be scheduled. Our web application is subject for extension and modification.
   
-<p align = "right"><em>[Written by Santiago - 10/15/2014]</em></p>
+<p align = "right"><em>[Written by Santiago De La Torre Pinzon - 10/15/2014]</em></p>
 
 
 
@@ -154,4 +154,4 @@ List of Open Issues:
 |Integrating other scheduling system in ours.													|
 |Refreshing other scheduling systems when they have changes.											|
 |If you send out multiple requests at one time, we need to update the other requests with the newly used time when a request is completed.      |
-<p align = "right"><em>[Written by  Santiago - 10/15/2014]</em></p>
+<p align = "right"><em>[Written by Santiago De La Torre Pinzon and Justin Coon - 10/15/2014]</em></p>

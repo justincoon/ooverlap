@@ -6,7 +6,7 @@ General Information:
 **Name of System:** Overlap  
 **Authors:** Giovanna Diaz, Santiago De La Torre, Justin Coon, Thai Nguyen, and Kiernan Drohan (Team Undefined)  
   
-<p align="center"><em>This file was last revised on: October 16, 2014</em></p>
+<p align="center"><em>This file was last revised on: October 04, 2014</em></p>
 
 Revision History:
 ----------------- 

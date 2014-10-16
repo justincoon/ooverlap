@@ -54,7 +54,6 @@ The functional specification of our web application is very straight forward. We
 
 Scenarios:
 ----------
-
 **Scenario 1:** <Thai>
 Cardie and Duncan from UMass and Nala from Smith College want to meet up to do assignment for CmpSci 250. They cannot figure out when to meet up because everyone has their own schedule to follow. They go to OOverlap and import their schedule from Spire and Google Calendar and OOverlap tells them a perfect time to meet up in Wednesday afternoon.
 
@@ -84,7 +83,6 @@ A group of friends wants to know when they finally have a day off to go to a con
 
 Non-Goals:
 ----------
-
 - We are here to help people organize their busy lives, not make money. We will not be advertising or monetizing the site in any way.
 - Although OOverlap facilitates social interaction, implementing any Facebook-esque social commenting is not a goal. This includes ‘wall posts’, ‘status updates’, and ‘likes’. Not only are there well-established websites that already have these functionalities, but we are not intending to be a social networking website - we help you manage the social network you already have.
 - It is assumed that the user will have a Google Calendar account where they can then use a pre-existing calendar / upload a calendar file from another source - This is if they want to see a calendar, otherwise they can still just choose their free times.
@@ -97,7 +95,7 @@ Flowchart:
 ----------
   
 
-<p align = "right"><em>[Written by  - ??/??/2014]</em></p>
+<p align = "right"><em>[Written by Thai Nguyen  - 10/15/2014]</em></p>
 
 Wireframe Images:
 -----------------

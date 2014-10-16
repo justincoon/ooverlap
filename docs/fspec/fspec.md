@@ -97,13 +97,13 @@ Wireframe Images:
 =======
 
 
-|          |
-|----------|
-| Privacy & Security.  |
-| Schedules being stored in the user’s database.     |
-|Time limit when users can meet.|
-|Integrating other scheduling system in ours.|
-|Refreshing other scheduling systems when they have changes.|
+
+|--------------------------------------------------------------------------------------------------------------------|
+| Privacy & Security.  																								 |
+| Schedules being stored in the user’s database.     																 |
+|Time limit when users can meet.																					 |
+|Integrating other scheduling system in ours.																		 |
+|Refreshing other scheduling systems when they have changes.														 |
 |If you send out multiple requests at one time, we need to update the other requests with the newly used time when a request is completed.   |
  -------------------------------
 <p align = "right"><em>[Written by  Santiago - 15/10/2014]</em></p>

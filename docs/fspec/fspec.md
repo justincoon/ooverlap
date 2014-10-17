@@ -97,7 +97,10 @@ Non-Goals:
 Flowchart:
 ----------
   
+<p align = "center"><em>
 ![Flowchart] (https://github.com/umass-cs-326/team-undefined/blob/master/docs/fspec/images/flowchart.jpg)
+</em></p>
+
 
 <p align = "right"><em>[Written by Thai Nguyen  - 10/15/2014]</em></p>
 

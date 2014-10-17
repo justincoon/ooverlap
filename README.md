@@ -14,4 +14,5 @@ Overlap is great for college students and professionals alike. It will include c
 
 #Functional Specification  
 **Documents for Review:**  
-_This assignment currently in progress. Please pardon our mess._
+- fspec.md : The functional specification markdown file for review
+- fpsec.pdf : The functional specification presentation for review

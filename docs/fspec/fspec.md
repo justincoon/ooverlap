@@ -21,13 +21,13 @@ Team Organization:
 *Responsibilities:* Organizing the team, Creating the Graphic Elements of the site, Making sure deadlines are met  
 
 **Santiago De La Torre:** Database Analyst  
-*Responsibilities:*  
+*Responsibilities:*  Implementing the database for the website and managing all data that flows through it such as user accounts and calendar info
 
 **Justin Coon:** Software Engineer, Technology Integration Specialist  
-*Responsibilities:*  Assisting in creation of design documents and researching the Google and Facebook APIs
+*Responsibilities:*  Assisting in creation of design documents and researching/utilizing the Google and Facebook APIs
 
 **Thai Nguyen:** UI/UX Designer, Software Engineer  
-*Responsibilities:*  
+*Responsibilities:*  Deciding the flow of the website, 
 
 **Kiernan Drohan:** Software Engineer, Technology Integration Specialist  
 *Responsibilities:*  

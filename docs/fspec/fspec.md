@@ -18,25 +18,19 @@ Revision History:
 Team Organization: 
 ------------------
 **Giovanna Diaz:** Project Manager, Graphic Designer  
-*Responsibilities:* Organizing the team, Creating the Graphic Elements of the site, Making sure deadlines are met 
-- _something here_
+*Responsibilities:* Organizing the team, Creating the Graphic Elements of the site, Making sure deadlines are met  
 
 **Santiago De La Torre:** Database Analyst  
 *Responsibilities:*  
-- _something here_
 
 **Justin Coon:** Software Engineer, Technology Integration Specialist  
 *Responsibilities:*  Assisting in creation of design documents and researching the Google and Facebook APIs
-- _something here_
 
 **Thai Nguyen:** UI/UX Designer, Software Engineer  
 *Responsibilities:*  
-- _something here_
 
 **Kiernan Drohan:** Software Engineer, Technology Integration Specialist  
 *Responsibilities:*  
-- _something here_
-
 
 Overview:
 ---------

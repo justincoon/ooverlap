@@ -18,25 +18,19 @@ Revision History:
 Team Organization: 
 ------------------
 **Giovanna Diaz:** Project Manager, Graphic Designer  
-*Responsibilities:* Organizing the team, Creating the Graphic Elements of the site, Making sure deadlines are met 
-- _something here_
+*Responsibilities:* Organizing the team, Creating the Graphic Elements of the site, Making sure deadlines are met  
 
 **Santiago De La Torre:** Database Analyst  
 *Responsibilities:*  
-- _something here_
 
 **Justin Coon:** Software Engineer, Technology Integration Specialist  
 *Responsibilities:*  Assisting in creation of design documents and researching the Google and Facebook APIs
-- _something here_
 
 **Thai Nguyen:** UI/UX Designer, Software Engineer  
 *Responsibilities:*  
-- _something here_
 
 **Kiernan Drohan:** Software Engineer, Technology Integration Specialist  
 *Responsibilities:*  
-- _something here_
-
 
 Overview:
 ---------
@@ -147,6 +141,9 @@ As a participant, the group is much more stripped down. The user can quickly see
 - Moderators and other members of the group (they are in the same position as on the profile page for consistency across the site).
 - Upcoming events: Quick View - If you are doing a quick glance of the page, the upcoming events are posted right at the top so that users don’t have to search through the calendar
 - Full Calendar: Useful if the Members wants to see upcoming events in more detail / when past events were held
+
+###Scheduling an Event  
+![Scheduling an Event] (https://github.com/umass-cs-326/team-undefined/blob/master/docs/fspec/images/scheduling_frames.png)  
 
 <p align = "right"><em>[Written by Giovanna Diaz - 10/15/2014]</em></p>
 

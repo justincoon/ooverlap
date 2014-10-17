@@ -27,7 +27,7 @@ Team Organization:
 *Responsibilities:*  Assisting in creation of design documents and researching/utilizing the Google and Facebook APIs
 
 **Thai Nguyen:** UI/UX Designer, Software Engineer  
-*Responsibilities:*  Deciding the flow of the website, 
+*Responsibilities:*  Deciding the flow of the website. Particitating in both UX/UI design and back-end design to integrate them together.
 
 **Kiernan Drohan:** Software Engineer, Technology Integration Specialist  
 *Responsibilities:*  

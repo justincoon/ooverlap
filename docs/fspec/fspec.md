@@ -145,6 +145,9 @@ As a participant, the group is much more stripped down. The user can quickly see
 - Upcoming events: Quick View - If you are doing a quick glance of the page, the upcoming events are posted right at the top so that users don’t have to search through the calendar
 - Full Calendar: Useful if the Members wants to see upcoming events in more detail / when past events were held
 
+###Scheduling an Event  
+![Scheduling an Event] (https://github.com/umass-cs-326/team-undefined/blob/master/docs/fspec/images/scheduling_frames.png)  
+
 <p align = "right"><em>[Written by Giovanna Diaz - 10/15/2014]</em></p>
 
 

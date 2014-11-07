@@ -41,7 +41,7 @@ function init() {
         zoom: 15,
 
         // The latitude and longitude to center the map (always required)
-        center: new google.maps.LatLng(42.395656, -72.52196), // UMass
+        center: new google.maps.LatLng(42.391157, -72.526712), // UMass
 
         // Disables the default Google Maps UI components
         disableDefaultUI: true,
@@ -169,7 +169,7 @@ function init() {
 
     // Custom Map Marker Icon - Customize the map-marker.png file to customize your icon
     var image = '/images/map-marker.png';
-    var myLatLng = new google.maps.LatLng(42.395656 , -72.52196);
+    var myLatLng = new google.maps.LatLng(42.391157, -72.526712);
     var beachMarker = new google.maps.Marker({
         position: myLatLng,
         map: map,

@@ -77,31 +77,31 @@ How does it relate and implement aspects that were mentioned in our fspec?:
 Please predict any implementation challenges:
 
 ##Log in
-- Person(s) Responsible: Justin, Santiago
-- How does it connect and communicate to other parts of the system?:  
+- **Person(s) Responsible:** Justin, Santiago
+- **How does it connect and communicate to other parts of the system?:**  
 	This view will allow the user to give us a username and password that we will pass on to the Google API to gain access to the user’s calendar information on their Google Calendar. The user will then be redirected to their user profile if their login is successful.
 - How does it relate and implement aspects that were mentioned in our fspec?:  
 	This will implement the login aspect of the homepage shown in the functional specification.
 - Please predict any implementation challenges:  
 	It may be difficult/complicated to manage the Google API’s login functionality.
 
-User Profile
-Person(s) Responsible: Santiago, Giovanna
-How does it connect and communicate to other parts of the system?:
-This component will pull the user’s information such as name, location, current OOverlap meetups, etc from the database as well as calendar information from their Google Calendar account and display it.
-How does it relate and implement aspects that were mentioned in our fspec?:
-This will be the implementation of the Personal View page mentioned in the functional specification.
-Please predict any implementation challenges:
-Deciding how to arrange and organize the information we pull in a clean and concise manner may be complicated.
+##User Profile
+- **Person(s) Responsible:** Santiago, Giovanna
+- **How does it connect and communicate to other parts of the system?:**  
+	This component will pull the user’s information such as name, location, current OOverlap meetups, etc from the database as well as calendar information from their Google Calendar account and display it.
+- **How does it relate and implement aspects that were mentioned in our fspec?:**  
+	This will be the implementation of the Personal View page mentioned in the functional specification.
+- **Please predict any implementation challenges:**  
+	Deciding how to arrange and organize the information we pull in a clean and concise manner may be complicated.
 
-Settings
-Person(s) Responsible: Kiernan, Santiago
-How does it connect and communicate to other parts of the system?:
-This component will be communicating with the database in that it will have to pull the user’s current settings and push the settings the user has changed. After changes have been saved it will redirect to the user’s profile page.
-How does it relate and implement aspects that were mentioned in our fspec?:
-This component implements the Settings view seen in our functional specification.
-Please predict any implementation challenges:
-This component will be relatively straight forward so we do not expect very many issues.
+##Settings
+- **Person(s) Responsible:** Kiernan, Santiago
+- **How does it connect and communicate to other parts of the system?:**  
+	This component will be communicating with the database in that it will have to pull the user’s current settings and push the settings the user has changed. After changes have been saved it will redirect to the user’s profile page.
+- **How does it relate and implement aspects that were mentioned in our fspec?:**  
+	This component implements the Settings view seen in our functional specification.
+- **Please predict any implementation challenges:**  
+	This component will be relatively straight forward so we do not expect very many issues.
 
 Calendars…
 Input Calendar (Scheduling Events)

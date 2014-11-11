@@ -76,14 +76,14 @@ How does it relate and implement aspects that were mentioned in our fspec?:
 
 Please predict any implementation challenges:
 
-Log in
-Person(s) Responsible: Justin, Santiago
-How does it connect and communicate to other parts of the system?:
-This view will allow the user to give us a username and password that we will pass on to the Google API to gain access to the user’s calendar information on their Google Calendar. The user will then be redirected to their user profile if their login is successful.
-How does it relate and implement aspects that were mentioned in our fspec?:
-This will implement the login aspect of the homepage shown in the functional specification.
-Please predict any implementation challenges:
-It may be difficult/complicated to manage the Google API’s login functionality.
+##Log in
+- Person(s) Responsible: Justin, Santiago
+- How does it connect and communicate to other parts of the system?:  
+	This view will allow the user to give us a username and password that we will pass on to the Google API to gain access to the user’s calendar information on their Google Calendar. The user will then be redirected to their user profile if their login is successful.
+- How does it relate and implement aspects that were mentioned in our fspec?:  
+	This will implement the login aspect of the homepage shown in the functional specification.
+- Please predict any implementation challenges:  
+	It may be difficult/complicated to manage the Google API’s login functionality.
 
 User Profile
 Person(s) Responsible: Santiago, Giovanna

@@ -12,7 +12,7 @@ Revision History:
 | Date     | Name | Revision |
 |----------|------|----------|
 | 11-03-14 | Giovanna Diaz | Created and Uploaded File |
-| 11-11-14 | Giovanna Diaz | Added Project Summary |
+| 11-11-14 | Giovanna Diaz | Added Project Summary & Bird's Eye View |
 
 What is OOverlap?
 -----------------
@@ -43,7 +43,7 @@ The settings component fits in to the website because we are offering the user s
 
 ###Calendars...
 ####Input Calendar (Scheduling Events)
-information
+The input calendar component will be used when the user goes to schedule an event with a friend or colleague. This fits in to our application since it is basically the basis of what the application is designed on: scheduling events with ease. The calendar that shows up will allow the user to drag their free times on to the calendar and will then take those times to compare later on. This component can be accessed by clicking on the “Schedule an Event” button on their Profile page.
 
 ####“Export” Calendar (Displaying All Users Free Time)
 information

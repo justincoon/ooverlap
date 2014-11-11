@@ -46,7 +46,7 @@ The settings component fits in to the website because we are offering the user s
 The input calendar component will be used when the user goes to schedule an event with a friend or colleague. This fits in to our application since it is basically the basis of what the application is designed on: scheduling events with ease. The calendar that shows up will allow the user to drag their free times on to the calendar and will then take those times to compare later on. This component can be accessed by clicking on the “Schedule an Event” button on their Profile page.
 
 ####“Export” Calendar (Displaying All Users Free Time)
-information
+The export calendar component will display the free times that both the users have filled out. With this calendar, you will be able to clearly see the overlaps. This component will ultimately be displayed once the two users have filled out their free time, and you cannot get to it before that point.
 
 ###E-mail Notifications
 The email notifications are an important component of the website. Via email, we plan to send the users…

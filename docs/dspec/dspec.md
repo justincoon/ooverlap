@@ -33,10 +33,10 @@ Components: Bird's Eye View
 ---------------------------
 
 ###Log-in  
-This component is fairly self-explanatory as to why it fits in to the website. Without the log-in feature, users will not be able to customize their experience on OOverlap. In order to access all of your personal data (ie. Calendar, Pending Requests, Friends, and Groups) you have to have an account, and in order to access that account you have to log in! Your profile will be your “home page” of sorts. After you log on, you will be taken to your profile page since you should be able to do everything that you need to do from that page.
+This component is fairly self-explanatory as to why it fits in to the website. Without the log-in feature, users will not be able to customize their experience on OOverlap. In order to access all of your personal data (ie. Calendar, Pending Requests, Friends, and Groups) you have to have an account, and in order to access that account you have to log in! Your profile will be your “home page” of sorts. After you log on, you will be taken to your profile page since you should be able to do everything that you need to do from that page. You should be able to access the login page from: “www.OOverlap.com/login”.
 
 ###User Profile
-The user profile is yet another important component in the website. As mentioned in the “Log-in” Component description, the User Profile will serve as a “home page” for the user when they are on the website. It will contain all of the information that they need in order to schedule events, access the groups they are members/admins of, and see their calendar. They can also reach their profile settings from their home page.
+The user profile is yet another important component in the website. As mentioned in the “Log-in” Component description, the User Profile will serve as a “home page” for the user when they are on the website. It will contain all of the information that they need in order to schedule events, access the groups they are members/admins of, and see their calendar. They can also reach their profile settings from their home page. They will be able to reach their user profile from the “Home” button in the navigation that will be placed in the upper right hand corner of screen. They will will be able to access their profile page from: “www.OOverlap.com/[theirLoginUsername]”.
 
 ###Calendars...
 ####Input Calendar (Scheduling Events)

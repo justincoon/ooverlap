@@ -32,6 +32,9 @@ External Libraries:
 Components: Bird's Eye View
 ---------------------------
 
+###Create Account  
+Of course if a user does not have a pre-existing account with OOverlap, they will need to create an account. This component will take in a username (currently this will be a gmail address) and a password. If the account already exists, it will display a notification to the user. Users should be able to get to this component from the index.ejs page, (there is a button that says “register”) or from the login page (underneath the login form, in small text it would say something to the effect of “Don’t have an account?”).  
+
 ###Log-in  
 This component is fairly self-explanatory as to why it fits in to the website. Without the log-in feature, users will not be able to customize their experience on OOverlap. In order to access all of your personal data (ie. Calendar, Pending Requests, Friends, and Groups) you have to have an account, and in order to access that account you have to log in! Your profile will be your “home page” of sorts. After you log on, you will be taken to your profile page since you should be able to do everything that you need to do from that page. You should be able to access the login page from: “www.OOverlap.com/login”.
 

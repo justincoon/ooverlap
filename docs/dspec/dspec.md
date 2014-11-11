@@ -69,6 +69,9 @@ As previously mentioned, the email notifications can be toggled in the Settings 
 Components: The Breakdown
 --------------------------
 
+###Create Account  
+etc.
+
 ###Log-in  
 etc.
 
@@ -89,4 +92,4 @@ etc.
 etc.
 
 
-<p align = "right"><em>[fname lname - 11/??/2014]</em></p>
+<p align = "right"><em>[Justin Coon, Giovanna Diaz - 11/11/2014]</em></p>

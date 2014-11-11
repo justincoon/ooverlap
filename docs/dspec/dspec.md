@@ -38,7 +38,12 @@ This component is fairly self-explanatory as to why it fits in to the website. W
 ###User Profile
 The user profile is yet another important component in the website. As mentioned in the “Log-in” Component description, the User Profile will serve as a “home page” for the user when they are on the website. It will contain all of the information that they need in order to schedule events, access the groups they are members/admins of, and see their calendar. They can also reach their profile settings from their home page.
 
+###Calendars...
+####Input Calendar (Scheduling Events)
+information
 
+####“Export” Calendar (Displaying All Users Free Time)
+information
 
 <p align = "right"><em>[Giovanna Diaz, - 11/10/2014]</em></p>
 

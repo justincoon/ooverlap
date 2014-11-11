@@ -16,3 +16,8 @@ Overlap is great for college students and professionals alike. It will include c
 **Documents for Review:**  
 - fspec.md : The functional specification markdown file for review
 - fpsec.pdf : The functional specification presentation for review
+
+#Design Specification
+**Documents for Review:**  
+- dspec.md : The design specification markdown file for review
+- dspec.pdf : The functional specification presentation file for review

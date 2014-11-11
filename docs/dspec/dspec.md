@@ -5,13 +5,14 @@ General Information:
 **Name of System:** OOverlap  
 **Authors:** Giovanna Diaz, Santiago De La Torre, Justin Coon, Thai Nguyen, and Kiernan Drohan (Team Undefined)  
   
-<p align="center"><em>This file was last revised on: November 3, 2014</em></p>
+<p align="center"><em>This file was last revised on: November 11, 2014</em></p>
 
 Revision History:
 ----------------- 
 | Date     | Name | Revision |
 |----------|------|----------|
 | 11-03-14 | Giovanna Diaz | Created and Uploaded File |
+| 11-11-14 | Giovanna Diaz | Added Project Summary |
 
 What is OOverlap?
 -----------------

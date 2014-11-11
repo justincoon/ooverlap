@@ -55,7 +55,7 @@ The email notifications are an important component of the website. Via email, we
 - The details from when an event is scheduled…
 	- The finalized time (assuming the overlaps were good!)
 	- A request to look over their offered free times again because no overlaps were found (potentially with hints at good times for them to fill out or times that they might not have prioritized highly)
-- Notification of friend request / group join request (if user is admin to a group)
+- Notification of friend request / group join request (if user is admin to a group)  
 As previously mentioned, the email notifications can be toggled in the Settings component. We do not want to spam the user with emails, but feel like emails are a good way of contacting the user so that we don’t have to rely on them checking our website every day to get updates. (Although it would be nice for people to want to go there every day, we just need to help remind the user that they use the site and that they should work it in to their website-checking habits. Email notifications will be sent directly to the user depending on what email they provided at login. (The email can be changed in the Settings component.)
 
 

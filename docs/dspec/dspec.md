@@ -40,7 +40,7 @@ The user profile is yet another important component in the website. As mentioned
 
 
 
-<p align = "right"><em>[Giovanna Diaz, - 11/??/2014]</em></p>
+<p align = "right"><em>[Giovanna Diaz, - 11/10/2014]</em></p>
 
 Components: The Breakdown
 --------------------------

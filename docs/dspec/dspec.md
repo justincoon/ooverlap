@@ -27,7 +27,7 @@ Additionally, with OOverlap's 'priorities' feature you can hierarchically declar
 External Libraries:
 -------------------
 
-<p align = "right"><em>[fname lname - 11/??/2014]</em></p>
+<p align = "right"><em>[Thai Nguyen - 11/??/2014]</em></p>
 
 Components: Bird's Eye View
 ---------------------------

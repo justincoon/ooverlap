@@ -39,7 +39,7 @@ This component is fairly self-explanatory as to why it fits in to the website. W
 The user profile is yet another important component in the website. As mentioned in the “Log-in” Component description, the User Profile will serve as a “home page” for the user when they are on the website. It will contain all of the information that they need in order to schedule events, access the groups they are members/admins of, and see their calendar. They can also reach their profile settings from their home page. They will be able to reach their user profile from the “Home” button in the navigation that will be placed in the upper right hand corner of screen. They will will be able to access their profile page from: “www.OOverlap.com/[theirLoginUsername]”.
 
 ###Settings
-The settings component fits in to the website because we are offering the user something that is customizable. In the settings the user can control their privacy settings, profile information (including profile picture, username, password, etc.), calendar preferences, and social network connections. Giving the user the ability to change the as much about their profile as possible makes the website more accessible. The user will be able to access this page from their homepage and by the following link: www.OOverlap.com/[theirLoginusername]/settings
+The settings component fits in to the website because we are offering the user something that is customizable. In the settings the user can control their privacy settings, profile information (including profile picture, username, password, etc.), calendar preferences, email notifications, and social network connections. Giving the user the ability to change the as much about their profile as possible makes the website more accessible. The user will be able to access this page from their homepage and by the following link: www.OOverlap.com/[theirLoginusername]/settings
 
 ###Calendars...
 ####Input Calendar (Scheduling Events)
@@ -49,10 +49,18 @@ information
 information
 
 ###E-mail Notifications
-info
+The email notifications are an important component of the website. Via email, we plan to send the users…
+- Notification when someone wants to schedule an event
+- Notification when a group wants to schedule an event
+- The details from when an event is scheduled…
+	- The finalized time (assuming the overlaps were good!)
+	- A request to look over their offered free times again because no overlaps were found (potentially with hints at good times for them to fill out or times that they might not have prioritized highly)
+- Notification of friend request / group join request (if user is admin to a group)
+As previously mentioned, the email notifications can be toggled in the Settings component. We do not want to spam the user with emails, but feel like emails are a good way of contacting the user so that we don’t have to rely on them checking our website every day to get updates. (Although it would be nice for people to want to go there every day, we just need to help remind the user that they use the site and that they should work it in to their website-checking habits. Email notifications will be sent directly to the user depending on what email they provided at login. (The email can be changed in the Settings component.)
 
 
-<p align = "right"><em>[Giovanna Diaz, - 11/10/2014]</em></p>
+
+<p align = "right"><em>[Giovanna Diaz - 11/10/2014]</em></p>
 
 Components: The Breakdown
 --------------------------

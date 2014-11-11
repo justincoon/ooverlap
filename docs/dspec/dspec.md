@@ -68,28 +68,81 @@ As previously mentioned, the email notifications can be toggled in the Settings 
 
 Components: The Breakdown
 --------------------------
+Create Account
+Person(s) Responsible: Santiago, Justin
+How code will implement that component?: 
 
-###Create Account  
-etc.
+How does it connect and communicate to other parts of the system?:
 
-###Log-in  
-etc.
+How does it relate and implement aspects that were mentioned in our fspec?:
 
-###User Profile
-etc.
+Please predict any implementation challenges:
+Log in
+Person(s) Responsible: Justin, Santiago
+How code will implement that component?:
+When a user goes to log in, they will need to supply 2 things:
+Username - YourEmail@gmail.com (We are using gmail to simplify for the time being) 
+Password
+The code will then check the database to verify the information that the user supplied. If the user typed in the wrong username or password they will be redirected back to the login page to try again.
+How does it connect and communicate to other parts of the system?:
+This view will allow the user to give us a username and password that we will pass on to the Google API to gain access to the user’s calendar information on their Google Calendar. The user will then be redirected to their user profile if their login is successful.
+How does it relate and implement aspects that were mentioned in our fspec?:
+This will implement the login aspect of the homepage shown in the functional specification.
+Please predict any implementation challenges:
+It may be difficult/complicated to manage the Google API’s login functionality.
+User Profile
+Person(s) Responsible: Santiago, Giovanna
+How code will implement that component?:
 
-###Settings
-etc.
+How does it connect and communicate to other parts of the system?:
+This component will pull the user’s information such as name, location, current OOverlap meetups, etc from the database as well as calendar information from their Google Calendar account and display it.
+How does it relate and implement aspects that were mentioned in our fspec?:
+This will be the implementation of the Personal View page mentioned in the functional specification.
+Please predict any implementation challenges:
+Deciding how to arrange and organize the information we pull in a clean and concise manner may be complicated.
 
-###Calendars...
-####Input Calendar (Scheduling Events)
-etc.
+Settings
+Person(s) Responsible: Kiernan, Santiago
+How code will implement that component?:
 
-####“Export” Calendar (Displaying All Users Free Time)
-etc.
+How does it connect and communicate to other parts of the system?:
+This component will be communicating with the database in that it will have to pull the user’s current settings and push the settings the user has changed. After changes have been saved it will redirect to the user’s profile page.
+How does it relate and implement aspects that were mentioned in our fspec?:
+This component implements the Settings view seen in our functional specification.
+Please predict any implementation challenges:
+This component will be relatively straight forward so we do not expect very many issues.
 
-###E-mail Notifications
-etc.
+Calendars…
+Input Calendar (Scheduling Events)
+Person(s) Responsible: Justin, Thai
+How code will implement that component?:
 
+How does it connect and communicate to other parts of the system?:
+This component will have a lot of communication with the Google Calendar and dhtmlxScheduler APIs
+How does it relate and implement aspects that were mentioned in our fspec?:
+This will implement one half of the member and moderator views mentioned in the functional specification. It will simply use the Google Calendar API to input the user’s calendar and then send it to the database for storage/use.
+Please predict any implementation challenges: 
+We might have some challenges when it comes to building the interface for this feature. It could very well be one of those things that looks really smooth, but is pretty complicated to code. Other implementation challenges could include...
+
+“Export” Calendar (Displaying All Users Free Time)
+Person(s) Responsible: Justin, Thai
+How code will implement that component?: 
+
+How does it connect and communicate to other parts of the system?:
+
+How does it relate and implement aspects that were mentioned in our fspec?:
+
+Please predict any implementation challenges:
+There could be challenges with implementing the interface for this feature. For consistency, all the calendars shown should look like the google calendar. (It would be ugly, and confusing to have different layouts for different calendars). That said, having the overlapping times shows up on a google calendar looks as though it will be quite the challenge.
+
+Email Notifications
+Person(s) Responsible: Kiernan, Giovanna, Thai
+How code will implement that component?: 
+
+How does it connect and communicate to other parts of the system?:
+
+How does it relate and implement aspects that were mentioned in our fspec?:
+
+Please predict any implementation challenges: We do not expect any implementation challenges. Sending an email is a fairly straightforward process and we will have their email address since that is what we are using for our username.
 
 <p align = "right"><em>[Justin Coon, Giovanna Diaz - 11/11/2014]</em></p>

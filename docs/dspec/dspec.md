@@ -68,7 +68,7 @@ As previously mentioned, the email notifications can be toggled in the Settings 
 
 Components: The Breakdown
 --------------------------
-Create Account
+##Create Account
 - **Person(s) Responsible:** Santiago, Justin
 - **How does it connect and communicate to other parts of the system?:**  
 

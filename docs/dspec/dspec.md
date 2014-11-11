@@ -70,30 +70,23 @@ Components: The Breakdown
 --------------------------
 Create Account
 Person(s) Responsible: Santiago, Justin
-How code will implement that component?: 
-
 How does it connect and communicate to other parts of the system?:
 
 How does it relate and implement aspects that were mentioned in our fspec?:
 
 Please predict any implementation challenges:
+
 Log in
 Person(s) Responsible: Justin, Santiago
-How code will implement that component?:
-When a user goes to log in, they will need to supply 2 things:
-Username - YourEmail@gmail.com (We are using gmail to simplify for the time being) 
-Password
-The code will then check the database to verify the information that the user supplied. If the user typed in the wrong username or password they will be redirected back to the login page to try again.
 How does it connect and communicate to other parts of the system?:
 This view will allow the user to give us a username and password that we will pass on to the Google API to gain access to the user’s calendar information on their Google Calendar. The user will then be redirected to their user profile if their login is successful.
 How does it relate and implement aspects that were mentioned in our fspec?:
 This will implement the login aspect of the homepage shown in the functional specification.
 Please predict any implementation challenges:
 It may be difficult/complicated to manage the Google API’s login functionality.
+
 User Profile
 Person(s) Responsible: Santiago, Giovanna
-How code will implement that component?:
-
 How does it connect and communicate to other parts of the system?:
 This component will pull the user’s information such as name, location, current OOverlap meetups, etc from the database as well as calendar information from their Google Calendar account and display it.
 How does it relate and implement aspects that were mentioned in our fspec?:
@@ -103,8 +96,6 @@ Deciding how to arrange and organize the information we pull in a clean and conc
 
 Settings
 Person(s) Responsible: Kiernan, Santiago
-How code will implement that component?:
-
 How does it connect and communicate to other parts of the system?:
 This component will be communicating with the database in that it will have to pull the user’s current settings and push the settings the user has changed. After changes have been saved it will redirect to the user’s profile page.
 How does it relate and implement aspects that were mentioned in our fspec?:
@@ -115,8 +106,6 @@ This component will be relatively straight forward so we do not expect very many
 Calendars…
 Input Calendar (Scheduling Events)
 Person(s) Responsible: Justin, Thai
-How code will implement that component?:
-
 How does it connect and communicate to other parts of the system?:
 This component will have a lot of communication with the Google Calendar and dhtmlxScheduler APIs
 How does it relate and implement aspects that were mentioned in our fspec?:
@@ -126,8 +115,6 @@ We might have some challenges when it comes to building the interface for this f
 
 “Export” Calendar (Displaying All Users Free Time)
 Person(s) Responsible: Justin, Thai
-How code will implement that component?: 
-
 How does it connect and communicate to other parts of the system?:
 
 How does it relate and implement aspects that were mentioned in our fspec?:
@@ -137,8 +124,6 @@ There could be challenges with implementing the interface for this feature. For 
 
 Email Notifications
 Person(s) Responsible: Kiernan, Giovanna, Thai
-How code will implement that component?: 
-
 How does it connect and communicate to other parts of the system?:
 
 How does it relate and implement aspects that were mentioned in our fspec?:

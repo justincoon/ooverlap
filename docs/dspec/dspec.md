@@ -57,4 +57,24 @@ info
 Components: The Breakdown
 --------------------------
 
+###Log-in  
+etc.
+
+###User Profile
+etc.
+
+###Settings
+etc.
+
+###Calendars...
+####Input Calendar (Scheduling Events)
+etc.
+
+####“Export” Calendar (Displaying All Users Free Time)
+etc.
+
+###E-mail Notifications
+etc.
+
+
 <p align = "right"><em>[fname lname - 11/??/2014]</em></p>

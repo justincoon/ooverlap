@@ -9,8 +9,10 @@ body {
     height: 100%;
     /*font-family: Lora,"Helvetica Neue",Helvetica,Arial,sans-serif;*/
     font-family: 'Open Sans', sans-serif;
-    color: #FFF;
-    background-color: #000;
+    /*color: #FFF;*/
+    /*background-color: #000;*/
+    color: #000;
+    background-color: #f7f7f7;
 }
 
 html {
@@ -350,7 +352,7 @@ footer p {
 ::-moz-selection {
     text-shadow: none;
     background: #fcfcfc;
-    background: rgba(255,255,255,.2);
+    /*background: rgba(255,255,255,.2);*/
 }
 
 ::selection {

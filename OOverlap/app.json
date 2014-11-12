@@ -1,8 +1,0 @@
-{
-  "name": "OOverlap",
-  "description": "OOverlap website",
-  "repository": "git@heroku.com:ooverlap.git",
-  "logo": "http://node-js-sample.herokuapp.com/node.svg",
-  "keywords": ["node", "express", "static"]
-}
-

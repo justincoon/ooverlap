@@ -69,12 +69,13 @@ As previously mentioned, the email notifications can be toggled in the Settings 
 Components: The Breakdown
 --------------------------
 ##Create Account
-- **Person(s) Responsible:** Santiago, Justin
+- **Person(s) Responsible:** Giovanna, Justin
 - **How does it connect and communicate to other parts of the system?:**  
-
+	Inputs a new user’s username and password, passes it onto the database for storage, and then logs the user in and redirects them to their new user profile.
 - **How does it relate and implement aspects that were mentioned in our fspec?:**  
-
+	This particular aspect was not directly referenced in the functional specification, but it implements creating a new user profile.
 - **Please predict any implementation challenges:**  
+	Any issues related to this would probably be difficulties in implementing the database.
 
 ##Log in
 - **Person(s) Responsible:** Justin, Santiago  
@@ -86,7 +87,7 @@ Components: The Breakdown
 	It may be difficult/complicated to manage the Google API’s login functionality.
 
 ##User Profile
-- **Person(s) Responsible:** Santiago, Giovanna  
+- **Person(s) Responsible:** Kiernan, Giovanna  
 - **How does it connect and communicate to other parts of the system?:**  
 	This component will pull the user’s information such as name, location, current OOverlap meetups, etc from the database as well as calendar information from their Google Calendar account and display it.
 - **How does it relate and implement aspects that were mentioned in our fspec?:**  
@@ -95,7 +96,7 @@ Components: The Breakdown
 	Deciding how to arrange and organize the information we pull in a clean and concise manner may be complicated.
 
 ##Settings
-- **Person(s) Responsible:** Kiernan, Santiago  
+- **Person(s) Responsible:** Kiernan, Santiago
 - **How does it connect and communicate to other parts of the system?:**  
 	This component will be communicating with the database in that it will have to pull the user’s current settings and push the settings the user has changed. After changes have been saved it will redirect to the user’s profile page.
 - **How does it relate and implement aspects that were mentioned in our fspec?:**  
@@ -116,18 +117,16 @@ Components: The Breakdown
 ####“Export” Calendar (Displaying All Users Free Time)
 - **Person(s) Responsible:** Justin, Thai  
 - **How does it connect and communicate to other parts of the system?:**  
-	
+	This component will mainly connect with the Google Calendar and dhtmlxScheduler APIs
 - **How does it relate and implement aspects that were mentioned in our fspec?:**  
-
+	This component will implement the other half of the member and moderator views mentioned in the fspec. This calendar will be the one that we build that shows the users the times that they are both free.
 - **Please predict any implementation challenges:**  
 	There could be challenges with implementing the interface for this feature. For consistency, all the calendars shown should look like the google calendar. (It would be ugly, and confusing to have different layouts for different calendars). That said, having the overlapping times shows up on a google calendar looks as though it will be quite the challenge.
 
 ##Email Notifications
 - **Person(s) Responsible:** Kiernan, Giovanna, Thai
 - **How does it connect and communicate to other parts of the system?:**  
-
-- **How does it relate and implement aspects that were mentioned in our fspec?:**  
-
+	This will be using the Nodemailer library and will be utilized by the meetup request component.
 - **Please predict any implementation challenges:**  
 	We do not expect any implementation challenges. Sending an email is a fairly straightforward process and we will have their email address since that is what we are using for our username.
 

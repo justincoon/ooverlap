@@ -26,23 +26,26 @@ Additionally, with OOverlap's 'priorities' feature you can hierarchically declar
 
 External Libraries:
 -------------------
-## Front-end
+### Front-end
 - Bootstrap: A framework for website’s responsive design.
 - JQuery: A Javascript library for manipulating DOM objects, handling events and AJAX 
 - AngularJS: A framework for designing user interactivity in the front-end side
 
-## Backend
-- Login
-Google API: Let user login via their Google acount 
-Facebook API: Let user login via their Facebook account
-- Database
-mongodb, monk: NoSql Database and a API layer to talk with the Database
-- Calendar
-google-calendar: Import user existing calendar into the database as well as insert new events to user calendar when it’s sheduled
-moment: a library for parsing, validating, manipulating, and formatting dates.
-dhtmlxScheduler API: a library for creating calendar application
-- Mail:
-Nodemailer: A library to send email to user
+### Backend
+#### Login
+- Google API: Let user login via their Google acount 
+- Facebook API: Let user login via their Facebook account
+
+#### Database
+- mongodb, monk: NoSql Database and a API layer to talk with the Database
+
+####Calendar
+- google-calendar: Import user existing calendar into the database as well as insert new events to user calendar when it’s sheduled
+- moment: a library for parsing, validating, manipulating, and formatting dates.
+- dhtmlxScheduler API: a library for creating calendar application
+
+####Mail:
+- nodemailer: A library to send email to user
 
 <p align = "right"><em>[Thai Nguyen - 11/??/2014]</em></p>
 

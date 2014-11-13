@@ -1,6 +1,6 @@
 /*******************************************
 	Database:
-	username, passwrod, Name, email, 
+	username, passwrod, Name, email
 */
 function addUser(users)
 function loadUser(users)

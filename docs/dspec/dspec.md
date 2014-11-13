@@ -50,10 +50,11 @@ Components: Bird's Eye View
 ---------------------------
 
 ###Create Account  
-Of course if a user does not have a pre-existing account with OOverlap, they will need to create an account. This component will take in a username (currently this will be a gmail address) and a password. If the account already exists, it will display a notification to the user. Users should be able to get to this component from the index.ejs page, (there is a button that says “register”) or from the login page (underneath the login form, in small text it would say something to the effect of “Don’t have an account?”).  
+Of course if a user does not have a pre-existing account with OOverlap, they will need to create an account. This component will take in a username (currently this will be a gmail address) and a password. If the account already exists, it will display a notification to the user. Users should be able to get to this component from the login function in the home page (Top left button on the navigation bar). There will be a window pop up and underneath the login form, user can click to the small text which says “Don’t have an account?” to change the form to register form.
+
 
 ###Log-in  
-This component is fairly self-explanatory as to why it fits in to the website. Without the log-in feature, users will not be able to customize their experience on OOverlap. In order to access all of your personal data (ie. Calendar, Pending Requests, Friends, and Groups) you have to have an account, and in order to access that account you have to log in! Your profile will be your “home page” of sorts. After you log on, you will be taken to your profile page since you should be able to do everything that you need to do from that page. You should be able to access the login page from: “www.OOverlap.com/login”.
+This component is fairly self-explanatory as to why it fits in to the website. Without the log-in feature, users will not be able to customize their experience on OOverlap. In order to access all of your personal data (ie. Calendar, Pending Requests, Friends, and Groups) you have to have an account, and in order to access that account you have to log in by clicking the “Log in” button at the top left corner of the navigation bar! Your profile will be your “home page” of sorts. After you log on, you will be taken to your profile page since you should be able to do everything that you need to do from that page.
 
 ###User Profile
 The user profile is yet another important component in the website. As mentioned in the “Log-in” Component description, the User Profile will serve as a “home page” for the user when they are on the website. It will contain all of the information that they need in order to schedule events, access the groups they are members/admins of, and see their calendar. They can also reach their profile settings from their home page. They will be able to reach their user profile from the “Home” button in the navigation that will be placed in the upper right hand corner of screen. They will will be able to access their profile page from: “www.OOverlap.com/user/[theirLoginUsername]”.
@@ -88,20 +89,20 @@ Components: The Breakdown
 ##Create Account
 - **Person(s) Responsible:** Giovanna, Justin
 - **How does it connect and communicate to other parts of the system?:**  
-	Inputs a new user’s username and password, passes it onto the database for storage, and then logs the user in and redirects them to their new user profile.
+	Inputs a new user’s username and password, validate whether the username exists before, if not,  passes it onto the database for storage, and then logs the user in and redirects them to their new user profile.
 - **How does it relate and implement aspects that were mentioned in our fspec?:**  
 	This particular aspect was not directly referenced in the functional specification, but it implements creating a new user profile.
 - **Please predict any implementation challenges:**  
-	Any issues related to this would probably be difficulties in implementing the database.
+	Any issues related to this would probably be difficulties in encrypting user information to ensure user’s privacy.
 
 ##Log in
 - **Person(s) Responsible:** Justin, Santiago  
 - **How does it connect and communicate to other parts of the system?:**  
-	This view will allow the user to give us a username and password that we will pass on to the Google API to gain access to the user’s calendar information on their Google Calendar. The user will then be redirected to their user profile if their login is successful.
+	This component will allow the user to choose whether they want to login by their account or via Google/ Facebook then redirect user information to the correct Authentication. The user will then be redirected to their user profile if their login is successful.
 - **How does it relate and implement aspects that were mentioned in our fspec?:**  
 	This will implement the login aspect of the homepage shown in the functional specification.
 - **Please predict any implementation challenges:**  
-	It may be difficult/complicated to manage the Google API’s login functionality.
+	It may be difficult/complicated to manage the Google API and Facebook API’s login functionality.
 
 ##User Profile
 - **Person(s) Responsible:** Kiernan, Giovanna  
@@ -125,18 +126,23 @@ Components: The Breakdown
 ####Input Calendar (Scheduling Events)
 - **Person(s) Responsible:** Justin, Thai  
 - **How does it connect and communicate to other parts of the system?:**  
-	This component will have a lot of communication with the Google Calendar and dhtmlxScheduler APIs
+	This component will make use of Google Calendar, dhtmlxScheduler APIs and AngularJs to make a smooth interface that let users input their free time.
 - **How does it relate and implement aspects that were mentioned in our fspec?:**  
 	This will implement one half of the member and moderator views mentioned in the functional specification. It will simply use the Google Calendar API to input the user’s calendar and then send it to the database for storage/use.
 - **Please predict any implementation challenges:**   
 	We might have some challenges when it comes to building the interface for this feature. It could very well be one of those things that looks really smooth, but is pretty complicated to code. Other implementation challenges could include...
 
+####Overlap Calendar (Figuring Out Group Meeting time)
+- **Person(s) Responsible:** Thai  
+- **How does it relate and implement aspects that were mentioned in our fspec?:** This component will connect with the database to retrieve all free time of members in the group and then using moment library and use matching algorithm to figure out the best overlap time slot.
+- **Please predict any implementation challenges:** The biggest challenge will be the algorithm to figure out the overlap time with highest users' prority.
+
 ####“Export” Calendar (Displaying All Users Free Time)
 - **Person(s) Responsible:** Justin, Thai  
 - **How does it connect and communicate to other parts of the system?:**  
-	This component will mainly connect with the Google Calendar and dhtmlxScheduler APIs
+	This component will mainly connect with the database to retrieve the best meet-up time
 - **How does it relate and implement aspects that were mentioned in our fspec?:**  
-	This component will implement the other half of the member and moderator views mentioned in the fspec. This calendar will be the one that we build that shows the users the times that they are both free.
+	This calendar will be the one that we build that shows the users the times that they are both free.
 - **Please predict any implementation challenges:**  
 	There could be challenges with implementing the interface for this feature. For consistency, all the calendars shown should look like the google calendar. (It would be ugly, and confusing to have different layouts for different calendars). That said, having the overlapping times shows up on a google calendar looks as though it will be quite the challenge.
 
@@ -147,4 +153,4 @@ Components: The Breakdown
 - **Please predict any implementation challenges:**  
 	We do not expect any implementation challenges. Sending an email is a fairly straightforward process and we will have their email address since that is what we are using for our username.
 
-<p align = "right"><em>[Justin Coon, Giovanna Diaz - 11/11/2014]</em></p>
+<p align = "right"><em>[Justin Coon, Giovanna Diaz, Thai Nguyen - 11/11/2014]</em></p>

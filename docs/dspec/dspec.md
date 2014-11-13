@@ -70,7 +70,7 @@ The settings component fits in to the website because we are offering the user s
 The input calendar component will be used when the user goes to schedule an event with a friend or colleague. This fits in to our application since it is basically the basis of what the application is designed on: scheduling events with ease. The calendar that shows up will allow the user to drag their free times on to the calendar and will then take those times to compare later on. This component can be accessed by clicking on the “Schedule an Event” button on their Profile page.
 
 ####Overlap Calendar (Figuring Out Group Meeting time)
-This component will occur in the back-end system once every members in the group have filled out their free time. It then retrieved all the user input and apply correct algorithm to figure out the time slot with highest priority.
+This component will occur in the back-end system once every members in the group have filled out their free time. It then retrieved all the user input and apply correct matching algorithm to figure out the time slot with highest priority.
 
 ####“Export” Calendar (Displaying All Users Free Time)
 The export calendar component will display the free times that both the users have filled out. With this calendar, you will be able to clearly see the overlaps. This component will ultimately be displayed once we figure out the best meeting time, and you cannot get to it before that point.
@@ -92,7 +92,7 @@ As previously mentioned, the email notifications can be toggled in the Settings 
 
 Components: The Breakdown
 --------------------------
-##Create Account
+###Create Account
 - **Person(s) Responsible:** Giovanna, Justin
 - **How does it connect and communicate to other parts of the system?:**  
 	Inputs a new user’s username and password, validate whether the username exists before, if not,  passes it onto the database for storage, and then logs the user in and redirects them to their new user profile.
@@ -101,7 +101,7 @@ Components: The Breakdown
 - **Please predict any implementation challenges:**  
 	Any issues related to this would probably be difficulties in encrypting user information to ensure user’s privacy.
 
-##Log in
+###Log in
 - **Person(s) Responsible:** Justin, Santiago  
 - **How does it connect and communicate to other parts of the system?:**  
 	This component will allow the user to choose whether they want to login by their account or via Google/ Facebook then redirect user information to the correct Authentication. The user will then be redirected to their user profile if their login is successful.
@@ -110,7 +110,7 @@ Components: The Breakdown
 - **Please predict any implementation challenges:**  
 	It may be difficult/complicated to manage the Google API and Facebook API’s login functionality.
 
-##User Profile
+###User Profile
 - **Person(s) Responsible:** Kiernan, Giovanna  
 - **How does it connect and communicate to other parts of the system?:**  
 	This component will pull the user’s information such as name, location, current OOverlap meetups, etc from the database as well as calendar information from their Google Calendar account and display it.
@@ -119,7 +119,7 @@ Components: The Breakdown
 - **Please predict any implementation challenges:**  
 	Deciding how to arrange and organize the information we pull in a clean and concise manner may be complicated.
 
-##Settings
+###Settings
 - **Person(s) Responsible:** Kiernan, Santiago
 - **How does it connect and communicate to other parts of the system?:**  
 	This component will be communicating with the database in that it will have to pull the user’s current settings and push the settings the user has changed. After changes have been saved it will redirect to the user’s profile page.
@@ -128,7 +128,7 @@ Components: The Breakdown
 - **Please predict any implementation challenges:**  
 	This component will be relatively straight forward so we do not expect very many issues.
 
-##Calendars…
+###Calendars…
 ####Input Calendar (Scheduling Events)
 - **Person(s) Responsible:** Justin, Thai  
 - **How does it connect and communicate to other parts of the system?:**  
@@ -152,7 +152,7 @@ Components: The Breakdown
 - **Please predict any implementation challenges:**  
 	There could be challenges with implementing the interface for this feature. For consistency, all the calendars shown should look like the google calendar. (It would be ugly, and confusing to have different layouts for different calendars). That said, having the overlapping times shows up on a google calendar looks as though it will be quite the challenge.
 
-##Email Notifications
+###Email Notifications
 - **Person(s) Responsible:** Kiernan, Giovanna, Thai
 - **How does it connect and communicate to other parts of the system?:**  
 	This will be using the Nodemailer library and will be utilized by the meetup request component.

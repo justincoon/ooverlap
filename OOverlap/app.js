@@ -4,10 +4,23 @@ var favicon      = require('serve-favicon');
 var logger       = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser   = require('body-parser');
+var passport     = require('passport');
+var session      = require('express-session');
+var MongoStore   = require('connect-mongo')(session);
 
 var routes       = require('./routes/index');
 var auth         = require('./routes/auth');
 var app          = express();
+
+//API Keys & Passport config
+
+var keys = require('./config/keys');
+var passConfig = require('./config/passport');
+
+//Mongo connection
+
+mongoose.connect(keys.db);
+mongoose.connection.on('error', function() {console.error('MongoDB connection error. Is is running?');});
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -26,6 +39,16 @@ app.use(express.static(path.join(__dirname, '/public')));
 
 app.use('/', routes);
 app.use('/login', auth);
+
+app.get('/auth/facebook', passport.authenticate('facebook', { scope: ['email', 'user_location'] }));
+app.get('/auth/facebook/callback', passport.authenticate('facebook', { failureRedirect: '/login' }), function(req, res) {
+  res.redirect(req.session.returnTo || '/');
+});
+app.get('/auth/google', passport.authenticate('google', { scope: 'profile email' }));
+app.get('/auth/google/callback', passport.authenticate('google', { failureRedirect: '/login' }), function(req, res) {
+  res.redirect(req.session.returnTo || '/');
+});
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

@@ -5,8 +5,6 @@ var logger       = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser   = require('body-parser');
 var passport     = require('passport');
-var session      = require('express-session');
-var MongoStore   = require('connect-mongo')(session);
 
 var routes       = require('./routes/index');
 
@@ -16,11 +14,6 @@ var app          = express();
 
 var keys = require('./config/keys');
 var passConfig = require('./config/passport');
-
-//Mongo connection
-
-mongoose.connect(keys.db);
-mongoose.connection.on('error', function() {console.error('MongoDB connection error. Is is running?');});
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));

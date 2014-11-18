@@ -7,7 +7,7 @@ var bodyParser   = require('body-parser');
 var passport     = require('passport');
 
 var routes       = require('./routes/index');
-
+var auth         = require('./routes/auth');
 var app          = express();
 
 //API Keys & Passport config
@@ -31,6 +31,7 @@ app.use(require('less-middleware')(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, '/public')));
 
 app.use('/', routes);
+app.use('/login', auth);
 
 app.get('/auth/facebook', passport.authenticate('facebook', { scope: ['email', 'user_location'] }));
 app.get('/auth/facebook/callback', passport.authenticate('facebook', { failureRedirect: '/login' }), function(req, res) {

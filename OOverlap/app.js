@@ -10,11 +10,11 @@ var routes       = require('./routes/index');
 var auth         = require('./routes/auth');
 var app          = express();
 
-//API Keys & Passport config
+/*//API Keys & Passport config
 
 var keys = require('./config/keys');
 var passConfig = require('./config/passport');
-
+*/
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
@@ -31,7 +31,7 @@ app.use(require('less-middleware')(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, '/public')));
 
 app.use('/', routes);
-app.use('/login', auth);
+/*app.use('/login', auth);
 
 app.get('/auth/facebook', passport.authenticate('facebook', { scope: ['email', 'user_location'] }));
 app.get('/auth/facebook/callback', passport.authenticate('facebook', { failureRedirect: '/login' }), function(req, res) {
@@ -41,7 +41,7 @@ app.get('/auth/google', passport.authenticate('google', { scope: 'profile email'
 app.get('/auth/google/callback', passport.authenticate('google', { failureRedirect: '/login' }), function(req, res) {
   res.redirect(req.session.returnTo || '/');
 });
-
+*/
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

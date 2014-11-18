@@ -9,4 +9,4 @@ router.post('/', function(req, res) {
   res.render('index', { title: 'OOverlap' });
 });
 
-module.exports = route
+module.exports = router

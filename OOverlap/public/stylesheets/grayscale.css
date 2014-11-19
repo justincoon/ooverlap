@@ -372,6 +372,25 @@ img::-moz-selection {
 /*body {
     webkit-tap-highlight-color: rgba(255,255,255,.2);
 }*/
+.team-member {
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.team-member img {
+    margin: 0 auto;
+    border: 7px solid #fff;
+}
+
+.team-member h4 {
+    margin-top: 25px;
+    margin-bottom: 0;
+    text-transform: none;
+}
+
+.team-member p {
+    margin-top: 0;
+}
 
 /*@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,700italic,400italic);*/
 

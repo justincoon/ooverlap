@@ -27,10 +27,94 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-    <title><%= title %></title>
+    <title><%= title  %></title>
     <!-- <link rel='stylesheet' href='/stylesheets/style.css' /> -->
   </head>
   <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+    <div class="container">
+    <!-- <a id="modal_trigger" href="#modal" class="btn">Click here to Login or register</a> -->
+
+    <div id="modal" class="popupContainer" style="display:none;">
+        <header class="popupHeader">
+            <span class="header_title">Login</span>
+            <span class="modal_close"><i class="fa fa-times"></i></span>
+	</header>
+        
+        <section class="popupBody">
+            <!-- Social Login -->
+            <div class="social_login">
+                <div class="">
+                    <a href="/auth/facebook" class="social_box fb">
+                        <span class="icon"><i class="fa fa-facebook"></i></span>
+                        <span class="icon_title">Connect with Facebook</span>
+                        
+                    </a>
+
+                    <a href="/auth/google" class="social_box google">
+                        <span class="icon"><i class="fa fa-google-plus"></i></span>
+                        <span class="icon_title">Connect with Google</span>
+                    </a>
+                </div>
+
+                <div class="centeredText">
+                    <span>Or use your Email address</span>
+                </div>
+
+                <div class="action_btns">
+                    <div class="one_half"><a href="#" id="login_form" class="btn">Login</a></div>
+                    <div class="one_half last"><a href="#" id="register_form" class="btn">Sign up</a></div>
+                </div>
+            </div>
+
+            <!-- Username & Password Login form -->
+            <div class="user_login">
+                <form>
+                    <label>Email / Username</label>
+                    <input type="text" />
+                    <br />
+
+                    <label>Password</label>
+                    <input type="password" />
+                    <br />
+
+                    <div class="checkbox">
+                        <input id="remember" type="checkbox" />
+                        <label for="remember">Remember me on this computer</label>
+                    </div>
+
+                    <div class="action_btns">
+                        <div class="one_half"><a href="#" class="btn back_btn"><i class="fa fa-angle-double-left"></i> Back</a></div>
+                        <div class="one_half last"><a href="/auth/local" class="btn btn_red">Login</a></div>
+                    </div>
+                </form>
+
+                <a href="#" class="forgot_password">Forgot password?</a>
+            </div>
+
+            <!-- Register Form -->
+            <div class="user_register">
+                <form>
+                    <label>Full Name</label>
+                    <input type="text" />
+                    <br />
+
+                    <label>Email Address</label>
+                    <input type="email" />
+                    <br />
+
+                    <label>Password</label>
+                    <input type="password" />
+                    <br />
+
+                    <div class="action_btns">
+                        <div class="one_half"><a href="#" class="btn back_btn"><i class="fa fa-angle-double-left"></i> Back</a></div>
+                        <div class="one_half last"><a href="#" class="btn btn_red">Register</a></div>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </div>
+    </div>
 
     <!-- Navigation -->
     <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
@@ -39,33 +123,10 @@
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
                     <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand login-window" href="#login-box">
+                <a class="navbar-brand" id="modal_trigger" href="#modal">
                     <i class="fa fa-play-circle"></i>  <span class="light">Login</span>
                 </a>
             </div>
-            <div id="login-box" class="login-popup">
-                <a href="#" class="close"><img src="./images/close_pop.png" class="btn_close" title="Close Window" alt="Close" /></a>
-                <form method="post" class="signin" action="#">
-                    <fieldset class="textbox">
-                        <label class="username">
-                            <span>Username or email</span>
-                            <input id="username" name="username" value="" type="text" autocomplete="on" placeholder="Username">
-                        </label>
-                        
-                        <label class="password">
-                            <span>Password</span>
-                            <input id="password" name="password" value="" type="password" placeholder="Password">
-                        </label>
-                        
-                        <button class="submit button" type="button">Sign in</button>
-                        
-                        <p>
-                        <a class="forgot" href="#">Forgot your password?</a>
-                        </p>
-                    </fieldset>
-                </form>
-            </div>
-    
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
                 <ul class="nav navbar-nav">
@@ -88,7 +149,7 @@
         </div>
         <!-- /.container -->
     </nav>
-
+        
     <!-- Intro Header -->
     <header class="intro">
         <div class="intro-body">
@@ -129,25 +190,93 @@
 
     <!-- About us Section -->
     <section id="about" class="container content-section text-center">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2">
-                <h2>About us</h2>
-                <p> Giovanna Diaz <br />A Dallas, Texas native, Giovanna Diaz is a junior at Smith College double majoring in Computer Science and Mathematics. She also has a great interest in design and will jump at any chance she gets to use the Adobe Creative Suite!</p>
-
-            	<p> Thai Nguyen <br />An Asian geek who sleeps with Java every night but falls in love with Python instead, who desires to solve challenging back-end problems but also fascinated in creating fabulous UI design. Being a person who favors "high entropy" (in other words: "utmost laziness"), he loves utilizing his computer to save his time and work, that's why he is now craving to learn about Machine Learning and Information Retrieval.</p>
-
-            	<p> Justin Coon <br />A sophomore at University of Massachusetts, Amherst majoring in Computer Science. Originally from Longmeadow, MA he now lives in Dallas, TX for summers but comes back for the cold UMass winters. Primarily going to be doing back end development with node and will be working towards integration with Google Calendar and Facebook.</p>
-
-            	<p> Santiago De La Torre <br />Software engineer brought from the darkest side of Europe looking forward to start writing malicious code. In the meantime, he loves desining databases and fairy-rail queries to store and retrieve data in a minimal time possible. Systems programming is his passion and C isn't only his favourite "vitamin."</p>
-
-            	<p> Kiernan Drohan<br/>A Massachusetts native with roots set in the boroughs. Originally a Westborough native but now dwelling in Northborough Massacusetts. With a foot already in the door on the business side of things he seeks to further his knowledge in every direction. Junior at University of Massachusetts Amherst, majoring in Computer Science with a focus in security. Interested in back end security and transfer intricacies.</p>
-            	</p>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Our Amazing Team</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="team-member">
+                        <img src="/images/team/giovanna.jpg" class="img-responsive img-circle" alt="">
+                        <h4>Giovanna Diaz</h4>
+                        <p class="text-muted">Project Manager & Graphic Designer</p>
+                        <ul class="list-inline social-buttons">
+                            <li><a href="#"><i class="fa fa-github"></i></a>
+                            </li>
+                            <li><a href="#"><i class="fa fa-facebook"></i></a>
+                            </li>
+                            <li><a href="#"><i class="fa fa-linkedin"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="team-member">
+                        <img src="/images/team/thai.jpg" class="img-responsive img-circle" alt="">
+                        <h4>Thai Nguyen</h4>
+                        <p class="text-muted">UI/UX Designer & Backend Developer</p>
+                        <ul class="list-inline social-buttons">
+                            <li><a href="http://github.com/thaingnguyen"><i class="fa fa-github"></i></a>
+                            </li>
+                            <li><a href="http://facebook.com/drmonky"><i class="fa fa-facebook"></i></a>
+                            </li>
+                            <li><a href="http://linkedin.com/in/thaingnguyen"><i class="fa fa-linkedin"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class ="row">
+                <div class="col-sm-4">
+                    <div class="team-member">
+                        <img src="/images/team/justin.jpg" class="img-responsive img-circle" alt="">
+                        <h4>Justin Coon</h4>
+                        <p class="text-muted">Backend Developer</p>
+                        <ul class="list-inline social-buttons">
+                            <li><a href="#"><i class="fa fa-github"></i></a>
+                            </li>
+                            <li><a href="#"><i class="fa fa-facebook"></i></a>
+                            </li>
+                            <li><a href="#"><i class="fa fa-linkedin"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="team-member">
+                        <img src="/images/team/santiago.jpg" class="img-responsive img-circle" alt="">
+                        <h4>Santiago De La Torre</h4>
+                        <p class="text-muted">Backend Developer & Database Analyst</p>
+                        <ul class="list-inline social-buttons">
+                            <li><a href="http://github.com/santidltp"><i class="fa fa-github"></i></a>
+                            </li>
+                            <li><a href="http://facebook.com/santidltp"><i class="fa fa-facebook"></i></a>
+                            </li>
+                            <li><a href="http://linkedin.com/in/santidltp"><i class="fa fa-linkedin"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="team-member">
+                        <img src="/images/team/kiernan.jpg" class="img-responsive img-circle" alt="">
+                        <h4>Kiernan Drohan</h4>
+                        <p class="text-muted">Backend Developer & Security Specialist</p>
+                        <ul class="list-inline social-buttons">
+                            <li><a href="#"><i class="fa fa-github"></i></a>
+                            </li>
+                            <li><a href="#"><i class="fa fa-facebook"></i></a>
+                            </li>
+                            <li><a href="#"><i class="fa fa-linkedin"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
-
-    <!-- Map Section 
-    <div id="map"></div> -->
 
     <!-- Footer -->
     <footer>
@@ -156,23 +285,50 @@
         </div>
     </footer>
 
-    <!-- jQuery Version 1.11.0 -->
-    <!-- <script src="/javascripts/jquery-1.11.0.js"></script> -->
-
-	<!-- jQuery Version 1.11.1 -->
-    <script src="/javascripts/jquery-1.11.0.js"></script>    
+    <!-- JQuery -->
+    <script src="/javascripts/jquery-1.11.0.min.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
     <script src="/javascripts/bootstrap.min.js"></script>
 
     <!-- Plugin JavaScript -->
     <script src="/javascripts/jquery.easing.min.js"></script>
-
-    <!-- Google Maps API Key - Use your own API key to enable the map feature. More information on the Google Maps API can be found at https://developers.google.com/maps/ -->
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRngKslUGJTlibkQ3FkfTxj3Xss1UlZDA&sensor=false"></script>
-
+    <script src="/javascripts/jquery.leanModal.min.js"></script>
+    
     <!-- Custom Theme JavaScript -->
     <script src="/javascripts/grayscale.js"></script>
+
+    <script>
+    $("#modal_trigger").leanModal({top : 200, overlay : 0.6, closeButton: ".modal_close" });
+
+    $(function(){
+        // Calling Login Form
+        $("#login_form").click(function(){
+            $(".social_login").hide();
+            $(".user_login").show();
+            return false;
+        });
+
+        // Calling Register Form
+        $("#register_form").click(function(){
+            $(".social_login").hide();
+            $(".user_register").show();
+            $(".header_title").text('Register');
+            return false;
+        });
+
+        // Going back to Social Forms
+        $(".back_btn").click(function(){
+            $(".user_login").hide();
+            $(".user_register").hide();
+            $(".social_login").show();
+            $(".header_title").text('Login');
+            return false;
+        });
+
+    })
+    </script>
+
 </body>
 
 </html>

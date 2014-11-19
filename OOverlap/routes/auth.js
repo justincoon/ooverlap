@@ -9,7 +9,7 @@ router.get('/facebook', passport.authenticate('facebook', {
 router.get('/facebook/callback', passport.authenticate('facebook', {
 	failureRedirect: '/'
 }), function(req, res) {
-	res.redirect('/');
+	res.redirect('/user/profile');
 });
 
 router.get('/google', passport.authenticate('google', {
@@ -19,7 +19,7 @@ router.get('/google', passport.authenticate('google', {
 router.get('/google/callback', passport.authenticate('google', {
 	failureRedirect: '/'
 }), function(req, res) {
-	res.redirect('/');
+	res.redirect('/user/profile');
 });
 
 module.exports = router

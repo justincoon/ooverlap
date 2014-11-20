@@ -13,7 +13,7 @@ router.get('/facebook/callback', passport.authenticate('facebook', {
 });
 
 router.get('/google', passport.authenticate('google', {
-	scope: 'profile email'
+	scope: ['profile email', 'https://www.googleapis.com/auth/calendar']
 }));
 
 router.get('/google/callback', passport.authenticate('google', {

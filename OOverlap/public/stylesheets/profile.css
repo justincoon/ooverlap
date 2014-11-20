@@ -141,7 +141,5 @@ body, html {
 }
 
 #iFrame_styling {
-	margin-left:auto;
-	margin-right:auto;
-	background-color:#003399;
+	text-align:center;
 }

@@ -11,12 +11,12 @@ var User = require('../lib/user');
  * Login page.
  */
 
-exports.getLogin = function(req, res) {
-  if (req.user) return res.redirect('/');
-  res.render('account/login', {
-    title: 'Login'
-  });
-};
+// exports.getLogin = function(req, res) {
+//   if (req.user) return res.redirect('/');
+//   res.render('account/login', {
+//     title: 'Login'
+//   });
+// };
 
 /**
  * POST /login
@@ -67,7 +67,7 @@ exports.logout = function(req, res) {
 
 exports.getSignup = function(req, res) {
   if (req.user) return res.redirect('/');
-  res.render('account/signup', {
+  res.render('user/signup', {
     title: 'Create Account'
   });
 };

@@ -22,4 +22,14 @@ router.get('/google/callback', passport.authenticate('google', {
 	res.redirect('/user/profile');
 });
 
+router.get('/login', passport.authenticate('google', {
+	scope: ['email', 'password']
+}));
+
+router.get('/login/callback', passport.authenticate('google', {
+	failureRedirect: '/'
+}), function(req, res) {
+	res.redirect('/user/profile');
+});
+
 module.exports = router

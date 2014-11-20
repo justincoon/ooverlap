@@ -3,6 +3,7 @@ var passport         = require('passport');
 var LocalStrategy    = require('passport-local').Strategy;
 var FacebookStrategy = require('passport-facebook').Strategy;
 var GoogleStrategy   = require('passport-google-oauth').OAuth2Strategy;
+var flash            = require('express-flash');
 var User             = require('../lib/user');
 var secrets          = require('./keys');
 

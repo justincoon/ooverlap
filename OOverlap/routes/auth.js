@@ -32,4 +32,4 @@ router.get('/login/callback', passport.authenticate('google', {
 	res.redirect('/user/profile');
 });
 
-module.exports = router
+module.exports = router;

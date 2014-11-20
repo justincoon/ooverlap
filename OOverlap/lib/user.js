@@ -52,4 +52,4 @@ userSchema.methods.comparePassword = function(candidatePassword, cb) {
     cb(null, isMatch);
   });
 };
-module.exports = mongoose.model('user', userSchema);
+module.exports = mongoose.model('User', userSchema);

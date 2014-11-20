@@ -22,7 +22,9 @@ body, html {
 	
 }
 
+/*											  */
 /* Contains the logo on the LHS of the screen */
+/*											  */
 #banner {
 	height:15%;
 	width:100%;
@@ -48,7 +50,7 @@ body, html {
 	margin-right:auto;
 	width:75%;
 	overflow:hidden;
-  	border-radius:50%;
+  	border-radius:100%;
 	-moz-border-radius: 50%;
     -khtml-border-radius: 50%;
     -webkit-border-radius: 50%;
@@ -80,6 +82,7 @@ body, html {
 	width:80%;
 	margin-left:auto;
 	margin-right:auto;
+	padding-bottom:10%;
 }
 
 .userFriends_wrapper div:nth-child(1), .userGroups_wrapper div:nth-child(1) {
@@ -93,17 +96,17 @@ body, html {
 
 /* FRIENDS */
 .userFriends_wrapper div:nth-child(2){
+	height:100px;
 	font-size:12px;
 	font-weight:normal;
-	height:50px;
 	overflow:scroll;
 }
 
 /* GROUPS */
 .userGroups_wrapper div:nth-child(2){
+	height:100px;
 	font-size:12px;
 	font-weight:normal;
-	height:50px;
 	overflow:scroll;
 }
 

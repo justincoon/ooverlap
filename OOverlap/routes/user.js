@@ -15,7 +15,9 @@ router.get('/calendar', function(req, res) {
     var google_calendar = new gcal.GoogleCalendar(req.user.tokens[0].accessToken);
     console.log(req.user.tokens[0].accessToken);
     google_calendar.calendarList.list(function(err, calendarList) {
-      console.log(calendarList);
+	google_calendar.events.list(req.user.email, function(err, calendarList) {
+		console.log(calendarList);
+	});
     });
   } else {
     res.redirect('/');

@@ -33,19 +33,20 @@ View for the Profile Page includes
         <div id="wrapper">
 
 			<!-- Links to Home -->
-			<div id="banner"><img src="images/OOverlap.png" alt="logo" /></div>
+			<div id="banner"><img src="/images/OOverlap.png" alt="logo" /></div>
 		    
 		    <div id="contentWrapper">
 		    	
 		        <div id="LHS_UserInformation">
 		        	
 		            <!-- Should be rounded -->
-		            <div class="profilePic_wrapper"><img src="images/profPic.png" alt="ProfilePicture" /></div>
+		            <div class="profilePic_wrapper"><img src= "<%= user.profile.picture %>" alt="ProfilePicture" /></div>
 					
 		            <div class="userInformation_wrapper">
-		            	<div> <!-- GET USERNAME -->Giovanna Diaz
+		            	<div> <%= user.profile.name %>
 		                	<div> Student, Smith College <br />
-		                    <!-- GET EMAIL -->gdiaz@smith.edu </div>    
+		                    <%= user.email %>
+		                     </div>    
 		                </div> 
 		            </div>
 		            

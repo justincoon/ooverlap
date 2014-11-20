@@ -23,4 +23,12 @@ module.exports = {
     callbackURL: '/auth/google/callback',
     passReqToCallback: true
   },
+
+  google-calendar: {
+    clientID: process.env.GOOGLE_ID || '410706092739-3b90s6fnpou8jjgd524ui84js5m4ntco.apps.googleusercontent.com',
+    clientSecret: process.env.GOOGLE_SECRET || 'WjAU7z4HmIV3SgMO-GPv4Ggv',
+    callbackURL: '/auth/google-calendar/callback',
+    passReqToCallback: true
+  },
+};
 };

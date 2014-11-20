@@ -18,6 +18,10 @@ var userSchema = new mongoose.Schema({
     picture: { type: String, default: '' }
   },
 
+  friends: Array,
+  groups: Array,
+  schedule: Array,
+  
   resetPasswordToken: String,
   resetPasswordExpires: Date
 });

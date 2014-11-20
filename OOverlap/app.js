@@ -25,9 +25,10 @@ var keys = require('./config/keys');
 var passConfig = require('./config/passport');
 
 //Start mongo
-
 mongoose.connect(keys.db);
-mongoose.connection.on('error', function() { console.error('Error: is mongo running?');});
+mongoose.connection.on('error', function() {
+    console.error('Error: is mongo running?');
+});
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -42,20 +43,22 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(validator());
 app.use(cookieParser());
-app.use(session(
-{
-	resave: true, 
-	saveUninitialized: true, 
-	secret: keys.sessionSecret, 
-	store: new connectmongo({ url: keys.db, auto_reconnect: true})
+app.use(session({
+    resave: true,
+    saveUninitialized: true,
+    secret: keys.sessionSecret,
+    store: new connectmongo({
+        url: keys.db,
+        auto_reconnect: true
+    })
 }));
 app.use(require('less-middleware')(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, '/public')));
 app.use(passport.initialize());
 app.use(passport.session());
 app.use(function(req, res, next) {
-	res.locals.user = req.user;
-	next();
+    res.locals.user = req.user;
+    next();
 });
 
 app.use('/', routes);

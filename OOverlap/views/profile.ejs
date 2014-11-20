@@ -40,7 +40,13 @@ View for the Profile Page includes
 		        <div id="LHS_UserInformation">
 		        	
 		            <!-- Should be rounded -->
-		            <div class="profilePic_wrapper"><img src= "<%= user.profile.picture %>" alt="ProfilePicture" /></div>
+		            <div class="profilePic_wrapper">
+                        <% if (user.profile.picture) { %>
+                            <img src= "<%= user.profile.picture %>" alt="ProfilePicture" />
+                        <% } else { %>
+                            <img src= "/images/profPic.png" alt="ProfilePicture" />
+                        <% } %>
+                    </div>
 					
 		            <div class="userInformation_wrapper">
 		            	<div> <%= user.profile.name %>

@@ -1,5 +1,4 @@
 module.exports = {
-
   db: process.env.MONGOLAB_URI || process.env.MONGODB || 'mongodb://localhost:27017/test',
   // 'mongodb://admin:123456@ds051720.mongolab.com:51720/heroku_app31554854',
   

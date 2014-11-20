@@ -3,7 +3,11 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res) {
-  res.render('index', { title: 'OOverlap', user: req.user });
+  if (req.user){
+  	res.redirect('/user/profile');
+  } else {
+  	res.render('index', { title: 'OOverlap', user: req.user });
+  }
 });
 
 module.exports = router;

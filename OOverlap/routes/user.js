@@ -11,14 +11,14 @@ router.get('/profile', function(req, res) {
 });
 
 router.get('/calendar', function(req, res) {
-  if(req.user){
-	var google_calendar = new gcal.GoogleCalendar(req.user.tokens.accessToken);
-	google_calendar.calendarList.list(function(err, calendarList) {
-		console.log(calendarList);
-	});
-  }
-  else{
-	res.redirect('/');
+  if (req.user) {
+    var google_calendar = new gcal.GoogleCalendar(req.user.tokens[0].accessToken);
+    console.log(req.user.tokens[0].accessToken);
+    google_calendar.calendarList.list(function(err, calendarList) {
+      console.log(calendarList);
+    });
+  } else {
+    res.redirect('/');
   }
 });
 

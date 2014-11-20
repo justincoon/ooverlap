@@ -21,19 +21,17 @@ View for the Profile Page includes
 
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     </head>
-	<%= user %>
     <body>
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-
-        <!-- Add your site or application content here
-        <p>Hello world! This is HTML5 Boilerplate.</p> -->
+        <div>
+            <img src= <%= user.profile.picture %> >
+            <p> Hi  <%= user.profile.name %> </p>
+        </div>
 
         <div id="wrapper">
-
-
-
+    
         </div>
 
 
@@ -51,3 +49,4 @@ View for the Profile Page includes
         </script>
     </body>
 </html>
+

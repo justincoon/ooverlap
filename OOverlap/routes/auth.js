@@ -1,6 +1,7 @@
 var express     = require('express');
 var router      = express.Router();
 var passport    = require('passport');
+var userController = require('../config/user');
 
 router.get('/facebook', passport.authenticate('facebook', {
 	scope: ['email', 'user_location']
@@ -22,14 +23,7 @@ router.get('/google/callback', passport.authenticate('google', {
 	res.redirect('/user/profile');
 });
 
-router.get('/login', passport.authenticate('google', {
-	scope: ['email', 'password']
-}));
-
-router.get('/login/callback', passport.authenticate('google', {
-	failureRedirect: '/'
-}), function(req, res) {
-	res.redirect('/user/profile');
-});
+router.get('/login', userController.getLogin);
+router.post('/login', userController.postLogin);
 
 module.exports = router;

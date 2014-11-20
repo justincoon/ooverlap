@@ -25,7 +25,7 @@ router.get('/google/callback', passport.authenticate('google', {
 
 router.get('/local', userController.getLogin);
 router.post('/local', userController.postLogin);
-app.get('/signup', userController.getSignup);
-app.post('/signup', userController.postSignup);
+// app.get('/signup', userController.getSignup);
+// app.post('/signup', userController.postSignup);
 
 module.exports = router;

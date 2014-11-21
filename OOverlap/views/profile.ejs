@@ -20,8 +20,10 @@ View for the Profile Page includes
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link href="/stylesheets/profile.css" rel="stylesheet" type="text/css" />
+        <link href='/stylesheets/fullcalendar.css' rel='stylesheet' />
+        <link href='/stylesheets/calendar.css' rel='stylesheet' />
+        <link href='/stylesheets/fullcalendar.print.css' rel='stylesheet' media='print' />
 
-        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     </head>
     <body>
         <!--[if lt IE 7]>
@@ -54,7 +56,14 @@ View for the Profile Page includes
 		                     </div>    
 		                </div> 
 		            </div>
-		            
+		            <div id="external-events" class="draggable_wrapper">
+                        <h4>Free Times</h4>
+                        <div class='fc-event'>Priority 1</div>
+                        <div class='fc-event'>Priority 2</div>
+                        <div class='fc-event'>Priority 3</div>
+                        <div class='fc-event'>Priority 4</div>
+                        <div class='fc-event'>Priority 5</div>
+                    </div>     
 		            <div class="userFriends_wrapper">
 		            	<div> Friends </div>
 		                <div>
@@ -62,6 +71,7 @@ View for the Profile Page includes
                                 <li> Friend 1 </li>
                                 <li> Friend 2 </li>
                                 <li> Friend 3 </li>
+                                
                             </ul>      
                         </div>
 		            </div>
@@ -100,33 +110,23 @@ View for the Profile Page includes
                 
             </div>
             
-            <div id="iFrame_styling">
+            <!-- <div id="iFrame_styling">
             
             <iframe src="https://www.google.com/calendar/embed?showTitle=0&amp;showNav=0&amp;showDate=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0&amp;height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;src=scs%40smith.edu&amp;color=%235229A3&amp;ctz=America%2FNew_York" style=" border-width:0 " width="98%" height="450px" frameborder="0" scrolling="no"></iframe>
-            </div>
-            
+            </div> -->
+            <div id='calendar'></div>
+
         </div> <!-- End of the RHS -->
 		    
 		    </div><!-- End of CONTENT WRAPPER -->
 
 		</div>
 
-
-
-
-
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
-
-        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-        <script>
-            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-            e.src='//www.google-analytics.com/analytics.js';
-            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-            ga('create','UA-XXXXX-X');ga('send','pageview');
-        </script>
+        <script src='/javascripts/moment.min.js'></script>
+        <script src='/javascripts/jquery.min.js'></script>
+        <script src='/javascripts/jquery-ui.custom.min.js'></script>
+        <script src='/javascripts/fullcalendar.min.js'></script>   
+        <script src='/javascripts/calendar.js'></script>
     </body>
 </html>
 

@@ -153,6 +153,10 @@ passport.use(new GoogleStrategy(secrets.google, function(req, accessToken, refre
             kind: 'google',
             accessToken: accessToken
           });
+	  user.tokens.push({
+	    kind: 'google-calendar',
+	    refreshToken: refreshToken
+	  });
           user.profile.name = profile.displayName;
           user.profile.gender = profile._json.gender;
           user.profile.picture = profile._json.picture;

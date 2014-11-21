@@ -174,3 +174,7 @@ body, html {
     margin: 0;
     vertical-align: middle;
 }
+
+#calendar {
+	width: 1000px;
+}

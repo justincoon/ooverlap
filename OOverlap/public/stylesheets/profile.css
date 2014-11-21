@@ -127,7 +127,6 @@ body, html {
 }
 
 #requestsEventsSchedule_wrapper table {
-	background-color:#FCC;
 	width:100%;
 }
 
@@ -139,6 +138,19 @@ body, html {
 #requestsEventsSchedule_wrapper table tr td div{
 	font-size:14px;
 	width:100%;
+}
+
+#pendingRequests, #upcomingEvents {
+	height:80px;
+	font-size:12px;
+	font-weight:normal;
+	overflow:scroll;
+}
+
+.pendingRequests_TTM {
+	font-style:italic;
+	font-size:13px;
+	color:#999;
 }
 
 /*#external-events {

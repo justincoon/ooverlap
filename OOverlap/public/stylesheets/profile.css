@@ -127,21 +127,18 @@ body, html {
 }
 
 #requestsEventsSchedule_wrapper table {
-	background-color:#FF9933;
+	background-color:#FCC;
 	width:100%;
 }
 
 #requestsEventsSchedule_wrapper table tr{
+	vertical-align:top;
 	text-align:left;
 }
 	
 #requestsEventsSchedule_wrapper table tr td div{
 	font-size:14px;
 	width:100%;
-}
-
-#iFrame_styling {
-	text-align:center;
 }
 
 /*#external-events {

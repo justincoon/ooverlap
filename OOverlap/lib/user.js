@@ -21,6 +21,8 @@ var userSchema = new mongoose.Schema({
   friends: Array,
   groups: Array,
   schedule: Array,
+  request: Array,
+  events: Array,
   
   resetPasswordToken: String,
   resetPasswordExpires: Date

@@ -22,12 +22,16 @@ router.get('/calendar', function(req, res) {
 		}
 		var google_calendar = new gcal.GoogleCalendar(req.user.tokens[0].accessToken);
 		google_calendar.events.list(req.user.email, {'timeMin': (new Date()).toISOString()}, function(err, calendarList) {
-			console.log(calendarList.items);
-			res.send(calendarList);
+      req.user.schedule = calendarList.items;
+      res.render('calendar', {items: req.user.schedule});
 		});
 	} else {
 		res.redirect('/');
 	}
+});
+
+router.get('/checkcalendar', function(req,res){
+  res.render('calendar', {items: req.user.schedule});
 });
 
 router.get('/logout', function(req, res) {

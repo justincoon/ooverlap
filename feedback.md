@@ -1,3 +1,18 @@
+#Project 3 Feedback
+
+Your mockups are extremely impressive, I'm completely blown away by your attention to detail and design! (I love that the "OO" circles in OOverlap are carried into the UI! Ahhh!)
+
+Regarding your non-goals, I find your goal of not advertising or monetizing quite admirable! On a similar note, your commitment to your users' privacy, because you're omitting the potential additional sensitive information (like bio, relationship status, and any other extraneous info) and especially because you'll be handling such private information, is great!
+
+A minor concern I had was in your scheduling flowchart under "Scheduling an Event". The user should generally always be able to reverse their action. Perhaps there should be a mechanism for the user to edit their choices if they notice on the confirmaton page that the times were incorrectly entered. Another note: you may want to provide more visible feedback to the user with potential scheduling conflicts instead of an asterick. An asterick denotes that there is additional information for the text, where as a warning sign or a color (red or yellow perhaps) would communicate to the user that there is a warning or error.
+
+Your trello board and weekly notes are always perfect. You guys are just awesome and I can't wait to see the OOverlap complete!
+
+Giving you a huge thumbs up!
+
+<img src="http://fileinabox.com/files/2008/11/thumbs-up.jpg">
+
+
 #Project 2 Feedback
 
 I found your team notes on UX quite intriguing, especially about avoiding "double booking" two activities for the same time slot. You may want to check out live templating frameworks that change as the model changes; For example, right when User 1 marks a time slot as taken in some activity, User 2's view would update to show that User 1's is suddenly unavailable during that slot without having to reload the page. (Like Meteor.js! http://docs.meteor.com/#livehtmltemplates) 

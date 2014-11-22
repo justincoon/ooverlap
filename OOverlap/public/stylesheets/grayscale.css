@@ -65,7 +65,7 @@ a:focus {
     border-bottom: 1px solid rgba(255,255,255,.3);
     text-transform: uppercase;
     font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
-    background-color: #000;
+    background-color: #FFF;
 }
 
 .navbar-custom .navbar-brand {
@@ -122,7 +122,7 @@ a:focus {
 
     .top-nav-collapse {
         padding: 0;
-        background-color: #000;
+        background-color: #FFF;
     }
 
     .navbar-custom.top-nav-collapse {
@@ -130,23 +130,7 @@ a:focus {
     }
 }
 
-/*
-.intro {
-    display: table;
-    width: 100%;
-    height: auto;
-    padding: 100px 0;
-    text-align: center;
-    color: #fff;
-    background: url(../images/intro-bg.jpg) no-repeat bottom center scroll;
-    background-color: #000;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
-}*/
 
-/* GIOVANNA MODIFIED */
 .intro {
     display: table;
     width: 100%;

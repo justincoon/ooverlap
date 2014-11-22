@@ -10,7 +10,6 @@ router.get('/profile', function(req, res) {
   if (req.user) {
     res.render('profile', {
       user: req.user,
-      items: req.user.schedule
     });
   } else {
     res.redirect('/');
@@ -74,8 +73,21 @@ router.get('/schedule', function(req, res) {
   res.end();
 });
 
+router.get('/request', function(req,res){
+  if (req.user) {
+    res.render('request', {
+      user: req.user,
+    });
+  } else {
+    res.redirect('/');
+  }
+});
+
 router.get('/logout', function(req, res) {
-  req.logout();
+  if (req.user) {
+    req.logout();
+  }
   res.redirect('/');
 });
+
 module.exports = router;

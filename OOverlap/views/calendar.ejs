@@ -19,12 +19,12 @@
         <!-- START OF HTML FOR PAGE -->
         <!-- <p> <%= JSON.stringify(user) %> </p> -->
       	<% for (var i=0; i<items.length; i++) {%>
-      		<!-- <p> <%= JSON.stringify(items[i]) %> </p> -->
+      		<p> <%= JSON.stringify(items[i]) %> </p>
 			<ul>
-				<li> Summary: <%= items[i].summary %> </li> 
+				<li> Summary <%= items[i].summary %> </li> 
 				<li> Location <%= items[i].location %> </li> 
-				<li> Start <%= JSON.stringify(items[i].start) %> </li> 
-				<li> End <%= JSON.stringify(items[i].end) %> </li> 
+				<li> Start <%= items[i].start.dateTime %> </li> 
+				<li> End <%= items[i].end.dateTime %> </li> 
 				<li> Recurrence <%= items[i].recurrence %> </li>
 			</ul>
       	<% } %>

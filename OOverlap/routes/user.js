@@ -9,7 +9,8 @@ var User    = require('../lib/user');
 router.get('/profile', function(req, res) {
   if (req.user) {
     res.render('profile', {
-      user: req.user
+      user: req.user,
+      items: req.user.schedule
     });
   } else {
     res.redirect('/');
@@ -26,20 +27,20 @@ router.get('/calendar', function(req, res) {
     }
     var google_calendar = new gcal.GoogleCalendar(req.user.tokens[0].accessToken);
     google_calendar.events.list(req.user.email, {
-      'timeMin': (new Date()).toISOString()
-    }, function(err, calendarList) {
-      User.findById(req.user.id, function(err, user) {
-        user.schedule = calendarList.items;
-        user.save(function(err) {
-          req.flash('info', {
-            msg: 'Schedule has been saved.'
+          'timeMin': (new Date()).toISOString(),
+          'singleEvents': true
+        }, function(err, calendarList) {
+          User.findById(req.user.id, function(err, user) {
+            user.schedule = calendarList.items;
+            user.save(function(err) {
+              req.flash('info', {
+                msg: 'Schedule has been saved.'
+              });
+              res.render('calendar', {
+                items: req.user.schedule
+              });
+            });
           });
-          res.render('calendar', {
-            items: req.user.schedule
-          });
-        });
-      });
-      
     });
   } else {
     res.redirect('/');
@@ -50,6 +51,27 @@ router.get('/checkcalendar', function(req, res) {
   res.render('calendar', {
     items: req.user.schedule
   });
+});
+
+router.get('/schedule', function(req, res) {
+  var items = []
+  req.user.schedule.forEach(function(item) {
+    if (item.start.dateTime && item.end.dateTime){
+      items[items.length] = {
+        title : item.summary,
+        start : item.start.dateTime,
+        end : item.end.dateTime
+      };
+    } else {
+      items[items.length] = {
+        title : item.summary,
+        start : item.start.date,
+        end : item.end.date
+      };
+    }
+  });
+  res.send(items);
+  res.end();
 });
 
 router.get('/logout', function(req, res) {

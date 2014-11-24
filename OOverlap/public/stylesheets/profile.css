@@ -23,16 +23,69 @@ body, html {
 }
 
 /*											  */
-/* Contains the logo on the LHS of the screen */
+/* Contains the logo on the banner            */
 /*											  */
-#banner {
+#LHS_banner {
 	height:15%;
 	width:100%;
 }
 
-#banner img {
+#LHS_banner img {
 	height:100%;
 }
+
+
+/* NAVIGATION */
+#RHS_nav {
+	float:right;
+	width:50%;
+	height:100%;
+}
+
+#top {
+	width:100%;
+	height:45%;
+}
+
+#bottom {
+	height:55%;
+}
+
+#RHS_nav ul {
+	color:#333333;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+#RHS_nav li {
+	color:#333333;
+	float:right;
+	font-size:22px;
+}
+
+#RHS_nav a:link {
+	color:#333333;
+	display: block;
+    width: 115px;
+    text-align: center;
+    text-decoration: none;
+}
+
+#RHS_nav a:visited {
+	color:#333333;
+}
+
+#RHS_nav a:hover {
+	color:#333333;
+	font-weight:bolder;
+}
+
+/*											  */
+/* Contains CSS for user information          */
+/*											  */
+
 
 #contentWrapper {
 	height:85%;

@@ -35,9 +35,7 @@ router.get('/calendar', function(req, res) {
               req.flash('info', {
                 msg: 'Schedule has been saved.'
               });
-              res.render('calendar', {
-                items: req.user.schedule
-              });
+              res.redirect('/');
             });
           });
     });
@@ -84,9 +82,7 @@ router.get('/request', function(req,res){
 });
 
 router.get('/logout', function(req, res) {
-  if (req.user) {
-    req.logout();
-  }
+  req.logout();
   res.redirect('/');
 });
 

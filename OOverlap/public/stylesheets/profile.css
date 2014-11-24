@@ -131,6 +131,10 @@ body, html {
 }
 
 /* FRIENDS & GROUPS */
+.draggable_wrapper {
+	text-align: center;
+}
+
 .userFriends_wrapper, .userGroups_wrapper, .draggable_wrapper {
 	width:80%;
 	margin-left:auto;

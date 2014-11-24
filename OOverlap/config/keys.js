@@ -1,6 +1,7 @@
 module.exports = {
-  db: process.env.MONGOLAB_URI || process.env.MONGODB || 'mongodb://localhost:27017/test',
-     // 'mongodb://admin:password@ds053160.mongolab.com:53160/ooverlap',
+  db: process.env.MONGOLAB_URI || process.env.MONGODB || //'mongodb://localhost:27017/test',
+     'mongodb://admin:password@ds053160.mongolab.com:53160/ooverlap',
+     // 'mongodb://admin:password@ds045087.mongolab.com:45087/ooverlap2',
   
   sessionSecret: process.env.SESSION_SECRET || 'Your Session Secret goes here',
 

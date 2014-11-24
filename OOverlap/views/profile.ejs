@@ -24,17 +24,21 @@
         <div id="wrapper">
 
 			<!-- Links to Home -->
-			<div id="LHS_banner"><img src="/images/website_Header.png" alt="logo" /></div>
+			<div id="LHS_banner">
+                <img src="/images/website_Header.png" alt="logo" />
+            </div>
 		    
             <div id="RHS_nav"> 
-            <div id="top"></div>
-            <div id="bottom">
-                <ul>
-                    <li><a href="#">Logout</a></li>
-                    <li><a href="#">Settings</a></li>
-                    <li><a href="#">Groups</a></li>
-                    <li><a href="#">Home</a></li>
-                </ul>
+                <div id="top">
+                </div>
+                <div id="bottom">
+                    <ul>
+                        <li><a href="#">Logout</a></li>
+                        <li><a href="#">Settings</a></li>
+                        <li><a href="#">Groups</a></li>
+                        <li><a href="#">Home</a></li>
+                    </ul>
+                </div>
             </div>
 
 		    <div id="contentWrapper">
@@ -53,7 +57,7 @@
 		            <div class="userInformation_wrapper">
 		            	<div> <%= user.profile.name %>
 		                	<div> <%= user.email %>
-		                     </div>    
+		                      </div>    
 		                </div> 
 		            </div>
 		            
@@ -88,49 +92,41 @@
 		        
 		        <div id="RHS_CalendarInformation">
         	
-            <div id="requestsEventsSchedule_wrapper">
+                    <div id="requestsEventsSchedule_wrapper">
             	
-                <table>
-                    <tr>
-                        <td><div><strong>2 Pending Requests</strong><br />
-                            <div id="pendingRequests">
-                            <!-- THAI I AM GOING TO CHANGE THIS TO JQUERY SO THAT WE DON'T HAVE TO COPY AND PASTE THAT SCHEDULE A TIME TO MEET THING, PLEASE LET ME ATTEMPT TO DO IT BEFORE YOU GO FOR IT! -->
-                             <strong>Spencer Williams</strong> <span class="pendingRequests_TTM">wants to schedule a time to meet</span><br />
-                             <strong>Smithies in CS</strong> <span class="pendingRequests_TTM">wants to schedule an event</span> <br />
-                             <strong>Sadie Strong</strong> <span class="pendingRequests_TTM">wants to schedule a time to meet</span> <br />
-                             <strong>Thai Nguyen</strong> <span class="pendingRequests_TTM"> wants to schedule a time to meet</span> <br />
-                             <strong>Justin Coon</strong>  <span class="pendingRequests_TTM">wants to schedule a time to meet</span> <br />
-                            </div>
-                        </div>
-                        
-                        
-                        </td>
-                        <td><div><strong>0 Upcoming Events:</strong><br />
-                            <div id="upcomingEvents">
-                            <i> You have no upcoming events </i>
-                            </div>
-                        </div>
-                        
-                        </td>
-                        <td>
-                            <button type="button">Schedule an Event</button>  
-                        </td>
-                    </tr>
-                </table>
-                
-            </div>
-            
-            <!-- <div id="iFrame_styling">
-            
-            <iframe src="https://www.google.com/calendar/embed?showTitle=0&amp;showNav=0&amp;showDate=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0&amp;height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;src=scs%40smith.edu&amp;color=%235229A3&amp;ctz=America%2FNew_York" style=" border-width:0 " width="98%" height="450px" frameborder="0" scrolling="no"></iframe>
-            </div> -->
-            <div id='calendar'></div>
+                        <table>
+                            <tr>
+                                <td>
+                                    <div>
+                                        <strong>2 Pending Requests</strong><br />
+                                        <div id="pendingRequests">
+                                        <!-- THAI I AM GOING TO CHANGE THIS TO JQUERY SO THAT WE DON'T HAVE TO COPY AND PASTE THAT SCHEDULE A TIME TO MEET THING, PLEASE LET ME ATTEMPT TO DO IT BEFORE YOU GO FOR IT! -->
+                                         <strong>Spencer Williams</strong> <span class="pendingRequests_TTM">wants to schedule a time to meet</span><br />
+                                         <strong>Smithies in CS</strong> <span class="pendingRequests_TTM">wants to schedule an event</span> <br />
+                                         <strong>Sadie Strong</strong> <span class="pendingRequests_TTM">wants to schedule a time to meet</span> <br />
+                                         <strong>Thai Nguyen</strong> <span class="pendingRequests_TTM"> wants to schedule a time to meet</span> <br />
+                                         <strong>Justin Coon</strong>  <span class="pendingRequests_TTM">wants to schedule a time to meet</span> <br />
+                                        </div>
+                                    </div>     
+                                </td>
 
-        </div> <!-- End of the RHS -->
-		    
+                                <td><div><strong>0 Upcoming Events:</strong><br />
+                                    <div id="upcomingEvents">
+                                    <i> You have no upcoming events </i>
+                                    </div>
+                                </div>
+                                </td>
+
+                                <td>
+                                    <button type="button">Schedule an Event</button>  
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div id='calendar'></div>
+                </div> <!-- End of the RHS -->
 		    </div><!-- End of CONTENT WRAPPER -->
-
-		</div>
+	    </div><!--End of wrapper-->
 
         <script src='/javascripts/jquery-1.11.0.min.js'></script>
         <script src='/javascripts/moment.min.js'></script>

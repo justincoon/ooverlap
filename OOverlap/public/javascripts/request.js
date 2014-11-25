@@ -1,26 +1,29 @@
 $(function() {
-
+	var request_friend;
 	function jQuery_GetFriend(name, callback) {
 		$.ajax({
-			type: 'GET',
+			type: 'POST',
 			url: '/user/get-friend',
-			data: 'name='+name
+			data: {
+				name : name
+			}
 		}).done(function(msg) {
 			callback(msg);
 		});
 	}
 
-	function jQuery_Bind() {
-		// For Getting XML From Server:
+	function jQuery_BindGetFriend() {
+		// For Getting Friend Info From Server:
 		$('#get-friend').bind('click',
 			function(event) {
-				// Get the index value of the pair to lookup:
+				// Get the friend name to lookup:
 				var name = $('input').val();
 
 				jQuery_GetFriend(name, function(friend) {
 					if (friend.name === undefined) {
 						$('#output').html('Friend Not Found');
 					} else {
+						request_friend = friend;	
 						$('#output').html(friend.name + " " + friend.email);
 					}
 				});
@@ -29,5 +32,6 @@ $(function() {
 				return false;
 			});
 	}
-	jQuery_Bind();
+
+	jQuery_BindGetFriend();
 });

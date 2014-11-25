@@ -84,7 +84,9 @@
                                 <table>
                                     <tr>
                                         <% for (var i=0; i<user.friends.length; i++) {%>
-                                        <td><div class="otherProfilePic_wrapper"><img src="<%=user.friends[i].picture %>" data-toggle="tooltip" data-placement="top" title="<%=user.friends[i].name%>"/></div></td>
+                                        <td><div class="otherProfilePic_wrapper">
+                                        <img src="<%=user.friends[i].picture %>" data-toggle="tooltip" data-placement="top" title="<%=user.friends[i].name%>"/>
+                                        </div></td>
                                         <% } %>
                                     </tr>
                                     <tr>

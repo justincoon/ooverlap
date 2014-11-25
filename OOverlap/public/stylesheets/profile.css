@@ -150,6 +150,34 @@ body, html {
 	border-bottom-width:1px;
 }
 
+/* STYLING THE PROFILE PICTURES OF OTHER FRIENDS / GROUPS */
+.userFriends_wrapper table tr td:nth-child(odd),
+.userFriends_wrapper table tr td:nth-child(even){
+	width:25%;
+	padding-bottom:5px;
+}
+
+.userGroups_wrapper table tr td:nth-child(odd),
+.userGroups_wrapper table tr td:nth-child(even){
+	width:25%;
+	padding-bottom:5px;
+}
+
+.otherProfilePic_wrapper {
+	margin-left:auto;
+	margin-right:auto;
+	width:100%;
+	overflow:hidden;
+  	border-radius:100%;
+	-moz-border-radius: 50%;
+    -khtml-border-radius: 50%;
+    -webkit-border-radius: 50%;
+}
+
+.otherProfilePic_wrapper img {
+	width:95%;
+}
+
 /* FRIENDS */
 .userFriends_wrapper div:nth-child(2){
 	height:100px;

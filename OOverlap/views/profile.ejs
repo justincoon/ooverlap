@@ -66,18 +66,29 @@
 		            
                     <div class="userFriends_wrapper">
 		            	<div> Friends </div>
-		                <div>
+
+                        <!-- new one using a table -->
+                        <div>
                             <% if (user.friends.length === 0) { %>
-                                Sorry, You don't have any friends now
+                                Sorry, You don't have any friends - Click "Add a New Friend" to get started!
                             <%} else {%> 
-                                <ul>
-                                <% for (var i=0; i<user.friends.length; i++) {%>
-                                    <li> <%= user.friends[i].name %> </li>
-                                </ul>
-                                <% } %>
+                                <table>
+                                    <tr>
+                                        <% for (var i=0; i<user.friends.length; i++) {%>
+                                        <td><div class="otherProfilePic_wrapper"><img src="<%=user.friends[i].picture %>"/></div></td>
+                                        <% } %>
+                                    </tr>
+                                    <tr>
+                                        <td><div class="otherProfilePic_wrapper"><img src="/images/profPic.png" /></div></td>
+                                        <td><div class="otherProfilePic_wrapper"><img src="/images/profPic.png" /></div></td>
+                                        <td><div class="otherProfilePic_wrapper"><img src="/images/profPic.png" /></div></td>
+                                        <td><div class="otherProfilePic_wrapper"><img src="/images/profPic.png" /></div></td>
+                                    </tr>
+                                </table>
                             <% } %>
                         </div>
-                        <div class="update_wrapper">
+
+                    <div class="update_wrapper">
                             <button type="button" class="btn btn-default" data-toggle="modal" data-target="#friendEventModal_1"> Add a new friend </button>
                         </div>   
 		            </div>
@@ -85,11 +96,20 @@
 		            <div class="userGroups_wrapper">
 		            	<div> Groups </div>
 		                <div> 
-                            <ul>
-                                <li> Group 1 </li>
-                                <li> Group 2 </li>
-                                <li> Group 3 </li>
-                            </ul>      
+                            <table>
+                                <tr>
+                                    <td><div class="otherProfilePic_wrapper"><img src="/images/profPic.png" /></div></td>
+                                    <td><div class="otherProfilePic_wrapper"><img src="/images/profPic.png" /></div></td>
+                                    <td><div class="otherProfilePic_wrapper"><img src="/images/profPic.png" /></div></td>
+                                    <td><div class="otherProfilePic_wrapper"><img src="/images/profPic.png" /></div></td>
+                                </tr>
+                                <tr>
+                                    <td><div class="otherProfilePic_wrapper"><img src="/images/profPic.png" /></div></td>
+                                    <td><div class="otherProfilePic_wrapper"><img src="/images/profPic.png" /></div></td>
+                                    <td><div class="otherProfilePic_wrapper"><img src="/images/profPic.png" /></div></td>
+                                    <td><div class="otherProfilePic_wrapper"><img src="/images/profPic.png" /></div></td>
+                                </tr>
+                            </table>  
                         </div>
 		            </div>
 		            

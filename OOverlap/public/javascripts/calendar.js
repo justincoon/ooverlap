@@ -44,8 +44,6 @@ $(document).ready(function() {
         url: '/user/schedule',
         type: 'GET',
         success: function(data) {
-            console.log("!!!");
-            console.log(JSON.stringify(data));
             $('#calendar').fullCalendar({
                 header: {
                     left: 'prev,next today',

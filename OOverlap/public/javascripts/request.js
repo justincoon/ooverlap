@@ -61,8 +61,12 @@ $(function() {
 				jQuery_FindFriend(email, function(data) {
 					if (data.error) {
 						$('#friend-output').html('Cannot find user with email ' + email);
-					} else if (data.exist){
+					} else if (data.friend_exist){
 						$('#friend-output').html('User with email ' + email + ' already in your friend list');
+					} else if (data.request_sent_exist){	
+						$('#friend-output').html('You already sent a request to user with email ' + email);	
+					} else if (data.request_received_exist){
+						$('#friend-output').html('User with email ' + email + ' already sent your a request, please check your pending requests');	
 					} else {
 						$('#friend-output').html(data.friend.name + " " + data.friend.email);
 					}

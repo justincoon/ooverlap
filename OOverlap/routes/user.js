@@ -132,26 +132,58 @@ router.get('/request', function(req, res) {
   }
 });
 
-router.get('/add_friend', function(req, res) {
+router.get('/friend_request', function(req, res) {
   if (add_friend) {
-    User.findById(req.user.id, function(err, user) {
-      user.friends[user.friends.length] = add_friend;
-      console.log(user.friends);
-      user.save(function(err) {
-        if (err){
-          console.log(err);
-        } else {
-          console.log("OK");
-          req.flash('info', {
-            msg: 'New friend has been saved.'
-          });
+    User.findOne({
+      email: add_friend.email
+    }, function(err, user) {
+      user.request.push({
+        type: 'friend_request',
+        data: {
+          name: req.user.profile.name,
+          email: req.user.email,
+          picture: req.user.profile.picture
         }
+      });
+      user.save(function(err) {
+        req.flash('info', {
+          msg: 'New request has been saved.'
+        });
         res.redirect('/');
       });
     });
   } else {
     res.redirect('/');
   }
+});
+
+router.get('/add_friend/:idx', function(req, res) {
+  request = req.user.request[req.params.idx];
+
+  User.findById(req.user.id, function(err, user) {
+    user.friends.push(request.data);
+    user.request.splice(req.params.idx, 1);
+    user.save(function(err) {
+      req.flash('info', {
+        msg: 'Schedule has been saved.'
+      });
+      User.findOne({
+        email: request.data.email
+      }, function(err, user) {
+        user.friends.push({
+          name: req.user.profile.name,
+          email: req.user.email,
+          picture: req.user.profile.picture
+        });
+        user.save(function(err) {
+          req.flash('info', {
+            msg: 'New request has been saved.'
+          });
+          res.redirect('/');
+        });
+      });
+    });
+  });
 });
 
 router.get('/group', function(req, res) {

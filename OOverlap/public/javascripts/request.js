@@ -18,7 +18,7 @@ $(function() {
 			function(event) {
 				$('#output').html('Finding..');
 				// Get the friend name to lookup:
-				var name = $('input').val();
+				var name = $('input').eq(0).val();
 
 				jQuery_GetFriend(name, function(friend) {
 					if (friend.name === undefined) {
@@ -34,5 +34,45 @@ $(function() {
 			});
 	}
 
+	function jQuery_FindFriend(email, callback) {
+		$.ajax({
+			type: 'POST',
+			url: '/user/find-friend',
+			data: {
+				email : email
+			}
+		}).done(function(msg) {
+			callback(msg);
+		});
+	}
+
+	function jQuery_BindFindFriend() {
+		// For Getting Friend Info From Server:
+		$('#find-friend').bind('click',
+			function(event) {
+				// Get the friend email to lookup:
+				var email = $('input').eq(1).val();
+				if (email.indexOf('@')<0){
+					$('#friend-output').html('Please provide a valid email address');	
+					return false;
+				}
+				$('#friend-output').html('Finding..');
+				
+				jQuery_FindFriend(email, function(data) {
+					if (data.error) {
+						$('#friend-output').html('Cannot find user with email ' + email);
+					} else if (data.exist){
+						$('#friend-output').html('User with email ' + email + ' already in your friend list');
+					} else {
+						$('#friend-output').html(data.friend.name + " " + data.friend.email);
+					}
+				});
+				// Reset input field:
+				$('input').val('');
+				return false;
+			});
+	}
+
 	jQuery_BindGetFriend();
+	jQuery_BindFindFriend();
 });

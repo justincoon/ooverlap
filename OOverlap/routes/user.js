@@ -1,12 +1,11 @@
 var express     = require('express');
 var router      = express.Router();
-var querystring = require('querystring');
-var url         = require('url');
 var gcal        = require('google-calendar');
 var refresh     = require('google-refresh-token');
 var flash       = require('express-flash');
 var keys        = require('../config/keys.js');
 var User        = require('../lib/user');
+var request_friend;
 
 router.get('/profile', function(req, res) {
   if (req.user) {
@@ -73,18 +72,29 @@ router.get('/schedule', function(req, res) {
   res.end();
 });
 
-router.get('/get-friend', function(req, res) {
-  var query = querystring.parse(url.parse(req.url).query);
-  var name = query.name;
+router.post('/get-friend', function(req, res) {
+  var name = req.body.name;
   var friends = req.user.friends;
   for (var i=0; i<friends.length; i++){
     if (name === friends[i].name){
       res.send(friends[i]);
+      request_friend = friends[i];
       break;
     }
   }
   res.end();
 });
+
+router.get('/request', function(req,res){
+  if (request_friend){
+    res.render("request", {
+      user: req.user,
+      friend: request_friend
+    });
+  } else {
+    res.redirect('/');
+  }
+})
 
 router.get('/logout', function(req, res) {
   req.logout();

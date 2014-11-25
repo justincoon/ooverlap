@@ -73,8 +73,8 @@
                                 <ul>
                                 <% for (var i=0; i<user.friends.length; i++) {%>
                                     <li> <%= user.friends[i].name %> </li>
-                                </ul>
                                 <% } %>
+                                </ul>
                             <% } %>
                         </div>
                         <div class="update_wrapper">
@@ -103,14 +103,24 @@
                             <tr>
                                 <td>
                                     <div>
-                                        <strong>2 Pending Requests</strong><br />
+                                        <strong> <%= user.request.length %> Pending Requests</strong><br />
                                         <div id="pendingRequests">
                                         <!-- THAI I AM GOING TO CHANGE THIS TO JQUERY SO THAT WE DON'T HAVE TO COPY AND PASTE THAT SCHEDULE A TIME TO MEET THING, PLEASE LET ME ATTEMPT TO DO IT BEFORE YOU GO FOR IT! -->
-                                         <strong>Spencer Williams</strong> <span class="pendingRequests_TTM">wants to schedule a time to meet</span><br />
+                                        <% for (var i=0; i<user.request.length; i++) {  %>
+                                            <% if (user.request[i].type === 'friend_request') { %>
+                                                <strong> <%=user.request[i].data.name %> </strong> <span class="pendingRequests_TTM">wants to be your friend</span>
+                                                <a href= <%='./add_friend/' + i %> > Confirm </a> 
+                                                <a href='./reject_friend' > Reject </a> 
+                                                <br /> 
+                                            <% } else if (user.request[i].type === 'meeting_request') {%>
+                                                <strong> <%=user.request[i].data.name %> </strong> <span class="pendingRequests_TTM">wants to schedule a time to meet</span><br />
+                                            <% } %>
+                                        <% } %>
+                       <!--                   <strong>Spencer Williams</strong> <span class="pendingRequests_TTM">wants to schedule a time to meet</span><br />
                                          <strong>Smithies in CS</strong> <span class="pendingRequests_TTM">wants to schedule an event</span> <br />
                                          <strong>Sadie Strong</strong> <span class="pendingRequests_TTM">wants to schedule a time to meet</span> <br />
                                          <strong>Thai Nguyen</strong> <span class="pendingRequests_TTM"> wants to schedule a time to meet</span> <br />
-                                         <strong>Justin Coon</strong>  <span class="pendingRequests_TTM">wants to schedule a time to meet</span> <br />
+                                         <strong>Justin Coon</strong>  <span class="pendingRequests_TTM">wants to schedule a time to meet</span> <br /> -->
                                         </div>
                                     </div>     
                                 </td>
@@ -175,7 +185,7 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-        <a class="btn btn-default" href="./add_friend">Add</a>
+        <a class="btn btn-default" href="./friend_request">Add</a>
       </div>
     </div>
   </div>

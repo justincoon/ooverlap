@@ -67,10 +67,14 @@
                     <div class="userFriends_wrapper">
 		            	<div> Friends </div>
 		                <div>
-                            <% for (var i=0; i<user.friends.length; i++) {%>
+                            <% if (user.friends.length === 0) { %>
+                                Sorry, You don't have any friends now
+                            <%} else {%> 
                                 <ul>
+                                <% for (var i=0; i<user.friends.length; i++) {%>
                                     <li> <%= user.friends[i].name %> </li>
-                                </ul>      
+                                </ul>
+                                <% } %>
                             <% } %>
                         </div>
                         <div class="update_wrapper">

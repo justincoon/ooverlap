@@ -1,11 +1,12 @@
-var express     = require('express');
-var router      = express.Router();
-var gcal        = require('google-calendar');
-var refresh     = require('google-refresh-token');
-var flash       = require('express-flash');
-var keys        = require('../config/keys.js');
-var User        = require('../lib/user');
+var express = require('express');
+var router = express.Router();
+var gcal = require('google-calendar');
+var refresh = require('google-refresh-token');
+var flash = require('express-flash');
+var keys = require('../config/keys.js');
+var User = require('../lib/user');
 var request_friend;
+var add_friend;
 
 router.get('/profile', function(req, res) {
   if (req.user) {
@@ -27,18 +28,18 @@ router.get('/calendar', function(req, res) {
     }
     var google_calendar = new gcal.GoogleCalendar(req.user.tokens[0].accessToken);
     google_calendar.events.list(req.user.email, {
-          'timeMin': (new Date()).toISOString(),
-          'singleEvents': true
-        }, function(err, calendarList) {
-          User.findById(req.user.id, function(err, user) {
-            user.schedule = calendarList.items;
-            user.save(function(err) {
-              req.flash('info', {
-                msg: 'Schedule has been saved.'
-              });
-              res.redirect('/');
-            });
+      'timeMin': (new Date()).toISOString(),
+      'singleEvents': true
+    }, function(err, calendarList) {
+      User.findById(req.user.id, function(err, user) {
+        user.schedule = calendarList.items;
+        user.save(function(err) {
+          req.flash('info', {
+            msg: 'Schedule has been saved.'
           });
+          res.redirect('/');
+        });
+      });
     });
   } else {
     res.redirect('/');
@@ -54,17 +55,17 @@ router.get('/checkcalendar', function(req, res) {
 router.get('/schedule', function(req, res) {
   var items = []
   req.user.schedule.forEach(function(item) {
-    if (item.start.dateTime && item.end.dateTime){
+    if (item.start.dateTime && item.end.dateTime) {
       items[items.length] = {
-        title : item.summary,
-        start : item.start.dateTime,
-        end : item.end.dateTime
+        title: item.summary,
+        start: item.start.dateTime,
+        end: item.end.dateTime
       };
     } else {
       items[items.length] = {
-        title : item.summary,
-        start : item.start.date,
-        end : item.end.date
+        title: item.summary,
+        start: item.start.date,
+        end: item.end.date
       };
     }
   });
@@ -75,28 +76,29 @@ router.get('/schedule', function(req, res) {
 router.get('/schedule_request', function(req, res) {
   var items = []
   req.user.schedule.forEach(function(item) {
-    if (item.start.dateTime && item.end.dateTime){
+    if (item.start.dateTime && item.end.dateTime) {
       items[items.length] = {
-        title : item.summary,
+        title: item.summary,
         color: '#ff0000',
-        start : item.start.dateTime,
-        end : item.end.dateTime
+        start: item.start.dateTime,
+        end: item.end.dateTime
       };
     } else {
       items[items.length] = {
-        title : item.summary,
+        title: item.summary,
         color: '#ff0000',
-        start : item.start.date,
-        end : item.end.date
+        start: item.start.date,
+        end: item.end.date
       };
     }
   });
   User.findOne({
     email: request_friend.email
   }, function(err, user) {
-    if (!user) return done(null, false, {
-      message: 'Email ' + email + ' not found'
-    });
+    if (!user)
+      return done(null, false, {
+        message: 'Email ' + email + ' not found'
+      });
     user.schedule.forEach(function(item) {
       if (item.start.dateTime && item.end.dateTime) {
         items[items.length] = {
@@ -119,24 +121,33 @@ router.get('/schedule_request', function(req, res) {
   });
 });
 
-router.post('/get-friend', function(req, res) {
-  var name = req.body.name;
-  var friends = req.user.friends;
-  for (var i=0; i<friends.length; i++){
-    if (name === friends[i].name){
-      res.send(friends[i]);
-      request_friend = friends[i];
-      break;
-    }
-  }
-  res.end();
-});
-
-router.get('/request', function(req,res){
-  if (request_friend){
+router.get('/request', function(req, res) {
+  if (request_friend) {
     res.render("request", {
       user: req.user,
       friend: request_friend
+    });
+  } else {
+    res.redirect('/');
+  }
+});
+
+router.get('/add_friend', function(req, res) {
+  if (add_friend) {
+    User.findById(req.user.id, function(err, user) {
+      user.friends[user.friends.length] = add_friend;
+      console.log(user.friends);
+      user.save(function(err) {
+        if (err){
+          console.log(err);
+        } else {
+          console.log("OK");
+          req.flash('info', {
+            msg: 'New friend has been saved.'
+          });
+        }
+        res.redirect('/');
+      });
     });
   } else {
     res.redirect('/');
@@ -151,6 +162,61 @@ router.get('/group', function(req, res) {
   } else {
     res.redirect('/');
   }
+});
+
+router.post('/get-friend', function(req, res) {
+  var name = req.body.name;
+  var friends = req.user.friends;
+  for (var i = 0; i < friends.length; i++) {
+    if (name === friends[i].name) {
+      res.send(friends[i]);
+      request_friend = friends[i];
+      break;
+    }
+  }
+  res.end();
+});
+
+router.post('/find-friend', function(req, res) {
+  var email = req.body.email;
+  User.findOne({
+    email: email
+  }, function(err, user) {
+    if (!user) {
+      res.send({
+        error: true,
+        exist: false,
+        friend: {}
+      });
+      res.end();
+    } else {
+      var exist = false;
+      for (var i=0; i<req.user.friends.length; i++){
+        if (req.user.friends[i].email === user.email) {
+          res.send({
+            error: false,
+            exist: true,
+            friend: {}
+          });
+          res.end();
+          exist = true;
+        }
+      }
+      if (!exist){
+        add_friend = {
+          name: user.profile.name,
+          email: user.email,
+          picture: user.profile.picture
+        };
+        res.send({
+            error: false,
+            exist: false,
+            friend: add_friend
+          });
+        res.end();
+      }
+    }
+  });
 });
 
 router.get('/logout', function(req, res) {

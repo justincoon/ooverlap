@@ -137,8 +137,8 @@
                                         <% for (var i=0; i<user.request.length; i++) {  %>
                                             <% if (user.request[i].type === 'friend_request') { %>
                                                 <strong> <%=user.request[i].data.name %> </strong> <span class="pendingRequests_TTM">wants to be your friend</span>
-                                                <a href= <%='./add_friend/' + i %> > Confirm </a> 
-                                                <a href='./reject_friend' > Reject </a> 
+                                                <a href= <%='./request/friend/add/' + i %> > Confirm </a> 
+                                                <a href= <%='./request/friend/reject'+i %> > Reject </a> 
                                                 <br /> 
                                             <% } else if (user.request[i].type === 'meeting_request') {%>
                                                 <strong> <%=user.request[i].data.name %> </strong> <span class="pendingRequests_TTM">wants to schedule a time to meet</span><br />
@@ -213,7 +213,7 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-        <a class="btn btn-default" href="./friend_request">Add</a>
+        <a class="btn btn-default" href="./request/friend">Add</a>
       </div>
     </div>
   </div>

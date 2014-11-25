@@ -22,7 +22,7 @@ $(document).ready(function() {
     });
 
     var request = $.ajax({
-        url: '/user/schedule_request',
+        url: '/user/request/schedule',
         type: 'GET',
         success: function(data) {
             $('#calendar').fullCalendar({

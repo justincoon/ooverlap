@@ -72,6 +72,49 @@ router.get('/schedule', function(req, res) {
   res.end();
 });
 
+router.get('/schedule_request', function(req, res) {
+  var items = []
+  req.user.schedule.forEach(function(item) {
+    if (item.start.dateTime && item.end.dateTime){
+      items[items.length] = {
+        title : item.summary,
+        start : item.start.dateTime,
+        end : item.end.dateTime
+      };
+    } else {
+      items[items.length] = {
+        title : item.summary,
+        start : item.start.date,
+        end : item.end.date
+      };
+    }
+  });
+  User.findOne({
+    email: request_friend.email
+  }, function(err, user) {
+    if (!user) return done(null, false, {
+      message: 'Email ' + email + ' not found'
+    });
+    user.schedule.forEach(function(item) {
+      if (item.start.dateTime && item.end.dateTime) {
+        items[items.length] = {
+          title: request_friend.name + " Schedule",
+          start: item.start.dateTime,
+          end: item.end.dateTime
+        };
+      } else {
+        items[items.length] = {
+          title: request_friend.name + " Schedule",
+          start: item.start.date,
+          end: item.end.date
+        };
+      }
+    });
+    res.send(items);
+    res.end();
+  });
+});
+
 router.post('/get-friend', function(req, res) {
   var name = req.body.name;
   var friends = req.user.friends;

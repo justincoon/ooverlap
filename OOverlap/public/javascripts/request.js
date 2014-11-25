@@ -16,6 +16,7 @@ $(function() {
 		// For Getting Friend Info From Server:
 		$('#get-friend').bind('click',
 			function(event) {
+				$('#output').html('Finding..');
 				// Get the friend name to lookup:
 				var name = $('input').val();
 

@@ -22,24 +22,41 @@ router.get('/calendar', function(req, res) {
   if (req.user) {
     if (req.user.tokens[1]) //If we have a refresh token, ask for a new access token
     {
+      console.log(req.user.tokens);
       refresh(req.user.tokens[1].refreshToken, keys.google.clientID, keys.google.clientSecret, function(err, json, res) {
-        req.user.tokens[0].accessToken = json.accessToken;
+        User.findById(req.user.id, function(err, user) {
+          user.tokens[0].accessToken = json.accessToken;
+          user.save(function(err) {
+            req.flash('info', {
+              msg: 'Schedule has been saved.'
+            });
+          });
+          console.log(req.user.tokens);
+        });
       });
     }
     var google_calendar = new gcal.GoogleCalendar(req.user.tokens[0].accessToken);
+    var timeMin = new Date();
+    var timeMax = new Date();
+    timeMax.setFullYear(timeMin.getFullYear()+1);
     google_calendar.events.list(req.user.email, {
-      'timeMin': (new Date()).toISOString(),
+      'timeMin': timeMin.toISOString(),
+      'timeMax': timeMax.toISOString(),
       'singleEvents': true
     }, function(err, calendarList) {
-      User.findById(req.user.id, function(err, user) {
-        user.schedule = calendarList.items;
-        user.save(function(err) {
-          req.flash('info', {
-            msg: 'Schedule has been saved.'
+      if (err){
+        console.log(err);
+      } else {
+        User.findById(req.user.id, function(err, user) {
+          user.schedule = calendarList.items;
+          user.save(function(err) {
+            req.flash('info', {
+              msg: 'Schedule has been saved.'
+            });
+            res.redirect('/');
           });
-          res.redirect('/');
         });
-      });
+      }
     });
   } else {
     res.redirect('/');

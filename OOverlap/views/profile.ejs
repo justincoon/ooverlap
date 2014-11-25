@@ -10,6 +10,8 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
+        <!-- TOOL TIP POP UP FOR FRIENDS NAMES -->
+
         <link href="/stylesheets/profile.css" rel="stylesheet" type="text/css" />
         <link href='/stylesheets/fullcalendar.css' rel='stylesheet' />
         <link href='/stylesheets/bootstrap.min.css' rel='stylesheet' />
@@ -47,7 +49,7 @@
 		            <!-- Should be rounded -->
 		            <div class="profilePic_wrapper">
                         <% if (user.profile.picture) { %>
-                            <img src= "<%= user.profile.picture %>" alt="ProfilePicture" />
+                            <img src= "<%= user.profile.picture %>" alt="ProfilePicture"/>
                         <% } else { %>
                             <img src= "/images/profPic.png" alt="ProfilePicture" />
                         <% } %>
@@ -82,7 +84,7 @@
                                 <table>
                                     <tr>
                                         <% for (var i=0; i<user.friends.length; i++) {%>
-                                        <td><div class="otherProfilePic_wrapper"><img src="<%=user.friends[i].picture %>"/></div></td>
+                                        <td><div class="otherProfilePic_wrapper"><img src="<%=user.friends[i].picture %>" data-toggle="tooltip" data-placement="top" title="<%=user.friends[i].name%>"/></div></td>
                                         <% } %>
                                     </tr>
                                     <tr>
@@ -92,12 +94,11 @@
                                         <td><div class="otherProfilePic_wrapper"><img src="/images/profPic.png" /></div></td>
                                     </tr>
                                 </table>
-
                             <% } %>
                         </div>
 
                     <div class="update_wrapper">
-                            <button type="button" class="btn btn-default" data-toggle="modal" data-target="#friendEventModal_1"> Add a new friend </button>
+                            <button type="button" class="btn btn-default" data-toggle="modal" data-target="#friendEventModal_1"> Add a new friend! </button>
                         </div>   
 		            </div>
 
@@ -120,7 +121,12 @@
                             </table>  
                         </div>
 		            </div>
-		            
+
+                    <!-- TEST FOR THE TOOLTIP -->
+		            <div align="center">
+                    <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="top" title="Tooltip on top">Tooltip on top</button>
+                    </div>
+
 		        </div> <!-- End of the LHS -->
 		        
 		        <div id="RHS_CalendarInformation">
@@ -133,22 +139,18 @@
                                     <div>
                                         <strong> <%= user.request.length %> Pending Requests</strong><br />
                                         <div id="pendingRequests">
-                                        <!-- THAI I AM GOING TO CHANGE THIS TO JQUERY SO THAT WE DON'T HAVE TO COPY AND PASTE THAT SCHEDULE A TIME TO MEET THING, PLEASE LET ME ATTEMPT TO DO IT BEFORE YOU GO FOR IT! -->
+                                        <!-- FUNCTION FOR A FRIEND REQUEST -->
                                         <% for (var i=0; i<user.request.length; i++) {  %>
                                             <% if (user.request[i].type === 'friend_request') { %>
                                                 <strong> <%=user.request[i].data.name %> </strong> <span class="pendingRequests_TTM">wants to be your friend</span>
                                                 <a href= <%='./add_friend/' + i %> > Confirm </a> 
                                                 <a href='./reject_friend' > Reject </a> 
                                                 <br /> 
+                                        <!-- FUNCTION FOR A MEETING REQUEST -->
                                             <% } else if (user.request[i].type === 'meeting_request') {%>
                                                 <strong> <%=user.request[i].data.name %> </strong> <span class="pendingRequests_TTM">wants to schedule a time to meet</span><br />
                                             <% } %>
                                         <% } %>
-                       <!--                   <strong>Spencer Williams</strong> <span class="pendingRequests_TTM">wants to schedule a time to meet</span><br />
-                                         <strong>Smithies in CS</strong> <span class="pendingRequests_TTM">wants to schedule an event</span> <br />
-                                         <strong>Sadie Strong</strong> <span class="pendingRequests_TTM">wants to schedule a time to meet</span> <br />
-                                         <strong>Thai Nguyen</strong> <span class="pendingRequests_TTM"> wants to schedule a time to meet</span> <br />
-                                         <strong>Justin Coon</strong>  <span class="pendingRequests_TTM">wants to schedule a time to meet</span> <br /> -->
                                         </div>
                                     </div>     
                                 </td>
@@ -161,9 +163,6 @@
                                 </td>
 
                                 <td align="center">
-                                <td align="center">
-                                    <!--<a class="btn btn-default" href="#">Schedule an Event</a>-->
-                                    <!-- Button trigger modal -->
                                     <button type="button" class="btn btn-default" data-toggle="modal" data-target="#scheduleEventModal_1"> Schedule an Event </button>
                                 </td>
                             </tr>
@@ -226,6 +225,18 @@
         <script src='/javascripts/fullcalendar.min.js'></script>   
         <script src='/javascripts/calendar.js'></script>
         <script src='/javascripts/request.js'></script>
+        <!-- TOOLTIP SCRIPT: POP UP FRIENDS NAMES -->
+        <script type='text/javascript'>
+            $(document).ready(function() { 
+                $('[data-toggle=tooltip]').tooltip();
+            }); 
+        </script>
+
+        <script type ='text/javascript'>
+        function hide_FriendConfirmed(){
+            /* hide the friend confirmation div */
+        }
+        </script>
     </body>
 </html>
 

@@ -234,21 +234,58 @@ router.post('/find-friend', function(req, res) {
     if (!user) {
       res.send({
         error: true,
-        exist: false,
+        request_sent_exist: false,
+        request_received_exist: false,
+        friend_exist: false,
         friend: {}
       });
       res.end();
     } else {
       var exist = false;
-      for (var i=0; i<req.user.friends.length; i++){
-        if (req.user.friends[i].email === user.email) {
+      for (var i=0; i<req.user.request.length; i++){
+        if (req.user.request[i].type === 'friend_request' && req.user.request[i].data.email === req.body.email){
           res.send({
             error: false,
-            exist: true,
+            request_send_exist: false,
+            request_received_exist: true,
+            friend_exist: false,
             friend: {}
           });
           res.end();
           exist = true;
+          break;
+        }
+      }
+      if (!exist){
+        for (var i=0; i<req.user.friends.length; i++){
+          if (req.user.friends[i].email === user.email) {
+            res.send({
+              error: false,
+              request_send_exist: false,
+              request_received_exist: false,
+              friend_exist: true,
+              friend: {}
+            });
+            res.end();
+            exist = true;
+            break;
+          }
+        }
+      }
+      if (!exist){
+        for (var i=0; i<user.request.length; i++){
+          if (user.request[i].type === 'friend_request' && user.request[i].data.email === req.user.email){
+          res.send({
+            error: false,
+            request_sent_exist: true,
+            request_received_exist: false,
+            friend_exist: false,
+            friend: {}
+          });
+          res.end();
+          exist = true;   
+          break;
+          }
         }
       }
       if (!exist){

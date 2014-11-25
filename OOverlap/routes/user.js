@@ -78,12 +78,14 @@ router.get('/schedule_request', function(req, res) {
     if (item.start.dateTime && item.end.dateTime){
       items[items.length] = {
         title : item.summary,
+        color: '#ff0000',
         start : item.start.dateTime,
         end : item.end.dateTime
       };
     } else {
       items[items.length] = {
         title : item.summary,
+        color: '#ff0000',
         start : item.start.date,
         end : item.end.date
       };
@@ -99,12 +101,14 @@ router.get('/schedule_request', function(req, res) {
       if (item.start.dateTime && item.end.dateTime) {
         items[items.length] = {
           title: request_friend.name + " Schedule",
+          color: '#ffa500',
           start: item.start.dateTime,
           end: item.end.dateTime
         };
       } else {
         items[items.length] = {
           title: request_friend.name + " Schedule",
+          color: '#ffa500',
           start: item.start.date,
           end: item.end.date
         };
@@ -137,7 +141,17 @@ router.get('/request', function(req,res){
   } else {
     res.redirect('/');
   }
-})
+});
+
+router.get('/group', function(req, res) {
+  if (req.user) {
+    res.render('group', {
+      user: req.user,
+    });
+  } else {
+    res.redirect('/');
+  }
+});
 
 router.get('/logout', function(req, res) {
   req.logout();

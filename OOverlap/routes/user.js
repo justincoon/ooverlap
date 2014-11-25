@@ -180,13 +180,12 @@ router.get('/request/friend', function(req, res) {
 
 router.get('/request/friend/add/:idx', function(req, res) {
   request = req.user.request[req.params.idx];
-
   User.findById(req.user.id, function(err, user) {
     user.friends.push(request.data);
     user.request.splice(req.params.idx, 1);
     user.save(function(err) {
       req.flash('info', {
-        msg: 'Schedule has been saved.'
+        msg: 'New friend has been added.'
       });
       User.findOne({
         email: request.data.email
@@ -198,11 +197,24 @@ router.get('/request/friend/add/:idx', function(req, res) {
         });
         user.save(function(err) {
           req.flash('info', {
-            msg: 'New request has been saved.'
+            msg: 'New friend has been added.'
           });
           res.redirect('/');
         });
       });
+    });
+  });
+});
+
+router.get('/request/friend/reject/:idx', function(req, res){
+  request = req.user.request[req.params.idx];
+  User.findById(req.user.id, function(err, user){
+    user.request.splice(req.params.idx, 1);
+    user.save(function(err) {
+      req.flash('info', {
+        msg: 'New friend has been rejected.'
+      });
+      res.redirect('/');
     });
   });
 });

@@ -2,7 +2,7 @@ $(function() {
 	function jQuery_GetFriend(email, callback) {
 		$.ajax({
 			type: 'POST',
-			url: '/user/get-friend',
+			url: '/user/friend/get',
 			data: {
 				email : email
 			}
@@ -35,7 +35,7 @@ $(function() {
 	function jQuery_FindFriend(email, callback) {
 		$.ajax({
 			type: 'POST',
-			url: '/user/find-friend',
+			url: '/user/friend/find',
 			data: {
 				email : email
 			}

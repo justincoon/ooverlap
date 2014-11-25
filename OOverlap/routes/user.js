@@ -8,6 +8,10 @@ var User = require('../lib/user');
 var request_friend;
 var add_friend;
 
+router.get('/', function(req,res){
+  res.redirect('/');
+});
+
 router.get('/profile', function(req, res) {
   if (req.user) {
     res.render('profile', {
@@ -90,7 +94,7 @@ router.get('/schedule', function(req, res) {
   res.end();
 });
 
-router.get('/schedule_request', function(req, res) {
+router.get('/request/schedule', function(req, res) {
   var items = []
   req.user.schedule.forEach(function(item) {
     if (item.start.dateTime && item.end.dateTime) {
@@ -149,7 +153,7 @@ router.get('/request', function(req, res) {
   }
 });
 
-router.get('/friend_request', function(req, res) {
+router.get('/request/friend', function(req, res) {
   if (add_friend) {
     User.findOne({
       email: add_friend.email
@@ -174,15 +178,14 @@ router.get('/friend_request', function(req, res) {
   }
 });
 
-router.get('/add_friend/:idx', function(req, res) {
+router.get('/request/friend/add/:idx', function(req, res) {
   request = req.user.request[req.params.idx];
-
   User.findById(req.user.id, function(err, user) {
     user.friends.push(request.data);
     user.request.splice(req.params.idx, 1);
     user.save(function(err) {
       req.flash('info', {
-        msg: 'Schedule has been saved.'
+        msg: 'New friend has been added.'
       });
       User.findOne({
         email: request.data.email
@@ -194,11 +197,24 @@ router.get('/add_friend/:idx', function(req, res) {
         });
         user.save(function(err) {
           req.flash('info', {
-            msg: 'New request has been saved.'
+            msg: 'New friend has been added.'
           });
           res.redirect('/');
         });
       });
+    });
+  });
+});
+
+router.get('/request/friend/reject/:idx', function(req, res){
+  request = req.user.request[req.params.idx];
+  User.findById(req.user.id, function(err, user){
+    user.request.splice(req.params.idx, 1);
+    user.save(function(err) {
+      req.flash('info', {
+        msg: 'New friend has been rejected.'
+      });
+      res.redirect('/');
     });
   });
 });
@@ -213,7 +229,11 @@ router.get('/group', function(req, res) {
   }
 });
 
-router.post('/get-friend', function(req, res) {
+router.get('/request/submit', function(req,res){
+
+});
+
+router.post('/friend/get', function(req, res) {
   var email = req.body.email;
   var friends = req.user.friends;
   for (var i = 0; i < friends.length; i++) {
@@ -226,7 +246,7 @@ router.post('/get-friend', function(req, res) {
   res.end();
 });
 
-router.post('/find-friend', function(req, res) {
+router.post('/friend/find', function(req, res) {
   var email = req.body.email;
   User.findOne({
     email: email

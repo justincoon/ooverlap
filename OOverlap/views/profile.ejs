@@ -117,7 +117,9 @@
                                 </td>
 
                                 <td>
-                                    <a class="btn btn-default" href="#">Schedule an Event</a>
+                                    <!--<a class="btn btn-default" href="#">Schedule an Event</a>-->
+                                    <!-- Button trigger modal -->
+                                    <button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal"> Schedule an Event </button>
                                 </td>
                             </tr>
                         </table>
@@ -127,9 +129,31 @@
 		    </div><!-- End of CONTENT WRAPPER -->
 	    </div><!--End of wrapper-->
 
+
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="myModalLabel">Schedule an Event</h4>
+      </div>
+      <div class="modal-body">
+        Who would you like to schedule a meeting with?
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+        <button type="button" class="btn btn-primary">Next</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
         <script src='/javascripts/jquery-1.11.0.min.js'></script>
         <script src='/javascripts/moment.min.js'></script>
         <script src='/javascripts/jquery-ui.custom.min.js'></script>
+        <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
         <script src='/javascripts/fullcalendar.min.js'></script>   
         <script src='/javascripts/calendar.js'></script>
     </body>

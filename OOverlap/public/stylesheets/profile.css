@@ -210,6 +210,11 @@ body, html {
 	color:#999;
 }
 
+#scheduleAnEvent_button {
+	background-color: #333333;
+	text-align: center;
+}
+
 /*#external-events {
         float: left;
         width: 150px;

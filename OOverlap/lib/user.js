@@ -49,7 +49,7 @@ userSchema.pre('save', function(next) {
 });
 
 /**
- * Helper method for validationg user's password.
+ * Helper method for validation user's password.
  */
 
 userSchema.methods.comparePassword = function(candidatePassword, cb) {

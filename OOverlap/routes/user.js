@@ -214,10 +214,10 @@ router.get('/group', function(req, res) {
 });
 
 router.post('/get-friend', function(req, res) {
-  var name = req.body.name;
+  var email = req.body.email;
   var friends = req.user.friends;
   for (var i = 0; i < friends.length; i++) {
-    if (name === friends[i].name) {
+    if (email === friends[i].email) {
       res.send(friends[i]);
       request_friend = friends[i];
       break;

@@ -131,11 +131,11 @@ body, html {
 }
 
 /* FRIENDS & GROUPS */
-.update_wrapper {
+.update_wrapper, .draggable_wrapper {
 	text-align: center;
 }
 
-.userFriends_wrapper, .userGroups_wrapper, .update_wrapper {
+.userFriends_wrapper, .userGroups_wrapper, .update_wrapper, .draggable_wrapper{
 	width:80%;
 	margin-left:auto;
 	margin-right:auto;

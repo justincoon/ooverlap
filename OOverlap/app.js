@@ -62,6 +62,7 @@ app.use(function(req, res, next) {
     res.locals.user = req.user;
     next();
 });
+app.use(logger('dev'));
 
 app.use('/', routes);
 app.use('/auth', auth);

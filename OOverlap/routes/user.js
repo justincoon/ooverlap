@@ -296,7 +296,9 @@ router.post('/find-friend', function(req, res) {
         };
         res.send({
             error: false,
-            exist: false,
+            request_send_exist: false,
+            request_received_exist: false,  
+            friend_exist: false,
             friend: add_friend
           });
         res.end();

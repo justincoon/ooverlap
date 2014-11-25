@@ -6,7 +6,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
+        <title> <%= user.profile.name %> </title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -67,11 +67,11 @@
                     <div class="userFriends_wrapper">
 		            	<div> Friends </div>
 		                <div>
-                            <ul>
-                                <li> Friend 1 </li>
-                                <li> Friend 2 </li>
-                                <li> Friend 3 </li>  
-                            </ul>      
+                            <% for (var i=0; i<user.friends.length; i++) {%>
+                                <ul>
+                                    <li> <%= user.friends[i].name %> </li>
+                                </ul>      
+                            <% } %>
                         </div>
                         <div class="update_wrapper">
                             <button type="button" class="btn btn-default" data-toggle="modal" data-target="#friendEventModal_1"> Add a new friend </button>
@@ -167,11 +167,11 @@
         Please enter the email of your friend
             <input type="text" name="" value="" size="15"/>
             <a href="" id="find-friend">Find </a>
-        <div id="output"></div>
+        <div id="friend-output"></div>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-        <a class="btn btn-default" href="./add">Add</a>
+        <a class="btn btn-default" href="./add_friend">Add</a>
       </div>
     </div>
   </div>

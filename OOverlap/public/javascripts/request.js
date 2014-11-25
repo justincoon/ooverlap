@@ -2,11 +2,9 @@ $(function() {
 
 	function jQuery_GetFriend(name, callback) {
 		$.ajax({
-			type: 'POST',
+			type: 'GET',
 			url: '/user/get-friend',
-			data: {
-				name: name
-			}
+			data: 'name='+name
 		}).done(function(msg) {
 			callback(msg);
 		});
@@ -19,12 +17,11 @@ $(function() {
 				// Get the index value of the pair to lookup:
 				var name = $('input').val();
 
-				jQuery_GetFriends(name, function(friend) {
-					console.log('Friends: ' + JSON.stringify(friend));
-					if (frien !== null) {
+				jQuery_GetFriend(name, function(friend) {
+					if (friend.name === undefined) {
 						$('#output').html('Friend Not Found');
 					} else {
-						$('#output').html(friend.name);
+						$('#output').html(friend.name + " " + friend.email);
 					}
 				});
 				// Reset input field:

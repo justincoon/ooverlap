@@ -1,7 +1,13 @@
-@charset "UTF-8";
+/*!
+ * Start Bootstrap - Grayscale Bootstrap Theme (http://startbootstrap.com)
+ * Code licensed under the Apache License v2.0.
+ * For details, see http://www.apache.org/licenses/LICENSE-2.0.
+ */
+
+ @charset "UTF-8";
 /* CSS Document */
 
-html, body, div, h1, h2, h3, h4, h5, h6, p, a, blockquote, pre, code, hr, img, form, fieldset, legend, label, textarea, span, em, strong, sub, sup, cite, table, tbody, td, tfoot, th, thead, tr, tt, dl, dt, dd, ol, ul, li {margin: 0; padding: 0;}
+html, body, div {margin: 0; padding: 0;}
 
 body, html {
 	height:100%;
@@ -16,21 +22,17 @@ body, html {
 }
 
 /*											  */
-/* Contains the logo / navigation             */
+/* Contains the logo on the banner            */
 /*											  */
-#bannerWrapper {
-	height:15%;
-}
-
 #LHS_banner {
-	float:left;
-	height:100%;
-	width:50%;
+	height:15%;
+	width:100%;
 }
 
 #LHS_banner img {
 	height:100%;
 }
+
 
 /* NAVIGATION */
 #RHS_nav {
@@ -83,11 +85,12 @@ body, html {
 /* Contains CSS for user information          */
 /*											  */
 
+
 #contentWrapper {
 	height:85%;
 }
 
-#LHS_UserInformation {
+#LHS_GroupInformation {
 	/*background-color:#3FC;*/
 	float:left;
 	width:20%;
@@ -127,7 +130,11 @@ body, html {
 }
 
 /* FRIENDS & GROUPS */
-.groupMods_wrapper, .groupMembers_wrapper {
+.update_wrapper {
+	text-align: center;
+}
+
+.groupMods_wrapper, .groupMembers_wrapper, .update_wrapper {
 	width:80%;
 	margin-left:auto;
 	margin-right:auto;
@@ -143,7 +150,7 @@ body, html {
 	border-bottom-width:1px;
 }
 
-/* MODS */
+/* FRIENDS */
 .groupMods_wrapper div:nth-child(2){
 	height:100px;
 	font-size:12px;
@@ -151,7 +158,7 @@ body, html {
 	overflow:scroll;
 }
 
-/* MEMBERS */
+/* GROUPS */
 .groupMembers_wrapper div:nth-child(2){
 	height:100px;
 	font-size:12px;
@@ -160,9 +167,10 @@ body, html {
 }
 
 /*											  */
-/* Contains the RHS of the screen             */
+/* Contains the logo on the RHS of the screen */
 /*											  */
 #RHS_CalendarInformation {
+	/*background-color:#FC9;*/
 	width:80%;
 	height:100%;
 	float:right;
@@ -216,7 +224,37 @@ body, html {
 	overflow:scroll;
 }
 
-/* Temporary styling for the iFrame */
-#iFrame_styling {
-	text-align:center;
+/*#external-events {
+        float: left;
+        width: 150px;
+        padding: 0 10px;
+        border: 1px solid #ccc;
+        background: #eee;
+        text-align: left;
+}*/
+        
+#external-events h4 {
+    font-size: 16px;
+    margin-top: 0;
+    padding-top: 1em;
+}
+    
+#external-events .fc-event {
+    margin: 10px 0;
+    cursor: pointer;
+}
+    
+#external-events p {
+    margin: 1.5em 0;
+    font-size: 11px;
+    color: #666;
+}
+    
+#external-events p input {
+    margin: 0;
+    vertical-align: middle;
+}
+
+#calendar {
+	width: 1000px;
 }

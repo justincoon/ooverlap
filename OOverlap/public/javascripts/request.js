@@ -27,7 +27,7 @@ function jQuery_BindGetFriend() {
 				});
 				// Reset input field:
 				$('input').val('');
-				return false;
+				// return false;
 			}
 		});
 }
@@ -70,13 +70,28 @@ function jQuery_BindFindFriend() {
 						$('#friend-output').html('User with email ' + email + ' already sent your a request, please check your pending requests');
 					} else {
 						$('#friend-output').html(data.friend.name + " " + data.friend.email);
-						generate(data.friend.name + ' is found','success');
 					}
 				});
 				// Reset input field:
 				$('input').val('');
-				return false;
+				// return false;
 			}
+		});
+}
+
+function jQuery_BindAddFriend(){
+	$('#add_friend').bind('click',
+		function(event){
+			$.ajax({
+				type: 'GET',
+				url: '/user/request/friend',
+			}).done(function(msg) {
+				if (msg.status){
+					generate('Succesfully sending friend request','success');
+				} else {
+					generate('Fail to send friend request, please try again','error');
+				}
+			});
 		});
 }
 
@@ -161,6 +176,6 @@ $(document).ready(function() {
 	});
 	jQuery_BindGetFriend();
 	jQuery_BindFindFriend();
-
+	jQuery_BindAddFriend();
 	$('[data-toggle=tooltip]').tooltip();
 });

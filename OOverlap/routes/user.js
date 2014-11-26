@@ -173,11 +173,15 @@ router.get('/request/friend', function(req, res) {
         req.flash('info', {
           msg: 'New request has been saved.'
         });
-        res.redirect('/');
+        res.send({status:true});
+        res.end();
+        // res.redirect('/');
       });
     });
   } else {
-    res.redirect('/');
+    // res.redirect('/');
+    res.send({status:false});
+    res.end();
   }
 });
 

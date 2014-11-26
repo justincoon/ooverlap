@@ -25,6 +25,13 @@ router.get('/google/callback', passport.authenticate('google', {
 	res.redirect('/user/profile');
 });
 
-router.post('/signup', function(req, res){});
+router.post('/signup', function(req, res){
+
+	var user = new User({
+	   email: req.body.email,
+	   password: req.body.password
+	});
+
+});
 
 module.exports = router;

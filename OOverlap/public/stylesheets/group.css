@@ -155,7 +155,7 @@ body, html {
 	height:100px;
 	font-size:12px;
 	font-weight:normal;
-	overflow:scroll;
+	overflow:auto;
 }
 
 /* GROUPS */
@@ -163,7 +163,7 @@ body, html {
 	height:100px;
 	font-size:12px;
 	font-weight:normal;
-	overflow:scroll;
+	overflow:auto;
 }
 
 /*											  */
@@ -200,7 +200,7 @@ body, html {
 	height:80px;
 	font-size:12px;
 	font-weight:normal;
-	overflow:scroll;
+	overflow:auto;
 }
 
 /*
@@ -221,7 +221,7 @@ body, html {
 	height:80px;
 	font-size:12px;
 	font-weight:normal;
-	overflow:scroll;
+	overflow:auto;
 }
 
 /*#external-events {

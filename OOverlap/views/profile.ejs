@@ -211,9 +211,10 @@
                 <h4 class="modal-title" id="myModalLabel">Add a new friend</h4>
               </div>
               <div class="modal-body">
-                Please enter the email of your friend
-                    <input type="text" name="" value="" size="15"/>
-                    <a href="" id="find-friend">Find </a>
+                    <div id="new_friend_input" >
+                        <p> Please enter the email of your friend </p>
+                        <input class="typeahead tt-query" id="find-new-friend-input" placeholder="New Friend Emails" type="text" size="20"/>
+                    </div>
                 <div id="friend-output"></div>
               </div>
               <div class="modal-footer">
@@ -229,6 +230,7 @@
         <script src='/javascripts/jquery-ui.custom.min.js'></script>
         <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
         <script src='/javascripts/fullcalendar.min.js'></script>   
+        <script src='/javascripts/typeahead.jquery.min.js'></script>
         <script src='/javascripts/calendar.js'></script>
         <script src='/javascripts/request.js'></script>
         <!-- TOOLTIP SCRIPT: POP UP FRIENDS NAMES -->

@@ -241,6 +241,17 @@ router.get('/request/submit', function(req,res){
 
 });
 
+router.get('/emails/all', function(req,res){
+   User.find({}, function(err, users) {
+    emails = []
+    for (var i=0; i<users.length; i++){
+      emails.push(users[i].email);
+    } 
+    res.send(emails);
+    res.end();
+   });
+});
+
 router.post('/friend/get', function(req, res) {
   var email = req.body.email;
   var friends = req.user.friends;

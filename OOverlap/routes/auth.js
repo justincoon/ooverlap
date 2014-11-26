@@ -33,6 +33,11 @@ router.post('/signup', function(req, res){
 	});
 
 User.findOne({ email: req.body.email }, function(err, existingUser) {
+			
+			if(req.body.password !== req.body.confirm){
+				return res.redirect('/');//to implent
+			}	
+
 			if (existingUser) {
 				req.flash('errors', { msg: 'Account with that email address already exists.' });
 				return res.redirect('/exist');//implement further

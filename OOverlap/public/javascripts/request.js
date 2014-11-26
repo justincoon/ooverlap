@@ -12,22 +12,23 @@ function jQuery_GetFriend(email, callback) {
 
 function jQuery_BindGetFriend() {
 	// For Getting Friend Info From Server:
-	$('#get-friend').bind('click',
+	$('input#find-friend-input').bind('keypress',
 		function(event) {
-			$('#output').html('Finding..');
-			// Get the friend email to lookup:
-			var email = $('input').eq(0).val();
-
-			jQuery_GetFriend(email, function(friend) {
-				if (friend.email === undefined) {
-					$('#output').html('Friend Not Found');
-				} else {
-					$('#output').html(friend.name + " " + friend.email);
-				}
-			});
-			// Reset input field:
-			$('input').val('');
-			return false;
+			if (event.keyCode === 13){
+				$('#output').html('Finding..');
+				// Get the friend email to lookup:
+				var email = $('input#find-friend-input').val();
+				jQuery_GetFriend(email, function(friend) {
+					if (friend.email === undefined) {
+						$('#output').html('Friend Not Found');
+					} else {
+						$('#output').html(friend.name + " " + friend.email);
+					}
+				});
+				// Reset input field:
+				$('input').val('');
+				return false;
+			}
 		});
 }
 
@@ -59,6 +60,8 @@ function jQuery_BindFindFriend() {
 				jQuery_FindFriend(email, function(data) {
 					if (data.error) {
 						$('#friend-output').html('Cannot find user with email ' + email);
+					} else if (data.self){
+						$('#friend-output').html('Sorry you cannot add yourself as a friend');
 					} else if (data.friend_exist) {
 						$('#friend-output').html('User with email ' + email + ' already in your friend list');
 					} else if (data.request_sent_exist) {
@@ -111,9 +114,29 @@ function getAllEmails(callback) {
 	});
 }
 
+function getFriendEmails(callback){
+	$.ajax({
+		type: 'get',
+		url: '/user/friend/emails/all',
+	}).done(function(msg) {
+		callback(msg);
+	});	
+}
+
 $(document).ready(function() {
 	getAllEmails(function(data) {
 		$('#new_friend_input .typeahead').typeahead({
+			hint: true,
+			highlight: true,
+			minLength: 1
+		}, {
+			name: 'emails',
+			displayKey: 'value',
+			source: substringMatcher(data)
+		});
+	});
+	getFriendEmails(function(data){
+		$('#new_request_input .typeahead').typeahead({
 			hint: true,
 			highlight: true,
 			minLength: 1

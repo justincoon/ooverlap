@@ -280,7 +280,7 @@ body, html {
 
 /*Typeahead style*/
 
-#new_friend_input{
+#new_friend_input, #new_request_input{
 	font-family: sans-serif;
 }
 .bs-example{

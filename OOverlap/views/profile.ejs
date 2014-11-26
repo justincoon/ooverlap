@@ -187,9 +187,10 @@
                 <h4 class="modal-title" id="myModalLabel">Schedule an Event</h4>
               </div>
               <div class="modal-body">
-                Who would you like to schedule a meeting with? 
-                    <input type="text" name="" value="" size="15"/>
-                    <a href="" id="get-friend">Find</a>
+                <div id="new_request_input" >
+                    <p> Please enter the email of your friend </p>
+                    <input class="typeahead tt-query" id="find-friend-input" placeholder="Friend Email" type="text" size="20"/>
+                </div>
                 <div id="output"></div>
               </div>
               <div class="modal-footer">
@@ -213,7 +214,7 @@
               <div class="modal-body">
                     <div id="new_friend_input" >
                         <p> Please enter the email of your friend </p>
-                        <input class="typeahead tt-query" id="find-new-friend-input" placeholder="New Friend Emails" type="text" size="20"/>
+                        <input class="typeahead tt-query" id="find-new-friend-input" placeholder="New Friend Email" type="text" size="20"/>
                     </div>
                 <div id="friend-output"></div>
               </div>

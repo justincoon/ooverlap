@@ -243,13 +243,24 @@ router.get('/request/submit', function(req,res){
 
 router.get('/emails/all', function(req,res){
    User.find({}, function(err, users) {
-    emails = []
+    var emails = [];
     for (var i=0; i<users.length; i++){
-      emails.push(users[i].email);
+      if (users[i].email !== req.user.email){
+        emails.push(users[i].email);
+      }
     } 
     res.send(emails);
     res.end();
    });
+});
+
+router.get('/friend/emails/all', function(req, res) {
+  var emails = [];
+  for (var i = 0; i < req.user.friends.length; i++) {
+    emails.push(req.user.friends[i].email);
+  }
+  res.send(emails);
+  res.end();
 });
 
 router.post('/friend/get', function(req, res) {
@@ -273,6 +284,7 @@ router.post('/friend/find', function(req, res) {
     if (!user) {
       res.send({
         error: true,
+        self: false,
         request_sent_exist: false,
         request_received_exist: false,
         friend_exist: false,
@@ -281,25 +293,41 @@ router.post('/friend/find', function(req, res) {
       res.end();
     } else {
       var exist = false;
-      for (var i=0; i<req.user.request.length; i++){
-        if (req.user.request[i].type === 'friend_request' && req.user.request[i].data.email === req.body.email){
-          res.send({
-            error: false,
-            request_send_exist: false,
-            request_received_exist: true,
-            friend_exist: false,
-            friend: {}
-          });
-          res.end();
-          exist = true;
-          break;
-        }
+      if (req.user.email === req.body.email){
+        res.send({
+              error: false,
+              self: true,
+              request_send_exist: false,
+              request_received_exist: false,
+              friend_exist: false,
+              friend: {}
+            });
+        res.end();
+        exist = true;
       }
+      if (!exist){
+        for (var i=0; i<req.user.request.length; i++){
+          if (req.user.request[i].type === 'friend_request' && req.user.request[i].data.email === req.body.email){
+            res.send({
+              error: false,
+              self: false,
+              request_send_exist: false,
+              request_received_exist: true,
+              friend_exist: false,
+              friend: {}
+            });
+            res.end();
+            exist = true;
+            break;
+          }
+        }
+      } 
       if (!exist){
         for (var i=0; i<req.user.friends.length; i++){
           if (req.user.friends[i].email === user.email) {
             res.send({
               error: false,
+              self: false,
               request_send_exist: false,
               request_received_exist: false,
               friend_exist: true,
@@ -316,6 +344,7 @@ router.post('/friend/find', function(req, res) {
           if (user.request[i].type === 'friend_request' && user.request[i].data.email === req.user.email){
           res.send({
             error: false,
+            self: false,
             request_sent_exist: true,
             request_received_exist: false,
             friend_exist: false,
@@ -335,6 +364,7 @@ router.post('/friend/find', function(req, res) {
         };
         res.send({
             error: false,
+            self: false,
             request_send_exist: false,
             request_received_exist: false,  
             friend_exist: false,

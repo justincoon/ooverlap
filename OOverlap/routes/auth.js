@@ -51,19 +51,16 @@ router.post('/signup', function(req, res){
 
 router.post('/login', function(req, res){
   passport.authenticate('local', function(err, user, info) {
-
-  if (err) { return next(err) }
-    if (!user) {
-      req.flash('error', info.message);
-      return res.redirect('/nouser')//called when no user found. to implement
-    }
-
-  	    req.logIn(user, function(err) {
+	  if (err) { return next(err) }
+   		 if (!user) {
+      		req.flash('error', info.message);
+      		return res.redirect('/nouser')//called when no user found. to implement
+    	}
+  req.logIn(user, function(err) {
       if (err) { return next(err); }
-    res.redirect(req.session.returnTo || '/');
-    });
+  	  res.redirect(req.session.returnTo || '/');
+  });
   })(req, res);
-
 });
 
 module.exports = router;

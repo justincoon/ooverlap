@@ -24,18 +24,26 @@ router.get('/profile', function(req, res) {
 
 router.get('/calendar', function(req, res) {
   if (req.user) {
-    if (req.user.tokens[1]) //If we have a refresh token, ask for a new access token
+    if (req.user.tokens[0].refreshToken) //If we have a refresh token, ask for a new access token
     {
-      console.log(req.user.tokens);
-      refresh(req.user.tokens[1].refreshToken, keys.google.clientID, keys.google.clientSecret, function(err, json, res) {
+      // console.log("Old user tokens: " + JSON.stringify(req.user.tokens));
+      refresh(req.user.tokens[0].refreshToken, keys.google.clientID, keys.google.clientSecret, function(err, json, res) {
         User.findById(req.user.id, function(err, user) {
-          user.tokens[0].accessToken = json.accessToken;
+          user.tokens.splice(0, 1);
+          user.tokens.push({
+            kind: 'google',
+            accessToken: json.accessToken,
+            refreshToken: req.user.tokens[0].refreshToken
+          });
+          // console.log("New token: " + json.accessToken);
+          // console.log("Expires in: " + json.expiresIn);
+          // console.log("Expected New user tokens: " + JSON.stringify(user.tokens));
           user.save(function(err) {
             req.flash('info', {
               msg: 'Schedule has been saved.'
             });
+            // console.log("Actual new user tokens: " + JSON.stringify(req.user.tokens));
           });
-          console.log(req.user.tokens);
         });
       });
     }

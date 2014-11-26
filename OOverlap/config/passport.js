@@ -118,7 +118,8 @@ passport.use(new GoogleStrategy(secrets.google, function(req, accessToken, refre
           user.google = profile.id;
           user.tokens.push({
             kind: 'google',
-            accessToken: accessToken
+            accessToken: accessToken,
+            refreshToken: refreshToken
           });
           user.profile.name = user.profile.name || profile.displayName;
           user.profile.gender = user.profile.gender || profile._json.gender;
@@ -151,12 +152,9 @@ passport.use(new GoogleStrategy(secrets.google, function(req, accessToken, refre
           user.google = profile.id;
           user.tokens.push({
             kind: 'google',
-            accessToken: accessToken
+            accessToken: accessToken,
+            refreshToken: refreshToken
           });
-	  user.tokens.push({
-	    kind: 'google-calendar',
-	    refreshToken: refreshToken
-	  });
           user.profile.name = profile.displayName;
           user.profile.gender = profile._json.gender;
           user.profile.picture = profile._json.picture;

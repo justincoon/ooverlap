@@ -50,7 +50,13 @@ router.post('/signup', function(req, res){
 
 
 router.post('/login', function(req, res){
-  passport.authenticate('local', function(err, user, info) {})(req, res);
+  passport.authenticate('local', function(err, user, info) {
+
+  	    req.logIn(user, function(err) {
+      if (err) { return next(err); }
+    res.redirect(req.session.returnTo || '/');
+    });
+  })(req, res);
 
 });
 

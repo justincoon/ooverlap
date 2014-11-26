@@ -152,6 +152,28 @@ function generate(text, type) {
 }
 
 $(document).ready(function() {
+	// Get user schedule
+	var request = $.ajax({
+        url: '/user/schedule',
+        type: 'GET',
+        success: function(data) {
+            $('#calendar').fullCalendar({
+                header: {
+                    left: 'prev,next today',
+                    center: 'title',
+                    right: 'month,agendaWeek,agendaDay'
+                },
+                editable: true,
+                droppable: true,
+                eventLimit: true, // allow "more" link when too many events
+                events: data
+            });
+        },
+        error: function(e) {
+            console.log("FAIL");
+        }
+    });
+    // Get emails db for autocomplte
 	getAllEmails(function(data) {
 		$('#new_friend_input .typeahead').typeahead({
 			hint: true,
@@ -174,6 +196,7 @@ $(document).ready(function() {
 			source: substringMatcher(data)
 		});
 	});
+	//Binding functions
 	jQuery_BindGetFriend();
 	jQuery_BindFindFriend();
 	jQuery_BindAddFriend();

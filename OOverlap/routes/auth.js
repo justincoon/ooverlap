@@ -1,7 +1,7 @@
 var express     = require('express');
 var router      = express.Router();
 var passport    = require('passport');
-var userController = require('../config/user');
+var User        = require('../lib/user');
 
 router.get('/facebook', passport.authenticate('facebook', {
 	scope: ['email', 'user_location']
@@ -31,6 +31,10 @@ router.post('/signup', function(req, res){
 	   email: req.body.email,
 	   password: req.body.password
 	});
+
+
+
+
 
 });
 

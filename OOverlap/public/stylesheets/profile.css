@@ -281,12 +281,12 @@ body, html {
 /*Typeahead style*/
 
 #new_friend_input, #new_request_input{
-	font-family: sans-serif;
+	font-family: 'Open Sans', sans-serif;
 }
 .typeahead, .tt-query, .tt-hint {
 	border: 2px solid #CCCCCC;
 	border-radius: 8px;
-	font-size: 18px;
+	font-size: 16px;
 	height: 35px;
 	line-height: 30px;
 	outline: medium none;
@@ -315,8 +315,8 @@ body, html {
 	width: 422px;
 }
 .tt-suggestion {
-	font-size: 24px;
-	line-height: 24px;
+	font-size: 16px;
+	line-height: 16px;
 	padding: 3px 20px;
 }
 .tt-suggestion.tt-is-under-cursor {

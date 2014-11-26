@@ -32,8 +32,9 @@ router.post('/signup', function(req, res){
 	   password: req.body.password
 	});
 
+User.findOne({ email: req.body.email }, function(err, existingUser) {
 
-
+	});
 
 
 });

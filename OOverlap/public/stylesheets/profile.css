@@ -283,16 +283,11 @@ body, html {
 #new_friend_input, #new_request_input{
 	font-family: sans-serif;
 }
-.bs-example{
-	font-family: sans-serif;
-	position: relative;
-	margin: 100px;
-}
 .typeahead, .tt-query, .tt-hint {
 	border: 2px solid #CCCCCC;
 	border-radius: 8px;
-	font-size: 24px;
-	height: 30px;
+	font-size: 18px;
+	height: 35px;
 	line-height: 30px;
 	outline: medium none;
 	padding: 8px 12px;

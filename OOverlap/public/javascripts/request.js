@@ -70,6 +70,7 @@ function jQuery_BindFindFriend() {
 						$('#friend-output').html('User with email ' + email + ' already sent your a request, please check your pending requests');
 					} else {
 						$('#friend-output').html(data.friend.name + " " + data.friend.email);
+						generate(data.friend.name + ' is found','success');
 					}
 				});
 				// Reset input field:
@@ -123,6 +124,18 @@ function getFriendEmails(callback){
 	});	
 }
 
+function generate(text, type) {
+ 	var n = noty({
+ 		text: text,
+ 		type: type,
+ 		dismissQueue: true,
+ 		layout: 'topCenter',
+ 		theme: 'defaultTheme',
+ 		timeout: 5000,
+ 		maxVisible: 10
+ 	});
+}
+
 $(document).ready(function() {
 	getAllEmails(function(data) {
 		$('#new_friend_input .typeahead').typeahead({
@@ -148,4 +161,6 @@ $(document).ready(function() {
 	});
 	jQuery_BindGetFriend();
 	jQuery_BindFindFriend();
+
+	$('[data-toggle=tooltip]').tooltip();
 });

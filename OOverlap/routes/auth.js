@@ -26,18 +26,14 @@ router.get('/google/callback', passport.authenticate('google', {
 });
 
 router.post('/signup', function(req, res){
-
 	var user = new User({
 	   email: req.body.email,
 	   password: req.body.password
 	});
-
-User.findOne({ email: req.body.email }, function(err, existingUser) {
-			
+	User.findOne({ email: req.body.email }, function(err, existingUser) {
 			if(req.body.password !== req.body.confirm){
 				return res.redirect('/');//to implent
 			}	
-
 			if (existingUser) {
 				req.flash('errors', { msg: 'Account with that email address already exists.' });
 				return res.redirect('/exist');//implement further
@@ -49,10 +45,7 @@ User.findOne({ email: req.body.email }, function(err, existingUser) {
 					res.redirect('/user/profile');
 				});
 			});
-
 	});
-
-
 });
 
 module.exports = router;

@@ -31,7 +31,6 @@ $(document).ready(function() {
                     center: 'title',
                     right: 'month,agendaWeek,agendaDay'
                 },
-                // defaultDate: '2014-11-12',
                 editable: true,
                 droppable: true,
                 eventLimit: true, // allow "more" link when too many events

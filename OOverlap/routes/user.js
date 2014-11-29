@@ -9,6 +9,7 @@ var querystring = require('querystring');
 var url         = require('url');
 var request_friend;
 var add_friend;
+var meeting_request;
 
 router.get('/', function(req,res){
   res.redirect('/');
@@ -153,9 +154,16 @@ router.get('/request/schedule', function(req, res) {
   });
 });
 
+router.post('/request/new',function(req, res){
+    meeting_request = req.body;
+    res.send("");
+    res.end();
+});
+
 router.get('/request', function(req, res) {
   if (request_friend) {
     res.render("request", {
+      request: meeting_request,
       user: req.user,
       friend: request_friend
     });
@@ -253,12 +261,13 @@ router.get('/request/view/:idx', function(req,res){
         name: user.profile.name,
         picture: user.profile.picture,
         email: user.email
-      }
+      },
+      request: request.meeting
     });
   });
 });
 
-router.post('/request/submit', function(req,res){
+router.post('/request/submit', function(req, res) {
   var free_times = req.body.free_times;
   User.findOne({
     email: req.body.to
@@ -267,6 +276,7 @@ router.post('/request/submit', function(req,res){
       type: 'meeting_request',
       from: req.body.from,
       to: req.body.to,
+      meeting: meeting_request,
       free_times: req.body.free_times
     })
     user.save(function(err) {

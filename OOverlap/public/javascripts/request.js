@@ -23,16 +23,32 @@ $(document).ready(function() {
     });
 
     $('#submit_request').bind('click',
-        function(event){
-            for (var i=0; i<free_times.length; i++){
-                console.log(free_times[i].start.format() + " " + free_times[i].end.format());
+        function(event) {
+            var data = [];
+            for (var i = 0; i < free_times.length; i++) {
+                if (free_times[i].allDay){
+                    data.push({
+                        id: free_times[i]._id,
+                        start: free_times[i].start.format()
+                    });
+                } else {
+                    data.push({
+                        id: free_times[i]._id,
+                        start: free_times[i].start.format(),
+                        end: free_times[i].end.format(),
+                    });
+                }
             }
-            // $.ajax({
-            //     type: 'POST',
-            //     url: '/user/request/submit',
-            //     data: free_times
-            // });
-    });
+            $.ajax({
+                type: 'POST',
+                url: '/user/request/submit',
+                data: {
+                    from: $('#from_email').text(),
+                    to: $('#to_email').text(),
+                    free_times: JSON.stringify(data)
+                }
+            });
+        });
 
     $.ajax({
         url: '/user/request/schedule',

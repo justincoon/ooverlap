@@ -1,10 +1,12 @@
-var express = require('express');
-var router = express.Router();
-var gcal = require('google-calendar');
-var refresh = require('google-refresh-token');
-var flash = require('express-flash');
-var keys = require('../config/keys.js');
-var User = require('../lib/user');
+var express     = require('express');
+var router      = express.Router();
+var gcal        = require('google-calendar');
+var refresh     = require('google-refresh-token');
+var flash       = require('express-flash');
+var keys        = require('../config/keys.js');
+var User        = require('../lib/user');
+var querystring = require('querystring');
+var url         = require('url');
 var request_friend;
 var add_friend;
 
@@ -118,8 +120,10 @@ router.get('/request/schedule', function(req, res) {
       };
     }
   });
+  var query = querystring.parse(url.parse(req.url).query);
+  var friend_email = query.friend_email;
   User.findOne({
-    email: request_friend.email
+    email: friend_email
   }, function(err, user) {
     if (!user)
       return done(null, false, {
@@ -128,7 +132,7 @@ router.get('/request/schedule', function(req, res) {
     user.schedule.forEach(function(item) {
       if (item.start.dateTime && item.end.dateTime) {
         items[items.length] = {
-          title: request_friend.name + " Schedule",
+          title: user.profile.name + " Schedule",
           color: '#ffa500',
           start: item.start.dateTime,
           end: item.end.dateTime,
@@ -136,7 +140,7 @@ router.get('/request/schedule', function(req, res) {
         };
       } else {
         items[items.length] = {
-          title: request_friend.name + " Schedule",
+          title: user.profile.name + " Schedule",
           color: '#ffa500',
           start: item.start.date,
           end: item.end.date,
@@ -179,18 +183,16 @@ router.get('/request/friend', function(req, res) {
         });
         res.send({status:true});
         res.end();
-        // res.redirect('/');
       });
     });
   } else {
-    // res.redirect('/');
     res.send({status:false});
     res.end();
   }
 });
 
 router.get('/request/friend/add/:idx', function(req, res) {
-  request = req.user.request[req.params.idx];
+  var request = req.user.request[req.params.idx];
   User.findById(req.user.id, function(err, user) {
     user.friends.push(request.data);
     user.request.splice(req.params.idx, 1);
@@ -240,34 +242,40 @@ router.get('/group', function(req, res) {
   }
 });
 
+router.get('/request/view/:idx', function(req,res){
+  var request = req.user.request[req.params.idx];
+  User.findOne({
+    email: request.from
+  }, function(err, user) {
+    res.render("request", {
+      user: req.user,
+      friend: {
+        name: user.profile.name,
+        picture: user.profile.picture,
+        email: user.email
+      }
+    });
+  });
+});
+
 router.post('/request/submit', function(req,res){
   var free_times = req.body.free_times;
-  var isReply = false;
-  for (var i=0; i<req.user.request.length; i++){
-    if (req.user.request[i].type === 'meeting_request' && req.user.request[i].from === req.body.to){
-      isReply = true;
-    }
-  }
-  if (isReply) {
-
-  } else {
-    User.findOne({
-      email: req.body.to
-    }, function(err, user) {
-      user.request.push({
-        type: 'meeting_request',
-        from: req.body.from,
-        to: req.body.to,
-        free_times: req.body.free_times
-      })
-      user.save(function(err){
-        req.flash('info', {
-          msg: 'New request has been saved.'
-        });
-        res.redirect('/');
+  User.findOne({
+    email: req.body.to
+  }, function(err, user) {
+    user.request.push({
+      type: 'meeting_request',
+      from: req.body.from,
+      to: req.body.to,
+      free_times: req.body.free_times
+    })
+    user.save(function(err) {
+      req.flash('info', {
+        msg: 'New request has been saved.'
       });
+      res.redirect('/');
     });
-  }
+  });
 });
 
 router.get('/emails/all', function(req,res){

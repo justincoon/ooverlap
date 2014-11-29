@@ -55,6 +55,9 @@ $(document).ready(function() {
     $.ajax({
         url: '/user/request/schedule',
         type: 'GET',
+        data: {
+            friend_email: $('#to_email').text()
+        },
         success: function(data) {
             $('#calendar').fullCalendar({
                 header: {

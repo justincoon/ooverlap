@@ -240,8 +240,34 @@ router.get('/group', function(req, res) {
   }
 });
 
-router.get('/request/submit', function(req,res){
+router.post('/request/submit', function(req,res){
+  var free_times = req.body.free_times;
+  var isReply = false;
+  for (var i=0; i<req.user.request.length; i++){
+    if (req.user.request[i].type === 'meeting_request' && req.user.request[i].from === req.body.to){
+      isReply = true;
+    }
+  }
+  if (isReply) {
 
+  } else {
+    User.findOne({
+      email: req.body.to
+    }, function(err, user) {
+      user.request.push({
+        type: 'meeting_request',
+        from: req.body.from,
+        to: req.body.to,
+        free_times: req.body.free_times
+      })
+      user.save(function(err){
+        req.flash('info', {
+          msg: 'New request has been saved.'
+        });
+        res.redirect('/');
+      });
+    });
+  }
 });
 
 router.get('/emails/all', function(req,res){

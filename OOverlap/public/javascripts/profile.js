@@ -10,28 +10,6 @@ function jQuery_GetFriend(email, callback) {
 	});
 }
 
-function jQuery_BindGetFriend() {
-	// For Getting Friend Info From Server:
-	$('input#find-friend-input').bind('keypress',
-		function(event) {
-			if (event.keyCode === 13){
-				$('#output').html('Finding..');
-				// Get the friend email to lookup:
-				var email = $('input#find-friend-input').val();
-				jQuery_GetFriend(email, function(friend) {
-					if (friend.email === undefined) {
-						$('#output').html('Friend Not Found');
-					} else {
-						$('#output').html(friend.name + " " + friend.email);
-					}
-				});
-				// Reset input field:
-				$('input').val('');
-				// return false;
-			}
-		});
-}
-
 function jQuery_FindFriend(email, callback) {
 	$.ajax({
 		type: 'POST',
@@ -79,16 +57,34 @@ function jQuery_BindAddFriend(){
 						$('#friend-output').html(data.friend.name + " " + data.friend.email);
 						$.ajax({
 							type: 'GET',
-							url: '/user/request/friend',
+							url: '/user/request/friend'
 						}).done(function(msg) {
-							console.log("!!!");
-							$('#friendEventModal_1').modal('hide')
+							$('#friendEventModal_1').modal('hide');
 							if (msg.status){
 								generate('Succesfully sending friend request','success');
 							} else {
 								generate('Fail to send friend request, please try again','error');
 							}
 						});
+					}
+				});
+		});
+}
+
+function jQuery_BindSubmitRequest(){
+	$('#submit_request').bind('click',
+		function (event){
+			$('#request-output').html('Finding..');
+				// Get the friend email to lookup:
+				var email = $('input#find-friend-input').val();
+				jQuery_GetFriend(email, function(friend) {
+					if (friend.email === undefined) {
+						generate('Cannot find friend with email ' +  email + ' in your friend list','error');
+						$('#request-output').html('');
+						return false;
+					} else {
+						$('#request-output').html(friend.name + " " + friend.email);
+						window.location.replace("/user/request");
 					}
 				});
 		});
@@ -196,7 +192,7 @@ $(document).ready(function() {
 		});
 	});
 	//Binding functions
-	jQuery_BindGetFriend();
+	jQuery_BindSubmitRequest();
 	jQuery_BindAddFriend();
 	$('[data-toggle=tooltip]').tooltip();
 });

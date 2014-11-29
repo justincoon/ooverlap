@@ -86,8 +86,13 @@
                                     <tr>
                                         <% for (var i=0; i<user.friends.length; i++) {%>
                                         <td><div class="otherProfilePic_wrapper">
+
                                         <img src="<%=user.friends[i].picture %>" data-toggle="tooltip" data-placement="top" title="<%=user.friends[i].name%>"/>
+
                                         </div></td>
+                                        <td><span data-placement="right" data-toggle="tooltip" title="Hello">
+                                            <a href="#myModal" role="button" data-toggle="modal">Show</a>
+                                        </span></td>
                                         <% } %>
                                     </tr>
                                     <tr>
@@ -101,7 +106,7 @@
                         </div>
 
                     <div class="update_wrapper">
-                            <button type="button" class="btn btn-default" data-toggle="modal" data-target="#friendEventModal_1"> Add a New Friend! </button>
+                            <button type="button" class="btn btn-default" data-toggle="modal" data-target="#friendingEventModal"> Add a New Friend! </button>
                         </div>   
 		            </div>
 
@@ -202,7 +207,42 @@
         <!--                          -->
         <!-- MODAL FOR ADD NEW FRIEND -->
         <!--                          -->
-        <div class="modal fade" id="friendEventModal_1" tabindex="-1" role="dialog" aria-labelledby="friendEventModal_1_Label" aria-hidden="true">
+        <div class="modal fade" id="friendingEventModal" tabindex="-1" role="dialog" aria-labelledby="friendingEventModal_Label" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+
+                <!-- APPLIED SPAN STYLE FOR CENTERING -->
+                    <span style="text-align:center;">
+                    <div class="modal-header"> 
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only"> Close</span></button>
+                        <h4 class="modal-title" id="myModalLabel">Add a New Friend</h4>
+                    </div>
+                    <div class="modal-body">
+
+
+                        <div id="new_friend_input" >
+                            <p> Please enter the <strong>email</strong> of the friend you intend to add:</p>
+                            <input class="typeahead tt-query" id="find-new-friend-input" placeholder="Email" type="text" size="20"/>
+                        </div>
+                        
+                        <span style="text-align:left;">
+                        <div id="friend-output"></div></span>
+                    </div>
+                    </span>
+                    <!-- end of span -->
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                        <button type="button" class="btn btn-default" id="add_friend">Add</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--                                    -->
+        <!-- MODAL FOR DISPLAYING USER PROFILES -->
+        <!--                                    -->
+        <div class="modal fade" id="otherUserProfilesModal" tabindex="-1" role="dialog" aria-labelledby="otherUserProfilesModal_Label" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
 

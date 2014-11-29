@@ -135,7 +135,7 @@
                                                 <br /> 
                                         <!-- FUNCTION FOR A MEETING REQUEST -->
                                             <% } else if (user.request[i].type === 'meeting_request') {%>
-                                                <strong> <%=user.request[i].from %> </strong> <span class="pendingRequests_TTM">wants to schedule a time to meet</span>
+                                                <strong> <%=user.request[i].from %> </strong> <span class="pendingRequests_TTM">wants to schedule a time to meet for <strong> <%= user.request[i].meeting.title %></strong></span>
                                                 <a href= <%='/request/view/' + i %> > View </a> 
                                                 <br />
                                             <% } %>

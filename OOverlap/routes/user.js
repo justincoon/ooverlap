@@ -105,14 +105,16 @@ router.get('/request/schedule', function(req, res) {
         title: item.summary,
         color: '#ff0000',
         start: item.start.dateTime,
-        end: item.end.dateTime
+        end: item.end.dateTime,
+        editable: false
       };
     } else {
       items[items.length] = {
         title: item.summary,
         color: '#ff0000',
         start: item.start.date,
-        end: item.end.date
+        end: item.end.date,
+        editable: false
       };
     }
   });
@@ -129,14 +131,16 @@ router.get('/request/schedule', function(req, res) {
           title: request_friend.name + " Schedule",
           color: '#ffa500',
           start: item.start.dateTime,
-          end: item.end.dateTime
+          end: item.end.dateTime,
+          editable: false
         };
       } else {
         items[items.length] = {
           title: request_friend.name + " Schedule",
           color: '#ffa500',
           start: item.start.date,
-          end: item.end.date
+          end: item.end.date,
+          editable: false
         };
       }
     });

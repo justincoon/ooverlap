@@ -181,7 +181,7 @@ body, html {
 
 /* FRIENDS */
 .userFriends_wrapper div:nth-child(2){
-	height:150px;
+	/*height:150px;*/
 	font-size:12px;
 	font-weight:normal;
 	overflow:auto;
@@ -189,7 +189,7 @@ body, html {
 
 /* GROUPS */
 .userGroups_wrapper div:nth-child(2){
-	height:150px;
+	/*height:150px;*/
 	font-size:12px;
 	font-weight:normal;
 	overflow:auto;

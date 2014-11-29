@@ -130,8 +130,8 @@
                                         <% for (var i=0; i<user.request.length; i++) {  %>
                                             <% if (user.request[i].type === 'friend_request') { %>
                                                 <strong> <%=user.request[i].data.name %> </strong> <span class="pendingRequests_TTM">wants to be your friend</span>
-                                                <a href= <%='/request/friend/add/' + i %> > Confirm </a> 
-                                                <a href= <%='/request/friend/reject/' + i %> > Reject </a> 
+                                                <a href= <%='/friend/add/' + i %> > Confirm </a> 
+                                                <a href= <%='/friend/reject/' + i %> > Reject </a> 
                                                 <br /> 
                                         <!-- FUNCTION FOR A MEETING REQUEST -->
                                             <% } else if (user.request[i].type === 'meeting_request') {%>

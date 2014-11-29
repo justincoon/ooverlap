@@ -13,7 +13,7 @@ function jQuery_GetFriend(email, callback) {
 function jQuery_FindFriend(email, callback) {
 	$.ajax({
 		type: 'POST',
-		url: '/user/friend/find',
+		url: '/friend/find',
 		data: {
 			email: email
 		}
@@ -33,6 +33,7 @@ function jQuery_BindAddFriend(){
 				}
 			$('#friend-output').html('Finding..');
 			jQuery_FindFriend(email, function(data) {
+					console.log(data);
 					if (data.error) {
 						generate('Cannot find user with email ' + email,'error');
 						$('#friend-output').html('');
@@ -50,14 +51,14 @@ function jQuery_BindAddFriend(){
 						$('#friend-output').html('');
 						return false;
 					} else if (data.request_received_exist) {
-						generate('User with email ' + email + ' already sent your a request, please check your pending requests')
+						generate('User with email ' + email + ' already sent your a request, please check your pending requests', 'error');
 						$('#friend-output').html('');
 						return false;
 					} else {
 						$('#friend-output').html(data.friend.name + " " + data.friend.email);
 						$.ajax({
 							type: 'GET',
-							url: '/user/request/friend'
+							url: '/friend/new_request'
 						}).done(function(msg) {
 							$('#friendEventModal_1').modal('hide');
 							if (msg.status){
@@ -149,7 +150,7 @@ var substringMatcher = function(strs) {
 function getAllEmails(callback) {
 	$.ajax({
 		type: 'get',
-		url: '/user/emails/all',
+		url: '/friend/find/emails/all',
 	}).done(function(msg) {
 		callback(msg);
 	});
@@ -158,7 +159,7 @@ function getAllEmails(callback) {
 function getFriendEmails(callback){
 	$.ajax({
 		type: 'get',
-		url: '/user/friend/emails/all',
+		url: '/friend/get/emails/all',
 	}).done(function(msg) {
 		callback(msg);
 	});	

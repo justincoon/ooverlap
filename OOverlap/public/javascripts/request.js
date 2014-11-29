@@ -41,7 +41,7 @@ $(document).ready(function() {
             }
             $.ajax({
                 type: 'POST',
-                url: '/user/request/submit',
+                url: '/request/submit',
                 data: {
                     from: $('#from_email').text(),
                     to: $('#to_email').text(),
@@ -53,7 +53,7 @@ $(document).ready(function() {
         });
 
     $.ajax({
-        url: '/user/request/schedule',
+        url: '/request/schedule',
         type: 'GET',
         data: {
             friend_email: $('#to_email').text()

@@ -1,7 +1,7 @@
 function jQuery_GetFriend(email, callback) {
 	$.ajax({
 		type: 'POST',
-		url: '/user/friend/get',
+		url: '/request/get_friend',
 		data: {
 			email: email
 		}
@@ -106,14 +106,14 @@ function jQuery_BindSubmitRequest() {
 					$('#request-output').html(friend.name + " " + friend.email);
 					$.ajax({
 						type: 'POST',
-						url: '/user/request/new',
+						url: '/request/new',
 						data: {
 							title: title,
 							hours: hours,
 							minutes: minutes
 						}
 					}).done(function(msg) {
-						window.location.replace("/user/request");
+						window.location.replace("/request");
 					});
 				}
 			});

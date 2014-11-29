@@ -47,6 +47,8 @@ $(document).ready(function() {
                     to: $('#to_email').text(),
                     free_times: JSON.stringify(data)
                 }
+            }).done(function(msg) {
+                window.location.replace("/user/profile");
             });
         });
 

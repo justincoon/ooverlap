@@ -139,6 +139,7 @@ body, html {
 	margin-left:auto;
 	margin-right:auto;
 	padding-bottom:10%;
+	text-align: center;
 }
 
 .userFriends_wrapper div:nth-child(1), .userGroups_wrapper div:nth-child(1) {
@@ -180,7 +181,7 @@ body, html {
 
 /* FRIENDS */
 .userFriends_wrapper div:nth-child(2){
-	height:150px;
+	/*height:150px;*/
 	font-size:12px;
 	font-weight:normal;
 	overflow:auto;
@@ -188,7 +189,7 @@ body, html {
 
 /* GROUPS */
 .userGroups_wrapper div:nth-child(2){
-	height:150px;
+	/*height:150px;*/
 	font-size:12px;
 	font-weight:normal;
 	overflow:auto;

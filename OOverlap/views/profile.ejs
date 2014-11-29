@@ -49,7 +49,7 @@
 		            <!-- Should be rounded -->
 		            <div class="profilePic_wrapper">
                         <% if (user.profile.picture) { %>
-                            <img src= "<%= user.profile.picture %>" alt="ProfilePicture"/>
+                            <img src= "<%= user.profile.picture %>" alt="ProfilePicture" />
                         <% } else { %>
                             <img src= "/images/profPic.png" alt="ProfilePicture" />
                         <% } %>
@@ -70,17 +70,11 @@
 		            	<div> Friends </div>
 
                         <!-- new one using a table -->
-                        <div>
+
+                        <div style="height:150px;">
                             <% if (user.friends.length === 0) { %>
-                                Sorry, You don't have any friends - Click "Add a New Friend" to get started!
+                            No friends to show! <br /><br /> Click "Add a New Friend" to get started.
                             <%} else {%> 
-
-<!--                                 <ul>
-                                <% for (var i=0; i<user.friends.length; i++) {%>
-                                    <li> <%= user.friends[i].name %> </li>
-                                <% } %>
-                                </ul> -->
-
                                 <table>
                                     <tr>
                                         <% for (var i=0; i<user.friends.length; i++) {%>
@@ -100,22 +94,18 @@
                         </div>
 
                     <div class="update_wrapper">
-                            <button type="button" class="btn btn-default" data-toggle="modal" data-target="#friendEventModal_1"> Add a new friend! </button>
+                            <button type="button" class="btn btn-default" data-toggle="modal" data-target="#friendEventModal_1"> Add a New Friend! </button>
                         </div>   
 		            </div>
 
 		            <div class="userGroups_wrapper">
 		            	<div> Groups </div>
-		                <div> 
+		                <div style="height:150px;"> 
                             <table>
                                 <tr>
-                                    <td><div class="otherProfilePic_wrapper"><img src="/images/profPic.png" /></div></td>
-                                    <td><div class="otherProfilePic_wrapper"><img src="/images/profPic.png" /></div></td>
-                                    <td><div class="otherProfilePic_wrapper"><img src="/images/profPic.png" /></div></td>
-                                    <td><div class="otherProfilePic_wrapper"><img src="/images/profPic.png" /></div></td>
-                                </tr>
-                                <tr>
-                                    <td><div class="otherProfilePic_wrapper"><img src="/images/profPic.png" /></div></td>
+                                    <td><div class="otherProfilePic_wrapper">
+                                        <img src="/images/profPic.png" data-toggle="tooltip" data-placement="top" title="Team Undefined"/>
+                                        </div></td>
                                     <td><div class="otherProfilePic_wrapper"><img src="/images/profPic.png" /></div></td>
                                     <td><div class="otherProfilePic_wrapper"><img src="/images/profPic.png" /></div></td>
                                     <td><div class="otherProfilePic_wrapper"><img src="/images/profPic.png" /></div></td>
@@ -123,11 +113,6 @@
                             </table>  
                         </div>
 		            </div>
-
-                    <!-- TEST FOR THE TOOLTIP -->
-		            <div align="center">
-                    <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="top" title="Tooltip on top">Tooltip on top</button>
-                    </div>
 
 		        </div> <!-- End of the LHS -->
 		        
@@ -150,7 +135,9 @@
                                                 <br /> 
                                         <!-- FUNCTION FOR A MEETING REQUEST -->
                                             <% } else if (user.request[i].type === 'meeting_request') {%>
-                                                <strong> <%=user.request[i].data.name %> </strong> <span class="pendingRequests_TTM">wants to schedule a time to meet</span><br />
+                                                <strong> <%=user.request[i].from %> </strong> <span class="pendingRequests_TTM">wants to schedule a time to meet</span>
+                                                <a href= <%='./request/view/' + i %> > View </a> 
+                                                <br />
                                             <% } %>
                                         <% } %>
                                         </div>
@@ -180,50 +167,66 @@
         <!-- MODAL FOR SCHEDULING AN EVENT -->
         <!--                               -->
         <div class="modal fade" id="scheduleEventModal_1" tabindex="-1" role="dialog" aria-labelledby="scheduleEventModal_1_Label" aria-hidden="true">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                <h4 class="modal-title" id="myModalLabel">Schedule an Event</h4>
-              </div>
-              <div class="modal-body">
-                <div id="new_request_input" >
-                    <p> Please enter the email of your friend </p>
-                    <input class="typeahead tt-query" id="find-friend-input" placeholder="Friend Email" type="text" size="20"/>
+            <div class="modal-dialog">
+                <div class="modal-content">
+
+                    <!-- APPLIED SPAN STYLE FOR CENTERING -->
+                    <span style="text-align:center;">
+
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                        <h4 class="modal-title" id="myModalLabel">Schedule an Event</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div id="new_request_input" >
+                            <p> Please enter the <strong>email</strong> of your friend:</p>
+                            <input class="typeahead tt-query" id="find-friend-input" placeholder="Type your friend email and press Enter to find" type="text" size="20"/>
+                        </div>
+                        <div id="request-output"></div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                        <button type="button" class="btn btn-default" id="submit_request">Send</button>
+                    </div>
+                    </span>
+
                 </div>
-                <div id="output"></div>
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-                <a class="btn btn-default" href="./request">Next</a>
-              </div>
             </div>
-          </div>
         </div>
 
         <!--                          -->
         <!-- MODAL FOR ADD NEW FRIEND -->
         <!--                          -->
         <div class="modal fade" id="friendEventModal_1" tabindex="-1" role="dialog" aria-labelledby="friendEventModal_1_Label" aria-hidden="true">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                <h4 class="modal-title" id="myModalLabel">Add a new friend</h4>
-              </div>
-              <div class="modal-body">
-                    <div id="new_friend_input" >
-                        <p> Please enter the email of the friend you intend to add:</p>
-                        <input class="typeahead tt-query" id="find-new-friend-input" placeholder="Type your friend email and press Enter to find" type="text" size="20"/>
+            <div class="modal-dialog">
+                <div class="modal-content">
+
+                <!-- APPLIED SPAN STYLE FOR CENTERING -->
+                    <span style="text-align:center;">
+                    <div class="modal-header"> 
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only"> Close</span></button>
+                        <h4 class="modal-title" id="myModalLabel">Add a New Friend</h4>
                     </div>
-                <div id="friend-output"></div>
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-                <button type="button" class="btn btn-default" data-dismiss="modal" id="add_friend">Add</button>
-              </div>
+                    <div class="modal-body">
+
+
+                        <div id="new_friend_input" >
+                            <p> Please enter the <strong>email</strong> of the friend you intend to add:</p>
+                            <input class="typeahead tt-query" id="find-new-friend-input" placeholder="Email" type="text" size="20"/>
+                        </div>
+                        
+                        <span style="text-align:left;">
+                        <div id="friend-output"></div></span>
+                    </div>
+                    </span>
+                    <!-- end of span -->
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                        <button type="button" class="btn btn-default" id="add_friend">Add</button>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
 
         <script src='/javascripts/jquery-1.11.0.min.js'></script>
@@ -233,7 +236,6 @@
         <script src='/javascripts/fullcalendar.min.js'></script>   
         <script src='/javascripts/typeahead.jquery.min.js'></script>
         <script src='/javascripts/jquery.noty.packaged.min.js'></script>
-        <script src='/javascripts/calendar.js'></script>
         <script src='/javascripts/profile.js'></script>
 
         <script type ='text/javascript'>

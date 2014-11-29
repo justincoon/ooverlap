@@ -75,13 +75,6 @@
                             <% if (user.friends.length === 0) { %>
                             No friends to show! <br /><br /> Click "Add a New Friend" to get started.
                             <%} else {%> 
-
-<!--                                 <ul>
-                                <% for (var i=0; i<user.friends.length; i++) {%>
-                                    <li> <%= user.friends[i].name %> </li>
-                                <% } %>
-                                </ul> -->
-
                                 <table>
                                     <tr>
                                         <% for (var i=0; i<user.friends.length; i++) {%>
@@ -191,11 +184,11 @@
                             <p> Please enter the <strong>email</strong> of your friend:</p>
                             <input class="typeahead tt-query" id="find-friend-input" placeholder="Type your friend email and press Enter to find" type="text" size="20"/>
                         </div>
-                        <div id="output"></div>
+                        <div id="request-output"></div>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-                        <a class="btn btn-default" href="./request">Next</a>
+                        <button type="button" class="btn btn-default" id="submit_request">Send</button>
                     </div>
                     </span>
 

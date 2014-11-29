@@ -74,9 +74,29 @@ function jQuery_BindAddFriend(){
 function jQuery_BindSubmitRequest(){
 	$('#submit_request').bind('click',
 		function (event){
+			var title = $('#request_title').val();
+			var hours = $('#request_hours').val();
+			var minutes = $('#request_minutes').val();
+			if (!title){
+				generate('Please enter a title for this meeting request','error');
+				return false;
+			}
+			if (!hours){
+				generate('Please enter an hour number for this meeting request','error');
+				return false;
+			}
+			if (!minutes){
+				generate('Please enter a minute number for this meeting request','error');
+				return false;
+			}
 			$('#request-output').html('Finding..');
 				// Get the friend email to lookup:
 				var email = $('input#find-friend-input').val();
+				if (email.indexOf('@') < 0 && email.indexOf('.') < 0) {
+					generate('Please provide a valid email address','error');
+					$('#request-output').html('');
+					return false;
+				}
 				jQuery_GetFriend(email, function(friend) {
 					if (friend.email === undefined) {
 						generate('Cannot find friend with email ' +  email + ' in your friend list','error');

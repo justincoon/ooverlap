@@ -179,8 +179,16 @@
                     </div>
                     <div class="modal-body">
                         <div id="new_request_input" >
-                            <p> Please enter the <strong>email</strong> of your friend:</p>
-                            <input class="typeahead tt-query" id="find-friend-input" placeholder="Type your friend email and press Enter to find" type="text" size="20"/>
+                            <p> Request Title 
+                                <input id="request_title" placeholder="Request Title" type="text" size="20" /> 
+                            </p>
+                            <p> Duration 
+                                <input id="request_hours" type="number" size="2" value='1'/> hours
+                                <input id="request_minutes" type="number" size="2" value='30'/> minutes
+                            </p>
+                            <p> Friend Email 
+                                <input class="typeahead tt-query" id="find-friend-input" placeholder="Enter your friend email to find" type="text" size="20"/> 
+                            </p>
                         </div>
                         <div id="request-output"></div>
                     </div>
@@ -208,7 +216,6 @@
                         <h4 class="modal-title" id="myModalLabel">Add a New Friend</h4>
                     </div>
                     <div class="modal-body">
-
 
                         <div id="new_friend_input" >
                             <p> Please enter the <strong>email</strong> of the friend you intend to add:</p>

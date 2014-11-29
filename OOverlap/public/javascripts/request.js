@@ -18,11 +18,15 @@ $(document).ready(function() {
             revert: true, // will cause the event to go back to its
             revertDuration: 0 //  original position after the drag
         });
+
+        $(this).data('duration', '01:00');
     });
 
     $('#submit_request').bind('click',
         function(event){
-            console.log(free_times);
+            for (var i=0; i<free_times.length; i++){
+                console.log(free_times[i].start.format() + " " + free_times[i].end.format());
+            }
             // $.ajax({
             //     type: 'POST',
             //     url: '/user/request/submit',
@@ -45,24 +49,24 @@ $(document).ready(function() {
                 droppable: true,
                 eventLimit: true, // allow "more" link when too many events
                 events: data,
-                drop: function(date, jsEvent, ui) {
-                    // console.log(ui.helper[0].innerText);
-                    start_date = moment(date);
-                    end_date = moment(date);
-                    end_date.set('hour', date.hour()+1);
-                    // console.log("drop start: " + start_date.format());
-                    // console.log("drop end: " + end_date.format());
-                    free_times.push({
-                        type: ui.helper[0].innerText,
-                        start: start_date.format(),
-                        end: end_date.format()
-                    });
+                eventReceive: function(event) {
+                    free_times.push(event);
                 },
                 eventDrop: function( event, delta, revertFunc, jsEvent, ui, view ) { 
-                    console.log("eventDrop: " + event.start.format());
+                    for (var i=0; i<free_times.length; i++){
+                        if (event._id === free_times[i]._id){
+                            free_times[i] = event;
+                            break;
+                        }
+                    }
                 },
                 eventResize: function( event, delta, revertFunc, jsEvent, ui, view ) { 
-                    console.log("eventResize: " + event.start.format());
+                    for (var i=0; i<free_times.length; i++){
+                        if (event._id === free_times[i]._id){
+                            free_times[i] = event;
+                            break;
+                        }
+                    }
                 }
             });
         },

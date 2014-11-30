@@ -131,13 +131,18 @@ body, html {
 /* the form on the RHS */
 /*					   */
 #RHS_SettingsForm {
-	background-color:#FC9;
 	width:80%;
 	height:100%;
 	float:right;
+	font-size: 16px;
+	font-weight: 400;
+	color:#666666;
 }
 
-.settingsTable {
-	background-color: #333333;
-	padding: 5px 0 10px 10px;
+.settingsTable tr td:nth-child(odd) {
+	padding: 0px 0px 3px 20px;
+}
+
+.settingsTable tr td:nth-child(even) {
+	padding: 0px 0px 3px 10px;
 }

@@ -79,9 +79,9 @@
                                     <tr>
                                         <% for (var i=0; i<user.friends.length; i++) {%>
                                             <td>
-                                                <div class="otherProfilePic_wrapper">
+                                                <div class="friend_profile otherProfilePic_wrapper" id=<%=i%> >
                                                     <span data-placement="top" data-toggle="tooltip" title="<%=user.friends[i].name%>">
-                                                        <a href="#otherUserProfilesModal" role="button" data-toggle="modal">
+                                                        <a href="#" role="button" data-toggle="modal">
                                                             <img src="<%=user.friends[i].picture %>"/>
                                                         </a>
                                                     </span>

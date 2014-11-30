@@ -139,10 +139,16 @@ body, html {
 	color:#666666;
 }
 
+.settingsHeader {
+	font-weight: bold;
+}
+
 .settingsTable tr td:nth-child(odd) {
+	text-align: right;
 	padding: 0px 0px 3px 20px;
 }
 
 .settingsTable tr td:nth-child(even) {
+	text-align: left;
 	padding: 0px 0px 3px 10px;
 }

@@ -64,7 +64,7 @@
 		        <div id="RHS_SettingsForm">
 
                     <div> 
-                        Privacy Settings: <br />
+                        <div class="settingsHeader"> Privacy Settings: </div>
                         <form name="privacySettings">
                             <table class="settingsTable">
                             <tr>
@@ -91,11 +91,11 @@
 
                         <br />
 
-                        Profile Information: <br />
+                        <div class="settingsHeader"> Profile Information: </div> 
                         <table  class="settingsTable">
                             <tr>
-                                <td align="right">Displayed Name: </td>
-                                <td align="left"> 
+                                <td>Displayed Name: </td>
+                                <td> 
                                     <form name="displayedName">
                                         <input type="text" name="displayedName_input" value="<%= user.profile.name %>">
                                     </form>
@@ -103,8 +103,8 @@
                             </tr>
 
                             <tr>
-                                <td align="right"> Email Address: </td>
-                                <td align="left">
+                                <td> Email Address: </td>
+                                <td>
                                     <form name="email">
                                         <input type="text" name="email_input" value="<%= user.email %>">
                                     </form>
@@ -112,17 +112,28 @@
                             </tr>
 
                             <tr>
-                                <td align="right"> 
-                                    Password:  </br>
-                                    New Password </br>
-                                    Confirm New Password
-                                </td>
-
-                                <td align="left">
-                                    <form name="password">
+                                <td> Password: </td>
+                                <td>
+                                    <form>
                                         <input type="text" name="password_input" value="************"> </br>
-                                        <input type="text" name="new_password" value="************"> </br>
-                                        <input type="text" name="new_password_cf" value="************">
+                                    </form>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td> New Password: </td>
+                                <td>
+                                    <form>
+                                        <input type="text" name="new_password" value=" " </br>
+                                    </form>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td> Confirm New Password: </td>
+                                <td>
+                                    <form>
+                                        <input type="text" name="new_password_cf" value=" " </br>
                                     </form>
                                 </td>
                             </tr>

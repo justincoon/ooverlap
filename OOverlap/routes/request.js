@@ -54,8 +54,9 @@ router.get('/schedule', function(req, res) {
     email: friend_email
   }, function(err, user) {
     if (!user)
-      return done(null, false, {
-        message: 'Email ' + email + ' not found'
+      console.log('Email ' + email + ' not found');
+      res.end();
+      return false;
       });
     if (reply_request >= 0) {
       JSON.parse(req.user.request[reply_request].free_times).forEach(function(item) {

@@ -95,7 +95,7 @@ router.get('/get/emails/all', function(req, res) {
   res.end();
 });
 
-router.post('/find', function(req, res) {
+router.post('/find/email', function(req, res) {
   var email = req.body.email;
   console.log(email);
   User.findOne({
@@ -194,6 +194,12 @@ router.post('/find', function(req, res) {
       }
     }
   });
+});
+
+router.post('/find/index', function(req, res){
+  var friend = req.user.friends[req.body.index];
+  res.send(friend);
+  res.end();
 });
 
 module.exports = router;

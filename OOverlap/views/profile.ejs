@@ -251,24 +251,21 @@
                     <span style="text-align:center;">
                     <div class="modal-header"> 
                         <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only"> Close</span></button>
-                        <h4 class="modal-title" id="myModalLabel"> Firstname Lastname </h4>
+                        <h4 class="modal-title" id="myModalLabel"> Friend Info </h4>
                     </div>
                     <div class="modal-body" style="width:300px;">
 
-                        <div class="profilePic_wrapper"> 
+                        <div class="profilePic_wrapper" id="profile_picture"> 
                             <img src= "/images/profPic.png" alt="ProfilePicture" />
                         </div>
                         
                         <div class="userInformation_wrapper">
-                            <div> Firstname Lastname
-                                <div> name@gmail.com </div>    
-                            </div> 
+                            <div id="profile_name"> Firstname Lastname </div>
+                            <div id="profile_email"> name@gmail.com </div>    
                         </div>
                     
-                        <!-- Friend Button -->
-                        <a class="btn btn-default" href="#" data-dismiss="modal"> Friend Firstname Lastname <!-- <%=user.name %> --> </a>
-                            <!-- if already friended, unfriend button ...
-                            <a class="btn btn-default" href="#">Unfriend <%=user.name %> </a> -->
+                        <!-- UnFriend Button -->
+                        <a class="btn btn-default" href="#" > Unfriend </a>
                     </div>
                     </span>
                     <!-- end of span -->

@@ -10,12 +10,24 @@ function jQuery_GetFriend(email, callback) {
 	});
 }
 
-function jQuery_FindFriend(email, callback) {
+function jQuery_FindFriendByEmail(email, callback) {
 	$.ajax({
 		type: 'POST',
-		url: '/friend/find',
+		url: '/friend/find/email',
 		data: {
 			email: email
+		}
+	}).done(function(msg) {
+		callback(msg);
+	});
+}
+
+function jQuery_FindFriendByIndex(index, callback) {
+	$.ajax({
+		type: 'POST',
+		url: '/friend/find/index',
+		data: {
+			index: index
 		}
 	}).done(function(msg) {
 		callback(msg);
@@ -32,7 +44,7 @@ function jQuery_BindAddFriend(){
 					return false;
 				}
 			$('#friend-output').html('Finding..');
-			jQuery_FindFriend(email, function(data) {
+			jQuery_FindFriendByEmail(email, function(data) {
 					console.log(data);
 					if (data.error) {
 						generate('Cannot find user with email ' + email,'error');
@@ -75,8 +87,12 @@ function jQuery_BindAddFriend(){
 function jQuery_BindGetFriend(){
 	$('.friend_profile').bind('click',
 		function(event){
-			console.log(event.currentTarget.id);
-			$('#otherUserProfilesModal').modal('show');
+			jQuery_FindFriendByIndex(event.currentTarget.id, function(data){
+				$('#profile_picture>img').attr('src',data.picture);
+				$('#profile_name').text(data.name);
+				$('#profile_email').text(data.email);
+				$('#otherUserProfilesModal').modal('show');
+			});
 		});
 }
 

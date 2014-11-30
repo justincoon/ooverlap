@@ -10,7 +10,7 @@ var reply_request = -1;
 
 router.get('/', function(req, res) {
   if (request_friend) {
-    reply_request = false;
+    reply_request = -1;
     res.render("request", {
       request: meeting_request,
       user: req.user,

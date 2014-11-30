@@ -22,6 +22,9 @@ var request      = require('./routes/request');
 var friend       = require('./routes/friend');
 var app          = express();
 
+//Icon
+app.use(favicon(__dirname + '/public/images/favicon.ico'));
+
 //API Keys & Passport config
 
 var keys = require('./config/keys');
@@ -37,8 +40,6 @@ mongoose.connection.on('error', function() {
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
-// uncomment after placing your favicon in /public
-//app.use(favicon(__dirname + '/public/favicon.ico'));
 app.use(compress());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({

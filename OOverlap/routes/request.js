@@ -65,14 +65,16 @@ router.get('/schedule', function(req, res) {
             color: '#0000ff',
             start: item.start,
             end: item.end,
-            editable: false
+            editable: false,
+            overlap: true
           });
         } else {
           items.push({
             title: user.profile.name + " Availability",
             color: '#0000ff',
             start: item.start,
-            editable: false
+            editable: false,
+            overlap: true
           });
         }
       });
@@ -127,23 +129,28 @@ router.get('/view/:idx', function(req,res){
 
 router.post('/submit', function(req, res) {
   var free_times = req.body.free_times;
-  User.findOne({
-    email: req.body.to
-  }, function(err, user) {
-    user.request.push({
-      type: 'meeting_request',
-      from: req.body.from,
-      to: req.body.to,
-      meeting: meeting_request,
-      free_times: req.body.free_times
-    })
-    user.save(function(err) {
-      req.flash('info', {
-        msg: 'New request has been saved.'
+  if (reply_request < 0){
+    User.findOne({
+      email: req.body.to
+    }, function(err, user) {
+      user.request.push({
+        type: 'meeting_request',
+        from: req.body.from,
+        to: req.body.to,
+        meeting: meeting_request,
+        free_times: req.body.free_times
+      })
+      user.save(function(err) {
+        req.flash('info', {
+          msg: 'New request has been saved.'
+        });
+        res.redirect('/');
       });
-      res.redirect('/');
     });
-  });
+  } else {
+    console.log(free_times);
+    console.log(req.user.request[reply_request].free_times);
+  }
 });
 
 router.post('/get_friend', function(req, res) {

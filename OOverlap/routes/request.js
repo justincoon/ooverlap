@@ -53,11 +53,11 @@ router.get('/schedule', function(req, res) {
   User.findOne({
     email: friend_email
   }, function(err, user) {
-    if (!user)
+    if (!user){
       console.log('Email ' + email + ' not found');
       res.end();
       return false;
-      });
+    }
     if (reply_request >= 0) {
       JSON.parse(req.user.request[reply_request].free_times).forEach(function(item) {
         if (item.start && item.end) {

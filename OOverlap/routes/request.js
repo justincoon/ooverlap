@@ -54,7 +54,7 @@ router.get('/schedule', function(req, res) {
     email: friend_email
   }, function(err, user) {
     if (!user){
-      console.log('Email ' + email + ' not found');
+      console.log('Email ' + friend_email + ' not found');
       res.end();
       return false;
     }

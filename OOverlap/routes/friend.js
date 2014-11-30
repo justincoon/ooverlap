@@ -97,7 +97,6 @@ router.get('/get/emails/all', function(req, res) {
 
 router.post('/find/email', function(req, res) {
   var email = req.body.email;
-  console.log(email);
   User.findOne({
     email: email
   }, function(err, user) {
@@ -199,6 +198,48 @@ router.post('/find/email', function(req, res) {
 router.post('/find/index', function(req, res){
   var friend = req.user.friends[req.body.index];
   res.send(friend);
+  res.end();
+});
+
+router.post('/unfriend', function(req, res) {
+  User.findById(req.user.id, function(err, user) {
+    for(var i=user.request.length-1; i>=0; i--){
+      if (user.request[i].from === req.body.email){
+        user.request.splice(i,1);
+      }
+    }
+    for(var i=user.friends.length-1; i>=0; i--){
+      if (user.friends[i].email === req.body.email){
+        user.friends.splice(i,1);
+        break;
+      }
+    }
+    user.save(function(err) {
+      req.flash('info', {
+        msg: 'Friend has been removed.'
+      });
+    });
+  });
+  User.findOne({
+    email: req.body.email
+  }, function(err, user) {
+    for(var i=user.request.length-1; i>=0; i--){
+      if (user.request[i].from === req.user.email){
+        user.request.splice(i,1);
+      }
+    }
+    for(var i=user.friends.length-1; i>=0; i--){
+      if (user.friends[i].email === req.user.email){
+        user.friends.splice(i,1);
+        break;
+      }
+    }
+    user.save(function(err) {
+      req.flash('info', {
+        msg: 'Friend has been removed.'
+      });
+    });
+  });
   res.end();
 });
 

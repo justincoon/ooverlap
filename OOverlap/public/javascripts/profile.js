@@ -96,6 +96,22 @@ function jQuery_BindGetFriend(){
 		});
 }
 
+function jQuery_BindUnfriend() {
+	$('#unfriend').bind('click',
+		function(event) {
+			$.ajax({
+				type: 'POST',
+				url: '/friend/unfriend',
+				data: {
+					email: $('#profile_email').text()
+				}
+			}).done(function(msg) {
+				$('#otherUserProfilesModal').modal('hide');
+				location.reload();
+			});
+		});
+}
+
 function jQuery_BindSubmitRequest() {
 	$('#submit_request').bind('click',
 		function(event) {
@@ -246,9 +262,10 @@ $(document).ready(function() {
 			source: substringMatcher(data)
 		});
 	});
+	$('[data-toggle=tooltip]').tooltip();
 	//Binding functions
 	jQuery_BindSubmitRequest();
 	jQuery_BindAddFriend();
 	jQuery_BindGetFriend();
-	$('[data-toggle=tooltip]').tooltip();
+	jQuery_BindUnfriend();
 });

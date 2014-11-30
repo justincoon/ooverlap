@@ -155,14 +155,72 @@
                         </table>
 
                         <br />
+                        <div class="settingsHeader"> Delete Account: </div>
+                        <table  class="settingsTable">
+                            <tr>
+                                <button type="submit" class="btn btn-default" data-toggle="modal" data-target="#deleteAccountModal">Delete Account</button>
+                            </tr>
+                        </table>
+
                         <br />
-                        
+                        <br />
+
                         <button type="submit" class="btn btn-default">Submit Changes</button>
 
                     </div>
                 </div> <!-- End of the RHS -->
 		    </div><!-- End of CONTENT WRAPPER -->
 	    </div><!--End of wrapper-->
+
+        <!--                            -->
+        <!-- MODAL FOR DELETING ACCOUNT -->
+        <!--                            -->
+        <div class="modal fade" id="deleteAccountModal" tabindex="-1" role="dialog" aria-labelledby="deleteAccountModal_Label" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+
+                <!-- APPLIED SPAN STYLE FOR CENTERING -->
+                    <span style="text-align:center;">
+                    <div class="modal-header"> 
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only"> Close</span></button>
+                        <h4 class="modal-title" id="myModalLabel"> <strong>Delete Account</strong> </h4>
+                    </div>
+                    <div class="modal-body">
+
+                        We're sorry to see you go!
+                        <br />
+                        <br />
+
+                        <form id="deleteAccount">
+                            <table  class="settingsTable" align="center">
+                                <tr>
+                                    <td>Please Enter your Password:</td>
+                                    <td> <input type="password" name="deleteAccount_password" value=""> </td>
+                                </tr>
+
+                                <tr>
+                                    <td>Confirm your Password: </td>
+                                    <td> <input type="password" name="deleteAccount_password_cf" value=""> <br /> </td>
+                                </tr>
+                            </table>
+                        
+                        <br />
+                        Why are you leaving OOverlap? We would love your input!
+                        <textarea class="contactInsertInfo" cols="50" rows="8" name="comments" value=""></textarea>
+
+                        <br />
+                        <br />
+                        <!-- Submit Button: deleting account -->
+                        <button type="submit" class="btn btn-default" id="deleteAccount"> Delete Account </button>
+
+                        </form>
+                    </div>
+                    </span>
+                    <!-- end of span -->
+                </div>
+            </div>
+        </div>
+
 
         <script src='/javascripts/jquery-1.11.0.min.js'></script>
         <script src='/javascripts/jquery-ui.custom.min.js'></script>

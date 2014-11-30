@@ -78,9 +78,15 @@
                                 <table>
                                     <tr>
                                         <% for (var i=0; i<user.friends.length; i++) {%>
-                                        <td><div class="otherProfilePic_wrapper">
-                                        <img src="<%=user.friends[i].picture %>" data-toggle="tooltip" data-placement="top" title="<%=user.friends[i].name%>"/>
-                                        </div></td>
+                                            <td>
+                                                <div class="otherProfilePic_wrapper">
+                                                    <span data-placement="top" data-toggle="tooltip" title="<%=user.friends[i].name%>">
+                                                        <a href="#otherUserProfilesModal" role="button" data-toggle="modal">
+                                                            <img src="<%=user.friends[i].picture %>"/>
+                                                        </a>
+                                                    </span>
+                                                </div> 
+                                            </td>
                                         <% } %>
                                     </tr>
                                     <tr>
@@ -94,7 +100,7 @@
                         </div>
 
                     <div class="update_wrapper">
-                            <button type="button" class="btn btn-default" data-toggle="modal" data-target="#friendEventModal_1"> Add a New Friend! </button>
+                            <button type="button" class="btn btn-default" data-toggle="modal" data-target="#friendingEventModal"> Add a New Friend! </button>
                         </div>   
 		            </div>
 
@@ -205,7 +211,7 @@
         <!--                          -->
         <!-- MODAL FOR ADD NEW FRIEND -->
         <!--                          -->
-        <div class="modal fade" id="friendEventModal_1" tabindex="-1" role="dialog" aria-labelledby="friendEventModal_1_Label" aria-hidden="true">
+        <div class="modal fade" id="friendingEventModal" tabindex="-1" role="dialog" aria-labelledby="friendingEventModal_Label" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
 
@@ -232,6 +238,42 @@
                         <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
                         <button type="button" class="btn btn-default" id="add_friend">Add</button>
                     </div>
+                </div>
+            </div>
+        </div>
+
+        <!--                                    -->
+        <!-- MODAL FOR DISPLAYING USER PROFILES -->
+        <!--                                    -->
+        <div class="modal fade" id="otherUserProfilesModal" tabindex="-1" role="dialog" aria-labelledby="otherUserProfilesModal_Label" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+
+                <!-- APPLIED SPAN STYLE FOR CENTERING -->
+                    <span style="text-align:center;">
+                    <div class="modal-header"> 
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only"> Close</span></button>
+                        <h4 class="modal-title" id="myModalLabel"> Firstname Lastname </h4>
+                    </div>
+                    <div class="modal-body">
+
+                        <div class="profilePic_wrapper"> 
+                            <img src= "/images/profPic.png" alt="ProfilePicture" />
+                        </div>
+                        
+                        <div class="userInformation_wrapper">
+                            <div> Firstname Lastname
+                                <div> name@gmail.com </div>    
+                            </div> 
+                        </div>
+                    
+                        <!-- Friend Button -->
+                        <a class="btn btn-default" href="#" data-dismiss="modal">Friend Firstname Lastname <!-- <%=user.name %> --> </a>
+                            <!-- if already friended, unfriend button ...
+                            <a class="btn btn-default" href="#">Unfriend <%=user.name %> </a> -->
+                    </div>
+                    </span>
+                    <!-- end of span -->
                 </div>
             </div>
         </div>

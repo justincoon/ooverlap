@@ -131,13 +131,13 @@ body, html {
 /* the form on the RHS */
 /*					   */
 #RHS_SettingsForm {
-	/*background-color:#FC9;*/
+	background-color:#FC9;
 	width:80%;
 	height:100%;
 	float:right;
 }
 
 .settingsTable {
-	background-color: #FC9;
+	background-color: #333333;
 	padding: 5px 0 10px 10px;
 }

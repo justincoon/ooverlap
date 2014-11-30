@@ -9,9 +9,6 @@
         <title> OOverlap - <%= user.profile.name %> </title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-
-        <!-- TOOL TIP POP UP FOR FRIENDS NAMES -->
-
         <link href="/stylesheets/profile.css" rel="stylesheet" type="text/css" />
         <link href='/stylesheets/fullcalendar.css' rel='stylesheet' />
         <link href='/stylesheets/bootstrap.min.css' rel='stylesheet' />
@@ -217,20 +214,21 @@
 
                 <!-- APPLIED SPAN STYLE FOR CENTERING -->
                     <span style="text-align:center;">
-                    <div class="modal-header"> 
-                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only"> Close</span></button>
-                        <h4 class="modal-title" id="myModalLabel">Add a New Friend</h4>
-                    </div>
-                    <div class="modal-body">
-
-                        <div id="new_friend_input" >
-                            <p> Please enter the <strong>email</strong> of the friend you intend to add:</p>
-                            <input class="typeahead tt-query" id="find-new-friend-input" placeholder="Email" type="text" size="20"/>
+                        <div class="modal-header"> 
+                            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only"> Close</span></button>
+                            <h4 class="modal-title" id="myModalLabel">Add a New Friend</h4>
                         </div>
-                        
-                        <span style="text-align:left;">
-                        <div id="friend-output"></div></span>
-                    </div>
+                        <div class="modal-body">
+
+                            <div id="new_friend_input" >
+                                <p> Please enter the <strong>email</strong> of the friend you intend to add:</p>
+                                <input class="typeahead tt-query" id="find-new-friend-input" placeholder="Email" type="text" size="20"/>
+                            </div>
+                            
+                            <span style="text-align:left;">
+                                <div id="friend-output"></div>
+                            </span>
+                        </div>
                     </span>
                     <!-- end of span -->
 
@@ -246,7 +244,7 @@
         <!-- MODAL FOR DISPLAYING USER PROFILES -->
         <!--                                    -->
         <div class="modal fade" id="otherUserProfilesModal" tabindex="-1" role="dialog" aria-labelledby="otherUserProfilesModal_Label" aria-hidden="true">
-            <div class="modal-dialog">
+            <div class="modal-dialog" style="width:300px;">
                 <div class="modal-content">
 
                 <!-- APPLIED SPAN STYLE FOR CENTERING -->
@@ -255,7 +253,7 @@
                         <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only"> Close</span></button>
                         <h4 class="modal-title" id="myModalLabel"> Firstname Lastname </h4>
                     </div>
-                    <div class="modal-body">
+                    <div class="modal-body" style="width:300px;">
 
                         <div class="profilePic_wrapper"> 
                             <img src= "/images/profPic.png" alt="ProfilePicture" />
@@ -268,7 +266,7 @@
                         </div>
                     
                         <!-- Friend Button -->
-                        <a class="btn btn-default" href="#" data-dismiss="modal">Friend Firstname Lastname <!-- <%=user.name %> --> </a>
+                        <a class="btn btn-default" href="#" data-dismiss="modal"> Friend Firstname Lastname <!-- <%=user.name %> --> </a>
                             <!-- if already friended, unfriend button ...
                             <a class="btn btn-default" href="#">Unfriend <%=user.name %> </a> -->
                     </div>

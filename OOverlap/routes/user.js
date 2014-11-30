@@ -21,47 +21,40 @@ router.get('/profile', function(req, res) {
 });
 
 router.get('/calendar', function(req, res) {
-  if (req.user) {
-    if (req.user.tokens[0].refreshToken) //If we have a refresh token, ask for a new access token
-    {
-      refresh(req.user.tokens[0].refreshToken, keys.google.clientID, keys.google.clientSecret, function(err, json, res) {
-        User.findById(req.user.id, function(err, user) {
-          user.tokens.splice(0, 1);
-          user.tokens.push({
-            kind: 'google',
-            accessToken: json.accessToken,
-            refreshToken: req.user.tokens[0].refreshToken
-          });
-          user.save(function(err) {
-            req.flash('info', {
-              msg: 'Schedule has been saved.'
+  if (req.user && req.user.tokens[0].refreshToken) {
+    refresh(req.user.tokens[0].refreshToken, keys.google.clientID, keys.google.clientSecret, function(err, json, result) {
+      User.findById(req.user.id, function(err, user) {
+        user.tokens.splice(0, 1);
+        user.tokens.push({
+          kind: 'google',
+          accessToken: json.accessToken,
+          refreshToken: req.user.tokens[0].refreshToken
+        });
+        var google_calendar = new gcal.GoogleCalendar(user.tokens[0].accessToken);
+        var timeMin = new Date();
+        var timeMax = new Date();
+        timeMax.setFullYear(timeMin.getFullYear()+1);
+        google_calendar.events.list(user.email, {
+          'timeMin': timeMin.toISOString(),
+          'timeMax': timeMax.toISOString(),
+          'singleEvents': true
+        }, function(err, calendarList) {
+          if (err){
+            console.log(err);
+          } else {
+            user.schedule = calendarList.items;
+            user.save(function(err) {
+              if (err){
+                console.log(err);
+              }
+              req.flash('info', {
+                msg: 'Schedule has been saved.'
+              });
+              res.redirect('/');
             });
-          });
+          }
         });
       });
-    }
-    var google_calendar = new gcal.GoogleCalendar(req.user.tokens[0].accessToken);
-    var timeMin = new Date();
-    var timeMax = new Date();
-    timeMax.setFullYear(timeMin.getFullYear()+1);
-    google_calendar.events.list(req.user.email, {
-      'timeMin': timeMin.toISOString(),
-      'timeMax': timeMax.toISOString(),
-      'singleEvents': true
-    }, function(err, calendarList) {
-      if (err){
-        console.log(err);
-      } else {
-        User.findById(req.user.id, function(err, user) {
-          user.schedule = calendarList.items;
-          user.save(function(err) {
-            req.flash('info', {
-              msg: 'Schedule has been saved.'
-            });
-            res.redirect('/');
-          });
-        });
-      }
     });
   } else {
     res.redirect('/');

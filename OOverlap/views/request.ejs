@@ -31,10 +31,10 @@
                     <div id="top"></div>
                     <div id="bottom">
                         <ul>
-                            <li><a href="./logout">Logout</a></li>
-                            <li><a href="./settings">Settings</a></li>
-                            <li><a href="./group">Groups</a></li>
-                            <li><a href="./profile">Home</a></li>
+                            <li><a href="/user/logout">Logout</a></li>
+                            <li><a href="/user/settings">Settings</a></li>
+                            <li><a href="/user/group">Groups</a></li>
+                            <li><a href="/user/profile">Home</a></li>
                         </ul>
                     </div>
                 </div>
@@ -86,8 +86,10 @@
                     </div>     
                     
                 </div> <!-- End of the LHS -->
-                
                 <div id="RHS_CalendarInformation">
+                    <div id='Request_Title'>
+                        Schdule for Meeting: <%= request.title %>
+                    </div>
                     <div id='calendar'></div>
                 </div> <!-- End of the RHS -->
             </div><!-- End of CONTENT WRAPPER -->

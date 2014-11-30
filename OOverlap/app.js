@@ -18,6 +18,8 @@ var flash        = require('express-flash');
 var routes       = require('./routes/index');
 var auth         = require('./routes/auth');
 var user         = require('./routes/user');
+var request      = require('./routes/request');
+var friend       = require('./routes/friend');
 var app          = express();
 
 //API Keys & Passport config
@@ -67,6 +69,8 @@ app.use(logger('dev'));
 app.use('/', routes);
 app.use('/auth', auth);
 app.use('/user', user);
+app.use('/request', request);
+app.use('/friend', friend);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

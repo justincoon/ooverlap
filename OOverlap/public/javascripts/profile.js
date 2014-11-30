@@ -72,6 +72,14 @@ function jQuery_BindAddFriend(){
 		});
 }
 
+function jQuery_BindGetFriend(){
+	$('.friend_profile').bind('click',
+		function(event){
+			console.log(event.currentTarget.id);
+			$('#otherUserProfilesModal').modal('show');
+		});
+}
+
 function jQuery_BindSubmitRequest() {
 	$('#submit_request').bind('click',
 		function(event) {
@@ -225,5 +233,6 @@ $(document).ready(function() {
 	//Binding functions
 	jQuery_BindSubmitRequest();
 	jQuery_BindAddFriend();
+	jQuery_BindGetFriend();
 	$('[data-toggle=tooltip]').tooltip();
 });

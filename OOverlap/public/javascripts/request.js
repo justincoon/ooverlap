@@ -9,7 +9,6 @@ $(document).ready(function() {
         $(this).data('event', {
             title: $.trim($(this).text()), // use the element's text as the event title
             stick: true, // maintain when user navigates (see docs on the renderEvent method)
-            overlap: false
         });
 
         // make the event draggable using jQuery UI

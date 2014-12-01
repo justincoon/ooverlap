@@ -217,7 +217,13 @@ function generate(text, type) {
  	});
 }
 
+function toggleDiv(RHS_SettingsForm, RHS_CalendarInformation) {
+	$("#RHS_SettingsForm").toggle();
+	$("#RHS_CalendarInformation").toggle();
+}
+
 $(document).ready(function() {
+
 	// Get user schedule
 	var request = $.ajax({
         url: '/user/schedule',

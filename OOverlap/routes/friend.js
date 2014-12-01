@@ -95,7 +95,12 @@ router.get('/get/emails/all', function(req, res) {
   res.end();
 });
 
-router.post('/find/email', function(req, res) {
+router.get('/get/all', function(req,res){
+  res.send(req.user.friends);
+  res.end();
+});
+
+router.post('/find', function(req, res) {
   var email = req.body.email;
   User.findOne({
     email: email
@@ -193,12 +198,6 @@ router.post('/find/email', function(req, res) {
       }
     }
   });
-});
-
-router.post('/find/index', function(req, res){
-  var friend = req.user.friends[req.body.index];
-  res.send(friend);
-  res.end();
 });
 
 router.post('/unfriend', function(req, res) {

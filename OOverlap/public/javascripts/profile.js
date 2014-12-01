@@ -1,3 +1,5 @@
+var friends;
+
 function jQuery_GetFriend(email, callback) {
 	$.ajax({
 		type: 'POST',
@@ -10,10 +12,10 @@ function jQuery_GetFriend(email, callback) {
 	});
 }
 
-function jQuery_FindFriendByEmail(email, callback) {
+function jQuery_FindFriend(email, callback) {
 	$.ajax({
 		type: 'POST',
-		url: '/friend/find/email',
+		url: '/friend/find',
 		data: {
 			email: email
 		}
@@ -22,15 +24,12 @@ function jQuery_FindFriendByEmail(email, callback) {
 	});
 }
 
-function jQuery_FindFriendByIndex(index, callback) {
+function jQuery_GetAllFriends(){
 	$.ajax({
-		type: 'POST',
-		url: '/friend/find/index',
-		data: {
-			index: index
-		}
-	}).done(function(msg) {
-		callback(msg);
+		type: 'GET',
+		url: '/friend/get/all'
+	}).done(function(msg){
+		friends = msg;
 	});
 }
 
@@ -44,7 +43,7 @@ function jQuery_BindAddFriend(){
 					return false;
 				}
 			$('#friend-output').html('Finding..');
-			jQuery_FindFriendByEmail(email, function(data) {
+			jQuery_FindFriend(email, function(data) {
 					console.log(data);
 					if (data.error) {
 						generate('Cannot find user with email ' + email,'error');
@@ -87,12 +86,11 @@ function jQuery_BindAddFriend(){
 function jQuery_BindGetFriend(){
 	$('.friend_profile').bind('click',
 		function(event){
-			jQuery_FindFriendByIndex(event.currentTarget.id, function(data){
-				$('#profile_picture>img').attr('src',data.picture);
-				$('#profile_name').text(data.name);
-				$('#profile_email').text(data.email);
-				$('#otherUserProfilesModal').modal('show');
-			});
+			var friend = friends[event.currentTarget.id];
+			$('#profile_picture>img').attr('src',friend.picture);
+			$('#profile_name').text(friend.name);
+			$('#profile_email').text(friend.email);
+			$('#otherUserProfilesModal').modal('show');
 		});
 }
 
@@ -223,6 +221,7 @@ function toggleDiv(RHS_SettingsForm, RHS_CalendarInformation) {
 }
 
 $(document).ready(function() {
+	jQuery_GetAllFriends();
 
 	// Get user schedule
 	var request = $.ajax({

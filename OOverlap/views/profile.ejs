@@ -14,6 +14,17 @@
         <link href='/stylesheets/bootstrap.min.css' rel='stylesheet' />
         <link href='/stylesheets/fullcalendar.print.css' rel='stylesheet' media='print' />
 
+        <script>
+           /* $(document).ready(function(){
+                $("settingsGear").click(function(){
+                    $("RHS_testDiv").toggle();
+                });
+            }); */
+
+            function toggleDiv(RHS_testDiv) {
+                $("#"+RHS_testDiv).toggle();
+            }
+        </script>
         <!-- Icon Credit:
         <div>Icons made by Freepik from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0">CC BY 3.0</a></div>-->
 
@@ -46,7 +57,8 @@
 		    	
 		        <div id="LHS_UserInformation">
 		        	
-		            <!-- Should be rounded -->
+                    <div id="settingsGear"> <a href="javascript:toggleDiv('RHS_testDiv');"> <img src="/images/settings_Gear.png"> </a> </div>
+
 		            <div class="profilePic_wrapper">
                         <% if (user.profile.picture) { %>
                             <img src= "<%= user.profile.picture %>" alt="ProfilePicture" />
@@ -122,10 +134,12 @@
 
 		        </div> <!-- End of the LHS -->
 		        
+                <div id="RHS_testDiv">
+                This is a lovely fancing tester div aren't you just so happy to see me?!
+                </div>
+
 		        <div id="RHS_CalendarInformation">
-        	
                     <div id="requestsEventsSchedule_wrapper">
-            	
                         <table>
                             <tr>
                                 <td>
@@ -165,6 +179,11 @@
                     </div>
                     <div id='calendar'></div>
                 </div> <!-- End of the RHS -->
+
+                
+
+
+
 		    </div><!-- End of CONTENT WRAPPER -->
 	    </div><!--End of wrapper-->
 

@@ -82,7 +82,7 @@ body, html {
 }
 
 /*											  */
-/* Contains CSS for user information          */
+/* Contains CSS for user information  LHS     */
 /*											  */
 
 
@@ -95,6 +95,12 @@ body, html {
 	float:left;
 	width:20%;
 	height:100%;
+}
+
+#settingsGear img {
+	width: 15px;
+	position: absolute;
+	left: 17%;
 }
 
 .profilePic_wrapper {
@@ -242,6 +248,14 @@ body, html {
 	background-color: #333333;
 	text-align: center;
 }
+
+/* testing stuff */
+#RHS_testDiv {
+	background-color: #3FC;
+	position: absolute;
+	left: 20%;
+}
+
 
 /*#external-events {
         float: left;

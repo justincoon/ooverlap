@@ -1,6 +1,6 @@
 $(document).ready(function() {
     var free_times = [];
-
+    var duration = $('#hours').text() + ":" + $('#minutes').text();
     /* initialize the external events
     -----------------------------------------------------------------*/
     $('#external-events .fc-event').each(function() {
@@ -18,7 +18,7 @@ $(document).ready(function() {
             revertDuration: 0 //  original position after the drag
         });
 
-        $(this).data('duration', '01:00');
+        $(this).data('duration', duration);
     });
 
     $('#submit_request').bind('click',

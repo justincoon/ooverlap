@@ -27,12 +27,12 @@ $(document).ready(function() {
             for (var i = 0; i < free_times.length; i++) {
                 if (free_times[i].allDay){
                     data.push({
-                        id: free_times[i]._id,
+                        priority: parseInt(free_times[i].title[free_times[i].title.length-1]),
                         start: free_times[i].start.format()
                     });
                 } else {
                     data.push({
-                        id: free_times[i]._id,
+                        priority: parseInt(free_times[i].title[free_times[i].title.length-1]),
                         start: free_times[i].start.format(),
                         end: free_times[i].end.format(),
                     });

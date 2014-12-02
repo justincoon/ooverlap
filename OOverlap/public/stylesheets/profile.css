@@ -285,7 +285,7 @@ body, html {
 	width: 1000px;
 }
 
-#Request_Title{
+#Request_Title, #Request_Duration{
 	text-align: center;
 	color:#FF0000;
 	font-size: 30px;

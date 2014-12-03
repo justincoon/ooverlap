@@ -160,15 +160,12 @@
                                 <td> Upload File: </td>
                                 <td> <input type="file" name="newProfilePicture_file" value=""> </td>
                             </tr>
-
                             <tr>
                                 <td> or insert URL: </td>
-                                <td> <input type="text" name="newProfilePicture_text" value=""> </td>
+                                <td> <input type="text" name="newProfilePicture_text" value=<%=user.profile.picture%> size="30"> </td>
                             </tr>
                         </table>
-
                         <br />
-
                         <div class="settingsHeader"> Profile Information: </div> 
                         <table  class="settingsTable">
                             <tr>
@@ -179,7 +176,6 @@
                                     </form>
                                 </td>
                             </tr>
-
                             <tr>
                                 <td> Email Address: </td>
                                 <td>
@@ -188,7 +184,6 @@
                                     </form>
                                 </td>
                             </tr>
-
                             <tr>
                                 <td> Password: </td>
                                 <td>
@@ -197,7 +192,6 @@
                                     </form>
                                 </td>
                             </tr>
-
                             <tr>
                                 <td> New Password: </td>
                                 <td>
@@ -206,7 +200,6 @@
                                     </form>
                                 </td>
                             </tr>
-
                             <tr>
                                 <td> Confirm New Password: </td>
                                 <td>
@@ -216,17 +209,13 @@
                                 </td>
                             </tr>
                         </table>
-
                         <br />
                         <div class="settingsHeader"> Delete Account: 
                             <button type="submit" class="btn btn-default" data-toggle="modal" data-target="#deleteAccountModal">Delete Account</button>
                         </div>
-
                         <br />
                         <br />
-
                         <button type="submit" class="btn btn-default">Submit Changes</button>
-
                     </div>
                 </div>
 

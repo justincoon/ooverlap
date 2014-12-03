@@ -44,7 +44,8 @@ External Libraries:
 - mongodb, mongoose: NoSql Database and a API layer to talk with the Database
 
 ####Calendar
-- google-calendar: Import user existing calendar into the database as well as insert new events to user calendar when it’s sheduled
+- google-calendar, google-refresh-token: Import user existing calendar into the database as well as insert new events to user calendar when it’s sheduled
+- passport: a library to authenticate user account
 - moment: a library for parsing, validating, manipulating, and formatting dates.
 
 ####Mail:

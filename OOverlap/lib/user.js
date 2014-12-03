@@ -9,6 +9,8 @@ var userSchema = new mongoose.Schema({
   facebook: String,
   google: String,
   tokens: Array,
+  profilePicPrivacy: String,
+  emailPrivacy: String,
 
   profile: {
     name: { type: String, default: '' },

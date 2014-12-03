@@ -1,6 +1,8 @@
 function jQuery_BindSubmitRequest() {
 	$('#submit_changes').bind('click',
 		function(event) {
+			generate('working', 'error');
+			return false;
 			var settings = {
 				profilePicPrivacy: $('#profilePicPrivacy').val(),
 				emailPrivacy: $('#profilePicPrivacy').val(),
@@ -12,10 +14,12 @@ function jQuery_BindSubmitRequest() {
 				newPasswordConfirm: $('#new_password_cf').val()
 			};
 			if (settings.newPassword) {
-				if(!jQuery_CheckPassword(settings.currentPassword)) {
-					generate('Incorrect password, please try again', 'error');
-					return false;
-				}
+				jQuery_CheckPassword(settings.currentPassword, function(msg) {
+					if(msg) {
+						generate('Incorrect password, please try again', 'error');
+						return false;
+					}
+				});
 				if(settings.newPassword !== settings.newPasswordConfirm) {
 					generate('Passwords do not match, please try again', 'error');
 					return false;
@@ -29,12 +33,27 @@ function jQuery_BindSubmitRequest() {
 		});
 }
 
-function jQuery_CheckPassword(password) {
-	
+function jQuery_CheckPassword(password, callback) {
+	$.ajax({
+		type: 'GET',
+		url:  '/user/checkpassword',
+		data: password
+	})
+	.done(function(msg) {
+		callback(msg);
+	});
 }
 
 function jQuery_ChangeSettings(settings) {
-	
+	$.ajax({
+		type: 'POST',
+		url: '/user/changesettings',
+		data: settings
+	})
+	.done(function(err) {
+		if(err)
+			generate(err, 'error');
+	});
 }
 
 function generate(text, type) {

@@ -238,7 +238,7 @@ body, html {
 	overflow:auto;
 }
 
-.pendingRequests_TTM {
+.pendingRequests_TTM, .pendingEvents_TTM{
 	font-style:italic;
 	font-size:13px;
 	color:#999;

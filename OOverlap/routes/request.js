@@ -155,18 +155,16 @@ router.post('/submit', function(req, res) {
     var user_free_times = JSON.parse(free_times);
     var request = req.user.request[reply_request];
     var friend_free_times = JSON.parse(request.free_times);
-    var duration = moment(request.meeting.hours+':'+request.meeting.minutes,'HH:mm');
+    var hours = parseInt(request.meeting.hours);
+    var minutes = parseInt(request.meeting.minutes);
+    var duration = hours*60 + minutes;
     console.log("User free times: " + free_times);
     console.log("Friend free times: " + request.free_times);
-    console.log("Duration: " + duration.format());
-    var user_free_time;
-    var user_start;
-    var user_end;
-    var friend_free_time;
-    var friend_start;
-    var friend_end;
-    var diff;
-    var tmp_date;
+    console.log("Duration: " + duration);
+    var user_free_time, user_start, user_end, friend_free_time, friend_start, friend_end, diff, tmp_date;
+    var priority_sum = 10;
+    var priority_diff = 5;
+    var meeting_start, meeting_end;
     for (var i=0; i<user_free_times.length; i++){
       for (var j=0; j<friend_free_times.length; j++){
         user_free_time = user_free_times[i];
@@ -205,20 +203,36 @@ router.post('/submit', function(req, res) {
           user_end = moment(friend_end);
           friend_end = moment(tmp_date);
         } 
-        // console.log("User start: " + user_start.format());
-        // console.log("User end: " + user_end.format());
-        // console.log("Friend start: " + user_start.format());
-        // console.log("Friend end: " + user_end.format());
         if (user_end.isAfter(friend_start)){
           //if they overlap
           if (user_end.isBefore(friend_end)){
-            diff = Math.abs(user_end.diff(friend_start));
+            diff = Math.abs(user_end.diff(friend_start, 'minutes'));
           } else {
-            diff = Math.abs(friend_start.diff(friend_end));
+            diff = Math.abs(friend_start.diff(friend_end, 'minutes'));
           }
-          console.log("Difference: " + diff);
+          if (diff >= duration){
+            if (user_free_time.priority + friend_free_time.priority < priority_sum){
+              priority_sum = user_free_time.priority + friend_free_time.priority;
+              priority_diff = Math.abs(user_free_time.priority - friend_free_time.priority);
+              meeting_start = friend_start;
+            } else if (user_free_time.priority + friend_free_time.priority == priority_sum){
+              priority_diff = Math.min(priority_diff, Math.abs(user_free_time.priority - friend_free_time.priority));
+              meeting_start = friend_start;
+            }
+          }
         } 
       }
+    }
+    if (meeting_start){
+      var meeting_end = moment(meeting_start);
+      meeting_end.hours(meeting_start.hours()+hours);
+      meeting_end.minutes(meeting_start.minutes()+minutes);
+      console.log(meeting_start.format());
+      console.log(meeting_end.format());
+      console.log(priority_sum);
+      console.log(priority_diff);
+    } else {
+      console.log("fail")
     }
   }
 });

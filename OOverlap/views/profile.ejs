@@ -240,6 +240,9 @@
                                         <strong> <%= user.request.length %> Pending Requests</strong><br />
                                         <div id="pendingRequests">
                                         <!-- FUNCTION FOR A FRIEND REQUEST -->
+                                        <% if (user.request.length === 0) { %>
+                                            <i> You have no upcoming requests </i>
+                                        <% } %>
                                         <% for (var i=0; i<user.request.length; i++) {  %>
                                             <% if (user.request[i].type === 'friend_request') { %>
                                                 <strong> <%=user.request[i].data.name %> </strong> <span class="pendingRequests_TTM">wants to be your friend</span>
@@ -257,9 +260,16 @@
                                     </div>     
                                 </td>
 
-                                <td><div><strong>0 Upcoming Events:</strong><br />
+                                <td><div><strong> <%= user.events.length %> Upcoming Events</strong><br />
                                     <div id="upcomingEvents">
-                                    <i> You have no upcoming events </i>
+                                    <% if (user.events.length == 0) { %>
+                                        <i> You have no upcoming events </i>
+                                    <% } %>
+                                    <% for (var i=0; i<user.events.length; i++) {  %>
+                                        <strong> <%=user.events[i].title%></strong> with <strong> <%=user.events[i].from %> </strong> on <%=user.events[i].start_format%>
+                                        <a href= <%='/events/view/' + i %> > View </a>         
+                                        <br /> 
+                                    <% } %>
                                     </div>
                                 </div>
                                 </td>

@@ -111,7 +111,6 @@ router.get('/view/:idx', function(req,res){
   if (index >=0 && index < requests.length && requests[index].type === 'meeting_request'){
     var request = requests[index];
     reply_request = index;
-    console.log(reply_request);
     User.findOne({
       email: request.from
     }, function(err, user) {
@@ -131,7 +130,6 @@ router.get('/view/:idx', function(req,res){
 });
 
 router.post('/submit', function(req, res) {
-  console.log(reply_request);
   var free_times = req.body.free_times;
   if (reply_request < 0){
     User.findOne({
@@ -227,10 +225,36 @@ router.post('/submit', function(req, res) {
       var meeting_end = moment(meeting_start);
       meeting_end.hours(meeting_start.hours()+hours);
       meeting_end.minutes(meeting_start.minutes()+minutes);
-      console.log(meeting_start.format());
-      console.log(meeting_end.format());
-      console.log(priority_sum);
-      console.log(priority_diff);
+      var meeting = {
+        title:req.user.request[reply_request].meeting.title,
+        start:meeting_start.format(),
+        start_format: meeting_start.format('MMM Do YYYY, h:mm:ss a'),
+        end:meeting_end.format(),
+        end_format: meeting_end.format('MMM Do YYYY, h:mm:ss a'),
+        from: request.from
+      }
+      User.findById(req.user.id, function(err, user) {
+        user.request.splice(reply_request,1);
+        user.events.push(meeting);
+        user.save(function(err) {
+          req.flash('info', {
+            msg: 'New event has been added.'
+          });
+          User.findOne({
+            email: request.from
+          }, function(err, user) {
+            meeting.from = request.to;
+            user.events.push(meeting);
+            user.save(function(err) {
+              req.flash('info', {
+                msg: 'New event has been added.'
+              });
+              res.send();
+              res.end();
+            });
+          });
+        });
+      });
     } else {
       console.log("fail")
     }

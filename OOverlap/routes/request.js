@@ -3,7 +3,8 @@ var router      = express.Router();
 var flash       = require('express-flash');
 var User        = require('../lib/user');
 var querystring = require('querystring');
-var url 	    = require('url');
+var url         = require('url');
+var moment      = require('moment');
 var request_friend;
 var meeting_request;
 var reply_request = -1;
@@ -110,6 +111,7 @@ router.get('/view/:idx', function(req,res){
   if (index >=0 && index < requests.length && requests[index].type === 'meeting_request'){
     var request = requests[index];
     reply_request = index;
+    console.log(reply_request);
     User.findOne({
       email: request.from
     }, function(err, user) {
@@ -129,6 +131,7 @@ router.get('/view/:idx', function(req,res){
 });
 
 router.post('/submit', function(req, res) {
+  console.log(reply_request);
   var free_times = req.body.free_times;
   if (reply_request < 0){
     User.findOne({
@@ -149,8 +152,74 @@ router.post('/submit', function(req, res) {
       });
     });
   } else {
-    console.log(free_times);
-    console.log(req.user.request[reply_request].free_times);
+    var user_free_times = JSON.parse(free_times);
+    var request = req.user.request[reply_request];
+    var friend_free_times = JSON.parse(request.free_times);
+    var duration = moment(request.meeting.hours+':'+request.meeting.minutes,'HH:mm');
+    console.log("User free times: " + free_times);
+    console.log("Friend free times: " + request.free_times);
+    console.log("Duration: " + duration.format());
+    var user_free_time;
+    var user_start;
+    var user_end;
+    var friend_free_time;
+    var friend_start;
+    var friend_end;
+    var diff;
+    var tmp_date;
+    for (var i=0; i<user_free_times.length; i++){
+      for (var j=0; j<friend_free_times.length; j++){
+        user_free_time = user_free_times[i];
+        friend_free_time =friend_free_times[j];
+        if (user_free_time.end){
+          //normal timeDate event
+          user_start = moment(user_free_time.start);
+          user_end = moment(user_free_time.end);
+        } else {
+          //all day event
+          user_start = moment(user_free_time.start);
+          user_end = moment(user_free_time.start);
+          user_end.hours('23');
+          user_end.minutes('59');
+          user_end.seconds('59');
+        }
+        if (friend_free_time.end){
+          //normal timeDate event
+          friend_start = moment(friend_free_time.start);
+          friend_end = moment(friend_free_time.end);
+        } else {
+          //all day event
+          friend_start = moment(friend_free_time.start);
+          friend_end = moment(friend_free_time.start);
+          friend_end.hours('23');
+          friend_end.minutes('59');
+          friend_end.seconds('59');   
+        }
+        if (user_start.isAfter(friend_start)){ 
+          //swap date so user_start will always be before friend_start
+          //hacky thing to reduce if statments
+          tmp_date = moment(user_start);
+          user_start = moment(friend_start);
+          friend_start = moment(tmp_date);
+          tmp_date = moment(user_end);
+          user_end = moment(friend_end);
+          friend_end = moment(tmp_date);
+        } 
+        // console.log("User start: " + user_start.format());
+        // console.log("User end: " + user_end.format());
+        // console.log("Friend start: " + user_start.format());
+        // console.log("Friend end: " + user_end.format());
+        if (user_end.isAfter(friend_start)){
+          //if they overlap
+          if (user_end.isBefore(friend_end)){
+            diff = Math.abs(user_end.diff(friend_start));
+          } else {
+            diff = Math.abs(friend_start.diff(friend_end));
+          }
+          console.log("Difference: " + diff);
+        } 
+      }
+    }
   }
 });
 

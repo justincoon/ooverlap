@@ -266,9 +266,16 @@
                                         <i> You have no upcoming events </i>
                                     <% } %>
                                     <% for (var i=0; i<user.events.length; i++) {  %>
-                                        <strong> <%=user.events[i].title%></strong> with <strong> <%=user.events[i].from %> </strong> on <%=user.events[i].start_format%>
-                                        <a href= <%='/events/view/' + i %> > View </a>         
-                                        <br /> 
+                                        <% if (user.events[i].status === 'successful') { %>
+                                            <strong> <%=user.events[i].meeting.title%></strong> with <strong> <%=user.events[i].meeting.from %> </strong> on <%=user.events[i].meeting.start_format%>
+                                            <a href= <%='/events/add/' + i %> > Confirm </a> 
+                                            <a href= <%='/events/reject/' + i %> > Reject </a> 
+                                            <br /> 
+                                        <% } else if (user.events[i].status === 'fail') {%>
+                                            We cannot schedule <strong> <%=user.events[i].meeting.title%></strong> with <strong> <%=user.events[i].meeting.from %> </strong> because there is no enough overlap time.
+                                            <a href= <%='/events/add/' + i %> > Confirm </a> 
+                                            <br /> 
+                                        <% } %>
                                     <% } %>
                                     </div>
                                 </div>

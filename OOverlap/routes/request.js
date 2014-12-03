@@ -226,7 +226,7 @@ router.post('/submit', function(req, res) {
       meeting_end.hours(meeting_start.hours()+hours);
       meeting_end.minutes(meeting_start.minutes()+minutes);
       var meeting = {
-        title:req.user.request[reply_request].meeting.title,
+        title: request.meeting.title,
         start:meeting_start.format(),
         start_format: meeting_start.format('MMM Do YYYY, h:mm:ss a'),
         end:meeting_end.format(),
@@ -235,7 +235,10 @@ router.post('/submit', function(req, res) {
       }
       User.findById(req.user.id, function(err, user) {
         user.request.splice(reply_request,1);
-        user.events.push(meeting);
+        user.events.push({
+          status: 'successful',
+          meeting: meeting
+        });
         user.save(function(err) {
           req.flash('info', {
             msg: 'New event has been added.'
@@ -244,7 +247,10 @@ router.post('/submit', function(req, res) {
             email: request.from
           }, function(err, user) {
             meeting.from = request.to;
-            user.events.push(meeting);
+            user.events.push({
+              status: 'successful',
+              meeting: meeting
+            });
             user.save(function(err) {
               req.flash('info', {
                 msg: 'New event has been added.'
@@ -256,7 +262,38 @@ router.post('/submit', function(req, res) {
         });
       });
     } else {
-      console.log("fail")
+      var meeting = {
+        title: request.meeting.title,
+        from: request.from
+      }
+      User.findById(req.user.id, function(err, user) {
+        user.request.splice(reply_request,1);
+        user.events.push({
+          status: 'fail',
+          meeting: meeting
+        });
+        user.save(function(err) {
+          req.flash('info', {
+            msg: 'New event has been added.'
+          });
+          User.findOne({
+            email: request.from
+          }, function(err, user) {
+            meeting.from = request.to;
+            user.events.push({
+              status: 'fail',
+              meeting: meeting
+            });
+            user.save(function(err) {
+              req.flash('info', {
+                msg: 'New event has been added.'
+              });
+              res.send();
+              res.end();
+            });
+          });
+        });
+      });
     }
   }
 });

@@ -14,6 +14,7 @@ Revision History:
 | 11-03-14 | Giovanna Diaz | Created and Uploaded File |
 | 11-11-14 | Giovanna Diaz | Added Project Summary & Bird's Eye View |
 | 11-12-14 | Thai Nguyen | Added Libraries and Update Components |
+| 12-02-14 | Thai Nguyen | Update Libraries |
 
 What is OOverlap?
 -----------------
@@ -30,7 +31,9 @@ External Libraries:
 ### Front-end
 - Bootstrap: A framework for website’s responsive design.
 - JQuery: A Javascript library for manipulating DOM objects, handling events and AJAX 
-- AngularJS: A framework for designing user interactivity in the front-end side
+- JQuery-noty: A library for flashing notification to user 
+- full-calendar: A library based to display nicely format calendar
+- typeahead: A library for suggestion while typing
 
 ### Backend
 #### Login
@@ -38,17 +41,16 @@ External Libraries:
 - Facebook API: Let user login via their Facebook account
 
 #### Database
-- mongodb, monk: NoSql Database and a API layer to talk with the Database
+- mongodb, mongoose: NoSql Database and a API layer to talk with the Database
 
 ####Calendar
 - google-calendar: Import user existing calendar into the database as well as insert new events to user calendar when it’s sheduled
 - moment: a library for parsing, validating, manipulating, and formatting dates.
-- dhtmlxScheduler API: a library for creating calendar application
 
 ####Mail:
 - nodemailer: A library to send email to user
 
-<p align = "right"><em>[Thai Nguyen - 11/12/2014]</em></p>
+<p align = "right"><em>[Thai Nguyen - 12/2/2014]</em></p>
 
 Components: Bird's Eye View
 ---------------------------

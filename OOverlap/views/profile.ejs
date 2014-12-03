@@ -251,7 +251,7 @@
                                                 <br /> 
                                         <!-- FUNCTION FOR A MEETING REQUEST -->
                                             <% } else if (user.request[i].type === 'meeting_request') {%>
-                                                <strong> <%=user.request[i].from %> </strong> <span class="pendingRequests_TTM">wants to schedule a time to meet for <strong> <%= user.request[i].meeting.title %></strong></span>
+                                                <strong> <%=user.request[i].from %> </strong> <span class="pendingRequests_TTM">wants to schedule a time to meet for</span> <strong> <%= user.request[i].meeting.title %></strong>
                                                 <a href= <%='/request/view/' + i %> > View </a> 
                                                 <br />
                                             <% } %>
@@ -267,12 +267,12 @@
                                     <% } %>
                                     <% for (var i=0; i<user.events.length; i++) {  %>
                                         <% if (user.events[i].status === 'successful') { %>
-                                            <strong> <%=user.events[i].meeting.title%></strong> with <strong> <%=user.events[i].meeting.from %> </strong> on <%=user.events[i].meeting.start_format%>
+                                            <strong> <%=user.events[i].meeting.title%></strong> <span class='pendingEvents_TTM'>with </span><strong> <%=user.events[i].meeting.from %> </strong> <span class='pendingEvents_TTM'>on</span> <strong><%=user.events[i].meeting.start_format%></strong> 
                                             <a href= <%='/events/add/' + i %> > Confirm </a> 
                                             <a href= <%='/events/reject/' + i %> > Reject </a> 
                                             <br /> 
                                         <% } else if (user.events[i].status === 'fail') {%>
-                                            We cannot schedule <strong> <%=user.events[i].meeting.title%></strong> with <strong> <%=user.events[i].meeting.from %> </strong> because there is no enough overlap time.
+                                            <span class='pendingEvents_TTM'>We cannot schedule </span> <strong> <%=user.events[i].meeting.title%></strong> <span class='pendingEvents_TTM'>with</span> <strong> <%=user.events[i].meeting.from %> </strong> <span class='pendingEvents_TTM'>because there is no enough overlap time.</span>
                                             <a href= <%='/events/add/' + i %> > Confirm </a> 
                                             <br /> 
                                         <% } %>

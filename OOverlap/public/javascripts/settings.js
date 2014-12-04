@@ -13,7 +13,7 @@ function jQuery_BindSubmitRequest() {
 			};
 			if (settings.newPassword) {
 				jQuery_CheckPassword(settings.currentPassword, function(msg) {
-					if(msg) {
+					if(!msg) {
 						generate('Incorrect password, please try again', 'error');
 						return false;
 					}

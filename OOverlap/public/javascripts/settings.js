@@ -13,7 +13,6 @@ function jQuery_BindSubmitRequest() {
 				newPassword: $('#new_password').val(),
 				newPasswordConfirm: $('#new_password_cf').val()
 			};
-			console.log(settings);
 			if (settings.newPassword) {
 				jQuery_CheckPassword(settings.currentPassword, function(msg) {
 					if(!msg) {

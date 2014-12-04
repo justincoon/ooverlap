@@ -20,6 +20,39 @@ function jQuery_BindLogin(){
         });
 }
 
+function jQuery_BindSignup(){
+    $('#signup').bind('click',
+        function(event){
+            var name = $('#signup_name').val();
+            var email = $('#signup_email').val();
+            var password = $('#signup_password').val();
+            var password_confirm = $('#signup_confirm').val();
+            if (!name || !email || !password || !password_confirm){
+                generate('Please provide all information','error');
+                return false;
+            }
+            if (password !== password_confirm){
+                generate('Your password is not matched','error');
+                return false;
+            }
+            $.ajax({
+                type: 'POST',
+                url: '/auth/signup',
+                data: {
+                    name: name,
+                    email: email,
+                    password: password
+                }
+            }).done(function(msg) {
+                if (msg.error){
+                    generate('This email is already existed','error');
+                } else {
+                    window.location.replace("/user/profile");
+                }
+            });
+        });
+}
+
 function generate(text, type) {
     var n = noty({
         text: text,
@@ -58,6 +91,6 @@ $(document).ready(function() {
             return false;
         });
     });
-    // jQuery_BindSignUp();
+    jQuery_BindSignup();
     jQuery_BindLogin();
 });

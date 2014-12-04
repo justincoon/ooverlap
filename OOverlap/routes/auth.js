@@ -32,18 +32,15 @@ router.post('/signup', function(req, res){
 	   password: req.body.password
 	});
 	User.findOne({ email: req.body.email }, function(err, existingUser) {
-			if(req.body.password !== req.body.confirm){
-				return res.redirect('/');//to implent
-			}	
 			if (existingUser) {
-				req.flash('errors', { msg: 'Account with that email address already exists.' });
-				return res.redirect('/exist');//implement further
+				res.send({error:'Account with that email address already exists.'});
+				res.end();
+				return false;
 			}
 			user.save(function(err) {
-				if (err) return next(err);
 				req.logIn(user, function(err) {
-					if (err) return next(err);
-					res.redirect('/user/profile');
+					res.send();
+					res.end();
 				});
 			});
 	});
@@ -57,18 +54,16 @@ router.post('/login', function(req, res) {
 				error: "ERROR"
 			});
 			res.end();
+			return false;
 		}
 		if (!user) {
 			res.send({
 				error: info.message
 			});
 			res.end();
+			return false;
 		}
 		req.logIn(user, function(err) {
-			// if (err) {
-			// 	 next(err);
-			// }
-			// res.redirect(req.session.returnTo || '/');
 			res.send();
 			res.end();
 		});

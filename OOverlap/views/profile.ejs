@@ -169,12 +169,12 @@
                         <div class="settingsHeader"> Profile Picture: </div> 
                         <table  class="settingsTable">
                             <tr>
-                                <td> Upload File: </td>
-                                <td> <input type="file" id="newProfilePicture_file" value=""> </td>
-                            </tr>
-                            <tr>
-                                <td> or insert URL: </td>
-                                <td> <input type="text" id="newProfilePicture_text" value=<%=user.profile.picture%> size="30"> </td>
+                                <td> Image URL: </td>
+                                <% if (user.profile.picture) { %>
+                                    <td> <input type="text" id="newProfilePicture_text" value=<%=user.profile.picture%> size="30"> </td>
+                                <% } else { %>
+                                    <td> <input type="text" id="newProfilePicture_text" value="" size="30"> </td>
+                                <% } %>
                             </tr>
                         </table>
                         <br />
@@ -196,25 +196,19 @@
                             <tr>
                                 <td> Password: </td>
                                 <td>
-                                    
-                                        <input type="password" id="password_input" value="************"> </br>
-                                    
+                                    <input type="password" id="password_input" value="************"> </br>
                                 </td>
                             </tr>
                             <tr>
                                 <td> New Password: </td>
                                 <td>
-                                    
-                                        <input type="password" id="new_password" value=""> </br>
-                                    
+                                    <input type="password" id="new_password" value=""> </br>
                                 </td>
                             </tr>
                             <tr>
                                 <td> Confirm New Password: </td>
                                 <td>
-                                    
-                                        <input type="password" id="new_password_cf" value=""> </br>
-                                    
+                                    <input type="password" id="new_password_cf" value=""> </br>
                                 </td>
                             </tr>
                             <% } %>

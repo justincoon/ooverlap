@@ -92,16 +92,6 @@ router.get('/group', function(req, res) {
   }
 });
 
-router.get('/settings', function(req, res) {
-  if (req.user) {
-    res.render('settings', {
-      user: req.user,
-    });
-  } else {
-    res.redirect('/');
-  }
-});
-
 router.get('/checkpassword', function(req, res) {
 	res.end(req.user.password === req.body.data);
 });

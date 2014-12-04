@@ -93,7 +93,11 @@ router.get('/group', function(req, res) {
 });
 
 router.get('/checkpassword', function(req, res) {
-	res.end(req.user.password === req.body.data);
+	User.findById(req.user.id, function(err, user) {
+		user.comparePassword(req.body.data, function(err, success) {
+			res.end(success);
+		});
+	});
 });
 
 router.post('/changesettings', function(req, res) {

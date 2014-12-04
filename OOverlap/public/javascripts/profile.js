@@ -36,37 +36,36 @@ function jQuery_GetAllFriends(){
 function jQuery_BindAddFriend(){
 	$('#add_friend').bind('click',
 		function(event){
+			var $btn = $(this).button('loading');
 			var email = $('input#find-new-friend-input').val();
 			if (email.indexOf('@') < 0 && email.indexOf('.') < 0) {
 					generate('Please provide a valid email address','error');
-					$('#friend-output').html('');
+					$btn.button('reset');
 					return false;
 				}
-			$('#friend-output').html('Finding..');
 			jQuery_FindFriend(email, function(data) {
 					console.log(data);
 					if (data.error) {
 						generate('Cannot find user with email ' + email,'error');
-						$('#friend-output').html('');
+						$btn.button('reset');
 						return false;
 					} else if (data.self){
 						generate('Sorry you cannot add yourself as a friend', 'error');
-						$('#friend-output').html('');
+						$btn.button('reset');
 						return false;
 					} else if (data.friend_exist) {
 						generate('User with email ' + email + ' already in your friend list', 'error');
-						$('#friend-output').html('');
+						$btn.button('reset');
 						return false;
 					} else if (data.request_sent_exist) {
 						generate('You already sent a request to user with email ' + email, 'error');
-						$('#friend-output').html('');
+						$btn.button('reset');
 						return false;
 					} else if (data.request_received_exist) {
 						generate('User with email ' + email + ' already sent your a request, please check your pending requests', 'error');
-						$('#friend-output').html('');
+						$btn.button('reset');
 						return false;
 					} else {
-						$('#friend-output').html(data.friend.name + " " + data.friend.email);
 						$.ajax({
 							type: 'GET',
 							url: '/friend/new_request'
@@ -77,6 +76,7 @@ function jQuery_BindAddFriend(){
 							} else {
 								generate('Fail to send friend request, please try again','error');
 							}
+							$btn.button('reset');
 						});
 					}
 				});
@@ -91,6 +91,13 @@ function jQuery_BindGetFriend(){
 			$('#profile_name').text(friend.name);
 			$('#profile_email').text(friend.email);
 			$('#otherUserProfilesModal').modal('show');
+		});
+}
+
+function jQuery_BindGetGroup(){
+	$('.group_profile').bind('click',
+		function(event){
+			window.location.replace("/user/group");
 		});
 }
 
@@ -128,21 +135,20 @@ function jQuery_BindSubmitRequest() {
 				generate('Please enter a minute number for this meeting request', 'error');
 				return false;
 			}
-			$('#request-output').html('Finding..');
+			var $btn = $(this).button('loading');
 			// Get the friend email to lookup:
 			var email = $('input#find-friend-input').val();
 			if (email.indexOf('@') < 0 && email.indexOf('.') < 0) {
 				generate('Please provide a valid email address', 'error');
-				$('#request-output').html('');
+				$btn.button('reset');
 				return false;
 			}
 			jQuery_GetFriend(email, function(friend) {
 				if (friend.email === undefined) {
 					generate('Cannot find friend with email ' + email + ' in your friend list', 'error');
-					$('#request-output').html('');
+					$btn.button('reset');
 					return false;
 				} else {
-					$('#request-output').html(friend.name + " " + friend.email);
 					$.ajax({
 						type: 'POST',
 						url: '/request/new',
@@ -152,6 +158,7 @@ function jQuery_BindSubmitRequest() {
 							minutes: minutes
 						}
 					}).done(function(msg) {
+						$btn.button('reset');
 						window.location.replace("/request");
 					});
 				}
@@ -272,5 +279,6 @@ $(document).ready(function() {
 	jQuery_BindSubmitRequest();
 	jQuery_BindAddFriend();
 	jQuery_BindGetFriend();
+	jQuery_BindGetGroup();
 	jQuery_BindUnfriend();
 });

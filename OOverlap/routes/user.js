@@ -61,12 +61,6 @@ router.get('/calendar', function(req, res) {
   }
 });
 
-router.get('/checkcalendar', function(req, res) {
-  res.render('calendar', {
-    items: req.user.schedule
-  });
-});
-
 router.get('/schedule', function(req, res) {
   var items = []
   req.user.schedule.forEach(function(item) {
@@ -91,16 +85,6 @@ router.get('/schedule', function(req, res) {
 router.get('/group', function(req, res) {
   if (req.user) {
     res.render('group', {
-      user: req.user,
-    });
-  } else {
-    res.redirect('/');
-  }
-});
-
-router.get('/settings', function(req, res) {
-  if (req.user) {
-    res.render('settings', {
       user: req.user,
     });
   } else {

@@ -97,19 +97,29 @@ router.get('/checkpassword', function(req, res) {
 });
 
 router.post('/changesettings', function(req, res) {
-	if(req.body.profilePicPrivacy)
-		req.user.profilePicPrivacy = req.body.profilePicPrivacy;
-	if(req.body.emailPrivacy)
-		req.user.emailPrivacy = req.body.emailPrivacy;
-	if(req.body.profPic)
-		req.user.profile.picture = req.body.profPic;
-	if(req.body.name)
-		req.user.profile.name = req.body.name;
-	if(req.body.email)
-		req.user.email = req.body.email;
-	if(req.body.newPassword)
-		req.user.password = req.body.newPassword;
-	res.end();
+	User.findById(req.user.id, function(err, user) {
+		if(req.body.profilePicPrivacy)
+			user.profilePicPrivacy = req.body.profilePicPrivacy;
+		if(req.body.emailPrivacy)
+			user.emailPrivacy = req.body.emailPrivacy;
+		if(req.body.profPic)
+			user.profile.picture = req.body.profPic;
+		if(req.body.name)
+			user.profile.name = req.body.name;
+		if(req.body.email)
+			user.email = req.body.email;
+		if(req.body.newPassword)
+			user.password = req.body.newPassword;
+		user.save(function(err) {
+		if (err){
+			console.log(err);
+		}
+			req.flash('info', {
+				msg: 'Settings have been saved.'
+			});
+		});
+		res.end();
+	});
 });
 
 router.get('/logout', function(req, res) {

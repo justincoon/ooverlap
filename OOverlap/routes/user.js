@@ -61,12 +61,6 @@ router.get('/calendar', function(req, res) {
   }
 });
 
-router.get('/checkcalendar', function(req, res) {
-  res.render('calendar', {
-    items: req.user.schedule
-  });
-});
-
 router.get('/schedule', function(req, res) {
   var items = []
   req.user.schedule.forEach(function(item) {

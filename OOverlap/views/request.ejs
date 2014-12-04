@@ -11,6 +11,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link href="/stylesheets/profile.css" rel="stylesheet" type="text/css" />
+        <link href="/stylesheets/request.css" rel="stylesheet" type="text/css" />
         <link href='/stylesheets/fullcalendar.css' rel='stylesheet' />
         <link href='/stylesheets/bootstrap.min.css' rel='stylesheet' />
         <link href='/stylesheets/fullcalendar.print.css' rel='stylesheet' media='print' />
@@ -73,6 +74,7 @@
                             <img src= "/images/profPic.png" alt="ProfilePicture" />
                         <% } %>
                     </div>
+
                     <div class="userInformation_wrapper">
                         <div> <%= friend.name %>
                             <div id="to_email"><%= friend.email %></div>    
@@ -89,7 +91,7 @@
                         Schdule for Meeting: <%= request.title %>
                     </div>
                     <div id='Request_Duration'>
-                        Duration: <span id="hours"><%= request.hours %></span> Hours <span id="minutes"><%= request.minutes %></span> Minutes
+                        Duration: <span id="hours"><%= request.hours %></span> Hours & <span id="minutes"><%= request.minutes %></span> Minutes
                     </div>
                     <div id='calendar'></div>
                 </div> <!-- End of the RHS -->

@@ -111,7 +111,7 @@
                                         <div class="otherProfilePic_wrapper group_profile">
                                             <span data-placement="top" data-toggle="tooltip" title="Team Undefined">
                                                 <a href="#" role="button">
-                                                    <img src="/images/profPic.png" />
+                                                    <img src="/images/teamUndefined_Logo.png" />
                                                 </a>
                                             </span>
                                         </div>
@@ -196,6 +196,7 @@
                                     </form>
                                 </td>
                             </tr>
+                            <% if (!user.google){%>
                             <tr>
                                 <td> Password: </td>
                                 <td>
@@ -220,6 +221,7 @@
                                     </form>
                                 </td>
                             </tr>
+                            <% } %>
                         </table>
                         <br />
                         <div class="settingsHeader"> Delete Account: 
@@ -421,6 +423,12 @@
 
                         <form id="deleteAccount">
                             <table  class="settingsTable" align="center">
+                                <% if  (user.google) { %>
+                                <tr>
+                                    <td>Please Enter your Email again:</td>
+                                    <td> <input type="email" name="deleteAccount_email" value=""> </td>
+                                </tr>
+                                <% } else { %>
                                 <tr>
                                     <td>Please Enter your Password:</td>
                                     <td> <input type="password" name="deleteAccount_password" value=""> </td>
@@ -430,6 +438,7 @@
                                     <td>Confirm your Password: </td>
                                     <td> <input type="password" name="deleteAccount_password_cf" value=""> <br /> </td>
                                 </tr>
+                                <% } %>
                             </table>
                         
                         <br />
@@ -458,7 +467,7 @@
         <script src='/javascripts/typeahead.jquery.min.js'></script>
         <script src='/javascripts/jquery.noty.packaged.min.js'></script>
         <script src='/javascripts/profile.js'></script>
-	<script src='/javascripts/settings.js'></script>
+	    <script src='/javascripts/settings.js'></script>
         
     </body>
 </html>

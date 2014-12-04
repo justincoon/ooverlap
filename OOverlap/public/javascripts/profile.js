@@ -38,7 +38,7 @@ function jQuery_BindAddFriend(){
 		function(event){
 			var $btn = $(this).button('loading');
 			var email = $('input#find-new-friend-input').val();
-			if (email.indexOf('@') < 0 && email.indexOf('.') < 0) {
+			if (email.indexOf('@') < 0 || email.indexOf('.') < 0) {
 					generate('Please provide a valid email address','error');
 					$btn.button('reset');
 					return false;
@@ -138,7 +138,7 @@ function jQuery_BindSubmitRequest() {
 			var $btn = $(this).button('loading');
 			// Get the friend email to lookup:
 			var email = $('input#find-friend-input').val();
-			if (email.indexOf('@') < 0 && email.indexOf('.') < 0) {
+			if (email.indexOf('@') < 0 || email.indexOf('.') < 0) {
 				generate('Please provide a valid email address', 'error');
 				$btn.button('reset');
 				return false;

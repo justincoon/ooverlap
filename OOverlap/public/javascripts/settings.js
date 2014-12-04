@@ -3,14 +3,14 @@ function jQuery_BindSubmitRequest() {
 		function(event) {
 			console.log('working\n');
 			var settings = {
-				profilePicPrivacy: $('#profilePicPrivacy').val(),
-				emailPrivacy: $('#profilePicPrivacy').val(),
-				profPic: $('#newProfilePicture_text').val(),
-				name: $('#displayedName').val(),
-				email: $('#email').val(),
-				currentPassword: $('#password_input').val(),
-				newPassword: $('#new_password').val(),
-				newPasswordConfirm: $('#new_password_cf').val()
+				var profilePicPrivacy: $('#profilePicPrivacy').val(),
+				var emailPrivacy: $('#profilePicPrivacy').val(),
+				var profPic: $('#newProfilePicture_text').val(),
+				var name: $('#displayedName').val(),
+				var email: $('#email').val(),
+				var currentPassword: $('#password_input').val(),
+				var newPassword: $('#new_password').val(),
+				var newPasswordConfirm: $('#new_password_cf').val()
 			};
 			if (settings.newPassword) {
 				jQuery_CheckPassword(settings.currentPassword, function(msg) {

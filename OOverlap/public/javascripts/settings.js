@@ -1,7 +1,6 @@
 function jQuery_BindSubmitRequest() {
 	$('#submit_changes').bind('click',
 		function(event) {
-			console.log('working\n');
 			var settings = {
 				var profilePicPrivacy: $('#profilePicPrivacy').val(),
 				var emailPrivacy: $('#profilePicPrivacy').val(),

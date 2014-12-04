@@ -157,13 +157,14 @@ body, html {
 	border-bottom-width:1px;
 }
 
-/* STYLING THE PROFILE PICTURES OF OTHER FRIENDS / GROUPS */
-.userFriends_wrapper table tr td:nth-child(odd),
-.userFriends_wrapper table tr td:nth-child(even){
+/* this has some vodoo magic... don't change this! */
+.userFriends_wrapper table,
+.userGroups_wrapper table {
 	width:25%;
-	padding:1px 2px 5px 1px;
 }
 
+.userFriends_wrapper table tr td:nth-child(odd),
+.userFriends_wrapper table tr td:nth-child(even),
 .userGroups_wrapper table tr td:nth-child(odd),
 .userGroups_wrapper table tr td:nth-child(even){
 	width:25%;
@@ -173,7 +174,7 @@ body, html {
 .otherProfilePic_wrapper {
 	margin-left:auto;
 	margin-right:auto;
-	width:100%;
+	width:47px;
 	overflow:hidden;
   	border-radius:100%;
 	-moz-border-radius: 50%;
@@ -185,21 +186,14 @@ body, html {
 	width:100%;
 }
 
-/* FRIENDS */
-.userFriends_wrapper div:nth-child(2){
-	/*height:150px;*/
-	font-size:12px;
-	font-weight:normal;
-	overflow:auto;
-}
-
-/* GROUPS */
+.userFriends_wrapper div:nth-child(2),
 .userGroups_wrapper div:nth-child(2){
 	/*height:150px;*/
 	font-size:12px;
 	font-weight:normal;
 	overflow:auto;
 }
+
 
 /*											  */
 /* Contains the logo on the RHS of the screen */

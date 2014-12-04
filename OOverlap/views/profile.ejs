@@ -238,7 +238,7 @@
                     <div id="requestsEventsSchedule_wrapper">
                         <table>
                             <tr>
-                                <td>
+                                <td width="30%">
                                     <div>
                                         <strong> <%= user.request.length %> Pending Requests</strong><br />
                                         <div id="pendingRequests">
@@ -263,7 +263,7 @@
                                     </div>     
                                 </td>
 
-                                <td><div><strong> <%= user.events.length %> Upcoming Events</strong><br />
+                                <td width="50%"><div><strong> <%= user.events.length %> Upcoming Events</strong><br />
                                     <div id="upcomingEvents">
                                     <% if (user.events.length == 0) { %>
                                         <i> You have no upcoming events </i>
@@ -284,7 +284,7 @@
                                 </div>
                                 </td>
 
-                                <td align="center">
+                                <td align="center" width="20%">
                                     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#scheduleEventModal_1"> Schedule an Event </button>
                                 </td>
                             </tr>

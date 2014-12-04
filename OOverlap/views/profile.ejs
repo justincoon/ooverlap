@@ -145,7 +145,7 @@
                             <tr>
                                 <td align="right">Profile Picture: </td>
                                 <td align="left"> 
-                                    <select name="profilePicPrivacy">
+                                    <select id="profilePicPrivacy">
                                       <option value="public">Public</option>
                                       <option value="private">Private</option>
                                     </select>
@@ -155,7 +155,7 @@
                             <tr>
                                 <td align="right">Email Address: </td>
                                 <td align="left"> 
-                                    <select name="emailPrivacy">
+                                    <select id="emailPrivacy">
                                       <option value="public">Public</option>
                                       <option value="private">Private</option>
                                     </select>
@@ -170,11 +170,11 @@
                         <table  class="settingsTable">
                             <tr>
                                 <td> Upload File: </td>
-                                <td> <input type="file" name="newProfilePicture_file" value=""> </td>
+                                <td> <input type="file" id="newProfilePicture_file" value=""> </td>
                             </tr>
                             <tr>
                                 <td> or insert URL: </td>
-                                <td> <input type="text" name="newProfilePicture_text" value=<%=user.profile.picture%> size="30"> </td>
+                                <td> <input type="text" id="newProfilePicture_text" value=<%=user.profile.picture%> size="30"> </td>
                             </tr>
                         </table>
                         <br />
@@ -184,7 +184,7 @@
                                 <td>Displayed Name: </td>
                                 <td> 
                                     <form name="displayedName">
-                                        <input type="text" name="displayedName_input" value="<%= user.profile.name %>">
+                                        <input type="text" id="displayedName_input" value="<%= user.profile.name %>">
                                     </form>
                                 </td>
                             </tr>
@@ -192,7 +192,7 @@
                                 <td> Email Address: </td>
                                 <td>
                                     <form name="email">
-                                        <input type="text" name="email_input" value="<%= user.email %>">
+                                        <input type="text" id="email_input" value="<%= user.email %>">
                                     </form>
                                 </td>
                             </tr>
@@ -201,7 +201,7 @@
                                 <td> Password: </td>
                                 <td>
                                     <form>
-                                        <input type="password" name="password_input" value="************"> </br>
+                                        <input type="password" id="password_input" value="************"> </br>
                                     </form>
                                 </td>
                             </tr>
@@ -209,7 +209,7 @@
                                 <td> New Password: </td>
                                 <td>
                                     <form>
-                                        <input type="password" name="new_password" value=""> </br>
+                                        <input type="password" id="new_password" value=""> </br>
                                     </form>
                                 </td>
                             </tr>
@@ -217,7 +217,7 @@
                                 <td> Confirm New Password: </td>
                                 <td>
                                     <form>
-                                        <input type="password" name="new_password_cf" value=""> </br>
+                                        <input type="password" id="new_password_cf" value=""> </br>
                                     </form>
                                 </td>
                             </tr>
@@ -421,7 +421,7 @@
                         <br />
                         <br />
 
-                        <form id="deleteAccount">
+                        <form name="deleteAccount">
                             <table  class="settingsTable" align="center">
                                 <% if  (user.google) { %>
                                 <tr>

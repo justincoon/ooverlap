@@ -259,6 +259,14 @@ a:focus {
     -o-background-size: cover;
 }
 
+#howTable table {
+}
+
+#howTable table tr td {
+    width: 33%;
+    vertical-align: top;
+}
+
 #map {
     width: 100%;
     height: 200px;

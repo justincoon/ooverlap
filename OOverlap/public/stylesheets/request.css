@@ -2,5 +2,20 @@
 /* CSS Document */
 
 #Request_Title, #Request_Duration {
-	background-color: #FC6;
+	color: #4F4F4F;
+	font-size: 20px;
+}
+
+#reqestHeader_wrapper {
+	background-color: #C8FFEC;
+	width: 100%;
+	text-align: center;
+	padding:10px 0px 10px 0px;
+}
+
+#title,
+#hours,
+#minutes {
+	font-size: 23px;
+	color: #000000;
 }

@@ -87,12 +87,15 @@
                     
                 </div> <!-- End of the LHS -->
                 <div id="RHS_CalendarInformation">
-                    <div id='Request_Title'>
-                        Schdule for Meeting: <%= request.title %>
+                    
+                    <div id="reqestHeader_wrapper">
+                        <span id='Request_Title'> You are scheduling <strong id="title"><%= request.title %></strong></span>
+                        <br/> 
+                        <span id='Request_Duration'>
+                           which will be <strong> <span id="hours"><%= request.hours %> Hour(s) & </span> <span id="minutes"><%= request.minutes %> Minute(s)</span> </strong> long
+                        </span>
                     </div>
-                    <div id='Request_Duration'>
-                        Duration: <span id="hours"><%= request.hours %></span> Hours & <span id="minutes"><%= request.minutes %></span> Minutes
-                    </div>
+
                     <div id='calendar'></div>
                 </div> <!-- End of the RHS -->
             </div><!-- End of CONTENT WRAPPER -->

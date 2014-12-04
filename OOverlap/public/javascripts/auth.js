@@ -31,7 +31,7 @@ function jQuery_BindSignup(){
                 generate('Please provide all information','error');
                 return false;
             }
-            if (email.indexOf('@') < 0 && email.indexOf('.') < 0) {
+            if (email.indexOf('@') < 0 || email.indexOf('.') < 0) {
                 generate('Please provide a valid email address','error');
                 return false;
             }

@@ -94,6 +94,13 @@ function jQuery_BindGetFriend(){
 		});
 }
 
+function jQuery_BindGetGroup(){
+	$('.group_profile').bind('click',
+		function(event){
+			window.location.replace("/user/group");
+		});
+}
+
 function jQuery_BindUnfriend() {
 	$('#unfriend').bind('click',
 		function(event) {
@@ -272,5 +279,6 @@ $(document).ready(function() {
 	jQuery_BindSubmitRequest();
 	jQuery_BindAddFriend();
 	jQuery_BindGetFriend();
+	jQuery_BindGetGroup();
 	jQuery_BindUnfriend();
 });

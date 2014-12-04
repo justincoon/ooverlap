@@ -27,7 +27,7 @@ function jQuery_BindSubmitRequest() {
 				generate('Please provide a valid email address', 'error');
 				return false;
 			}
-			jQuery_ChangeSettings(settings);
+			jQuery_UpdateSettings(settings);
 		});
 }
 
@@ -42,7 +42,7 @@ function jQuery_CheckPassword(password, callback) {
 	});
 }
 
-function jQuery_ChangeSettings(settings) {
+function jQuery_UpdateSettings(settings) {
 	$.ajax({
 		type: 'POST',
 		url: '/user/changesettings',

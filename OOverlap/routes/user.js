@@ -101,6 +101,7 @@ router.get('/checkpassword', function(req, res) {
 });
 
 router.post('/changesettings', function(req, res) {
+  console.log(req.body);
 	User.findById(req.user.id, function(err, user) {
 		if(req.body.profilePicPrivacy)
 			user.profilePicPrivacy = req.body.profilePicPrivacy;

@@ -183,42 +183,38 @@
                             <tr>
                                 <td>Displayed Name: </td>
                                 <td> 
-                                    <form name="displayedName">
-                                        <input type="text" id="displayedName_input" value="<%= user.profile.name %>">
-                                    </form>
+                                    <input type="text" id="displayedName_input" value="<%= user.profile.name %>">
                                 </td>
                             </tr>
                             <tr>
                                 <td> Email Address: </td>
                                 <td>
-                                    <form name="email">
-                                        <input type="text" id="email_input" value="<%= user.email %>">
-                                    </form>
+                                    <input type="text" id="email_input" value="<%= user.email %>">
                                 </td>
                             </tr>
                             <% if (!user.google){%>
                             <tr>
                                 <td> Password: </td>
                                 <td>
-                                    <form>
+                                    
                                         <input type="password" id="password_input" value="************"> </br>
-                                    </form>
+                                    
                                 </td>
                             </tr>
                             <tr>
                                 <td> New Password: </td>
                                 <td>
-                                    <form>
+                                    
                                         <input type="password" id="new_password" value=""> </br>
-                                    </form>
+                                    
                                 </td>
                             </tr>
                             <tr>
                                 <td> Confirm New Password: </td>
                                 <td>
-                                    <form>
+                                    
                                         <input type="password" id="new_password_cf" value=""> </br>
-                                    </form>
+                                    
                                 </td>
                             </tr>
                             <% } %>

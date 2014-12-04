@@ -1,16 +1,19 @@
+var settings;
+
 function jQuery_BindSubmitRequest() {
 	$('#submit_changes').bind('click',
 		function(event) {
-			var settings = {
-				var profilePicPrivacy: $('#profilePicPrivacy').val(),
-				var emailPrivacy: $('#profilePicPrivacy').val(),
-				var profPic: $('#newProfilePicture_text').val(),
-				var name: $('#displayedName').val(),
-				var email: $('#email').val(),
-				var currentPassword: $('#password_input').val(),
-				var newPassword: $('#new_password').val(),
-				var newPasswordConfirm: $('#new_password_cf').val()
+			settings = {
+				profilePicPrivacy: $('#profilePicPrivacy').val(),
+				emailPrivacy: $('#profilePicPrivacy').val(),
+				profPic: $('#newProfilePicture_text').val(),
+				name: $('#displayedName_input').val(),
+				email: $('#email_input').val(),
+				currentPassword: $('#password_input').val(),
+				newPassword: $('#new_password').val(),
+				newPasswordConfirm: $('#new_password_cf').val()
 			};
+			console.log(settings);
 			if (settings.newPassword) {
 				jQuery_CheckPassword(settings.currentPassword, function(msg) {
 					if(!msg) {
@@ -23,7 +26,7 @@ function jQuery_BindSubmitRequest() {
 					return false;
 				}
 			}
-			if (settings.email.indexOf('@') < 0 && settings.email.indexOf('.') < 0) {
+			if (settings.email.indexOf('@') < 0 || settings.email.indexOf('.') < 0) {
 				generate('Please provide a valid email address', 'error');
 				return false;
 			}
@@ -51,6 +54,8 @@ function jQuery_UpdateSettings(settings) {
 	.done(function(err) {
 		if(err)
 			generate(err, 'error');
+		else
+			window.location.replace("/user/profile");
 	});
 }
 

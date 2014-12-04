@@ -73,10 +73,11 @@
                             No friends to show! <br /><br /> Click "Add a New Friend" to get started.
                             <%} else {%> 
                                 <table>
+                                    <tr>
                                         <% for (var i=0; i<user.friends.length; i++) {%>
-                                            <% if (i===0 || i%3===1) { %>
-                                                <!-- you are the first prof pic / first in a row -->
-                                                <tr>
+                                            <% if (i!==0 && i%4===0) { %>
+                                                <!-- first in a row except first one -->
+                                                </tr><tr>
                                             <% } %>
 
                                             <td> <!-- div for profile picture + tooltip + modal -->
@@ -89,13 +90,8 @@
                                                 </div> <!-- end of profile picture + tooltip + modal magic -->
                                             </td>
 
-                                            <% if ( (i>0 && i%3===0) || (i === (user.friends.length-1)) ) { %>
-                                                <!-- if you are last in a row, or the last one in general-->
-                                                </tr>
-                                            <% } %>
-
                                         <% } %> <!-- end of for -->
-                                    
+                                    </tr>
                                 </table>
                             <% } %>
                         </div>
@@ -111,8 +107,24 @@
 		                <div style="height:150px;"> 
                             <table>
                                 <tr>
-                                    <td><div class="otherProfilePic_wrapper"><img src="/images/profPic.png" /></div></td>
-                                    <td><div class="otherProfilePic_wrapper"><img src="/images/profPic.png" /></div></td>
+                                    <td>
+                                        <div class="otherProfilePic_wrapper group_profile">
+                                            <span data-placement="top" data-toggle="tooltip" title="Team Undefined">
+                                                <a href="#" role="button">
+                                                    <img src="/images/profPic.png" />
+                                                </a>
+                                            </span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="otherProfilePic_wrapper group_profile">
+                                            <span data-placement="top" data-toggle="tooltip" title="CS 326">
+                                                <a href="#" role="button">
+                                                    <img src="/images/profPic.png" />
+                                                </a>
+                                            </span>
+                                        </div>
+                                    </td>
                                 </tr>
                             </table>  
                         </div>

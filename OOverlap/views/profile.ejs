@@ -78,6 +78,9 @@
                                 <table>
                                     <tr>
                                         <% for (var i=0; i<user.friends.length; i++) {%>
+                                            <% if (i>0 && i%4===0) { %>
+                                                </tr><tr>
+                                            <%}%>
                                             <td>
                                                 <div class="friend_profile otherProfilePic_wrapper" id="<%=i%>" >
                                                     <span data-placement="top" data-toggle="tooltip" title="<%=user.friends[i].name%>">
@@ -89,12 +92,14 @@
                                             </td>
                                         <% } %>
                                     </tr>
+                                    <% if (user.friends.length<=4) { %>
                                     <tr>
                                         <td><div class="otherProfilePic_wrapper"><img src="/images/profPic.png" /></div></td>
                                         <td><div class="otherProfilePic_wrapper"><img src="/images/profPic.png" /></div></td>
                                         <td><div class="otherProfilePic_wrapper"><img src="/images/profPic.png" /></div></td>
                                         <td><div class="otherProfilePic_wrapper"><img src="/images/profPic.png" /></div></td>
                                     </tr>
+                                    <% } %>
                                 </table>
                             <% } %>
                         </div>

@@ -31,9 +31,17 @@ function jQuery_BindSignup(){
                 generate('Please provide all information','error');
                 return false;
             }
+            if (email.indexOf('@') < 0 && email.indexOf('.') < 0) {
+                generate('Please provide a valid email address','error');
+                return false;
+            }
             if (password !== password_confirm){
                 generate('Your password is not matched','error');
                 return false;
+            }
+            if (password.length < 6) {
+                generate('Your password is too short','error');
+                return false;   
             }
             $.ajax({
                 type: 'POST',

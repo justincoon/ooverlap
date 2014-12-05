@@ -5,6 +5,14 @@ var User        = require('../lib/user');
 var querystring = require('querystring');
 var url         = require('url');
 var moment      = require('moment');
+var mail        = require('nodemailer');
+var transporter = nodemailer.createTransport({
+    service: 'Gmail',
+    auth: {
+        user: 'ooverlap.team.undefined@gmail.com',
+        pass: 'ooverlap'
+    }
+});
 var request_friend;
 var meeting_request;
 var reply_request = -1;
@@ -132,6 +140,21 @@ router.get('/view/:idx', function(req,res){
 router.post('/submit', function(req, res) {
   var free_times = req.body.free_times;
   if (reply_request < 0){
+    var mailOptions = {
+   	 from: 'OOverlap ✔ <ooverlap.team.undefined@gmail.com>', // sender address
+   	 to: req.body.to, // list of receivers
+   	 subject: 'Hello ✔', // Subject line
+   	 text: 'Hello world ✔', // plaintext body
+   	 html: '<b>Hello world ✔</b>' // html body
+    };
+
+    transporter.sendMail(mailOptions, function(error, info){
+   	 if(error){
+   	     console.log(error);
+   	 }else{
+   	     console.log('Message sent: ' + info.response);
+   	 }
+    });
     User.findOne({
       email: req.body.to
     }, function(err, user) {

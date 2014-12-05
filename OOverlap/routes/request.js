@@ -5,7 +5,7 @@ var User        = require('../lib/user');
 var querystring = require('querystring');
 var url         = require('url');
 var moment      = require('moment');
-var mail        = require('nodemailer');
+var nodemailer  = require('nodemailer');
 var transporter = nodemailer.createTransport({
     service: 'Gmail',
     auth: {

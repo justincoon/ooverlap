@@ -1,3 +1,15 @@
+#Project 4 Feedback
+
+Can I start by saying that I am incredibly impressed that you considered how to send email notifications to the user? (I gotta check out that nodemailer module) Genius!
+
+As a minimalist myself, I really appreciate that you are keeping the amount of modules you are incorporating into OOverlap small.  Your choices for libraries are also interesting, like jquery-noty and typeahead, though I wish you had explained you were specifically utilizing them! Still, your effort to plan and implement a full app experience beyond the web, including live notification and email, is extremely admirable! 
+
+However, you didn't mention how you would specifically store dates and events in your MongoDB. I am looking forward to seeing your DB schema, especially your event and user document schema. Also, using moment.js was an excellent choice for your date management! (Especially this extension to moment: https://github.com/gf3/moment-range) (Sidenote: I LOVE the fact that moment-range has the function DATE.overlaps(DATE) haha, wouldn't it be funny to have the code use its own name? I digress...) 
+
+YOUR TEAM NOTES AND TRELLO ACTIVITY ARE JUST AMAZING. Fantastic work at making sure you took notes for each meeting!!
+
+Thumbs up! I can't wait to see the OOverlap complete!
+
 #Project 3 Feedback
 
 Your mockups are extremely impressive, I'm completely blown away by your attention to detail and design! (I love that the "OO" circles in OOverlap are carried into the UI! Ahhh!)

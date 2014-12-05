@@ -16,7 +16,6 @@ var userSchema = new mongoose.Schema({
     name: { type: String, default: '' },
     gender: { type: String, default: '' },
     location: { type: String, default: '' },
-    website: { type: String, default: '' },
     picture: { type: String, default: '' }
   },
 
@@ -25,9 +24,6 @@ var userSchema = new mongoose.Schema({
   schedule: Array,
   request: Array,
   events: Array,
-  
-  resetPasswordToken: String,
-  resetPasswordExpires: Date
 });
 
 /**

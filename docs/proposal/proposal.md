@@ -27,15 +27,15 @@ Project Manager, Graphic Designer
 
 >A Dallas, Texas native, Giovanna Diaz is a junior at Smith College double majoring in Computer Science and Mathematics. She also has a great interest in design and will jump at any chance she gets to use the Adobe Creative Suite!
 
-**Colin McGinnis**
-UI Designer, Software Engineer
+**Colin McGinnis** **is no longer working with us on this porject**  
+<strike>UI Designer, Software Engineer
 
->Grew up in the South Shore of Massachusetts, in Hingham, MA specifically. He's a junior at the University of Massachusetts Amherst, studying Computer Science. He has an interest in design, which he hopes to explore in working with User Interfaces, and has an interest in working in both front end and back end development as well. 
+>Grew up in the South Shore of Massachusetts, in Hingham, MA specifically. He's a junior at the University of Massachusetts Amherst, studying Computer Science. He has an interest in design, which he hopes to explore in working with User Interfaces, and has an interest in working in both front end and back end development as well. </strike>
 
-**Mariem Ayadi**
-Software Engineer and Marketing Leader
+**Mariem Ayadi** **is no longer working with us on this project**
+<strike>Software Engineer and Marketing Leader
 
->Junior at Smith College, majoring in Computer Science with a minor in Engineering. She is Tunisian/Moroccan nternational student who enjoys learning languages. Interested in back-end development with a focus on databases. Mariem will be responsible for marketing the product in order to increase user interest.
+>Junior at Smith College, majoring in Computer Science with a minor in Engineering. She is Tunisian/Moroccan nternational student who enjoys learning languages. Interested in back-end development with a focus on databases. Mariem will be responsible for marketing the product in order to increase user interest.</strike>
 
 **Kiernan Drohan**
 Business Integration and User Access Specialist

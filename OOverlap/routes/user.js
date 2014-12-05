@@ -62,7 +62,7 @@ router.get('/calendar', function(req, res) {
 });
 
 router.get('/schedule', function(req, res) {
-  var items = []
+  var items = [];
   req.user.schedule.forEach(function(item) {
     if (item.start.dateTime && item.end.dateTime) {
       items[items.length] = {

@@ -5,37 +5,9 @@ var refresh     = require('google-refresh-token');
 var flash       = require('express-flash');
 var keys        = require('../config/keys.js');
 var User        = require('../lib/user');
-var nodemailer  = require('nodemailer');
-var transporter = nodemailer.createTransport({
-    service: 'Gmail',
-    auth: {
-        user: 'ooverlap.team.undefined@gmail.com',
-        pass: 'ooverlap'
-    }
-});
 
 router.get('/', function(req,res){
   res.redirect('/');
-});
-
-router.get('/test', function(req,res) {
-	var mailOptions = {
-    		from: 'OOverlap', // sender address
-    		to: 'justin.tyler.coon@gmail.com', // list of receivers
-    		subject: 'Hello ✔', // Subject line
-    		text: 'Hello world ✔', // plaintext body
-    		html: '<b>Hello world ✔</b>' // html body
-	};
-
-	// send mail with defined transport object
-	transporter.sendMail(mailOptions, function(error, info){
-	    if(error){
-	        console.log(error);
-	    }else{
-	        console.log('Message sent: ' + info.response);
-	    }
-	});
-	res.redirect('/');
 });
 
 router.get('/profile', function(req, res) {

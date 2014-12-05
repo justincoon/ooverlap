@@ -34,7 +34,7 @@ router.get('/schedule', function(req, res) {
     if (item.start.dateTime && item.end.dateTime) {
       items.push({
         title: item.summary,
-        color: '#ff0000',
+        color: '#D31900',
         start: item.start.dateTime,
         end: item.end.dateTime,
         editable: false
@@ -42,7 +42,7 @@ router.get('/schedule', function(req, res) {
     } else {
       items.push({
         title: item.summary,
-        color: '#ff0000',
+        color: '#D31900',
         start: item.start.date,
         end: item.end.date,
         editable: false
@@ -64,7 +64,7 @@ router.get('/schedule', function(req, res) {
         if (item.start && item.end) {
           items.push({
             title: user.profile.name + " Availability",
-            color: '#0000ff',
+            color: '#1BB0CE',
             start: item.start,
             end: item.end,
             editable: false,
@@ -73,7 +73,7 @@ router.get('/schedule', function(req, res) {
         } else {
           items.push({
             title: user.profile.name + " Availability",
-            color: '#0000ff',
+            color: '#1BB0CE',
             start: item.start,
             editable: false,
             overlap: true
@@ -85,7 +85,7 @@ router.get('/schedule', function(req, res) {
       if (item.start.dateTime && item.end.dateTime) {
         items.push({
           title: user.profile.name + " Schedule",
-          color: '#ffa500',
+          color: '#FFC52C',
           start: item.start.dateTime,
           end: item.end.dateTime,
           editable: false
@@ -93,7 +93,7 @@ router.get('/schedule', function(req, res) {
       } else {
         items.push({
           title: user.profile.name + " Schedule",
-          color: '#ffa500',
+          color: '#FFC52C',
           start: item.start.date,
           end: item.end.date,
           editable: false

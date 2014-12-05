@@ -1,6 +1,6 @@
 var settings;
 
-function jQuery_BindSubmitRequest() {
+function jQuery_BindSubmitChanges() {
 	$('#submit_changes').bind('click',
 		function(event) {
 			settings = {
@@ -58,18 +58,6 @@ function jQuery_UpdateSettings(settings) {
 	});
 }
 
-function generate(text, type) {
- 	var n = noty({
- 		text: text,
- 		type: type,
- 		dismissQueue: true,
- 		layout: 'topCenter',
- 		theme: 'defaultTheme',
- 		timeout: 5000,
- 		maxVisible: 10
- 	});
-}
-
 $(document).ready(function() {
-	jQuery_BindSubmitRequest();
+	jQuery_BindSubmitChanges();
 });

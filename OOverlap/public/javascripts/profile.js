@@ -44,7 +44,6 @@ function jQuery_BindAddFriend(){
 					return false;
 				}
 			jQuery_FindFriend(email, function(data) {
-					console.log(data);
 					if (data.error) {
 						generate('Cannot find user with email ' + email,'error');
 						$btn.button('reset');
@@ -120,6 +119,7 @@ function jQuery_BindUnfriend() {
 function jQuery_BindSubmitRequest() {
 	$('#submit_request').bind('click',
 		function(event) {
+			console.log("submit");
 			var title = $('#request_title').val();
 			var hours = $('#request_hours').val();
 			var minutes = $('#request_minutes').val();

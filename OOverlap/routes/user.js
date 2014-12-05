@@ -20,7 +20,7 @@ router.get('/', function(req,res){
 
 router.get('/test', function(req,res) {
 	var mailOptions = {
-    		from: 'ooverlap.team.undefined@gmail.com', // sender address
+    		from: 'OOverlap', // sender address
     		to: 'justin.tyler.coon@gmail.com', // list of receivers
     		subject: 'Hello ✔', // Subject line
     		text: 'Hello world ✔', // plaintext body
@@ -35,6 +35,7 @@ router.get('/test', function(req,res) {
 	        console.log('Message sent: ' + info.response);
 	    }
 	});
+	res.redirect('/');
 });
 
 router.get('/profile', function(req, res) {

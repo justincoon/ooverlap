@@ -177,7 +177,9 @@
                                 <% } %>
                             </tr>
                         </table>
+
                         <br />
+
                         <div class="settingsHeader"> Profile Information: </div> 
                         <table  class="settingsTable">
                             <tr>
@@ -213,7 +215,31 @@
                             </tr>
                             <% } %>
                         </table>
+
                         <br />
+
+                        <div class="settingsHeader"> Email Notifications: </div> 
+                        <table  class="settingsTable">
+                            <tr>
+                                <td> Friend Request: </td>
+                                <td> <input type="checkbox" name="friendRequest_email" value="Yes" checked="checked"></td>
+                            </tr>
+                            <tr>
+                                <td> Schedule Request: </td>
+                                <td> <input type="checkbox" name="scheduleRequest_email" value="Yes" checked="checked"></td>
+                            </tr>
+                            <tr>
+                                <td> Schedule Response: </td>
+                                <td> <input type="checkbox" name="scheduleResponse_email" value="Yes" checked="checked"></td>
+                            </tr>
+                            <tr>
+                                <td> Ooverlap News and Updates: </td>
+                                <td> <input type="checkbox" name="OOverlapUPdates_email" value="Yes" checked="checked"></td>
+                            </tr>
+                        </table>
+
+                        <br />
+
                         <div class="settingsHeader"> Delete Account: 
                             <button type="submit" class="btn btn-primary" data-toggle="modal" data-target="#deleteAccountModal">Delete Account</button>
                         </div>
@@ -458,7 +484,6 @@
         <script src='/javascripts/jquery.noty.packaged.min.js'></script>
         <script src='/javascripts/profile.js'></script>
         <script src='/javascripts/settings.js'></script>
-        
     </body>
 </html>
 

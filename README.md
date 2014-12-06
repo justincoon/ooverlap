@@ -14,17 +14,17 @@ Overlap is great for college students and professionals alike. It will include c
 
 #Functional Specification  
 **Documents for Review:**  
-- fspec.md : The functional specification markdown file for review
-- fpsec.pdf : The functional specification presentation for review
+- [fspec.md](https://github.com/umass-cs-326/team-undefined/blob/master/docs/fspec/fspec.md) : The functional specification markdown file for review
+- [fpsec.pdf](https://github.com/umass-cs-326/team-undefined/blob/master/docs/fspec/fspec.pdf) : The functional specification presentation for review
 
 #Design Specification
 **Documents for Review:**  
-- dspec.md : The design specification markdown file for review
-- dspec.pdf : The functional specification presentation file for review
+- [dspec.md](https://github.com/umass-cs-326/team-undefined/blob/master/docs/dspec/dspec.md) : The design specification markdown file for review
+- [dspec.pdf](https://github.com/umass-cs-326/team-undefined/blob/master/docs/dspec/dspec.pdf) : The functional specification presentation file for review
 
 #Final Project
 **Folder for Review:**
-- OOverlap
+- [OOverlap](https://github.com/umass-cs-326/team-undefined/tree/master/OOverlap)
 
 **How to Run Site**
 ```
@@ -41,6 +41,6 @@ sudo npm install
 ```
 
 **Videos for Review**
-- The [Commerical](http://youtu.be/pe7ZY-xyub8 "Source Code") Video
-- The [Source Code](http://youtu.be/dss9zgPqDtM "Source Code") Video
-- The [Walkthrough](http://youtu.be/b7on7OO_Rds "Source Code") Video
+- The [Commerical](http://youtu.be/pe7ZY-xyub8) Video
+- The [Source Code](http://youtu.be/dss9zgPqDtM) Video
+- The [Walkthrough](http://youtu.be/b7on7OO_Rds) Video

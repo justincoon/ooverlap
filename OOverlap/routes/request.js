@@ -28,6 +28,7 @@ router.post('/new',function(req, res){
     res.end();
 });
 
+//This route is to pull calendar or two user who are scheduling request
 router.get('/schedule', function(req, res) {
   var items = []
   req.user.schedule.forEach(function(item) {
@@ -105,6 +106,7 @@ router.get('/schedule', function(req, res) {
   });
 });
 
+//This route is to view a pending meeting request
 router.get('/view/:idx', function(req,res){
   var index = req.params.idx;
   var requests = req.user.request;
@@ -129,6 +131,7 @@ router.get('/view/:idx', function(req,res){
   }
 });
 
+//This route is to submit meeting request and figure out overlap time
 router.post('/submit', function(req, res) {
   var free_times = req.body.free_times;
   if (reply_request < 0){

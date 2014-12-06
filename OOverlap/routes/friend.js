@@ -5,6 +5,7 @@ var User        = require('../lib/user');
 
 var add_friend;
 
+//This route is to send a new friend request from a user to another
 router.get('/new_request', function(req, res) {
   if (add_friend) {
     User.findOne({
@@ -32,6 +33,7 @@ router.get('/new_request', function(req, res) {
   }
 });
 
+//This route is to accept friend request
 router.get('/add/:idx', function(req, res) {
   var request = req.user.request[req.params.idx];
   User.findById(req.user.id, function(err, user) {
@@ -60,6 +62,7 @@ router.get('/add/:idx', function(req, res) {
   });
 });
 
+//This route is to reject friend request
 router.get('/reject/:idx', function(req, res){
   request = req.user.request[req.params.idx];
   User.findById(req.user.id, function(err, user){
@@ -73,33 +76,7 @@ router.get('/reject/:idx', function(req, res){
   });
 });
 
-router.get('/find/emails/all', function(req,res){
-   User.find({}, function(err, users) {
-    var emails = [];
-    for (var i=0; i<users.length; i++){
-      if (users[i].email !== req.user.email){
-        emails.push(users[i].email);
-      }
-    } 
-    res.send(emails);
-    res.end();
-   });
-});
-
-router.get('/get/emails/all', function(req, res) {
-  var emails = [];
-  for (var i = 0; i < req.user.friends.length; i++) {
-    emails.push(req.user.friends[i].email);
-  }
-  res.send(emails);
-  res.end();
-});
-
-router.get('/get/all', function(req,res){
-  res.send(req.user.friends);
-  res.end();
-});
-
+//This route is to find an account when user want to add a friend
 router.post('/find', function(req, res) {
   var email = req.body.email;
   User.findOne({
@@ -200,6 +177,7 @@ router.post('/find', function(req, res) {
   });
 });
 
+//This route is to unfriend an account
 router.post('/unfriend', function(req, res) {
   User.findById(req.user.id, function(err, user) {
     for(var i=user.request.length-1; i>=0; i--){
@@ -239,6 +217,37 @@ router.post('/unfriend', function(req, res) {
       });
     });
   });
+  res.end();
+});
+
+
+//This route is to get all emails to add friend (for typeahead suggestion)
+router.get('/find/emails/all', function(req,res){
+   User.find({}, function(err, users) {
+    var emails = [];
+    for (var i=0; i<users.length; i++){
+      if (users[i].email !== req.user.email){
+        emails.push(users[i].email);
+      }
+    } 
+    res.send(emails);
+    res.end();
+   });
+});
+
+//This route is to get all friend email to send meeting request (for typeahead suggestion)
+router.get('/get/emails/all', function(req, res) {
+  var emails = [];
+  for (var i = 0; i < req.user.friends.length; i++) {
+    emails.push(req.user.friends[i].email);
+  }
+  res.send(emails);
+  res.end();
+});
+
+//This route is to get all current friends
+router.get('/get/all', function(req,res){
+  res.send(req.user.friends);
   res.end();
 });
 

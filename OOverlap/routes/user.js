@@ -20,6 +20,7 @@ router.get('/profile', function(req, res) {
   }
 });
 
+//This route is to update user calendar
 router.get('/calendar', function(req, res) {
   if (req.user && req.user.tokens[0].refreshToken) {
     refresh(req.user.tokens[0].refreshToken, keys.google.clientID, keys.google.clientSecret, function(err, json, result) {
@@ -61,6 +62,7 @@ router.get('/calendar', function(req, res) {
   }
 });
 
+//This route is to pull user calendar
 router.get('/schedule', function(req, res) {
   var items = [];
   req.user.schedule.forEach(function(item) {
@@ -100,6 +102,7 @@ router.get('/checkpassword', function(req, res) {
 	});
 });
 
+//this route is to save new settings
 router.post('/changesettings', function(req, res) {
 	User.findById(req.user.id, function(err, user) {
 		if(req.body.profilePicPrivacy)

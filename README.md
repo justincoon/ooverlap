@@ -9,8 +9,8 @@ Overlap is great for college students and professionals alike. It will include c
 
 #Original Proposal  
 **Documents for Review:**  
-- proposal.md : The proposal markdown file for review
-- proposal.pdf : The proposal presentation for review
+- [proposal.md](https://github.com/umass-cs-326/team-undefined/blob/master/docs/proposal/proposal.md) : The proposal markdown file for review
+- [proposal.pdf](https://github.com/umass-cs-326/team-undefined/blob/master/docs/proposal/proposal.md) : The proposal presentation for review
 
 #Functional Specification  
 **Documents for Review:**  

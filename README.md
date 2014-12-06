@@ -27,11 +27,17 @@ Overlap is great for college students and professionals alike. It will include c
 - OOverlap
 
 **How to Run Site**
-- Download Source Code
-- Enter OOverlap folder...
-- Terminal Code: sudo npm install
-- Terminal Code: ./bin/www
-- Enjoy the site!
+```
+#If you haven't clone our repository
+git clone https://github.com/umass-cs-326/team-undefined.git
+#Or if you haven't pull newest code
+git pull
+
+cd /team-undefined/OOverlap
+sudo npm install
+./bin/www
+```
+- Open localhost:3000 and Enjoy the site!
 
 **Videos for Review**
 - The [Commerical](http://youtu.be/pe7ZY-xyub8 "Source Code") Video

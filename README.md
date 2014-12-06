@@ -36,8 +36,9 @@ git pull
 cd /team-undefined/OOverlap
 sudo npm install
 ./bin/www
+
+#Open web app at localhost:3000 and Enjoy the site!
 ```
-- Open localhost:3000 and Enjoy the site!
 
 **Videos for Review**
 - The [Commerical](http://youtu.be/pe7ZY-xyub8 "Source Code") Video

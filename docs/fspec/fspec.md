@@ -117,7 +117,13 @@ Simple, giving just the right amount of information!
 
 ###Profile: Personal View - Settings Page  
 ![Personal Profile:Settings] (https://github.com/umass-cs-326/team-undefined/blob/master/docs/fspec/images/user_settings.png)  
-All the settings the user could ever want - right there at a click of the mouse!
+All the settings the user could ever want - right there at a click of the mouse!  
+  
+Edit: We have taken out some of these settings, such as...
+- Social Network Connections
+- Calendar Prefernces
+- Occupation
+- Location
 
 ###Profile: External View  
 ![Personal Profile:External View] (https://github.com/umass-cs-326/team-undefined/blob/master/docs/fspec/images/public_Profile.png)  

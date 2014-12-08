@@ -153,13 +153,21 @@ As a participant, the group is much more stripped down. The user can quickly see
 
 ###Scheduling an Event  
 ![Scheduling an Event] (https://github.com/umass-cs-326/team-undefined/blob/master/docs/fspec/images/scheduling_frames.png)  
-<striek>
-When you go to schedule an event with a friend, you have to make sure you fill out the required information. Although it would be nice to have some sort of set time stored, more likely then not the user will want to only give specific times to specific people. (Who wants to meet with their boss at 8pm on a Saturday night?). The options supplied to the user allow for...
-- Easy selection of free times via a click and drag method: You will be supplied your calendar and you will preform the same action as if you were to add an event, but rather you are setting the chunks of free time. This way you can see what you already have scheduled!
-- Specification of which times you want to prioritize. (Once again, Friday afternoons will always be last on my list!)
-- Include more than one user: This way you can schedule meetings with groups
-The UI also warns the user when they have specified a free time with a different user. This is in response to a case where a user is scheduling multiple meetings simultaniously. If you give the same free time to 3 different people, you need a way of keeping track what you have said, and what will happen as those people respond and your free time slowly goes away. 
-</striek>
+**Edit:** The UI of this selection changed dramatically for the final version. Now, all you have to do is click the "Schedule an Event" button on your personal profile. This prompts a from asking for...
+- Name of Event
+- Length of Event
+- Person you want to Schedule With
+Once this is complete, you see shared calendar between you and the other person with whom you are scheduling an event. You are then able to see how your calendars overlap (with chunks of time - no details!). You are then able to drag and drop your priorities (all of the length of time that you specified) on to the calendar and submit it.
+
+<strike>
+When you go to schedule an event with a friend, you have to make sure you fill out the required information. Although it would be nice to have some sort of set time stored, more likely then not the user will want to only give specific times to specific people. (Who wants to meet with their boss at 8pm on a Saturday night?). The options supplied to the user allow for...  
+Easy selection of free times via a click and drag method: You will be supplied your calendar and you will preform the same action as if you were to add an event, but rather you are setting the chunks of free time. This way you can see what you already have scheduled!  
+Specification of which times you want to prioritize. (Once again, Friday afternoons will always be last on my list!)  
+Include more than one user: This way you can schedule meetings with groups</strike>
+
+<strike>
+The UI also warns the user when they have specified a free time with a different user. This is in response to a case where a user is scheduling multiple meetings simultaniously. If you give the same free time to 3 different people, you need a way of keeping track what you have said, and what will happen as those people respond and your free time slowly goes away. </strike> **Edit:** While this is a good idea still, it was not implemented in the final design.
+
 
 
 <p align = "right"><em>[Written by Giovanna Diaz - 10/15/2014]</em></p>

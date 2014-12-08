@@ -15,7 +15,7 @@ Revision History:
 | 11-11-14 | Giovanna Diaz | Added Project Summary & Bird's Eye View |
 | 11-12-14 | Thai Nguyen | Added Libraries and Update Components |
 | 12-02-14 | Thai Nguyen | Update Libraries |
-| 12-08-14 | Giovanna Diaz | Edit for Recent Inormation |
+| 12-08-14 | Giovanna Diaz | Edit for Recent Information |
 
 What is OOverlap?
 -----------------

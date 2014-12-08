@@ -6,7 +6,7 @@
   </ul>
 </div>
 
-<span id="ProjectOverview"> #Project Overview  </span>
+<h1 id="ProjectOverview"> #Project Overview  </h1>
 ![Overlap Logo] (https://github.com/umass-cs-326/team-undefined/blob/master/docs/proposal/OOverlap.png)
 
 Overlap is a multi-platform application that allows users to detect overlaps between their schedule and their friend's schedule. In that way, individuals can find the perfect time to meet for any given purpose. With the "Priority" feature, a  user can prioritize their free time. Overlap will then take their priorities in to consideration when comparing the schedules.

@@ -83,7 +83,7 @@ Non-Goals:
 ----------
 - We are here to help people organize their busy lives, not make money. We will not be advertising or monetizing the site in any way.
 - Although OOverlap facilitates social interaction, implementing any Facebook-esque social commenting is not a goal. This includes ‘wall posts’, ‘status updates’, and ‘likes’. Not only are there well-established websites that already have these functionalities, but we are not intending to be a social networking website - we help you manage the social network you already have.
-- It is assumed that the user will have a Google Calendar account where they can then use a pre-existing calendar / upload a calendar file from another source - This is if they want to see a calendar, otherwise they can still just choose their free times.
+- It is assumed that the user will have a Google Calendar account where they can then use a pre-existing calendar / upload a calendar file from another source - This is if they want to see a calendar, otherwise they can still just choose their free times. [Edit: While this is still the case, we do generate a local calendar for users that sign in with a native OOverlap account. Ultimately though, if users want the best outcome, and they use Google calendar, it would make the most sense for them to log in with that - that way their calendar on OOverlap is true to their real calendar as possible.]
 - We are not supporting multiple calendars per person (eg. work calendar / play calendar). It is assumed that everybody has one calendar for everything.
 
 

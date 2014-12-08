@@ -111,7 +111,7 @@ The user’s profile view meets their needs in the following ways:
 - Easy viewing of friends and groups
 - Quick view of their calendar to see any upcoming events
 - Easy access to settings (gear - currently circle right next to their profile picture)
-- Easy access to scheduling an event: 2 ways: clicking on a friend’s profile picture or clicking the “Schedule Event” button on their profile  
+<striek>Easy access to scheduling an event: 2 ways: clicking on a friend’s profile picture or clicking the “Schedule Event” button on their profile</striek> Edit: There is only one way to schedule an event with a friend - click on the "Schedule Event" button on their user profile page.
 
 Simple, giving just the right amount of information!
 

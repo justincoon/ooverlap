@@ -41,6 +41,6 @@ sudo npm install
 ```
 
 **Videos for Review**
-- The [Commerical](http://youtu.be/pe7ZY-xyub8) Video
-- The [Source Code](http://youtu.be/dss9zgPqDtM) Video
-- The [Walkthrough](http://youtu.be/b7on7OO_Rds) Video
+- Please take a look at our [Commerical](http://youtu.be/pe7ZY-xyub8)
+- Want to learn more about what is under the hood? Take a peek at our [Source Code](http://youtu.be/dss9zgPqDtM) Walkthrough
+- How does it all look? Check out our [Walkthrough](http://youtu.be/b7on7OO_Rds) Video to get a better understanding of all the features!

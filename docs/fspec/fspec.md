@@ -103,6 +103,8 @@ Wireframe Images:
 ![Homepage] (https://github.com/umass-cs-326/team-undefined/blob/master/docs/fspec/images/home.png)  
 Although represented as one page, this page will really be one long page that you can scroll through. The purpose of this homepage is to serve as welcome to the site. If you are new and do not know anything about what OOverlap does, this will be a clean and elegant introduction. The “Login In” and “Sign Up” buttons are in an easily accessible part of the screen and will float on top of the page while you scroll down so you don’t have to go all the way up to make an account.
 
+Edit: While the design of this has slightly changed for the final version, this is still an accurate description of the home page.
+
 ###Profile: Personal View  
 ![Personal Profile] (https://github.com/umass-cs-326/team-undefined/blob/master/docs/fspec/images/PersonalProfile.png)  
 The user’s profile view meets their needs in the following ways:

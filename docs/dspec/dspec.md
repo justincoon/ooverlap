@@ -38,6 +38,7 @@ External Libraries:
 - full-calendar: A library based to display nicely format calendar
 - typeahead: A library for suggestion while typing
 
+**Edit:**  
 <strike>AngularJS</strike>
 
 ### Backend

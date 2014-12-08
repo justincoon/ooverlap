@@ -19,7 +19,7 @@ Revision History:
 Team Organization: 
 ------------------
 **Giovanna Diaz:** Project Manager, Graphic Designer  
-*Responsibilities:* Organizing the team, Creating the Graphic Elements of the site, Making sure deadlines are met [Edit to Add more Responsiblities] CSS/HTML for site, Creating Google Docs for each PA, Creating the Videos for Submission, Writing up Script for Commercial  
+*Responsibilities:* Organizing the team, Creating the Graphic Elements of the site, Making sure deadlines are met [**Edit** to Add more Responsiblities] CSS/HTML for site, Creating Google Docs for each PA, Creating the Videos for Submission, Writing up Script for Commercial  
 
 **Santiago De La Torre:** Database Analyst  
 *Responsibilities:*  Implementing the database for the website and managing all data that flows through it such as user accounts and calendar info
@@ -83,7 +83,7 @@ Non-Goals:
 ----------
 - We are here to help people organize their busy lives, not make money. We will not be advertising or monetizing the site in any way.
 - Although OOverlap facilitates social interaction, implementing any Facebook-esque social commenting is not a goal. This includes ‘wall posts’, ‘status updates’, and ‘likes’. Not only are there well-established websites that already have these functionalities, but we are not intending to be a social networking website - we help you manage the social network you already have.
-- It is assumed that the user will have a Google Calendar account where they can then use a pre-existing calendar / upload a calendar file from another source - This is if they want to see a calendar, otherwise they can still just choose their free times. [Edit: While this is still the case, we do generate a local calendar for users that sign in with a native OOverlap account. Ultimately though, if users want the best outcome, and they use Google calendar, it would make the most sense for them to log in with that - that way their calendar on OOverlap is true to their real calendar as possible.]
+- It is assumed that the user will have a Google Calendar account where they can then use a pre-existing calendar / upload a calendar file from another source - This is if they want to see a calendar, otherwise they can still just choose their free times. [**Edit:** While this is still the case, we do generate a local calendar for users that sign in with a native OOverlap account. Ultimately though, if users want the best outcome, and they use Google calendar, it would make the most sense for them to log in with that - that way their calendar on OOverlap is true to their real calendar as possible.]
 - We are not supporting multiple calendars per person (eg. work calendar / play calendar). It is assumed that everybody has one calendar for everything.
 
 
@@ -103,7 +103,7 @@ Wireframe Images:
 ![Homepage] (https://github.com/umass-cs-326/team-undefined/blob/master/docs/fspec/images/home.png)  
 Although represented as one page, this page will really be one long page that you can scroll through. The purpose of this homepage is to serve as welcome to the site. If you are new and do not know anything about what OOverlap does, this will be a clean and elegant introduction. The “Login In” and “Sign Up” buttons are in an easily accessible part of the screen and will float on top of the page while you scroll down so you don’t have to go all the way up to make an account.
 
-Edit: While the design of this has slightly changed for the final version, this is still an accurate description of the home page.
+**Edit:** While the design of this has slightly changed for the final version, this is still an accurate description of the home page.
 
 ###Profile: Personal View  
 ![Personal Profile] (https://github.com/umass-cs-326/team-undefined/blob/master/docs/fspec/images/PersonalProfile.png)  
@@ -111,7 +111,7 @@ The user’s profile view meets their needs in the following ways:
 - Easy viewing of friends and groups
 - Quick view of their calendar to see any upcoming events
 - Easy access to settings (gear - currently circle right next to their profile picture)
-<striek>Easy access to scheduling an event: 2 ways: clicking on a friend’s profile picture or clicking the “Schedule Event” button on their profile</striek> Edit: There is only one way to schedule an event with a friend - click on the "Schedule Event" button on their user profile page.
+<striek>Easy access to scheduling an event: 2 ways: clicking on a friend’s profile picture or clicking the “Schedule Event” button on their profile</striek> **Edit:** There is only one way to schedule an event with a friend - click on the "Schedule Event" button on their user profile page.
 
 Simple, giving just the right amount of information!
 
@@ -119,7 +119,7 @@ Simple, giving just the right amount of information!
 ![Personal Profile:Settings] (https://github.com/umass-cs-326/team-undefined/blob/master/docs/fspec/images/user_settings.png)  
 All the settings the user could ever want - right there at a click of the mouse!  
   
-Edit: We have taken out some of these settings, such as...
+**Edit:** We have taken out some of these settings, such as...
 - Social Network Connections
 - Calendar Prefernces
 - Occupation
@@ -136,7 +136,7 @@ Where privacy is concerned, a user can eliminate their place of business, and th
 
 ###Group: Moderator View  
 ![Group Profile:Mod View] (https://github.com/umass-cs-326/team-undefined/blob/master/docs/fspec/images/group_ModView.png)  
-Edit: Please note, this moderator view was not ultimately created for our final version  
+**Edit:** Please note, this moderator view was not ultimately created for our final version  
 
 Groups are for things such as a clubs, project teams, etc., where you will have recurring events. This is the moderator view. Moderators either were either the creator of the group / invited to become a moderator by a creator. This meets the moderator’s needs in the following ways:
 - Moderators can accept / decline people to the group (by clicking on the request - triggering a pop up window to confirm or reject)

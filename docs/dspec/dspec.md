@@ -59,6 +59,10 @@ External Libraries:
 
 <p align = "right"><em>[Thai Nguyen - 12/2/2014]</em></p>
 
+Database: ER Diagram
+--------------------
+![Overlap Logo] (https://raw.githubusercontent.com/umass-cs-326/team-undefined/master/docs/dspec/ER%20diagram%20-%20ERD.jpeg)  
+
 Components: Bird's Eye View
 ---------------------------
 

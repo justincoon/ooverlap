@@ -15,10 +15,12 @@ Revision History:
 | 11-11-14 | Giovanna Diaz | Added Project Summary & Bird's Eye View |
 | 11-12-14 | Thai Nguyen | Added Libraries and Update Components |
 | 12-02-14 | Thai Nguyen | Update Libraries |
-| 12-08-14 | Giovanna Diaz | Edit for Recent Information |
+| 12-08-14 | Giovanna Diaz | Edit for Recent Information / added OOverlap logo |
 
 What is OOverlap?
 -----------------
+![Overlap Logo] (https://github.com/umass-cs-326/team-undefined/blob/master/docs/proposal/OOverlap.png)  
+
 OOverlap is a scheduling application with the busy college student and professional in mind. Organize meetings with ease by sending out request. Both users will declare their free time and then OOverlap will do the rest - comparing the two schedules and alerting you of compatible meeting times! No more hassle about changing schedules, and no more frustrating back-and-forth emails. In order to enhance your scheduling experience, OOverlap connects with your GoogleCal so that you have your most up-to-date calendar. As you schedule and confirm meetings your calendar will update to reflect the newest information. 
 
 Part of a group? Don't worry. OOverlap offers group functionality so that you can easily plan large-scale events or small board meetings. Simply create a group, invite your members, and start planning.

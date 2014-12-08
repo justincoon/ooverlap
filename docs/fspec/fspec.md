@@ -136,6 +136,8 @@ Where privacy is concerned, a user can eliminate their place of business, and th
 
 ###Group: Moderator View  
 ![Group Profile:Mod View] (https://github.com/umass-cs-326/team-undefined/blob/master/docs/fspec/images/group_ModView.png)  
+Edit: Please note, this moderator view was not ultimately created for our final version  
+
 Groups are for things such as a clubs, project teams, etc., where you will have recurring events. This is the moderator view. Moderators either were either the creator of the group / invited to become a moderator by a creator. This meets the moderator’s needs in the following ways:
 - Moderators can accept / decline people to the group (by clicking on the request - triggering a pop up window to confirm or reject)
 - Moderators have easy access to all of their members / other moderators

@@ -28,14 +28,16 @@ Overlap is great for college students and professionals alike. It will include c
 
 **How to Run Site**
 ```
-#If you haven't clone our repository
-git clone https://github.com/umass-cs-326/team-undefined.git
-#Or if you haven't pull newest code
-git pull
+#If you haven't cloned our repository
+$ git clone https://github.com/umass-cs-326/team-undefined.git  
 
-cd /team-undefined/OOverlap
-sudo npm install
-./bin/www
+#Or if you haven't pulled newest code
+$ git pull
+
+#Once code is up to date...
+$ cd /team-undefined/OOverlap
+$ sudo npm install
+$ ./bin/www
 
 #Open web app at localhost:3000 and Enjoy the site!
 ```

@@ -6,19 +6,20 @@ General Information:
 **Name of System:** OOverlap  
 **Authors:** Giovanna Diaz, Santiago De La Torre, Justin Coon, Thai Nguyen, and Kiernan Drohan (Team Undefined)  
   
-<p align="center"><em>This file was last revised on: October 15, 2014</em></p>
+<p align="center"><em>This file was last revised on: December 8, 2014</em></p>
 
 Revision History:
 ----------------- 
 | Date     | Name | Revision |
 |----------|------|----------|
 | 10-04-14 | Giovanna Diaz | Created and Uploaded File |
+| 12-08-14 | Giovanna Diaz | Updated for Recent Info |
 
 
 Team Organization: 
 ------------------
 **Giovanna Diaz:** Project Manager, Graphic Designer  
-*Responsibilities:* Organizing the team, Creating the Graphic Elements of the site, Making sure deadlines are met  
+*Responsibilities:* Organizing the team, Creating the Graphic Elements of the site, Making sure deadlines are met [Edit to Add more Responsiblities] CSS/HTML for site, Creating Google Docs for each PA, Creating the Videos for Submission, Writing up Script for Commercial  
 
 **Santiago De La Torre:** Database Analyst  
 *Responsibilities:*  Implementing the database for the website and managing all data that flows through it such as user accounts and calendar info

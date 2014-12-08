@@ -38,8 +38,7 @@ External Libraries:
 - full-calendar: A library based to display nicely format calendar
 - typeahead: A library for suggestion while typing
 
-**Edit:**  
-<strike>AngularJS</strike>
+**Edit:** <strike>AngularJS</strike>
 
 ### Backend
 #### Login
@@ -48,6 +47,7 @@ External Libraries:
 
 #### Database
 - mongodb, mongoose: NoSql Database and a API layer to talk with the Database
+**Edit:** We are hosting our database on monogolab as well
 
 ####Calendar
 - google-calendar, google-refresh-token: Import user existing calendar into the database as well as insert new events to user calendar when it’s sheduled

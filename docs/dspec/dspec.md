@@ -46,7 +46,7 @@ External Libraries:
 - Facebook API: Let user login via their Facebook account
 
 #### Database
-- mongodb, mongoose: NoSql Database and a API layer to talk with the Database
+- mongodb, mongoose: NoSql Database and a API layer to talk with the Database  
 **Edit:** We are hosting our database on monogolab as well
 
 ####Calendar

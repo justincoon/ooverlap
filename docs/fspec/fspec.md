@@ -153,7 +153,7 @@ As a participant, the group is much more stripped down. The user can quickly see
 
 ###Scheduling an Event  
 ![Scheduling an Event] (https://github.com/umass-cs-326/team-undefined/blob/master/docs/fspec/images/scheduling_frames.png)  
-**Edit:** The UI of this selection changed dramatically for the final version. Now, all you have to do is click the "Schedule an Event" button on your personal profile. This prompts a from asking for...
+**Edit:** The UI of this selection changed dramatically for the final version. Now, all you have to do is click the "Schedule an Event" button on your personal profile. This prompts a form which asks for...
 - Name of Event
 - Length of Event
 - Person you want to Schedule With

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link href="/stylesheets/group.css" rel="stylesheet" type="text/css" />
+        <link href='/stylesheets/fullcalendar.css' rel='stylesheet' />
+        <link href='/stylesheets/bootstrap.min.css' rel='stylesheet' />
+        <link href='/stylesheets/fullcalendar.print.css' rel='stylesheet' media='print' />
+
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        
+        <!-- START OF HTML FOR PAGE -->
+        <div id="wrapper">
+
+            <!-- Links to Home -->
+            <div id="LHS_banner">
+                <a href="./profile"><img src="/images/website_Header.png" alt="logo" /></a>
+                <div id="RHS_nav"> 
+                    <div id="top"></div>
+                    <div id="bottom">
+                        <ul>
+                            <li><a href="./logout">Logout</a></li>
+                            <li><a href="./profile">Home</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div> 
+
+            <div id="contentWrapper">
+                
+                <div id="LHS_GroupInformation">
+                    
+                    <!-- Should be rounded -->
+                    <div class="profilePic_wrapper"> <img src= "/images/teamUndefined_Logo.png" alt="ProfilePicture" />
+                    </div>
+                    
+                    <div class="groupInformation_wrapper">
+                        <div> Team Undefined
+                            <div> ooverlap.team.undefined@gmail.com
+                              </div>    
+                        </div> 
+                    </div>   
+                    
+                    <div class="groupMods_wrapper">
+                        <div> Moderators </div>
+                        <div>
+                            <ul>
+                                <li> Tim Richards </li>
+                            </ul>      
+                        </div>
+                    </div>
+
+                    <div class="groupMembers_wrapper">
+                        <div> Members </div>
+                        <div> 
+                            <ul>
+                                <li> Giovanna Diaz </li>
+                                <li> Justin Coon</li>
+                                <li> Thai Nguyen</li>
+                                <li> Santiago De La Torre</li>
+                                <li> Kiernan Drohan</li>
+                            </ul>      
+                        </div>
+                    </div>
+                    
+                </div> <!-- End of the LHS -->
+                
+                <div id="RHS_CalendarInformation">
+            
+                    <div id="eventsDescription_wrapper">
+                        <table>
+                            <tr>
+                                <td><div><strong>0 Upcoming Events:</strong><br />
+                                    <div id="upcomingEvents">
+                                    <i> You have no upcoming events </i>
+                                    </div>
+                                </div>
+                                </td>
+                                <td><div><strong>Group Description:</strong><br />
+                                    <div id="groupDescription"> Let’s face it, in this day and age you are busy. Work, school, family, friends - everybody pulls you in so many different directions and and before you know it your schedule is a confusing mess. Undefined hopes to connect you with your schedule in a brand new way.<br /> <br />
+
+We intend to create a system where you can enter your schedule and determine your free time. Then, when a friend asks “Hey, when can you hang out?”, all you have to do is add your friend and our app will determine the times where you both can meet. No paper. No back and forth. Simple. [Edit: Hey! You're looking at it!]
+                                    </div>
+                                </div>
+                                
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div id='calendar'></div>
+                </div> <!-- End of the RHS -->
+            </div><!-- End of CONTENT WRAPPER -->
+        </div><!--End of wrapper-->
+
+        <script src='/javascripts/jquery-1.11.0.min.js'></script>
+        <script src='/javascripts/moment.min.js'></script>
+        <script src='/javascripts/jquery-ui.custom.min.js'></script>
+        <script src="/javascripts/bootstrap.min.js"></script>
+        <script src='/javascripts/fullcalendar.min.js'></script>   
+        <script src='/javascripts/group.js'></script>   
+    </body>
+</html>
+

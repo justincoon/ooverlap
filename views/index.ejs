@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Bootstrap Core CSS -->
+    <link href="/stylesheets/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="/stylesheets/grayscale.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="/font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <!-- NEW FONT(S) FOR MORE MODERN FEEL~ -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600,700' rel='stylesheet' type='text/css'>
+    <!-- Older fonts -->
+    <link href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <title><%= title  %></title>
+  </head>
+  <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+   
+    <!-- Navigation -->
+    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand" id="modal_trigger" href="#">
+                    <i class="fa fa-play-circle"></i>  <span class="light" data-toggle="modal" data-target="#loginModal">Login</span>
+                </a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+                <ul class="nav navbar-nav">
+                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#what">What</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#howScroll">How</a>
+                    </li> 
+                    <li>
+                        <a class="page-scroll" href="#about">About us</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+        
+    <!-- Intro Header -->
+    <header class="intro">
+        <div class="intro-body">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <h1 class="brand-heading"><img src="images/OOverlap.png" width="90%"></h1>
+                        <p class="intro-text">A multi-platform application that allows users to detect overlaps between their schedule and their friend's schedule.<br> <span style="font-size:14px">Created by <i>Team Undefined</i>.</span> </p>
+                        <a href="#what" class="btn btn-circle page-scroll">
+                            <i class="fa fa-angle-double-down animated"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- What Section -->
+    <section id="what" class="container content-section text-center">
+        <div class="row">
+            <div class="col-lg-10 col-lg-offset-1">
+            <h2>What is OOverlap?</h2>
+            <p> OOverlap is a scheduling application with the busy college student and professional in mind. 
+			<br />
+            Organize meetings with ease by sending out requests. The users declare their 
+			free time and then OOverlap does the rest - comparing the schedules and alerting 
+			you of compatible meeting times! 
+			<br /><br />
+            No more back and forth. No more struggle. 
+			<br />
+            OOverlap makes scheduling your next meeting quick and painless.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- How Section -->
+    
+    <section id="how" class="content-section text-center">
+        <div id="howScroll" class="how-section">
+            <div class="container">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <h2>How</h2>
+
+                    <p> You are only 3 steps away from a less stressful scheduling experience! </p>
+                    <div id="howTable">
+                        
+                        <table>
+                            <tr>
+                                <td><img src="/images/how/how_1.png"></td>
+                                <td><img src="/images/how/how_2.png"></td>
+                                <td><img src="/images/how/how_3.png"></td>
+                            </tr>
+                            <tr>
+                                <td>Connect with <strong>Google</strong>, or create an account, so we can get you a calendar</td>
+                                <td>Add your <strong>friends and collegues</strong></td>
+                                <td><strong>Start scheduling</strong> your important events and meetings</td>
+                            </tr>
+                        </table>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <!-- About us Section -->
+    <section id="about" class="content-section text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Our Amazing Team</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="team-member">
+                        <img src="/images/team/giovanna.jpg" class="img-responsive img-circle" alt="">
+                        <h4>Giovanna Diaz</h4>
+                        <p class="text-muted">Project Manager & Graphic / Front End Designer</p>
+                        <ul class="list-inline social-buttons">
+                            <li><a href="http://github.com/gmdiaz" target="_blank"><i class="fa fa-github"></i></a>
+                            </li>
+                            <li><a href="http://facebook.com/giovanna.diaz.7106" target="_blank"><i class="fa fa-facebook"></i></a>
+                            </li>
+                            <li><a href="https://www.linkedin.com/pub/giovanna-diaz/a3/48b/6a9" target="_blank"><i class="fa fa-linkedin"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="team-member">
+                        <img src="/images/team/thai.jpg" class="img-responsive img-circle" alt="">
+                        <h4>Thai Nguyen</h4>
+                        <p class="text-muted">UI/UX Designer & Backend Developer</p>
+                        <ul class="list-inline social-buttons">
+                            <li><a href="http://github.com/thaingnguyen" target="_blank"><i class="fa fa-github"></i></a>
+                            </li>
+                            <li><a href="http://facebook.com/drmonky" target="_blank"><i class="fa fa-facebook"></i></a>
+                            </li>
+                            <li><a href="http://linkedin.com/in/thaingnguyen" target="_blank"><i class="fa fa-linkedin"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class ="row">
+                <div class="col-sm-4">
+                    <div class="team-member">
+                        <img src="/images/team/justin.png" class="img-responsive img-circle" alt="">
+                        <h4>Justin Coon</h4>
+                        <p class="text-muted">Backend Developer & Security Specialist</p>
+                        <ul class="list-inline social-buttons">
+                            <li><a href="http://github.com/justincoon" target="_blank"><i class="fa fa-github"></i></a>
+                            </li>
+                            <li><a href="#"><i class="fa fa-facebook"></i></a>
+                            </li>
+                            <li><a href="https://www.linkedin.com/profile/view?id=112948302"><i class="fa fa-linkedin" ></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="team-member">
+                        <img src="/images/team/santiago.jpg" class="img-responsive img-circle" alt="">
+                        <h4>Santiago De La Torre</h4>
+                        <p class="text-muted">Backend Developer & Database Analyst</p>
+                        <ul class="list-inline social-buttons">
+                            <li><a href="http://github.com/santidltp" target="_blank"><i class="fa fa-github"></i></a>
+                            </li>
+                            <li><a href="http://facebook.com/santidltp" target="_blank"><i class="fa fa-facebook"></i></a>
+                            </li>
+                            <li><a href="http://linkedin.com/in/santidltp" target="_blank"><i class="fa fa-linkedin"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="team-member">
+                        <img src="/images/team/kiernan.jpg" class="img-responsive img-circle" alt="">
+                        <h4>Kiernan Drohan</h4>
+                        <p class="text-muted">Backend Developer<br /><br /></p>
+                        <ul class="list-inline social-buttons">
+                            <li><a href="#"><i class="fa fa-github"></i></a>
+                            </li>
+                            <li><a href="#"><i class="fa fa-facebook"></i></a>
+                            </li>
+                            <li><a href="#"><i class="fa fa-linkedin"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Login Modal -->
+    <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModal_Label" aria-hidden="true">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <span style="text-align:center;">
+                <header class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Login</h4>
+                </header>
+                
+                <div class="modal-body">
+                    <!-- Social Login -->
+                    <div class="social_login">
+                        <div class="">
+                            <a href="#" class="social_box fb">
+                                <span class="icon"><i class="fa fa-facebook"></i></span>
+                                <span class="icon_title">Connect with Facebook</span>
+                                
+                            </a>
+
+                            <a href="/auth/google" class="social_box google">
+                                <span class="icon"><i class="fa fa-google-plus"></i></span>
+                                <span class="icon_title">Connect with Google</span>
+                            </a>
+                        </div>
+
+                        <div class="centeredText">
+                            <span>Or use your Email address</span>
+                        </div>
+
+                        <div class="action_btns">
+                            <div class="one_half"><button id="login_form" class="btn btn_red">Login</button></div>
+                            <div class="one_half last"><button id="register_form" class="btn btn_red">Sign up</button></div>
+                        </div>
+                    </div>
+
+                    <!-- Username & Password Login form -->
+                    <div class="user_login">
+                            <label>Email</label>
+                            <input id="login_email" type="email" />
+                            <br />
+
+                            <label>Password</label>
+                            <input id="login_pwd" type="password" />
+                            <br />
+
+                            <div class="action_btns">
+                                <div class="one_half"><a href="#" class="btn back_btn"><i class="fa fa-angle-double-left"></i> Back</a></div>
+                                 <input type="submit" class="btn btn_red" id="login" value="login">
+                            </div>
+
+                        <a href="#" class="forgot_password">Forgot password?</a>
+                    </div>
+
+                    <!-- Register Form -->
+                    <div class="user_register">
+                        
+                            <label>Full Name</label>
+                            <input id ="signup_name" type="text" />
+                            <br />
+
+                            <label>Email Address</label>
+                            <input id="signup_email" type="email" />
+                            <br />
+
+                            <label>Password</label>
+                            <input id="signup_password" type="password" />
+                            <br />
+
+                            <label>Confirm Password</label>
+                            <input id="signup_confirm" type="password" />
+                            <br />
+
+                            <div class="action_btns">
+                                <div class="one_half"><a href="#" class="btn back_btn"><i class="fa fa-angle-double-left"></i> Back</a></div>
+                                <input type="submit" class="btn btn_red" id="signup" value="register">
+                            </div>
+                        
+                    </div>
+                </div>
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container text-center">
+            <span style="font-size:10px">Copyright &copy; OOverlap 2014</span>
+        </div>
+    </footer>
+
+    <script src="/javascripts/jquery-1.11.0.min.js"></script>
+    <script src="/javascripts/bootstrap.min.js"></script>
+    <script src="/javascripts/jquery.easing.min.js"></script>
+    <script src='/javascripts/jquery.noty.packaged.min.js'></script>
+    <script src="/javascripts/grayscale.js"></script>
+    <script src="/javascripts/auth.js"></script>
+</body>
+
+</html>

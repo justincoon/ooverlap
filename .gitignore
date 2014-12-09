@@ -1,2 +1,3 @@
 _site
 *.log
+node_modules

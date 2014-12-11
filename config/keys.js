@@ -1,7 +1,6 @@
 module.exports = {
   db: process.env.MONGOLAB_URI || process.env.MONGODB || //'mongodb://localhost:27017/test',
      'mongodb://admin:password@ds053160.mongolab.com:53160/ooverlap',
-     // 'mongodb://admin:password@ds045087.mongolab.com:45087/ooverlap2',
   
   sessionSecret: process.env.SESSION_SECRET || 'Your Session Secret goes here',
 
@@ -18,8 +17,8 @@ module.exports = {
   },
 
   google: {
-    clientID: process.env.GOOGLE_ID || '376095271632-7h2b3hog676d1ndd58fdv0de1fc6h5b9.apps.googleusercontent.com',
-    clientSecret: process.env.GOOGLE_SECRET || 'SFrLJ7P0YVqcF8TVrTq0qq2a',
+    clientID: process.env.GOOGLE_ID || '935745080764-olnesivupirhdpm899bgifu0mte7c969.apps.googleusercontent.com',
+    clientSecret: process.env.GOOGLE_SECRET || 'zCXMjasevF3cogfDSMVUt2OG',
     callbackURL: '/auth/google/callback',
     passReqToCallback: true
   },
